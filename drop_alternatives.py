@@ -95,8 +95,7 @@ def drop_alternatives(msg):
 				text_taken = True
 				body = part
 				composition |= TEXTPLAIN
-			else:
-				# if we are seeing a second text/plain part, stop throwing things
+			else: # if we are seeing a second text/plain part, stop throwing things
 				composition |= MISCPARTS
 				break
 		elif part.get_content_type() == "text/html":

@@ -12,7 +12,7 @@ import re
 import sys
 
 
-DEBUG = True
+DEBUG = False
 strip_html_tags = re.compile(r'<.*?>', re.MULTILINE)
 
 

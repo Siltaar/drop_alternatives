@@ -3,7 +3,7 @@ HTML and who prefer their inbox to have as many messages in pure text as
 feasible. Given an RFC-2822 message message, it generates its 'sanitized'
 version.
 
-This script is generally meant to be run as a filter with procmail
+This script is generally meant to be run as a filter with procmail,
 [FDM](https://github.com/nicm/fdm) or some other mail delivery agent.
 
 It tries to be moderately conservative and only act when things are
@@ -19,5 +19,5 @@ moderately safe:
 
 ***
 
-Copyright: 2010-2012 [Rogério Theodoro de Brito](https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970) \
+Copyright: 2010-2012 @rbrito from a StackExchange [thread](https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970). ([GitHub account](https://github.com/rbrito)) \
 Copyright: 2017 Simon Descarpentries

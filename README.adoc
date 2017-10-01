@@ -1,0 +1,39 @@
+`drop_alternatives.py` is a simple Python script for those who hate emails in
+HTML and who prefer their inbox to have as many messages in pure text as
+feasible. Given an RFC-2822 message message, it generates its 'sanitized'
+version.
+
+This script is generally meant to be run as a filter with procmail,
+[FDM](https://github.com/nicm/fdm) or some other mail delivery agent.
+
+It tries to be moderately conservative and only act when things are
+moderately safe:
+
+* if the message is `multipart` and has a `text/plain` and a `text/html`
+  part, keep the `text/plain` part only ;
+* if the situation is more complicated, drop 'text/html' parts that are 50%
+  identical to 'text/plain' parts ;
+* in all other cases keep the message intact.
+
+### `fdm.conf` example :
+
+`match all action rewrite "python2 -SE drop_alternatives.py" continue`
+
+== Tests
+Some _doctests_ are included. You can run them with the following command in
+the cloned repository root:
+```shell
+python2 -m doctest drop_alternatives.py
+python3 -m doctest drop_alternatives.py
+```
+
+== Author
+* 2010-2012: @rbrito from a StackExchange [thread](https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970). ([GitHub account](https://github.com/rbrito)) +
+* 2017: Simon Descarpentries
+
+== Ressources
+Github repository : https://github.com/Siltaar/drop_alternatives
+
+== Licensing
+GNU General Public License v3.0. See LICENCE file for more information.
+

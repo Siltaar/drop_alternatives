@@ -4,8 +4,10 @@
 # licence: GPLv3
 
 
-import email
+from __future__ import print_function
+from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
+from difflib import SequenceMatcher
 
 
 def compose_message(orig, parts):
@@ -24,33 +26,71 @@ def compose_message(orig, parts):
 	return wanted
 
 
-def drop_alternatives(msg):
-	if msg.is_multipart():
-		no_html_parts = []
-		text_parts = []
-		html_parts = []
+def drop_alternatives(msg_str):
+	eml = Parser().parsestr(msg_str);
 
-		for part in msg.walk():
+	if eml.is_multipart():
+		kept_parts = []
+		html_parts = []
+		texts = []
+
+		for part in eml.walk():
 			if (part.get_content_maintype() == "multipart" or
 				part.get_content_type() == "message/external-body" or
 				part.get_payload() == ""):
-				no_html_parts.append(part)
+				continue
 			elif part.get_content_type() == "text/plain":
-				text_parts.append(part)
-				no_html_parts.append(part)
+				texts.append(part.get_payload())
+				kept_parts.append(part)
 			elif part.get_content_type() == "text/html":
 				html_parts.append(part)
 			else:
-				no_html_parts.append(part)
+				kept_parts.append(part)
 
-		if (html_parts and len(text_parts) >= len(html_parts) and
-			sum([len(a.get_payload()) for a in html_parts]) <
-				10 * sum([len(b.get_payload()) for b in text_parts])):
-			return compose_message(msg, no_html_parts)
+		if html_parts:
+			recompose_msg = False
 
-	return msg
+			for h in html_parts:
+				for i, t in enumerate(texts):
+					if SequenceMatcher(a=h.get_payload(), b=t).real_quick_ratio() < 0.5:
+						kept_parts.append(h)
+					else:
+						del texts[i]
+						recompose_msg = True
+
+			if recompose_msg:
+				return compose_message(eml, kept_parts)
+
+	return eml
+
+
+def test_drop_alternatives(msg_str):
+	"""
+	>>> test_drop_alternatives('Content-Type: text/plain;\\nA')
+	text/plain;
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/html;\\n<p>B</p>')
+	multipart/mixed;text/plain;text/html;
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/html;\\n<p>A</p>')
+	multipart/mixed;text/plain;text/html;
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nCoucou\\n'
+	... '--\\nContent-Type: text/html;\\n<p>Coucou</p>')
+	multipart/mixed;text/plain;
+	"""
+	for p in drop_alternatives(msg_str).walk():
+		print(p.get_content_type(), end=';')
+		# print(p.get_payload())
+	print('')
 
 
 if __name__ == "__main__":
 	import sys
-	print(drop_alternatives(email.message_from_file(sys.stdin)))
+	if sys.version_info.major > 2:
+		from io import TextIOWrapper
+		print(drop_alternatives(TextIOWrapper(stdin.buffer, errors='ignore').read()))
+	else:
+		print(drop_alternatives(sys.stdin.read()))

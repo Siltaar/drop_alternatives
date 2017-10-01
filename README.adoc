@@ -28,7 +28,7 @@ python3 -m doctest drop_alternatives.py
 ```
 
 == Author
-* 2010-2012: @rbrito from a StackExchange https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970[thread]. (https://github.com/rbrito[GitHub account])
+* 2010-2012: https://github.com/rbrito[rbrito] from a StackExchange https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970[thread].
 * 2017: Simon Descarpentries
 
 == Ressources

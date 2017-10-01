@@ -19,5 +19,5 @@ moderately safe:
 
 ***
 
-Copyright: 2010-2012 @rbrito from a StackExchange [thread](https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970) [GitHub account](https://github.com/rbrito) \
+Copyright: 2010-2012 @rbrito from a StackExchange [thread](https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970). ([GitHub account](https://github.com/rbrito)) \
 Copyright: 2017 Simon Descarpentries

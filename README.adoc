@@ -15,7 +15,7 @@ moderately safe:
   identical to `text/plain` parts ;
 * in all other cases keep the message intact.
 
-### `fdm.conf` example :
+== `fdm.conf` example :
 
 `match all action rewrite "python2 -SE drop_alternatives.py" continue`
 

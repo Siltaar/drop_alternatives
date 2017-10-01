@@ -8,6 +8,12 @@ from __future__ import print_function
 from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
 from difflib import SequenceMatcher
+import re
+import sys
+
+
+DEBUG = True
+strip_html_tags = re.compile(r'<.*?>', re.MULTILINE)
 
 
 def compose_message(orig, parts):
@@ -30,6 +36,7 @@ def drop_alternatives(msg_str):
 	eml = Parser().parsestr(msg_str);
 
 	if eml.is_multipart():
+		debug(' ')
 		kept_parts = []
 		html_parts = []
 		texts = []
@@ -40,8 +47,8 @@ def drop_alternatives(msg_str):
 				part.get_payload() == ""):
 				continue
 			elif part.get_content_type() == "text/plain":
-				texts.append(part.get_payload())
 				kept_parts.append(part)
+				texts.append(part.get_payload(decode=True))
 			elif part.get_content_type() == "text/html":
 				html_parts.append(part)
 			else:
@@ -51,12 +58,20 @@ def drop_alternatives(msg_str):
 			recompose_msg = False
 
 			for h in html_parts:
+				h_txt = re.sub(strip_html_tags, '', str(h.get_payload(decode=True)))
+				save_html = True
+
 				for i, t in enumerate(texts):
-					if SequenceMatcher(a=h.get_payload(), b=t).real_quick_ratio() < 0.5:
-						kept_parts.append(h)
-					else:
-						del texts[i]
+					debug(str(h_txt)+' '+str(t)+' '+
+						str(SequenceMatcher(a=str(h_txt), b=str(t)).real_quick_ratio()))
+
+					if SequenceMatcher(a=str(h_txt), b=str(t)).real_quick_ratio() > 0.50:
+						save_html = False
 						recompose_msg = True
+						del texts[i]  # avoid comparing again with this text
+
+				if save_html:
+					kept_parts.append(h)
 
 			if recompose_msg:
 				return compose_message(eml, kept_parts)
@@ -70,25 +85,41 @@ def test_drop_alternatives(msg_str):
 	text/plain;
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n<p>B</p>')
+	... '--\\nContent-Type: text/html;\\n<p>A</p>')
+	multipart/mixed;text/plain;
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/html;\\n<p>BBBBBBBBB</p>')
 	multipart/mixed;text/plain;text/html;
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n<p>A</p>')
-	multipart/mixed;text/plain;text/html;
+	... '--\\nContent-Type: text/plain;\\nBBBB\\n'
+	... '--\\nContent-Type: text/html;\\n<p>BBBBBBBBB</p>')
+	multipart/mixed;text/plain;text/plain;
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
-	... '--\\nContent-Type: text/plain;\\nCoucou\\n'
-	... '--\\nContent-Type: text/html;\\n<p>Coucou</p>')
-	multipart/mixed;text/plain;
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/plain;\\nB\\n'
+	... '--\\nContent-Type: text/html;\\n<p>CCCCCCCCC</p>')
+	multipart/mixed;text/plain;text/plain;text/html;
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/plain;\\nBBBB\\n'
+	... '--\\nContent-Type: text/html;\\n<p>BBBBBBBBB</p>\\n'
+	... '--\\nContent-Type: text/html;\\n<p>CCCCCCCCC</p>')
+	multipart/mixed;text/plain;text/plain;text/html;
 	"""
 	for p in drop_alternatives(msg_str).walk():
 		print(p.get_content_type(), end=';')
-		# print(p.get_payload())
+		# debug(str(p.get_payload()))
 	print('')
 
 
+def debug(s):
+    if DEBUG:
+        print(s, file=sys.stderr)
+
+
 if __name__ == "__main__":
-	import sys
 	if sys.version_info.major > 2:
 		from io import TextIOWrapper
 		print(drop_alternatives(TextIOWrapper(stdin.buffer, errors='ignore').read()))

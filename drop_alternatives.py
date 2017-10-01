@@ -26,26 +26,27 @@ def compose_message(orig, parts):
 
 def drop_alternatives(msg):
 	if msg.is_multipart():
+		no_html_parts = []
 		text_parts = []
 		html_parts = []
-		misc_parts = []
 
 		for part in msg.walk():
 			if (part.get_content_maintype() == "multipart" or
 				part.get_content_type() == "message/external-body" or
 				part.get_payload() == ""):
-				continue
+				no_html_parts.append(part)
 			elif part.get_content_type() == "text/plain":
 				text_parts.append(part)
+				no_html_parts.append(part)
 			elif part.get_content_type() == "text/html":
 				html_parts.append(part)
 			else:
-				misc_parts.append(part)
+				no_html_parts.append(part)
 
 		if (html_parts and len(text_parts) >= len(html_parts) and
 			sum([len(a.get_payload()) for a in html_parts]) <
 				10 * sum([len(b.get_payload()) for b in text_parts])):
-			return compose_message(msg, text_parts + misc_parts)
+			return compose_message(msg, no_html_parts)
 
 	return msg
 

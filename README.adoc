@@ -4,18 +4,18 @@ feasible. Given an RFC-2822 message message, it generates its 'sanitized'
 version.
 
 This script is generally meant to be run as a filter with procmail,
-[FDM](https://github.com/nicm/fdm) or some other mail delivery agent.
+https://github.com/nicm/fdm[FDM] or some other mail delivery agent.
 
 It tries to be moderately conservative and only act when things are
 moderately safe:
 
 * if the message is `multipart` and has a `text/plain` and a `text/html`
   part, keep the `text/plain` part only ;
-* if the situation is more complicated, drop 'text/html' parts that are 50%
-  identical to 'text/plain' parts ;
+* if the situation is more complicated, drop `text/html` parts that are 50%
+  identical to `text/plain` parts ;
 * in all other cases keep the message intact.
 
-### `fdm.conf` example :
+== `fdm.conf` example :
 
 `match all action rewrite "python2 -SE drop_alternatives.py" continue`
 
@@ -28,7 +28,7 @@ python3 -m doctest drop_alternatives.py
 ```
 
 == Author
-* 2010-2012: @rbrito from a StackExchange [thread](https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970). ([GitHub account](https://github.com/rbrito)) +
+* 2010-2012: https://github.com/rbrito[rbrito] from a StackExchange https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970[thread].
 * 2017: Simon Descarpentries
 
 == Ressources

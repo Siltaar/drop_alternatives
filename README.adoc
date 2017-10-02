@@ -20,7 +20,7 @@ moderately safe:
 * lxml
 * cssselect
 
-Can be installed via : apt install python3-lxml python3-cssselect
+Can be installed via : `apt install python3-lxml python3-cssselect`
 
 == `fdm.conf` example :
 
@@ -29,9 +29,7 @@ Can be installed via : apt install python3-lxml python3-cssselect
 == Tests
 Some _doctests_ are included. You can run them with the following command in
 the cloned repository root:
-```shell
-python3 -m doctest drop_alternatives.py
-```
+`python3 -m doctest drop_alternatives.py`
 
 == Author
 * 2010-2012: https://github.com/rbrito[rbrito] from a StackExchange https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970[thread].

@@ -15,15 +15,21 @@ moderately safe:
   identical to `text/plain` parts ;
 * in all other cases keep the message intact.
 
+== Dependances
+
+* lxml
+* cssselect
+
+Can be installed via : apt install python3-lxml python3-cssselect
+
 == `fdm.conf` example :
 
-`match all action rewrite "python2 -SE drop_alternatives.py" continue`
+`match all action rewrite "python3 drop_alternatives.py" continue`
 
 == Tests
 Some _doctests_ are included. You can run them with the following command in
 the cloned repository root:
 ```shell
-python2 -m doctest drop_alternatives.py
 python3 -m doctest drop_alternatives.py
 ```
 

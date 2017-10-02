@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 # coding: utf-8
 # author : Simon Descarpentries, 2017-09
 # licence: GPLv3
@@ -8,12 +8,11 @@ from __future__ import print_function
 from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
 from difflib import SequenceMatcher
-import re
+from lxml import html
 import sys
 
 
 DEBUG = False
-strip_html_tags = re.compile(r'<.*?>', re.MULTILINE)
 
 
 def compose_message(orig, parts):
@@ -58,14 +57,27 @@ def drop_alternatives(msg_str):
 			recompose_msg = False
 
 			for h in html_parts:
-				h_txt = re.sub(strip_html_tags, '', str(h.get_payload(decode=True)))
+				h_txt = html.fromstring(str(h.get_payload(decode=True)))
+
+				for tag in h_txt.cssselect('style'):
+					tag.drop_tree()
+				for tag in h_txt.cssselect('script'):
+					tag.drop_tree()
+
+				h_txt = str(h_txt.text_content())
+				h_txt = h_txt.replace('\\n', '')
+				h_txt = h_txt.replace('\\t', '')
+				h_txt = h_txt.replace('\t', '')
+				h_txt = h_txt.replace('  ', '')
+				h_txt = h_txt.replace('\n\n', '')
+
 				save_html = True
 
 				for i, t in enumerate(texts):
-					debug(str(h_txt)+' '+str(t)+' '+
-						str(SequenceMatcher(a=str(h_txt), b=str(t)).real_quick_ratio()))
+					diff_ratio = SequenceMatcher(a=h_txt, b=t).real_quick_ratio()
+					debug(str(h_txt)+' '+str(t)+' '+str(diff_ratio))
 
-					if SequenceMatcher(a=str(h_txt), b=str(t)).real_quick_ratio() > 0.50:
+					if diff_ratio > 0.50:
 						save_html = False
 						recompose_msg = True
 						del texts[i]  # avoid comparing again with this text
@@ -84,28 +96,28 @@ def test_drop_alternatives(msg_str):
 	>>> test_drop_alternatives('Content-Type: text/plain;\\nA')
 	text/plain;
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
-	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n<p>A</p>')
+	... '--\\nContent-Type: text/plain;\\nAAA\\n'
+	... '--\\nContent-Type: text/html;\\n<style>body{color}</style><body>AAA</body>')
 	multipart/mixed;text/plain;
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n<p>BBBBBBBBB</p>')
+	... '--\\nContent-Type: text/html;\\n<html><style>a{color red;}</style>BBBBBBBBB')
 	multipart/mixed;text/plain;text/html;
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
 	... '--\\nContent-Type: text/plain;\\nBBBB\\n'
-	... '--\\nContent-Type: text/html;\\n<p>BBBBBBBBB</p>')
+	... '--\\nContent-Type: text/html;\\n<style>a{color}</style>BBBB')
 	multipart/mixed;text/plain;text/plain;
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
 	... '--\\nContent-Type: text/plain;\\nB\\n'
-	... '--\\nContent-Type: text/html;\\n<p>CCCCCCCCC</p>')
+	... '--\\nContent-Type: text/html;\\n<p>C</p>')
 	multipart/mixed;text/plain;text/plain;text/html;
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
 	... '--\\nContent-Type: text/plain;\\nBBBB\\n'
-	... '--\\nContent-Type: text/html;\\n<p>BBBBBBBBB</p>\\n'
-	... '--\\nContent-Type: text/html;\\n<p>CCCCCCCCC</p>')
+	... '--\\nContent-Type: text/html;\\n<html><style>a{color}</style>BBBB</html>\\n'
+	... '--\\nContent-Type: text/html;\\n<style>body{color}</style><body>CCCCCCCCC</body>')
 	multipart/mixed;text/plain;text/plain;text/html;
 	"""
 	for p in drop_alternatives(msg_str).walk():
@@ -120,8 +132,5 @@ def debug(s):
 
 
 if __name__ == "__main__":
-	if sys.version_info.major > 2:
-		from io import TextIOWrapper
-		print(drop_alternatives(TextIOWrapper(stdin.buffer, errors='ignore').read()))
-	else:
-		print(drop_alternatives(sys.stdin.read()))
+	from io import TextIOWrapper
+	print(drop_alternatives(TextIOWrapper(sys.stdin.buffer, errors='ignore').read()))

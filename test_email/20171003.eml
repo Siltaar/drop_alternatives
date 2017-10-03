@@ -1,0 +1,145 @@
+Return-Path: ddd@gmail.com
+Received: by aaa (fdm 1.9, account "ccc")
+	with imap (version=TLSv1/SSLv3 ECDHE-RSA-AES128-GCM-SHA256 128 bits)
+	Tue, 03 Oct 2017 16:28:02 +0200
+Received: from 10.128.63.14 (LHLO lpn-prd-vrin013) (10.128.63.14) by
+ lpn-prd-mstr021 with LMTP; Tue, 3 Oct 2017 16:23:16 +0200 (CEST)
+Received: from lpn-prd-vrin013 (localhost [127.0.0.1])
+	by lpn-prd-vrin013 (Postfix) with ESMTP id E1D65740091
+	for <bbb@laposte.net>; Tue,  3 Oct 2017 16:23:16 +0200 (CEST)
+Received: from mail-oi0-f67.google.com (mail-oi0-f67.google.com [209.85.218.67])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by lpn-prd-vrin013 (Postfix) with ESMTPS id 7C0B3740077
+	for <bbb@laposte.net>; Tue,  3 Oct 2017 16:23:16 +0200 (CEST)
+Received: by mail-oi0-f67.google.com with SMTP id j126so14535657oia.10
+        for <bbb@laposte.net>; Tue, 03 Oct 2017 07:23:16 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=LeK0zWGsvGORUz/jB5FpxRbIur6xOUBb7Qma6BgeetE=;
+        b=IdInRm0HIlqn5TjtUP0K4X3hvuCHU2daafLCcSzmPT+aZNLpWg3XKdrMXNwn9NmF/f
+         dGEJ/3FFfJj3xNi06fWhKp8Gulvv3RsX7QSzW5IZK7g2J998hf6FssC2AL9CF2z6TikU
+         C6eS8vgyU+JwVFJmRtGruwEG7u5eYZeh5naOtV0jmSpfd2Tp/5jCjr7Oh92KY4SmqVWF
+         zqm6bqENtM4uejaGoPl5E9JpnNBzt2dd1NwqzZPGGayLsDLr0Je70TMGwYslPMMW9Ge7
+         kWMThBA1PsjbWOezURE6F92mqAsrPELgKHQirER2Wh3OZj2sVMxrZAjtcYJp7I02yZ1H
+         fFiQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=LeK0zWGsvGORUz/jB5FpxRbIur6xOUBb7Qma6BgeetE=;
+        b=PMjXkINa90NRmw0xiOpaCvsDsjvSyVuCUjll1mR8b18r+SCLp6F4Auz9fV3+hr/aEw
+         /r0Nv7LOfqigZFnLlLQxOFcRZXWM7WM4XgZLTTyMbvTCcQGRfhKrWT5UViMjJMQRkSJp
+         vtxmsjKqDQZnAJEwzu2JaTPCaO2MVp2MoaZxzzx/amFLgVzGHpSvr1QJ+z8xi0PVZ02q
+         d98Qc0VtYQ3hha8W++n6yYIEa83XBbDnRqVvy4HlnPC8y3eqHQkvESrftMqeKIGVdZY1
+         m1ukgIHD44ANlDgtZyuK07eL/be1q+z9BY9d695OcJdIRf0aPk43kbEOf/g/OjjqcLwu
+         mCFQ==
+X-Gm-Message-State: AMCzsaUMU2UvLZslMK7nY4vSPRQdr2p3GUvH6tWY04nRxWoJVLnL8qbN
+	cTU+pgLLM9tr8I+yEP+NjN14l6T2WoSezLgGTS8=
+X-Google-Smtp-Source: AOwi7QDpDKQQkW+KPvrWzBg+EYKcPpPB6QxwYqWHhRtqJDWaV3Msz3SI3alIEIz4nPK4Zor12myhVKkqTKn51JKru4s=
+X-Received: by 10.202.193.6 with SMTP id r6mr6297584oif.169.1507040594849;
+ Tue, 03 Oct 2017 07:23:14 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.157.56.118 with HTTP; Tue, 3 Oct 2017 07:23:14 -0700 (PDT)
+From: EEE <ddd@gmail.com>
+Date: Tue, 3 Oct 2017 16:23:14 +0200
+Message-ID: <CAOR2+VSGkmzuf+e8G8MGLk3VDasiTyDQASQQEzbFZsjqUgxxpw@mail.gmail.com>
+Subject: INFO TARDIVE : REUNION CE MARDI 3 OCTOBRE 19H30
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="001a113d774c517d13055aa53bbf"
+Authentication-Results: helo=mail-oi0-f67.google.com; spf=pass smtp.mailfrom=ddd@gmail.com; dkim=pass header.d=gmail.com; dmarc=pass D=gmail.com alignspf=pass aligndkim=pass
+X-VR-FullState: 0
+X-VR-Score: 40
+X-VR-Cause-1: gggruggvucftvghtrhhoucdtuddrfeelledrkeejgdeglecutefuodetggdotefrodftvfcurfhrohhf
+X-VR-Cause-2: ihhlvgemucfntefrqffuvffgpdggtfgfnhhsuhgsshgtrhhisggvnecuuegrihhlohhuthemucehtddt
+X-VR-Cause-3: necuoghunhguihhstghlohhsvgguucdlgedtmdenucfjughrpefhfffkufgtsegrtderredttdejnecu
+X-VR-Cause-4: hfhrohhmpeflohgvlhhlvgcujfgrnhhothcuoehprghlrggtvgdrtghhrghtvggruhhgohhnthhivghr
+X-VR-Cause-5: sehgmhgrihhlrdgtohhmqeenucffohhmrghinheprghvrghsthdrtghomhenucfkphepvddtledrkeeh
+X-VR-Cause-6: rddvudekrdeijeenucfrrghrrghmpehhvghlohepmhgrihhlqdhoihdtqdhfieejrdhgohhoghhlvgdr
+X-VR-Cause-7: tghomhdpihhnvghtpedvtdelrdekhedrvddukedrieejpdhmrghilhhfrhhomhepphgrlhgrtggvrdgt
+X-VR-Cause-8: hhgrthgvrghughhonhhtihgvrhesghhmrghilhdrtghomhdprhgtphhtthhopehsihhmohhnrdguvghs
+X-VR-Cause-9: tggrrhhpvghnthhrihgvsheslhgrphhoshhtvgdrnhgvth
+X-VR-AvState: No
+X-VR-State: 0
+Content-Length: 3848
+
+--001a113d774c517d13055aa53bbf
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour
+
+une voici une info un peu tardive mais importante :
+
+ Une conf=C3=A9rence ce mardi 3 octobre est  autour du *sujet "ondes
+=C3=A9lectromagn=C3=A9tiques et sant=C3=A9" en pr=C3=A9sence d'Alexandre Ru=
+sanov Ing=C3=A9nieur
+g=C3=A9ologue d'origine Russe et =C3=A9galement g=C3=A9obiologue.*
+mardi 03 octobre au chene Vert =C3=A0 19h30  entree 6=E2=82=AC places limit=
+=C3=A9es  - vous
+pouvez appeler au 0642481901 ou 0645152394
+
+Qu'est ce qui aggrave les effets des ondes ?
+
+qu'est il important de conna=C3=AEtre sur les compteur Linky ?
+--=20
+Vous pouvez vous renseigner sur le site : Les citoyens =C3=A9clair=C3=A9s
+Pr=C3=A9sidente de l'association, Dani=C3=A8le Bovin : 02 97 76 24 96
+16 rue Marcel Cerdan - 56600 LANESTER
+Adresse mail : FFF
+
+EEE
+
+<https://www.avast.com/sig-email?utm_medium=3Demail&utm_source=3Dlink&utm_c=
+ampaign=3Dsig-email&utm_content=3Dwebmail>
+Garanti
+sans virus. www.avast.com
+<https://www.avast.com/sig-email?utm_medium=3Demail&utm_source=3Dlink&utm_c=
+ampaign=3Dsig-email&utm_content=3Dwebmail>
+<#DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2>
+
+--001a113d774c517d13055aa53bbf
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div><div>Bonjour</div><div><=
+br></div><div>une voici une info un peu tardive mais importante :<br clear=
+=3D"all"></div><div><br></div><div>=C2=A0<font size=3D"4">Une conf=C3=A9ren=
+ce=C2=A0ce mardi=C2=A03 octobre=C2=A0est =C2=A0autour du <strong>sujet &quo=
+t;ondes =C3=A9lectromagn=C3=A9tiques et sant=C3=A9&quot; en pr=C3=A9sence d=
+&#39;Alexandre Rusanov Ing=C3=A9nieur g=C3=A9ologue d&#39;origine Russe et =
+=C3=A9galement g=C3=A9obiologue.</strong>=C2=A0</font></div><div><font size=
+=3D"4">mardi 03 octobre=C2=A0au chene Vert =C3=A0 19h30=C2=A0 entree 6=E2=
+=82=AC places limit=C3=A9es=C2=A0 - vous pouvez appeler au 0642481901 ou 06=
+45152394</font></div><div><br></div><div><font size=3D"4">Qu&#39;est ce qui=
+ aggrave les effets des ondes ?</font></div><div><font size=3D"4"><br></fon=
+t></div><div><font size=3D"4">qu&#39;est il important de conna=C3=AEtre sur=
+ les compteur Linky ?</font><br>-- </div><div><div><font size=3D"4">Vous po=
+uvez vous renseigner sur=C2=A0le site : Les citoyens =C3=A9clair=C3=A9s</fo=
+nt></div><div><font size=3D"4">Pr=C3=A9sidente de l&#39;association, Dani=
+=C3=A8le Bovin : 02 97 76 24 96 <br>16 rue Marcel Cerdan - 56600 LANESTER<b=
+r> Adresse mail : <a href=3D"mailto:FFF" target=
+=3D"_blank">FFF</a> </font></div></div><div><br>=
+</div></div><div class=3D"gmail_signature"><div dir=3D"ltr"><div>EEE</div>=
+</div></div>=
+</div><div id=3D"DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2"><br> <table style=3D=
+"border-top:1px solid #d3d4de">
+	<tr>
+      <td style=3D"width:55px;padding-top:18px"><a href=3D"https://www.avas=
+t.com/sig-email?utm_medium=3Demail&amp;utm_source=3Dlink&amp;utm_campaign=
+=3Dsig-email&amp;utm_content=3Dwebmail" target=3D"_blank"><img src=3D"https=
+://ipmcdn.avast.com/images/icons/icon-envelope-tick-round-orange-animated-n=
+o-repeat-v1.gif" alt=3D"" width=3D"46" height=3D"29" style=3D"width: 46px; =
+height: 29px;"></a></td>
+		<td style=3D"width:470px;padding-top:17px;color:#41424e;font-size:13px;fo=
+nt-family:Arial,Helvetica,sans-serif;line-height:18px">Garanti sans virus. =
+<a href=3D"https://www.avast.com/sig-email?utm_medium=3Demail&amp;utm_sourc=
+e=3Dlink&amp;utm_campaign=3Dsig-email&amp;utm_content=3Dwebmail" target=3D"=
+_blank" style=3D"color:#4453ea">www.avast.com</a> 		</td>
+	</tr>
+</table>
+<a href=3D"#DAB4FAD8-2DD7-40BB-A1B8-4E2AA1F9FDF2" width=3D"1" height=3D"1">=
+</a></div>
+
+--001a113d774c517d13055aa53bbf--
+

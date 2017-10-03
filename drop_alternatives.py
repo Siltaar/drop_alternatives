@@ -16,8 +16,8 @@ import re
 
 DEBUG = True
 DEBUG = False
-COMPARED_SIZE = 200
-re_strip = re.compile('\s+|\n+|\t+', re.MULTILINE)
+COMPARED_SIZE = 100
+re_strip = re.compile('\s+|\n+|\t+|-+|#+|https?://.*?[ \n"]|\[.*?\]|(<|=).*?>', re.MULTILINE)
 
 
 def debug(s):
@@ -58,7 +58,7 @@ def drop_alternatives(msg_str):
 			elif part.get_content_type() == "text/plain":
 				kept_parts.append(part)
 				texts.append(part.get_payload(decode=True)
-					.decode('utf-8', 'ignore')[-COMPARED_SIZE:])
+						.decode('utf-8', 'ignore')[-10*COMPARED_SIZE:])
 			elif part.get_content_type() == "text/html":
 				html_parts.append(part)
 			else:
@@ -69,7 +69,7 @@ def drop_alternatives(msg_str):
 
 			for h in html_parts:
 				h_tags = html.fromstring(h.get_payload(decode=True)
-					.decode('utf-8', 'ignore')[-4*COMPARED_SIZE:])
+						.decode('utf-8', 'ignore')[-12*COMPARED_SIZE:])
 
 				for tag in h_tags.cssselect('style'):  # scripts in emails not yet seen
 					tag.drop_tree()
@@ -81,11 +81,11 @@ def drop_alternatives(msg_str):
 				save_html = True
 
 				for i, t in enumerate(texts):
-					t = re.sub(re_strip, ' ', t)
+					t = re.sub(re_strip, ' ', t)[-COMPARED_SIZE:]
 					diff_ratio = SequenceMatcher(None, a=h_txt, b=t).quick_ratio()
-					debug(t+' '+h_txt+' '+str(diff_ratio))
+					debug(h_txt+'\t'+t+' '+str(diff_ratio)+' '+str(len(h_txt))+' '+str(len(t)))
 
-					if diff_ratio > 0.50:
+					if diff_ratio > 0.66:
 						save_html = False
 						recompose_msg = True
 						del texts[i]  # avoid comparing again with this text
@@ -138,6 +138,10 @@ def test_drop_alternatives(msg_str):
 	>>> test_drop_alternatives(open('test_email/20170917.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
 	>>> test_drop_alternatives(open('test_email/20170925.eml', errors='ignore').read())
+	multipart/mixed;text/plain;
+	>>> test_drop_alternatives(open('test_email/20171003.eml', errors='ignore').read())
+	multipart/mixed;text/plain;
+	>>> test_drop_alternatives(open('test_email/20171003-2.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
 	"""
 	for p in drop_alternatives(msg_str).walk():

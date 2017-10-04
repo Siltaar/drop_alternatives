@@ -1,0 +1,190 @@
+Return-Path: <aaa@gmail.com>
+Delivered-To: siltaer@d12s.work
+Received: by bbb (fdm 1.9, account "ccc")
+	with imap (version=TLSv1/SSLv3 ECDHE-RSA-AES128-GCM-SHA256 128 bits)
+	Wed, 04 Oct 2017 18:21:02 +0200
+Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
+	by nmboxes66.sd2.0x35.net (Postfix) with ESMTP id 68D1628871
+	for <siltaer@d12s.work>; Wed,  4 Oct 2017 18:20:00 +0200 (CEST)
+Received: from acoeuro.com (unknown [IPv6:2001:4b98:dc0:43:216:3eff:febf:d9a6])
+	by spool.mail.gandi.net (Postfix) with ESMTPS id 55E71178043
+	for <siltaer@d12s.work>; Wed,  4 Oct 2017 18:20:00 +0200 (CEST)
+Received: from mail-oi0-f48.google.com ([209.85.218.48])
+	by acoeuro.com with esmtp (Exim 4.89)
+	(envelope-from <aaa@gmail.com>)
+	id 1dzmOu-0002xg-3x
+	for ccc@ccc.fr; Wed, 04 Oct 2017 18:20:00 +0200
+Received: by mail-oi0-f48.google.com with SMTP id j126so20379388oia.10
+        for <ccc@ccc.fr>; Wed, 04 Oct 2017 09:20:00 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:sender:from:date:message-id:subject:to;
+        bh=q0vINEL6bVr6DcQpdKEKbjvXKrHFaIKi80EmTUpfJwM=;
+        b=h0YHVxvLJe456AnU/D18p3sp4IlJhmlodwpeXpRPLWDIZXd7b7w43h9BdFCzqgl3Hy
+         8EEzqkaVfMg9l26qRM2QCJsncLyLhkfnBOoKl66WlIO5CZyU7a+Ar72p3Vxf6zGMztBv
+         AzopkueJBsvQE9iENK1QmjH+XS+ZJ4opFsuplsq3r2yQN7QzWtjfq/y3m9Hd5grqw1Vl
+         Luqc3BrSKBudwcmBcPootp2FQVB2ndikKLzafNQ5kslpgeIdatWIrZNj/NlGYhqvLr9f
+         bPERY7e2plF51qu3kKYn1yFHeyRTH5Ws22FnHu/IcWiycfB6Q14ZA5uYUw1cau2z5P3w
+         i5ig==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:sender:from:date:message-id:subject
+         :to;
+        bh=q0vINEL6bVr6DcQpdKEKbjvXKrHFaIKi80EmTUpfJwM=;
+        b=t/b3NUkyqDP7669DJJk/JOSIfuZB1u7CW3kHfMUx8dc5DTOpjWcSihR48ZZViRynX+
+         REbxEe7R2pykRJA4JJgNEY/PYoSgTzWfiHwmdhlmM0j0ow1isOjWVlwuBtWpUnEs7V2P
+         03YbfOSWx0TMyN4Mt5YJ0QWbhFJF3TF+UBkrwlvXa8ELFb98mHsd+9pa00xOmcm65L3M
+         Okk0z/4tvjMfzU1YTKP19uqZ59snXrZpSoqrMrvlTnyLF4ILGrLVmRBGzfKfXpKBQQ+s
+         tjX3JSte0GUu/EqxHL6WMQbued53IX7d4++9T+s3Y0rRkPq4nkc16cd+5uyM8bazk+MT
+         s4Rw==
+X-Gm-Message-State: AMCzsaWlxFxPnBNCg2rJFdK08mbBjcF03LDLmofLnas0Rp2Byhkabmmp
+	IAnSbSw1aJv5IvwX7Md/kJnkWSOmbVrzQSzlZgs=
+X-Google-Smtp-Source: AOwi7QC9FLvd//JrhpWVBJJtC0WpXMH8cl+hHwjg1fI4Op4sPSIi2uThhzNb/mphwNZhQJ2xguvJO4DN92JDMnJZ/SE=
+X-Received: by 10.202.168.75 with SMTP id r72mr2677450oie.342.1507133998911;
+ Wed, 04 Oct 2017 09:19:58 -0700 (PDT)
+MIME-Version: 1.0
+Sender: aaa@gmail.com
+Received: by 10.157.22.246 with HTTP; Wed, 4 Oct 2017 09:19:58 -0700 (PDT)
+From: =?UTF-8?Q?ffff_Deux_S=C3=A8vres?= <ddd@ddd.org>
+Date: Wed, 4 Oct 2017 18:19:58 +0200
+X-Google-Sender-Auth: kg3QPK6mnfCYaoyeiqd6vCbEp6o
+Message-ID: <CAKpmcF_ve734kzx-D7CA90AC2Fc5pSSCbksUtH7edOPZ_dfpog@mail.gmail.com>
+Subject: Agenda Collaboratif Bressuire
+To: ccc@ccc.fr
+Content-Type: multipart/alternative; boundary="001a113cf58ca25cd9055abafaa9"
+X-Spam-Level: **
+Content-Length: 7081
+
+--001a113cf58ca25cd9055abafaa9
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Voila mon mail et mes contact dans ma signature
+
+--=20
+
+EEE Eee
+
+Animateur Permanent
+
+
+FFFF Deux-S=C3=A8vres
+
+
+*NOUVELLE ADRESSE et T=C3=A9l=C3=A9phone*
+
+*41 Boulevard de la Goblech=C3=A8re*
+
+*79300 Bressuire*
+
+*Tel: 01-11-11-11-11*
+
+
+ddd@ddd.org
+
+https://www.facebook.com/ffff-ffff-ffff/
+
+https://www.facebook.com/ffff-ffff-ffff/
+
+http://poitoucharentes.ffff.org/
+
+
+Le FFFF Ffff Ffff propose une mission de service civique! Contacte n=
+ous
+pour en savoir plus!
+
+
+*Samedi 14 Octobre : Journ=C3=A9e Chantier Partcipatif *
+https://www.facebook.com/events/118167795528850
+
+
+*21/22 Octobre :* Le Grand Rendez Vous! Un camp le temps d'un week-end pour
+tous les 12/17 ans!  https://www.facebook.com/events/148224582445898
+
+--001a113cf58ca25cd9055abafaa9
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Voila mon mail et mes contact dans ma signature<br clear=
+=3D"all"><div><br></div>-- <br><div class=3D"gmail_signature" data-smartmai=
+l=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
+<div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div di=
+r=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"lt=
+r"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><p s=
+tyle=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;word-break:normal"=
+>EEE Eee</p><p style=3D"margin-top:0pt;margin-bottom:0pt;margin-le=
+ft:0in;word-break:normal">Animateur Permanent</p><p style=3D"margin-top:0pt=
+;margin-bottom:0pt;margin-left:0in;direction:ltr;word-break:normal"><font f=
+ace=3D"tahoma, sans-serif" size=3D"2"><span style=3D"color:black;font-weigh=
+t:bold"><img src=3D"https://docs.google.com/uc?export=3Ddownload&amp;id=3D0=
+Bwhs3AdI3PWrMkprazdOdVUxRUE&amp;revid=3D0Bwhs3AdI3PWremJZdXl5V1o4TEN5YXNydD=
+FZcG5lb2pzekJrPQ" width=3D"83" height=3D"96"><br></span></font></p><p style=
+=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;direction:ltr;word-bre=
+ak:normal"><font face=3D"tahoma, sans-serif" size=3D"2"><span style=3D"colo=
+r:black;font-weight:bold"><span></span><span></span>FFFF Deux-S=C3=A8vres</=
+span><span style=3D"color:black"></span></font></p><p style=3D"margin-top:0=
+pt;margin-bottom:0pt;margin-left:0in;direction:ltr;word-break:normal"><font=
+ face=3D"tahoma, sans-serif" size=3D"2" color=3D"#ff0000"><b><br></b></font=
+></p><p style=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;direction=
+:ltr;word-break:normal"><font face=3D"tahoma, sans-serif" size=3D"2" color=
+=3D"#ff0000"><b>NOUVELLE ADRESSE et T=C3=A9l=C3=A9phone</b></font></p><p st=
+yle=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;word-break:normal">=
+<font face=3D"tahoma, sans-serif" size=3D"2" color=3D"#ff0000"><b>41 Boulev=
+ard de la Goblech=C3=A8re</b></font></p><p style=3D"margin-top:0pt;margin-b=
+ottom:0pt;margin-left:0in;word-break:normal"><font face=3D"tahoma, sans-ser=
+if" size=3D"2" color=3D"#ff0000"><b>79300 Bressuire</b></font></p><p style=
+=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;direction:ltr;word-bre=
+ak:normal"><font face=3D"tahoma, sans-serif" size=3D"2" color=3D"#ff0000"><=
+b>Tel: 01-11-11-11-11</b></font></p><p style=3D"margin-top:0pt;margin-botto=
+m:0pt;margin-left:0in;direction:ltr;word-break:normal"><font face=3D"tahoma=
+, sans-serif" size=3D"2" color=3D"#ff0000"><b><br></b></font></p><p style=
+=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;direction:ltr;word-bre=
+ak:normal"><span style=3D"color:black"><font face=3D"tahoma, sans-serif" si=
+ze=3D"2"><a href=3D"mailto:ddd@ddd.org" target=3D"_blank">deuxsevre=
+s@ffff.org</a></font></span></p><p style=3D"margin-top:0pt;margin-bottom:0p=
+t;margin-left:0in;direction:ltr;word-break:normal"><font color=3D"#000000">=
+<a href=3D"https://www.facebook.com/ffffdeuxsevres/" target=3D"_blank">http=
+s://www.facebook.com/ffffdeuxsevres/</a></font></p><p style=3D"margin-top:0=
+pt;margin-bottom:0pt;margin-left:0in;direction:ltr;word-break:normal"><font=
+ color=3D"#000000"><a href=3D"https://www.facebook.com/ffffPoitouCharentes/=
+" target=3D"_blank">https://www.facebook.com/ffffPoitouCharentes/</a></font=
+></p><p style=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;direction=
+:ltr;word-break:normal"><span style=3D"color:black"><font face=3D"tahoma, s=
+ans-serif" size=3D"2"><a href=3D"http://poitoucharentes.ffff.org/" target=
+=3D"_blank">http://poitoucharentes.ffff.org/</a></font></span></p><p style=
+=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;direction:ltr;word-bre=
+ak:normal"><span style=3D"color:black"><br></span></p><p style=3D"margin-to=
+p:0pt;margin-bottom:0pt;margin-left:0in;word-break:normal"><font color=3D"#=
+ff0000" face=3D"comic sans ms, sans-serif">Le ffff Deux s=C3=A8vres propose=
+ une mission de service civique! Contacte nous pour en savoir plus!=C2=A0</=
+font></p><p style=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;word-=
+break:normal"><font face=3D"comic sans ms, sans-serif" color=3D"#ff9900" st=
+yle=3D"font-size:12.8px"><b><br></b></font></p><p style=3D"margin-top:0pt;m=
+argin-bottom:0pt;margin-left:0in;word-break:normal"><font face=3D"comic san=
+s ms, sans-serif" style=3D"font-size:12.8px" color=3D"#38761d"><b><u>Samedi=
+ 14 Octobre :</u> Journ=C3=A9e Chantier Partcipatif=C2=A0</b></font><font f=
+ace=3D"arial, helvetica, sans-serif" color=3D"#000000"><a href=3D"https://w=
+ww.facebook.com/events/118167795528850" target=3D"_blank">https://www.faceb=
+ook.com/events/118167795528850</a></font></p><p style=3D"margin-top:0pt;mar=
+gin-bottom:0pt;margin-left:0in;word-break:normal"><br></p><p style=3D"margi=
+n-top:0pt;margin-bottom:0pt;margin-left:0in;word-break:normal"><u style=3D"=
+font-weight:bold;font-family:&quot;comic sans ms&quot;,sans-serif;color:rgb=
+(11,83,148)">21/22 Octobre :</u><font color=3D"#0b5394" style=3D"font-weigh=
+t:bold;font-family:&quot;comic sans ms&quot;,sans-serif"> Le Grand Rendez V=
+ous! Un camp le temps d&#39;un week-end pour tous les 12/17 ans! </font><fo=
+nt color=3D"#000000"><font face=3D"comic sans ms, sans-serif" style=3D"font=
+-weight:bold">=C2=A0</font><font face=3D"arial, helvetica, sans-serif"><a h=
+ref=3D"https://www.facebook.com/events/148224582445898" target=3D"_blank">h=
+ttps://www.facebook.com/events/148224582445898</a></font></font></p><p styl=
+e=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;word-break:normal"><f=
+ont color=3D"#000000"><font face=3D"arial, helvetica, sans-serif"><br></fon=
+t></font></p><p style=3D"margin-top:0pt;margin-bottom:0pt;margin-left:0in;w=
+ord-break:normal"><font face=3D"comic sans ms, sans-serif" color=3D"#000000=
+" style=3D"background-color:rgb(255,255,255)"><br></font></p></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div>
+</div>
+
+--001a113cf58ca25cd9055abafaa9--
+

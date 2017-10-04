@@ -9,15 +9,17 @@ from io import TextIOWrapper
 from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
 from difflib import SequenceMatcher
-from lxml import html
 import sys
 import re
 
 
 DEBUG = True
 DEBUG = False
-COMPARED_SIZE = 100
-re_strip = re.compile('\s+|\n+|\t+|-+|#+|https?://.*?[ \n"]|\[.*?\]|(<|=).*?>', re.MULTILINE)
+COMPARED_SIZE = 45
+re_light_decode = re.compile('=\n')
+re_junk_txt = re.compile('\*+|-+|#+|https?://[^ >]+|\[.*?\]|<.*?>')
+re_strip = re.compile('\s+|\n+|\t+')
+re_junk_html= re.compile('C2=A0|=09|(<|^).*?>|&nbsp;|=+')
 
 
 def debug(s):
@@ -57,8 +59,7 @@ def drop_alternatives(msg_str):
 				continue
 			elif part.get_content_type() == "text/plain":
 				kept_parts.append(part)
-				texts.append(part.get_payload(decode=True)
-						.decode('utf-8', 'ignore')[-10*COMPARED_SIZE:])
+				texts.append(part.get_payload()[-20*COMPARED_SIZE:])
 			elif part.get_content_type() == "text/html":
 				html_parts.append(part)
 			else:
@@ -68,22 +69,23 @@ def drop_alternatives(msg_str):
 			recompose_msg = False
 
 			for h in html_parts:
-				h_tags = html.fromstring(h.get_payload(decode=True)
-						.decode('utf-8', 'ignore')[-12*COMPARED_SIZE:])
-
-				for tag in h_tags.cssselect('style'):  # scripts in emails not yet seen
-					tag.drop_tree()
-
-				h_txt = h_tags.text_content()
-				h_txt = re.sub(re_strip, ' ', h_txt)
+				h_txt = h.get_payload()[-76*COMPARED_SIZE:]
+				h_txt = re.sub(re_light_decode, '', h_txt)
+				h_txt = re.sub(re_strip, '', h_txt)
+				h_txt = re.sub(re_junk_html, '', h_txt)
 				h_txt = h_txt[-COMPARED_SIZE:]
 
 				save_html = True
 
 				for i, t in enumerate(texts):
-					t = re.sub(re_strip, ' ', t)[-COMPARED_SIZE:]
+					t = re.sub(re_light_decode, '', t)
+					t = re.sub(re_junk_txt, '', t)
+					t = re.sub(re_strip, '', t)
+					t = t[-COMPARED_SIZE:]
+					# debug(t)
+
 					diff_ratio = SequenceMatcher(None, a=h_txt, b=t).quick_ratio()
-					debug(h_txt+'\t'+t+' '+str(diff_ratio)+' '+str(len(h_txt))+' '+str(len(t)))
+					debug(h_txt+' '+t+' '+str(round(diff_ratio, 2)))
 
 					if diff_ratio > 0.66:
 						save_html = False
@@ -105,7 +107,7 @@ def test_drop_alternatives(msg_str):
 	text/plain;
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n<body>A</body><style>body{color red;}</style>')
+	... '--\\nContent-Type: text/html;\\n<body>A</body><style><!--body{color red;}--></style>')
 	multipart/mixed;text/plain;
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
@@ -142,6 +144,12 @@ def test_drop_alternatives(msg_str):
 	>>> test_drop_alternatives(open('test_email/20171003.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
 	>>> test_drop_alternatives(open('test_email/20171003-2.eml', errors='ignore').read())
+	multipart/mixed;text/plain;
+	>>> test_drop_alternatives(open('test_email/20171004.eml', errors='ignore').read())
+	multipart/mixed;text/plain;text/plain;
+	>>> test_drop_alternatives(open('test_email/20171004-2.eml', errors='ignore').read())
+	multipart/mixed;text/plain;
+	>>> test_drop_alternatives(open('test_email/20171004-3.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
 	"""
 	for p in drop_alternatives(msg_str).walk():

@@ -1,0 +1,135 @@
+Return-Path: <Carmela4112@innovativeosolutions.com>
+Delivered-To: aaa@aaa.fr
+X-policyd-weight: NOT_IN_SBL_XBL_SPAMHAUS=-1.5 NOT_IN_SPAMCOP=-1.5 CL_IP_NE_HELO=1.5 (check from: .innovativeosolutions. - helo: .vip.april. - helo-domain: .april.)  FROM_NOT_FAILED_HELO(DOMAIN)=3 REV_IP_EQ_HELO_DOMAIN=-1.25; rate: 0.25
+Received: by bbb (fdm 1.9, account "ddd")
+	with pop3 (version=TLSv1/SSLv3 DHE-RSA-AES256-GCM-SHA384 256 bits)
+	Wed, 04 Oct 2017 08:07:02 +0200
+Received: from vip.april.org (virola.april.org [62.210.101.52])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by ccc.globenet.org (Postfix) with ESMTPS id 885A97655D
+	for <aaa@aaa.fr>; Wed,  4 Oct 2017 08:05:25 +0200 (CEST)
+Received: by vip.april.org (Postfix)
+	id 6A400100B; Wed,  4 Oct 2017 08:05:25 +0200 (CEST)
+Delivered-To: eee@eee.fr
+Received: from localhost (localhost [127.0.0.1])
+	by vip.april.org (Postfix) with ESMTP id 5050CF9C
+	for <eee@eee.fr>; Wed,  4 Oct 2017 08:05:25 +0200 (CEST)
+X-Virus-Scanned: Debian amavisd-new at april.org
+X-Spam-Flag: NO
+X-Spam-Score: 4.015
+X-Spam-Level: ****
+X-Spam-Status: No, score=4.015 tagged_above=-9999 required=5
+	tests=[BAYES_50=0.8, HELO_MISC_IP=0.25, HTML_MESSAGE=0.001,
+	PYZOR_CHECK=1.392, RDNS_NONE=0.793, SPF_NEUTRAL=0.779]
+	autolearn=no autolearn_force=no
+Received: from vip.april.org ([127.0.0.1])
+	by localhost (mail.april.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id jvUPqCevyeZw for <eee@eee.fr>;
+	Wed,  4 Oct 2017 08:05:24 +0200 (CEST)
+Received: from [37.231.163.45] (unknown [94.129.100.151])
+	by vip.april.org (Postfix) with ESMTP id A6FCFF78
+	for <eee@eee.fr>; Wed,  4 Oct 2017 08:05:23 +0200 (CEST)
+From: CARMELA ROYDON <Carmela4112@innovativeosolutions.com>
+To: "eee@eee.fr" <eee@eee.fr>
+Subject: Emailing - PDF073
+Thread-Topic: Emailing - PDF073
+Date: Wed, 04 Oct 2017 09:05:21 +0300
+Message-ID: <F262D361DC3CE91EB7D04B97E2325BC63CD942@A124EBF14B90E.innovativeosolutions.com>
+Accept-Language: en-US
+Content-Language: en-US
+Content-Type: multipart/mixed;
+	boundary="_004_A124EBF14B90E7B6C3AF2570A953156258F9EEA124EBF14B90Enamp_"
+MIME-Version: 1.0
+Content-Length: 2859
+
+--_004_A124EBF14B90E7B6C3AF2570A953156258F9EEA124EBF14B90Enamp_
+Content-Type: multipart/alternative;
+	boundary="_000_A124EBF14B90E7B6C3AF2570A953156258F9EEA124EBF14B90Enamp_"
+
+--_000_A124EBF14B90E7B6C3AF2570A953156258F9EEA124EBF14B90Enamp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Hi
+
+See attachment
+
+--_000_A124EBF14B90E7B6C3AF2570A953156258F9EEA124EBF14B90Enamp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Hi <o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">See attachment <o:p></o:p></p>
+</div>
+</body>
+</html>
+
+--_000_A124EBF14B90E7B6C3AF2570A953156258F9EEA124EBF14B90Enamp_--
+
+--_004_A124EBF14B90E7B6C3AF2570A953156258F9EEA124EBF14B90Enamp_
+Content-Type: message/external-body; access-type=x-mutt-deleted;
+	expiration="Wed, 4 Oct 2017 09:42:25 +0200"; length=5516
+
+Content-Type: application/octet-stream; name="PDF073.7z"
+Content-Description: PDF073.7z
+Content-Disposition: attachment; filename="PDF073.7z";
+	creation-date="Wed, 04 Oct 2017 09:05:21 +0300";
+	modification-date="Wed, 04 Oct 2017 09:05:21 +0300"
+Content-Transfer-Encoding: base64
+
+
+--_004_A124EBF14B90E7B6C3AF2570A953156258F9EEA124EBF14B90Enamp_--
+

@@ -11,16 +11,9 @@ moderately safe:
 
 * if the message is `multipart` and has a `text/plain` and a `text/html`
   part, keep the `text/plain` part only ;
-* if the situation is more complicated, drop `text/html` parts that are 50%
+* if the situation is more complicated, drop `text/html` parts that are 66%
   identical to `text/plain` parts ;
 * in all other cases keep the message intact.
-
-== Dependances
-
-* lxml
-* cssselect
-
-Can be installed via : `apt install python3-lxml python3-cssselect`
 
 == `fdm.conf` example :
 
@@ -30,6 +23,8 @@ Can be installed via : `apt install python3-lxml python3-cssselect`
 Some _doctests_ are included. You can run them with the following command in
 the cloned repository root:
 `python3 -m doctest drop_alternatives.py`
+
+No output means a success.
 
 == Author
 * 2010-2012: https://github.com/rbrito[rbrito] from a StackExchange https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970[thread].

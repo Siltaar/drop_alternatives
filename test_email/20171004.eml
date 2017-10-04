@@ -1,0 +1,259 @@
+Return-Path: <eee-owner@framalistes.org>
+Delivered-To: aaa@aaa.fr
+X-policyd-weight: using cached result; rate:hard: -6.1
+Authentication-Results: ccc.globenet.org; dkim=pass
+	reason="1024-bit key; insecure key"
+	header.d=framalistes.org header.i=eee-request@framalistes.org
+	header.b=FuSuL+Zg; dkim-adsp=pass; dkim-atps=neutral
+Received: by bbb (fdm 1.9, account "silt@d12s")
+	with pop3 (version=TLSv1/SSLv3 DHE-RSA-AES256-GCM-SHA384 256 bits)
+	Wed, 04 Oct 2017 04:42:02 +0200
+Received: from rod2.framasoft.org (rod2.framasoft.org [46.4.207.252])
+	(using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by ccc.globenet.org (Postfix) with ESMTPS id A36AF76043
+	for <aaa@aaa.fr>; Wed,  4 Oct 2017 04:41:34 +0200 (CEST)
+Received: by rod2.framasoft.org (Postfix, from userid 1006)
+	id C75141402F2; Wed,  4 Oct 2017 04:41:32 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=framalistes.org; h=
+	mime-version:in-reply-to:references:from:date:message-id:to
+	:subject:reply-to:sender:list-id:list-help:list-subscribe
+	:list-unsubscribe:list-post:list-owner:list-archive
+	:content-type; s=dkim; i=eee-request@framalistes.org;
+	 bh=P+trS36uX086N46fxNMS162kHdM=; b=FuSuL+ZgoCGN9iol8FulBQjl6G4a
+	lzBDSXq4YfhuhsQjy/yULKi7UzBB4050I0DwTJ1Tk4YN2024V7WJ0cnhejq+BZuG
+	asJ0fqIyJjsdwU7FSJXXQK1+rrnYAx9Os582jjCH4Yaq2EloIf1WRW9eYmNEzURJ
+	rahkT+LZtTyczIk=
+X-Original-To: eee@framalistes.org
+Delivered-To: eee@framalistes.org
+Received: from mail-qt0-x236.google.com (mail-qt0-x236.google.com [IPv6:2607:f8b0:400d:c0d::236])
+	by rod2.framasoft.org (Postfix) with ESMTPS id 40B771402B6
+	for <eee@framalistes.org>; Wed,  4 Oct 2017 04:41:25 +0200 (CEST)
+Received: by mail-qt0-x236.google.com with SMTP id i13so16691007qtc.11
+        for <eee@framalistes.org>; Tue, 03 Oct 2017 19:41:25 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=kgvRZn8yNkd/gd4H9vQaLm68r2j+DHNDuIwaVpGV0bU=;
+        b=khZ9oINQEvlPgi/TOcgiwFeaac3ap23vGK/L3g1tLAJHJSUFPWR6IAmaFFL6ceBHA9
+         Xo1OdTAtCxfKBW4QQPpx2vu03s528D+CanQ/jc/B2Mu8IRBsgCZt+XUHgRVRD23+VfuP
+         YnE0Cg4VK0omLY9hKaFfnqTJYpU78f0nzfyPVhopEyEgXgd7Y5xefkxdkNZ8QlLCt1oQ
+         syH9KSBJqEj8vJKygjKC5Y6dSaEULmFOGC9Giq2l9j8LE2lLvX3ho9wepHQuWbC1pmGT
+         ImPg4VmhT7Ju1jgkc48VLyAPY3Rz9fy4tAILIRb8S7+JMdA+A8/Z60ZfvTk8lH4iDBdy
+         nU+w==
+X-Gm-Message-State: AMCzsaWyJjvezf7HQIvhnsO9ZGKAOWriv5Y7vQvzkmOHZm2OB0iPzz54
+	JgnNlA7xQBdStjEzdnnctbC+hiZ5c9+Hg/K34QKorw==
+X-Google-Smtp-Source: AOwi7QCopCQG13rD+ljuBQ9273NUkxcZ3yKtUDMbxTrhn+qieNm2colEgaa/P59cKQVBWnxth36N3WUrThKvL61f9So=
+X-Received: by 10.200.28.123 with SMTP id j56mr26746780qtk.299.1507084883928;
+ Tue, 03 Oct 2017 19:41:23 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.12.135.176 with HTTP; Tue, 3 Oct 2017 19:41:23 -0700 (PDT)
+In-Reply-To: <CANwGRygn6Zg2wObO1SiezDMh4R-79J0r=QNkX+ECwraB2xUDyQ@mail.gmail.com>
+References: <CANwGRygn6Zg2wObO1SiezDMh4R-79J0r=QNkX+ECwraB2xUDyQ@mail.gmail.com>
+From: "\"fff .\"" (via eee Mailing List) <eee@framalistes.org>
+Date: Wed, 4 Oct 2017 04:41:23 +0200
+Message-ID: <CAHgWpVcjR=yAAFEadXc41RF-2o+KTo-BW4cXtXef2-zbDK5gcQ@mail.gmail.com>
+To: eee@framalistes.org
+Subject: [eee] Fwd: Ateliers sur l'Ecofestival
+Reply-To: "fff ." <fff@gmail.com>
+X-Loop: eee@framalistes.org
+X-Sequence: 68
+Errors-To: eee-owner@framalistes.org
+Precedence: list
+Precedence: bulk
+Sender: eee-request@framalistes.org
+X-no-archive: yes
+List-Id: <eee.framalistes.org>
+List-Help: <mailto:sympa@framalistes.org?subject=help>
+List-Subscribe: <mailto:sympa@framalistes.org?subject=subscribe%20eee>
+List-Unsubscribe: <mailto:sympa@framalistes.org?subject=unsubscribe%20eee>
+List-Post: <mailto:eee@framalistes.org>
+List-Owner: <mailto:eee-request@framalistes.org>
+List-Archive: <https://framalistes.org/sympa/arc/eee>
+Archived-At: <https://framalistes.org/sympa/arcsearch_id/eee/2017-10/CAHgWpVcjR%3DyAAFEadXc41RF-2o%2BKTo-BW4cXtXef2-zbDK5gcQ%40mail.gmail.com>
+Content-type: multipart/mixed; boundary="----------=_1507084891-1590-112479"
+X-Original-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=kgvRZn8yNkd/gd4H9vQaLm68r2j+DHNDuIwaVpGV0bU=;
+        b=AYstUhJA3pHu9WimiTa3ipFZBLN34iLcup1BUNcUmYgsOqA4q5LMxhWN/qXqsamRzY
+         K9/ICV+DgaEtwqTqKfLg4FylaLJHxiL3lrvrL/0UBjNlrblHuqxUJFU+ufm+zsKfuaX3
+         u0WeRGWEL4M4WalhNKZ05MT29j6f4beS3bBa4wxHyH+J9wW60FIZtl+vadhHRwJGgABc
+         S0heFQbvT1dLHbG1Ly1bPEwPVBHy+U3+irdLGNKSJWz41diYxJAHmOfjays1iDLPG2xo
+         VuazyLSUIeFHdt8QXpsjdmHgl6TPqI7L2ECJqmBvsF8r70FRvj/CH2eRs+f5Iqqek1t5
+         N0tw==
+X-Original-From: "fff ." <fff@gmail.com>
+Content-Length: 9374
+
+This is a multi-part message in MIME format...
+
+------------=_1507084891-1590-112479
+Content-Type: multipart/alternative; boundary="94eb2c03d4a0272cec055aaf8b9e"
+
+--94eb2c03d4a0272cec055aaf8b9e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+bonjour les amis du Repair-Caf=C3=A9
+je vous fais suivre le message de l'=C3=A9co-festival
+donc, j'y serai  vers les 13h55.
+on m'a demand=C3=A9 o=C3=B9 c'=C3=A9tait et donc, pour ceux qui ne savent p=
+as, c'est place
+du drapeau et au gps, au cas o=C3=B9, mettre avenue pierre mend=C3=A8s fran=
+ce =C3=A0
+parthenay et vous vous garez au-dessus des tivolis si vous venez de
+bressuire par exemple.
+mon t=C3=A8l est le 11 11 11 11 11
+bonne semaine et =C3=A0 bient=C3=B4t
+
+---------- Forwarded message ----------
+From: Ecofestival Parthenay <ecofestivalcamarche79@gmail.com>
+Date: 2017-10-03 17:12 GMT+02:00
+Subject: Ateliers sur l'Ecofestival
+To: Ecofestival Parthenay <ECOFESTIVALCAMARCHE79@gmail.com>
+
+
+Bonjour =C3=A0 tous,
+
+Ch=C3=A8res intervenantes, chers intervenants,
+
+Vous avez accept=C3=A9 d'animer des ateliers durant cette 8i=C3=A8me =C3=A9=
+dition de
+l'Ecofestival soit samedi prochain sur le village "Faites le vous-m=C3=AAme=
+ !"
+soit dimanche.
+Le weekend approche, les tivolis s'installent et il est temps pour moi de
+reprendre contact avec vous. Tout d'abord via ce mail pour vous donner les
+informations pratiques et ensuite par t=C3=A9l=C3=A9phone =C3=A0 partir de =
+demain pour
+faire le point avec chacun d'entre vous.
+Pour les intervenants du village, sachez que vous pourrez vous installer
+samedi =C3=A0 partir de 10h30 sous les tivolis pour ouverture au public =C3=
+=A0
+14h30 -G=C3=A9n=C3=A9ralement
+les visiteurs arrivent vers 14h00-
+Je vous enverrai le plan avec vos emplacements respectifs jeudi soir au
+plus tard.
+Pour ceux qui interviennent le dimanche, le contact t=C3=A9l=C3=A9phonique =
+de demain
+sera l'occasion de r=C3=A9pondre aux attentes et contraintes de chacun.
+
+Durant les prochains jours j'assurerai une permanence sous la yourte sur
+l'esplanade du Palais des congr=C3=A8s pour ceux qui souhaiteraient me
+rencontrer :  *mercredi* 10h -12h . 14h30 - 17h30 / *jeudi* 10h -12h et
+*vendredi* 10h-12h . 14h-18h30
+
+*Au plaisir de vous retrouver ou de vous rencontrer*
+
+*ggg GGG*
+Coordinatrice
+
+<http://www.eco-festival-ca-marche.fr>
+
+--94eb2c03d4a0272cec055aaf8b9e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">bonjour les amis du Repair-Caf=C3=A9<div>je vous fais suiv=
+re le message de l&#39;=C3=A9co-festival</div><div>donc, j&#39;y serai=C2=
+=A0 vers les 13h55.</div><div>on m&#39;a demand=C3=A9 o=C3=B9 c&#39;=C3=A9t=
+ait et donc, pour ceux qui ne savent pas, c&#39;est place du drapeau et au =
+gps, au cas o=C3=B9, mettre avenue pierre mend=C3=A8s france =C3=A0 parthen=
+ay et vous vous garez au-dessus des tivolis si vous venez de bressuire par =
+exemple.</div><div>mon t=C3=A8l est le 11 11 11 11 11</div><div>bonne semai=
+ne et =C3=A0 bient=C3=B4t</div><div><br><div class=3D"gmail_quote">--------=
+-- Forwarded message ----------<br>From: <b class=3D"gmail_sendername">Ecof=
+estival Parthenay</b> <span dir=3D"ltr">&lt;<a href=3D"mailto:ecofestivalca=
+marche79@gmail.com">ecofestivalcamarche79@gmail.com</a>&gt;</span><br>Date:=
+ 2017-10-03 17:12 GMT+02:00<br>Subject: Ateliers sur l&#39;Ecofestival<br>T=
+o: Ecofestival Parthenay &lt;<a href=3D"mailto:ECOFESTIVALCAMARCHE79@gmail.=
+com">ECOFESTIVALCAMARCHE79@gmail.com</a>&gt;<br><br><br><div dir=3D"ltr">Bo=
+njour =C3=A0 tous,<div><br></div><div style=3D"text-align:left">Ch=C3=A8res=
+ intervenantes, chers intervenants,</div><div style=3D"text-align:left"><br=
+></div><div style=3D"text-align:left">Vous avez accept=C3=A9 d&#39;animer d=
+es ateliers durant cette 8i=C3=A8me =C3=A9dition de l&#39;Ecofestival soit =
+samedi prochain sur le village &quot;Faites le vous-m=C3=AAme !&quot; soit =
+dimanche.=C2=A0</div><div style=3D"text-align:left">Le weekend approche, le=
+s tivolis s&#39;installent et il est temps pour moi de reprendre contact av=
+ec vous. Tout d&#39;abord via ce mail pour vous donner les informations pra=
+tiques et ensuite par t=C3=A9l=C3=A9phone =C3=A0 partir de demain pour fair=
+e le point avec chacun d&#39;entre vous.</div><div style=3D"text-align:left=
+">Pour les intervenants du village, sachez que vous pourrez vous installer =
+samedi =C3=A0 partir de 10h30 sous les tivolis pour ouverture au public =C3=
+=A0 14h30 -<font color=3D"#999999">G=C3=A9n=C3=A9ralement les visiteurs arr=
+ivent vers 14h00-</font></div><div style=3D"text-align:left">Je vous enverr=
+ai le plan avec vos emplacements respectifs jeudi soir au plus tard.</div><=
+div><div style=3D"text-align:left">Pour ceux qui interviennent le dimanche,=
+ le contact t=C3=A9l=C3=A9phonique de demain sera l&#39;occasion de r=C3=A9=
+pondre aux attentes et contraintes de chacun.</div><div style=3D"text-align=
+:left"><br></div><div style=3D"text-align:left">Durant les prochains jours =
+j&#39;assurerai une permanence sous la yourte sur l&#39;esplanade du Palais=
+ des congr=C3=A8s pour ceux qui souhaiteraient me rencontrer :=C2=A0 <b>mer=
+credi</b> 10h -12h . 14h30 - 17h30 / <b>jeudi</b> 10h -12h et <b>vendredi</=
+b> 10h-12h . 14h-18h30</div><div style=3D"text-align:left"><b><br></b></div=
+><div style=3D"text-align:left"><b>Au plaisir de vous retrouver ou de vous =
+rencontrer</b></div><div style=3D"text-align:left"><br></div><div><div clas=
+s=3D"m_-857403253273164557gmail_signature"><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
+<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><div><div><font size=3D"2"><span></span><span></span><b>ggg GGG</b=
+></font></div><div><font size=3D"2">Coordinatrice</font></div><div><br><a h=
+ref=3D"http://www.eco-festival-ca-marche.fr" target=3D"_blank"><span><font =
+size=3D"2"><img src=3D"https://docs.google.com/uc?export=3Ddownload&amp;id=
+=3D0BwUZstcaSaPbUUFhdkFTVnFHbVk&amp;revid=3D0BwUZstcaSaPbSXB4VHFsMmo4N25hck=
+tSdjlOTmxudXJKZEpzPQ" width=3D"200" height=3D"58"></font></span></a></div><=
+div><font size=3D"2"><br></font></div></div></div></div></div></div></div><=
+/div></div><blockquote style=3D"margin:0px 0px 0px 40px;border:none;padding=
+:0px"><blockquote style=3D"margin:0px 0px 0px 40px;border:none;padding:0px"=
+><blockquote style=3D"margin:0px 0px 0px 40px;border:none;padding:0px"><blo=
+ckquote style=3D"margin:0px 0px 0px 40px;border:none;padding:0px"><blockquo=
+te style=3D"margin:0px 0px 0px 40px;border:none;padding:0px"></blockquote><=
+/blockquote></blockquote></blockquote><blockquote style=3D"margin:0px 0px 0=
+px 40px;border:none;padding:0px"><blockquote style=3D"margin:0px 0px 0px 40=
+px;border:none;padding:0px"><blockquote style=3D"margin:0px 0px 0px 40px;bo=
+rder:none;padding:0px"><blockquote style=3D"margin:0px 0px 0px 40px;border:=
+none;padding:0px"><blockquote style=3D"margin:0px 0px 0px 40px;border:none;=
+padding:0px"><blockquote style=3D"margin:0px 0px 0px 40px;border:none;paddi=
+ng:0px"><div><div><div><div><div><div><div><div><div><div><div><div><div><d=
+iv><div><div><div><div><div><div><div><div><div><div><div><div><div><div><d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></blockquote></blockquote></blockquote></blockqu=
+ote></blockquote></blockquote></blockquote><div><div dir=3D"ltr"><div><div =
+dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"lt=
+r"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div d=
+ir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"l=
+tr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><di=
+v dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div><p st=
+yle=3D"line-height:normal"><span style=3D"font-size:12pt;font-family:&quot;=
+Times New Roman&quot;,serif"></span></p></div><div><span><span><span><span>=
+<font size=3D"1"></font></span></span></span></span></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div></div></div></div></div></div></div></div></div></div></div></=
+div></div></div></div></div></div></div></div></div>
+</div></div>
+</div><br></div></div>
+
+--94eb2c03d4a0272cec055aaf8b9e--
+
+------------=_1507084891-1590-112479
+Content-Type: text/plain; charset="UTF-8"
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+
+
+--
+Vous recevez cet email car vous êtes abonné·e à la liste "eee".
+Pour vous désabonner, merci de cliquer sur ce lien : https://framalistes.org/sympa/sigrequest/eee
+ou d'envoyer un mail à sympa@framalistes.org avec comme sujet "unsubscribe eee"
+
+You receive this email since you subscribed to the list "eee".
+To unsubscribe, click on following link: https://framalistes.org/sympa/sigrequest/eee
+or send an email to sympa@framalistes.org with the subject: unsubscribe eee
+
+------------=_1507084891-1590-112479--
+

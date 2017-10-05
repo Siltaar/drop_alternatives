@@ -9,6 +9,7 @@ from io import TextIOWrapper
 from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
 from difflib import SequenceMatcher
+from lxml import html
 import sys
 import re
 
@@ -16,10 +17,9 @@ import re
 DEBUG = True
 DEBUG = False
 COMPARED_SIZE = 45
-re_light_decode = re.compile('=\n')
 re_strip = re.compile('https?://[^ >]+|\s+|\n+|\t+')
 re_junk_txt = re.compile('\*+|-+|#+|\[.*?\]|<.*?>')
-re_junk_html= re.compile('C2=A0|=09|(<|^).*?>|&nbsp;|=+')
+re_junk_html= re.compile('(<|^).*?>|&nbsp;')
 
 
 def debug(s):
@@ -59,7 +59,8 @@ def drop_alternatives(msg_str):
 				continue
 			elif part.get_content_type() == "text/plain":
 				kept_parts.append(part)
-				texts.append(part.get_payload()[-20*COMPARED_SIZE:])
+				texts.append(
+					part.get_payload(decode=True).decode('utf-8', 'ignore')[-20*COMPARED_SIZE:])
 			elif part.get_content_type() == "text/html":
 				html_parts.append(part)
 			else:
@@ -69,8 +70,7 @@ def drop_alternatives(msg_str):
 			recompose_msg = False
 
 			for h in html_parts:
-				h_txt = h.get_payload()[-76*COMPARED_SIZE:]
-				h_txt = re.sub(re_light_decode, '', h_txt)
+				h_txt = h.get_payload(decode=True).decode('utf-8', 'ignore')[-76*COMPARED_SIZE:]
 				h_txt = re.sub(re_strip, '', h_txt)
 				# debug(h_txt)
 				h_txt = re.sub(re_junk_html, '', h_txt)
@@ -79,7 +79,6 @@ def drop_alternatives(msg_str):
 				save_html = True
 
 				for i, t in enumerate(texts):
-					t = re.sub(re_light_decode, '', t)
 					t = re.sub(re_strip, '', t)
 					t = re.sub(re_junk_txt, '', t)
 					t = t[-COMPARED_SIZE:]
@@ -152,6 +151,8 @@ def test_drop_alternatives(msg_str):
 	>>> test_drop_alternatives(open('test_email/20171004-3.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
 	>>> test_drop_alternatives(open('test_email/20171004-4.eml', errors='ignore').read())
+	multipart/mixed;text/plain;
+	>>> test_drop_alternatives(open('test_email/20171005.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
 	"""
 	for p in drop_alternatives(msg_str).walk():

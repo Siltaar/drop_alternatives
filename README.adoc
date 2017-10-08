@@ -11,7 +11,7 @@ moderately safe:
 
 * if the message is `multipart` and has a `text/plain` and a `text/html`
   part, keep the `text/plain` part only ;
-* if the situation is more complicated, drop `text/html` parts that are 66%
+* if the situation is more complicated, drop `text/html` parts that are 75%
   identical to `text/plain` parts ;
 * in all other cases keep the message intact.
 

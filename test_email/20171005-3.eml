@@ -1,0 +1,877 @@
+Return-Path: <b0444dac43fsdescarpentries=april.org@bounce.twitter.com>
+Delivered-To: aaa@aaa.fr
+X-policyd-weight: using cached result; rate: 0.25
+Authentication-Results: eee.globenet.org; dkim=pass
+	reason="2048-bit key; insecure key"
+	header.d=twitter.com header.i=@twitter.com header.b=YtHG2ste;
+	dkim-adsp=pass; dkim-atps=neutral
+Received: by ccc (fdm 1.9, account "ddd")
+	with pop3 (version=TLSv1/SSLv3 DHE-RSA-AES256-GCM-SHA384 256 bits)
+	Thu, 05 Oct 2017 09:14:02 +0200
+Received: from vip.april.org (virola.april.org [62.210.101.52])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by eee.globenet.org (Postfix) with ESMTPS id D468D76038
+	for <aaa@aaa.fr>; Thu,  5 Oct 2017 09:11:38 +0200 (CEST)
+Received: by vip.april.org (Postfix)
+	id 77E3C1177; Thu,  5 Oct 2017 09:11:38 +0200 (CEST)
+Delivered-To: bbb@bbb.fr
+Received: from localhost (localhost [127.0.0.1])
+	by vip.april.org (Postfix) with ESMTP id 5417E115C
+	for <bbb@bbb.fr>; Thu,  5 Oct 2017 09:11:38 +0200 (CEST)
+Authentication-Results: vip.april.org; dkim=pass
+	reason="2048-bit key; unprotected key"
+	header.d=twitter.com header.i=@twitter.com header.b=YtHG2ste;
+	dkim-adsp=pass; dkim-atps=neutral
+X-Virus-Scanned: Debian amavisd-new at april.org
+X-Spam-Flag: NO
+X-Spam-Score: -4.4
+X-Spam-Level:
+X-Spam-Status: No, score=-4.4 tagged_above=-9999 required=5
+	tests=[BAYES_50=0.8, DKIM_SIGNED=0.1, DKIM_VALID=-0.1,
+	DKIM_VALID_AU=-0.1, HTML_FONT_LOW_CONTRAST=0.001, HTML_MESSAGE=0.001,
+	RCVD_IN_DNSWL_MED=-2.3, RCVD_IN_MSPIKE_H2=-2.8,
+	RP_MATCHES_RCVD=-0.001, SPF_PASS=-0.001]
+	autolearn=ham autolearn_force=no
+Received: from vip.april.org ([127.0.0.1])
+	by localhost (mail.april.org [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id UQAL-68h_oy3 for <bbb@bbb.fr>;
+	Thu,  5 Oct 2017 09:11:37 +0200 (CEST)
+Received: from spring-chicken-at.twitter.com (spring-chicken-at.twitter.com [199.16.156.159])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by vip.april.org (Postfix) with ESMTPS id AE153112E
+	for <bbb@bbb.fr>; Thu,  5 Oct 2017 09:11:36 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=twitter.com;
+	s=dkim-201406; t=1507187495;
+	bh=Ck1APhusv94aBDzSOFBUd0OuVhWBGmmar/98atx2D1s=;
+	h=Date:From:To:Subject:MIME-Version:Content-Type:List-Unsubscribe:
+	 Message-ID;
+	b=YtHG2steFUVT7zL58vnTmH2CAQ/U6jKlpeBxxBIM8jo9t2zBhWSLFigDwsm8jznau
+	 RloAnjRHGramDVc7E22qtwQ2xboZKkaqZgJc85mTVX7gAUY83cDfmdXrG/4Ibsuzhn
+	 VJkbR8Hq6HsryanybWIbbb2CpY3eSAzVIIiFrDi8WIVaaJIJh0EA0gZx8ob0UqPmEs
+	 zqX+amFl4MWaoKo45JHxzIz1fG1tYXuqo4Xdvqa85z/+sBVxLy39GNCR29Hxv2FPkx
+	 FcpzHOkFKR8g/Zd8cNsqPcZhtndcYlgIMXxpdp6Bcdo+C15qUKFbYpZpneztNkIGCY
+	 0QS8at8EOwC0w==
+X-MSFBL: WVFhGwF1m/ecmFvSkjCrt98gUm/jeJ7Y+CQpSsT4L+g=|eyJnIjoiQnVsayIsInI
+	iOiJzZGVzY2FycGVudHJpZXNAYXByaWwub3JnIiwiYiI6ImF0bGEtYXhyLTM3LXN
+	yMS1CdWxrLjE3OSIsInUiOiJzZGVzY2FycGVudHJpZXNAYXByaWwub3JnQGlpZCM
+	jMDA5ZTk4MjExYWEzNDQxN2FkMmIyNTQyMTgxN2E2MGVAdXNiIyMzMEAyNDRAMTQ
+	xMTc4OTkxQDBAMTU3ZDExYzNmMzdiOTYyMzAyZTVkNzhhZmUzMzA5Y2JmYWVhOTU
+	3ZCJ9
+Date: Thu, 05 Oct 2017 07:11:35 +0000
+From: Twitter pour les pros <info@twitter.com>
+To: "@fff@mamot.fr" <bbb@bbb.fr>
+Subject: @ggg, comprenez votre audience
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_1190734_1586926425.1507187495448"
+List-Unsubscribe: <https://twitter.com/i/u?t=1&listunsub=t&cn=c21ic3NfYWNxX2Jsb2dfMjk%3D&sig=5d9c45146586461e8a64f842a4bea97d7c658223&iid=009e98211aa34417ad2b25421817a60e&uid=141178991&nid=244+26&usbid=30>
+Feedback-ID: 0040162518f58f41d1f0:0048183034d98b50d6cafc20b0614bf3ad:FR:twitterESP
+Precedence: Bulk
+Message-ID: <E6.7B.23557.72BD5D95@twitter.com>
+Content-Length: 38137
+
+------=_Part_1190734_1586926425.1507187495448
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Offrez =C3=A0 vos abonn=C3=A9s le contenu qu'ils recherchent
+
+Tester les Publicit=C3=A9s Twitter
+> https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fads.twitter.com%2Fstar=
+t%3Fref%3Dgl-em-tw%26utm_source%3Dlead-factory%26utm_medium%3Demail%26utm_t=
+erm%3Dtwitter_analytics%26utm_content%3D29%26utm_name%3Dacq-chain-2017&t=3D=
+1&cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&sig=3D7cc4d3359d5e3f85095d046ac9c19e1037e=
+54e1d&iid=3D009e98211aa34417ad2b25421817a60e&uid=3D141178991&nid=3D244+1555
+=3D
+
+
+Bonjour @ggg
+
+Nous voulons vous aider =C3=A0 exploiter tout le potentiel de Twitter, et l=
+es Publicit=C3=A9s Twitter amplifient vos efforts.
+                   =20
+Connaissez-vous bien votre audience ? Savez-vous ce qu'elle a envie de lire=
+ et ce qui suscitera son engagement ? Utilisez le tableau de bord Statistiq=
+ues Twitter pour le d=C3=A9couvrir.
+> https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fanalytics.twitter.com%=
+3Fref%3Dgl-em-tw%26utm_source%3Dlead-factory%26utm_medium%3Demail%26utm_ter=
+m%3Dtwitter_analytics%26utm_content%3D29%26utm_name%3Dacq-chain-2017&t=3D1&=
+cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&sig=3D56c036eb124dc7348b3ead1d4d8932f4f47d7=
+8c7&iid=3D009e98211aa34417ad2b25421817a60e&uid=3D141178991&nid=3D244+1556
+
+Les Statistiques Twitter vous offrent des informations tr=C3=A8s utiles pou=
+r votre prochaine campagne :
+
+Faites-vous une id=C3=A9e claire de ce qui int=C3=A9resse vos abonn=C3=A9s =
+en consultant votre Analyse de l'audience.
+> https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fanalytics.twitter.com%=
+3Fref%3Dgl-em-tw%26utm_source%3Dlead-factory%26utm_medium%3Demail%26utm_ter=
+m%3Dtwitter_analytics%26utm_content%3D29%26utm_name%3Dacq-chain-2017&t=3D1&=
+cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&sig=3D15a5c28e52c917a1928af0a5ca37d855d03e8=
+583&iid=3D009e98211aa34417ad2b25421817a60e&uid=3D141178991&nid=3D244+1557
+
+Cliquez sur Audiences, puis sur Demographics (Donn=C3=A9es d=C3=A9mographiq=
+ues) pour obtenir la r=C3=A9partition de votre audience par pays et r=C3=A9=
+gion. Vous conna=C3=AEtrez ainsi les fuseaux horaires de votre audience, ce=
+ qui vous aidera =C3=A0 d=C3=A9terminer le moment id=C3=A9al pour publier v=
+otre contenu.
+
+Tirez parti de contenu qui a fonctionn=C3=A9 dans le pass=C3=A9. Utilisez l=
+e tableau de bord Statistiques Twitter pour d=C3=A9terminer quels sont vos =
+Tweets les plus performants et d=C3=A9velopper du contenu similaire pour vo=
+s prochains Tweets.
+> https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fanalytics.twitter.com%=
+3Fref%3Dgl-em-tw%26utm_source%3Dlead-factory%26utm_medium%3Demail%26utm_ter=
+m%3Dtwitter_analytics%26utm_content%3D29%26utm_name%3Dacq-chain-2017&t=3D1&=
+cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&sig=3Df38b96ff9678057edca55cf02e1f914287fa0=
+2ee&iid=3D009e98211aa34417ad2b25421817a60e&uid=3D141178991&nid=3D244+1558
+
+
+
+Suivez-nous @TwitterBusiness pour profiter d'autres infos et actus.
+> https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%2FTwitterB=
+usiness%3Fref%3Dgl-em-tw%26utm_source%3Dlead-factory%26utm_medium%3Demail%2=
+6utm_term%3Dtwitter_analytics%26utm_content%3D29%26utm_name%3Dacq-chain-201=
+7&t=3D1&cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&sig=3Da8fc8147c891ae591dee368102f1a=
+56e8892fcb2&iid=3D009e98211aa34417ad2b25421817a60e&uid=3D141178991&nid=3D24=
+4+1560
+
+
+=3D
+
+Tester les Publicit=C3=A9s Twitter
+> https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fads.twitter.com%2Fstar=
+t%3Fref%3Dgl-em-tw%26utm_source%3Dlead-factory%26utm_medium%3Demail%26utm_t=
+erm%3Dtwitter_analytics%26utm_content%3D29%26utm_name%3Dacq-chain-2017%26la=
+ng%3Dfr&t=3D1&cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&sig=3D394fa6bd56c02c5fb8d29fe=
+539526e697e4a6677&iid=3D009e98211aa34417ad2b25421817a60e&uid=3D141178991&ni=
+d=3D244+1561
+
+=3D
+
+business.twitter.com
+> https://business.twitter.com
+
+@TwitterBusiness
+> https://twitter.com/TwitterBusiness
+
+Aide
+> http://business.twitter.com/help
+
+Se d=C3=A9sinscrire
+> https://twitter.com/i/u?t=3D1&amp;cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&amp;sig=
+=3Dac0502edb39ef21003e2d8ba88a9b639c3803e15&amp;iid=3D009e98211aa34417ad2b2=
+5421817a60e&amp;uid=3D141178991&amp;nid=3D244+26&amp;usbid=3D30
+
+Twitter International Company
+One Cumberland Place, Fenian Street
+Dublin 2, D02 AX07  IRELAND
+------=_Part_1190734_1586926425.1507187495448
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" />
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, minimum-scale=3D1.=
+0, maximum-scale=3D1.0, user-scalable=3D0" />
+<meta name=3D"apple-mobile-web-app-capable" content=3D"yes" />
+<style type=3D"text/css">
+
+@media only screen and (max-width: 320px) {
+
+td[class=3D"body-copy"]{
+padding-left: 5px !important;
+padding-right: 5px !important;
+font-size: 16px !important;
+line-height: 22px !important;
+font-weight: 400 !important;
+
+}
+
+td[class=3D"main-unit-height"]{
+height: 30px !important;
+}
+
+td[class=3D"gutter"]{
+width: 7px !important;
+}
+
+}
+
+
+@media only screen and (max-width: 420px) {
+
+img[class=3D"video-icon"]{
+width: 40px;
+}
+
+td[class=3D"h1"]{
+font-size:22px;
+line-height: 30px;
+}
+
+td[class=3D"h1_header"]{
+font-size:30px;
+line-height: 40px;
+}
+
+td[class=3D"h2"]{
+font-size:18px;
+line-height: 25px;
+}
+td[class=3D"body-copy"]{
+font-size:16px;
+line-height: 24px;
+}
+td[class=3D"sms-text"]{
+font-size: 22px !important;
+line-height: 32px !important;
+padding-left: 5px !important;
+padding-right: 5px !important;
+}
+td[class=3D"top-unit-height"]{
+height: 30px !important;
+}
+td[class=3D"sms-top-height"]{
+height: 40px !important;
+}
+td[class=3D"btm-unit-height"]{
+height: 50px !important;
+}
+td[class=3D"sms-btm-height"]{
+height: 50px !important;
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+table[class=3D"collapse"]{
+width:100% !important;
+}
+
+div[class=3D"collapse"]{
+width:100% !important;
+}
+
+td[class=3D"logo_space"]{
+height:12px !important;
+}
+
+span[class=3D"address"]{
+display:block !important;
+width:240px !important;
+line-height:18px !important;
+}
+
+img[class=3D"media"]{
+width: 100%;
+}
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+table[class=3D"collapse"]{
+width:100% !important;
+}
+
+div[class=3D"collapse"]{
+width:100% !important;
+}
+
+td[class=3D"logo_space"]{
+height:12px !important;
+}
+
+span[class=3D"address"]{
+display:block !important;
+width:240px !important;
+line-height:18px !important;
+}
+
+td[class=3D"cut"]{
+display:none !important;
+}
+td[class=3D"inline-space"]{
+width:25px !important;
+}
+td[class=3D"hash-margin"]{
+width: 5% !important;
+}
+td[class=3D"margins"]{
+width:5% !important;
+}
+td[class=3D"paragraph-text"] {
+text-align: center !important;
+}=09padding-bottom: 25px !important;
+}
+td[class=3D"space"]{
+height: 7px !important;
+}
+td[class=3D"space-420"]{
+height: 17px !important;
+}
+td[class=3D"space-480"]{
+height: 70px !important;
+}
+td[class=3D"cut-480"]{
+display:none !important;
+}
+td[class=3D"btm-unit-height2"]{
+height: 60px !important;
+}
+
+}
+
+
+</style>
+</head>
+<body bgcolor=3D"#f5f8fa" style=3D"margin: 0;padding: 0;-webkit-text-size-a=
+djust: 100%;-ms-text-size-adjust: 100%;margin:0;padding:0;-webkit-text-size=
+-adjust:100%;-ms-text-size-adjust:100%;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" bgco=
+lor=3D"#f5f8fa" style=3D"background-color: #f5f8fa;padding: 0;margin: 0;lin=
+e-height: 1px;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1=
+px;" class=3D"body_wrapper">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"padding: 0;margin: 0;line-height: 1px;font-si=
+ze: 1px;padding:0;margin:0;line-height:1px;font-size:1px;">
+<table class=3D"collapse" id=3D"header" align=3D"center" width=3D"680" styl=
+e=3D"width: 680px;padding: 0;margin: 0;line-height: 1px;font-size: 1px;padd=
+ing:0;margin:0;line-height:1px;font-size:1px;" bgcolor=3D"#ffffff" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td style=3D"min-width: 680px;height: 1;padding: 0;margin: 0;line-height: 1=
+px;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;" height=
+=3D"1" class=3D"cut"> <img src=3D"https://ea.twimg.com/email/self_serve/med=
+ia/spacer-1402696023930.png" height=3D"1" style=3D"min-width: 680px;height:=
+ 1px;margin: 0;padding: 0;display: block;-ms-interpolation-mode: bicubic;bo=
+rder: none;outline: none;margin:0;display:block;-ms-interpolation-mode:bicu=
+bic;border:none;outline:none;" /> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding: 0;margin: 0;line-height: 1px;font-si=
+ze: 1px;padding:0;margin:0;line-height:1px;font-size:1px;">
+<!--/////////////////// pre-header ///////////////////////////-->
+<table class=3D"collapse" id=3D"hide" align=3D"center" width=3D"680" style=
+=3D"width: 680px;padding: 0;margin: 0;line-height: 0;font-size: 0;display: =
+none;max-height: 0;padding:0;margin:0;line-height:1px;font-size:1px;" bgcol=
+or=3D"#f5f8fa" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td height=3D"25" style=3D"padding: 0;margin: 0;line-height: 1px;font-size:=
+ 1px;padding:0;margin:0;line-height:1px;font-size:1px;"></td>
+</tr>
+<tr align=3D"center">
+<td class=3D"preheader" style=3D"padding: 0px;margin: 0px;line-height: 12px=
+;font-size: 12px;font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;-webkit-font-smoothing: antialiased;color: #8899a6;font-=
+weight: normal;padding:0;margin:0;line-height:1px;font-size:1px;"> <a href=
+=3D"https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fads.twitter.com%2Fst=
+art%3Fref%3Dfr-em-tw-smbss_acq_blog_29-20171004-a%26utm_source%3Dlead-facto=
+ry%26utm_medium%3Demail%26utm_term%3Dtwitter_analytics%26utm_content%3D29%2=
+6utm_name%3Dacq-chain-2017%26lang%3Dfr&amp;t=3D1&amp;cn=3Dc21ic3NfYWNxX2Jsb=
+2dfMjk%3D&amp;sig=3Da5862937982528d2d4584ed179a857556ea17e7c&amp;iid=3D009e=
+98211aa34417ad2b25421817a60e&amp;uid=3D141178991&amp;nid=3D244+1553" style=
+=3D"text-decoration: none;border-style: none;border: 0;padding: 0px;margin:=
+ 0px;font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans=
+-serif;-webkit-font-smoothing: antialiased;color: #8899a6;font-size: 12px;f=
+ont-weight: normal;line-height: 12px;text-decoration:none;border-style:none=
+;border:0;padding:0;margin:0;">Cr&eacute;ez des Tweets percutants gr&acirc;=
+ce aux statistiques Twitter.</a> </td>
+</tr>
+<tr>
+<td height=3D"15" style=3D"padding: 0;margin: 0;line-height: 1px;font-size:=
+ 1px;padding:0;margin:0;line-height:1px;font-size:1px;"></td>
+</tr>
+</tbody>
+</table>
+<!--/////////////////// end pre-header///////////////////////////-->
+<!--/////////////////// hero image ///////////////////////////-->
+<table class=3D"collapse" id=3D"header" align=3D"center" width=3D"680" styl=
+e=3D"width: 680px; background-color: #A37CED;padding: 0;margin: 0;line-heig=
+ht: 1px;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;" b=
+gcolor=3D"#A37CED" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td style=3D"padding: 0;margin: 0;line-height: 1px;font-size: 1px;padding:0=
+;margin:0;line-height:1px;font-size:1px;"> <a href=3D"https://twitter.com/i=
+/redirect?url=3Dhttps%3A%2F%2Fbusiness.twitter.com%3Fref%3Dfr-em-tw-smbss_a=
+cq_blog_29-20171004-a%26utm_source%3Dlead-factory%26utm_medium%3Demail%26ut=
+m_term%3Dtwitter_analytics%26utm_content%3D29%26utm_name%3Dacq-chain-2017%2=
+6lang%3Dfr&amp;t=3D1&amp;cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&amp;sig=3D99d03e1b=
+4f880cbbe0221fa37bd70befb64a491b&amp;iid=3D009e98211aa34417ad2b25421817a60e=
+&amp;uid=3D141178991&amp;nid=3D244+1554" style=3D"text-decoration: none;bor=
+der-style: none;border: 0;padding: 0;margin: 0;text-decoration:none;border-=
+style:none;border:0;padding:0;margin:0;"> <img src=3D"https://ea.twimg.com/=
+email/self_serve/media/smbss_acq_blog_29-1505777475393.jpg" width=3D"680" c=
+lass=3D"media" alt=3D"Twitter for Business" style=3D"font-family: 'Helvetic=
+aNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;-webkit-font-smoothi=
+ng: antialiased;-webkit-text-size-adjust: none;color: #ffffff;font-size: 50=
+px;font-weight: 300;text-align: center;background-color: #A37CED;margin: 0p=
+x;padding: 0px;display: block;-ms-interpolation-mode: bicubic;border: none;=
+outline: none;margin:0;display:block;-ms-interpolation-mode:bicubic;border:=
+none;outline:none;" /> </a> </td>
+</tr>
+</tbody>
+</table>
+<!--/////////////////// end hero image ///////////////////////////-->
+<!--//////////////////// header copy //////////////////////////-->
+<table class=3D"collapse" align=3D"center" width=3D"680" style=3D"width: 68=
+0px;background-color: #ffffff;border-bottom: 2px solid #f5f8fa;padding: 0;m=
+argin: 0;line-height: 1px;font-size: 1px;padding:0;margin:0;line-height:1px=
+;font-size:1px;" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td width=3D"90" style=3D"width: 90px;padding: 0;margin: 0;line-height: 1px=
+;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;" class=3D=
+"margins"></td>
+<td align=3D"center" style=3D"padding: 0;margin: 0;line-height: 1px;font-si=
+ze: 1px;padding:0;margin:0;line-height:1px;font-size:1px;">
+<table width=3D"100%" align=3D"left" cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" class=3D"collapse" style=3D"padding: 0;margin: 0;line-height: 1p=
+x;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;">
+<tbody>
+<tr>
+<td height=3D"40" style=3D"height: 40px;padding: 0;margin: 0;line-height: 1=
+px;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;" class=
+=3D"main-unit-height"></td>
+</tr>
+<tr>
+<td class=3D"h2" style=3D"padding: 0;margin: 0;line-height: 52px;font-size:=
+ 48px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weig=
+ht: bold;color: #14171A;text-align: left;text-decoration: none;-webkit-font=
+-smoothing: antialiased;padding:0;margin:0;line-height:1px;font-size:1px;fo=
+nt-family:'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;f=
+ont-size:48px;line-height:52px;font-weight:bold;color:#14171A;text-align:le=
+ft;text-decoration:none;-webkit-font-smoothing:antialiased;"> Offrez &agrav=
+e; vos abonn&eacute;s le contenu qu'ils recherchent </td>
+</tr>
+<tr>
+<td height=3D"26" style=3D"height: 26px;padding: 0;margin: 0;line-height: 1=
+px;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;"></td>
+</tr>
+<!--*********** button ************-->
+<tr>
+<td align=3D"left" style=3D"padding: 0;margin: 0;line-height: 1px;font-size=
+: 1px;padding:0;margin:0;line-height:1px;font-size:1px;">
+<table style=3D"padding: 0;margin: 0;line-height: 1px;font-size: 1px;paddin=
+g:0;margin:0;line-height:1px;font-size:1px;">
+<tbody>
+<tr>
+<td style=3D"padding: 0;margin: 0;line-height: 1px;font-size: 1px;padding:0=
+;margin:0;line-height:1px;font-size:1px;">
+<!-- Tap, click, press, push the button -->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"padding: 0;margin: 0;line-height: 1px;font-size: 1px;padding:0;margin:=
+0;line-height:1px;font-size:1px;">
+<tbody>
+<tr>
+<td style=3D"padding: 0;margin: 0;line-height: 1px;font-size: 1px;padding:0=
+;margin:0;line-height:1px;font-size:1px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"padding: 1=
+1px 20px;margin: 0;line-height: 1px;font-size: 1px;padding:0;margin:0;line-=
+height:1px;font-size:1px;">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"bulletproof-btn-1" bgcolor=3D"#A37CED" style=
+=3D"padding: 11px 20px;margin: 0;line-height: 12px;font-size: 16px;-webkit-=
+border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;padding=
+:0;margin:0;line-height:1px;font-size:1px;-webkit-border-radius:100px;-moz-=
+border-radius:100px;border-radius:100px;line-height:12px;"> <a href=3D"http=
+s://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fads.twitter.com%2Fstart%3Fre=
+f%3Dfr-em-tw-smbss_acq_blog_29-20171004-a%26utm_source%3Dlead-factory%26utm=
+_medium%3Demail%26utm_term%3Dtwitter_analytics%26utm_content%3D29%26utm_nam=
+e%3Dacq-chain-2017&amp;t=3D1&amp;cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&amp;sig=3D=
+6c80099068ff3ed80cd1763ee6871634b80982dd&amp;iid=3D009e98211aa34417ad2b2542=
+1817a60e&amp;uid=3D141178991&amp;nid=3D244+1555" target=3D"_blank" class=3D=
+"bulletproof-btn-3" style=3D"color: #ffffff;text-decoration: none;border-st=
+yle: none;border: 1px solid #A37CED;padding: 11px 20px;margin: 0;font-size:=
+ 16px;font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, san=
+s-serif;-webkit-border-radius: 100px;-moz-border-radius: 100px;border-radiu=
+s: 100px;display: inline-block;font-weight: 600;-webkit-font-smoothing: ant=
+ialiased;text-decoration:none;border-style:none;border:0;padding:0;margin:0=
+;font-size:12px;font-family:'HelveticaNeue', 'Helvetica Neue', Helvetica, A=
+rial, sans-serif;color:#ffffff;text-decoration:none;-webkit-border-radius:1=
+00px;-moz-border-radius:100px;border-radius:100px;padding:11px 20px;border:=
+1px solid #A37CED;display:inline-block;font-weight:bold;-webkit-font-smooth=
+ing:antialiased;">
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> <strong>Tester les Pub=
+licit&eacute;s Twitter</strong>
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> </a></td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<!--*********** end button ************-->
+</tbody>
+</table> </td>
+<td width=3D"90" style=3D"width: 90px;padding: 0;margin: 0;line-height: 1px=
+;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;" class=3D=
+"margins"></td>
+</tr>
+<tr>
+<td colspan=3D"3" height=3D"70" style=3D"height: 70px;padding: 0;margin: 0;=
+line-height: 1px;font-size: 1px;padding:0;margin:0;line-height:1px;font-siz=
+e:1px;" class=3D"btm-unit-height2"></td>
+</tr>
+</tbody>
+</table>
+<!--//////////////////// end header copy //////////////////////////-->
+<!--//////////////////// body text //////////////////////////-->
+<table class=3D"collapse" align=3D"center" width=3D"680" style=3D"width: 68=
+0px;background-color: #ffffff;padding: 0;margin: 0;line-height: 1px;font-si=
+ze: 1px;padding:0;margin:0;line-height:1px;font-size:1px;" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td width=3D"90" style=3D"width: 90px;padding: 0;margin: 0;line-height: 1px=
+;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;" class=3D=
+"margins"></td>
+<td align=3D"center" style=3D"padding: 0;margin: 0;line-height: 1px;font-si=
+ze: 1px;padding:0;margin:0;line-height:1px;font-size:1px;">
+<table width=3D"100%" align=3D"left" cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" class=3D"collapse" style=3D"padding: 0;margin: 0;line-height: 1p=
+x;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;">
+<tbody>
+<tr>
+<td height=3D"40" style=3D"height: 40px;padding: 0;margin: 0;line-height: 1=
+px;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;" class=
+=3D"main-unit-height"></td>
+</tr>
+<tr>
+<td class=3D"h3" style=3D"font-family: 'HelveticaNeue', 'Helvetica Neue', H=
+elvetica, Arial, sans-serif; font-size: 16px; line-height: 24px; font-weigh=
+t: bold; color:#14171a; text-align: left; text-decoration: none; -webkit-fo=
+nt-smoothing: antialiased;padding:0;margin:0;line-height:1px;font-size:1px;=
+font-family:'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif=
+;font-size:16px;line-height:24px;font-weight:bold;color:#14171a;text-align:=
+left;text-decoration:none;-webkit-font-smoothing:antialiased;"> Bonjour @Si=
+ltaar </td>
+</tr>
+<tr>
+<td height=3D"25" style=3D"padding: 0;margin: 0;line-height: 1px;font-size:=
+ 1px;padding:0;margin:0;line-height:1px;font-size:1px;"></td>
+</tr>
+<!-- ***** recap ***** -->
+<tr align=3D"center">
+<td align=3D"center" class=3D"body-copy" style=3D"padding: 0;margin: 0;line=
+-height: 20px;font-size: 16px;font-family: 'HelveticaNeue', 'Helvetica Neue=
+', Helvetica, Arial, sans-serif;font-weight: 400;color: #14171a;text-align:=
+ left;text-decoration: none;-webkit-font-smoothing: antialiased;padding:0;m=
+argin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue', 'Helveti=
+ca Neue', Helvetica, Arial, sans-serif;font-size:16px;line-height:20px;font=
+-weight:400;color:#14171A;text-align:left;text-decoration:none;-webkit-font=
+-smoothing:antialiased;"> Nous voulons vous aider &agrave; exploiter tout l=
+e potentiel de Twitter, et les Publicit&eacute;s Twitter amplifient vos eff=
+orts.<br /><br /> Connaissez-vous bien votre audience ? Savez-vous ce qu'el=
+le a envie de lire et ce qui suscitera son engagement ? Utilisez le <a href=
+=3D"https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fanalytics.twitter.co=
+m%3Fref%3Dfr-em-tw-smbss_acq_blog_29-20171004-a%26utm_source%3Dlead-factory=
+%26utm_medium%3Demail%26utm_term%3Dtwitter_analytics%26utm_content%3D29%26u=
+tm_name%3Dacq-chain-2017&amp;t=3D1&amp;cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&amp;=
+sig=3D4f8117ef3bb2df175e8372749d90ae6781e5b81d&amp;iid=3D009e98211aa34417ad=
+2b25421817a60e&amp;uid=3D141178991&amp;nid=3D244+1556" style=3D"padding: 0;=
+margin: 0;line-height: 20px;font-size: 16px;font-family: 'HelveticaNeue', '=
+Helvetica Neue', Helvetica, Arial, sans-serif;color: #A37CED;text-align: le=
+ft;text-decoration: none;-webkit-font-smoothing: antialiased;text-decoratio=
+n:none;border-style:none;border:0;padding:0;margin:0;">tableau de bord Acti=
+vit&eacute; sur Twitter</a> pour le d&eacute;couvrir.<br /><br /> Les Stati=
+stiques Twitter vous offrent des informations tr&egrave;s utiles pour votre=
+ prochaine campagne :<br /><br /> <span style=3D"color: #A37CED;">=E2=80=A2=
+</span> Faites-vous une id&eacute;e claire de ce qui int&eacute;resse vos a=
+bonn&eacute;s en consultant votre <a href=3D"https://twitter.com/i/redirect=
+?url=3Dhttps%3A%2F%2Fanalytics.twitter.com%3Fref%3Dfr-em-tw-smbss_acq_blog_=
+29-20171004-a%26utm_source%3Dlead-factory%26utm_medium%3Demail%26utm_term%3=
+Dtwitter_analytics%26utm_content%3D29%26utm_name%3Dacq-chain-2017&amp;t=3D1=
+&amp;cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&amp;sig=3Dcfe333dfb5799fb4a926c5a289f3=
+b154d764a2ab&amp;iid=3D009e98211aa34417ad2b25421817a60e&amp;uid=3D141178991=
+&amp;nid=3D244+1557" style=3D"padding: 0;margin: 0;line-height: 20px;font-s=
+ize: 16px;font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial,=
+ sans-serif;color: #A37CED;text-align: left;text-decoration: none;-webkit-f=
+ont-smoothing: antialiased;text-decoration:none;border-style:none;border:0;=
+padding:0;margin:0;">Analyse de l'audience</a>.<br /><br /> <img src=3D"htt=
+ps://ea.twimg.com/email/self_serve/media/Audience_insights_dash_FR-15057774=
+64050.jpg" width=3D"100%" style=3D"margin:0;display:block;-ms-interpolation=
+-mode:bicubic;border:none;outline:none;" /><br /><br /> <span style=3D"colo=
+r: #A37CED;">=E2=80=A2</span> Cliquez sur Audiences, puis sur Demographics =
+(Donn&eacute;es d&eacute;mographiques) pour obtenir la r&eacute;partition d=
+e votre audience par pays et r&eacute;gion. Vous conna&icirc;trez ainsi les=
+ fuseaux horaires de votre audience, ce qui vous aidera &agrave; d&eacute;t=
+erminer le moment id&eacute;al pour publier votre contenu.<br /><br /> <img=
+ src=3D"https://ea.twimg.com/email/self_serve/media/demographics_dash_FR-15=
+05777464276.jpg" width=3D"100%" style=3D"margin:0;display:block;-ms-interpo=
+lation-mode:bicubic;border:none;outline:none;" /><br /><br /> <span style=
+=3D"color: #A37CED;">=E2=80=A2</span> Tirez parti de contenu qui a fonction=
+n&eacute; dans le pass&eacute;. Utilisez le <a href=3D"https://twitter.com/=
+i/redirect?url=3Dhttps%3A%2F%2Fanalytics.twitter.com%3Fref%3Dfr-em-tw-smbss=
+_acq_blog_29-20171004-a%26utm_source%3Dlead-factory%26utm_medium%3Demail%26=
+utm_term%3Dtwitter_analytics%26utm_content%3D29%26utm_name%3Dacq-chain-2017=
+&amp;t=3D1&amp;cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&amp;sig=3D878fb1cc9272ac030b=
+53efadc8076f2c34c8b0d7&amp;iid=3D009e98211aa34417ad2b25421817a60e&amp;uid=
+=3D141178991&amp;nid=3D244+1558" style=3D"padding: 0;margin: 0;line-height:=
+ 20px;font-size: 16px;font-family: 'HelveticaNeue', 'Helvetica Neue', Helve=
+tica, Arial, sans-serif;color: #A37CED;text-align: left;text-decoration: no=
+ne;-webkit-font-smoothing: antialiased;text-decoration:none;border-style:no=
+ne;border:0;padding:0;margin:0;">tableau de bord Statistiques Twitter</a> p=
+our d&eacute;terminer quels sont vos Tweets les plus performants et d&eacut=
+e;velopper du contenu similaire pour vos prochains Tweets.<br /><br /> <img=
+ src=3D"https://ea.twimg.com/email/self_serve/media/Tweet_activity_dash_FR-=
+1505777464147.jpg" width=3D"100%" style=3D"margin:0;display:block;-ms-inter=
+polation-mode:bicubic;border:none;outline:none;" /><br /><br /> Suivez-nous=
+ <a href=3D"https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Ftwitter.com%=
+2FTwitterBusiness%3Fref%3Dfr-em-tw-smbss_acq_blog_29-20171004-a%26utm_sourc=
+e%3Dlead-factory%26utm_medium%3Demail%26utm_term%3Dtwitter_analytics%26utm_=
+content%3D29%26utm_name%3Dacq-chain-2017&amp;t=3D1&amp;cn=3Dc21ic3NfYWNxX2J=
+sb2dfMjk%3D&amp;sig=3D60c2b6f43d3d2a1eeb7b8c5e6fd7dec80ac54cc5&amp;iid=3D00=
+9e98211aa34417ad2b25421817a60e&amp;uid=3D141178991&amp;nid=3D244+1560" styl=
+e=3D"padding: 0;margin: 0;line-height: 20px;font-size: 16px;font-family: 'H=
+elveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;color: #A37CE=
+D;text-align: left;text-decoration: none;-webkit-font-smoothing: antialiase=
+d;text-decoration:none;border-style:none;border:0;padding:0;margin:0;">@Twi=
+tterBusiness</a> pour d'autres infos et actus. </td>
+</tr>
+<tr align=3D"left">
+<td align=3D"center" class=3D"body-copy" style=3D"padding: 0;margin: 0;line=
+-height: 20px;font-size: 16px;font-family: 'HelveticaNeue', 'Helvetica Neue=
+', Helvetica, Arial, sans-serif;font-weight: 400;color: #657786;text-align:=
+ left;text-decoration: none;-webkit-font-smoothing: antialiased;padding:0;m=
+argin:0;line-height:1px;font-size:1px;font-family:'HelveticaNeue', 'Helveti=
+ca Neue', Helvetica, Arial, sans-serif;font-size:16px;line-height:20px;font=
+-weight:400;color:#14171A;text-align:left;text-decoration:none;-webkit-font=
+-smoothing:antialiased;"> </td>
+</tr>
+<!-- ***** end recap ***** -->
+<tr>
+<td height=3D"26" style=3D"height: 26px;padding: 0;margin: 0;line-height: 1=
+px;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;"></td>
+</tr>
+<!--*********** button ************-->
+<tr>
+<td align=3D"center" style=3D"padding: 0;margin: 0;line-height: 1px;font-si=
+ze: 1px;padding:0;margin:0;line-height:1px;font-size:1px;">
+<table style=3D"padding: 0;margin: 0;line-height: 1px;font-size: 1px;paddin=
+g:0;margin:0;line-height:1px;font-size:1px;">
+<tbody>
+<tr>
+<td style=3D"padding: 0;margin: 0;line-height: 1px;font-size: 1px;padding:0=
+;margin:0;line-height:1px;font-size:1px;">
+<!-- Tap, click, press, push the button -->
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D"padding: 0;margin: 0;line-height: 1px;font-size: 1px;padding:0;margin:=
+0;line-height:1px;font-size:1px;">
+<tbody>
+<tr>
+<td style=3D"padding: 0;margin: 0;line-height: 1px;font-size: 1px;padding:0=
+;margin:0;line-height:1px;font-size:1px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"padding: 0=
+;margin: 0;line-height: 1px;font-size: 1px;padding:0;margin:0;line-height:1=
+px;font-size:1px;">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"bulletproof-btn-1" bgcolor=3D"#A37CED" style=
+=3D"padding: 11px 20px;margin: 0;line-height: 12px;font-size: 16px;-webkit-=
+border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;padding=
+:0;margin:0;line-height:1px;font-size:1px;-webkit-border-radius:100px;-moz-=
+border-radius:100px;border-radius:100px;line-height:12px;"><a href=3D"https=
+://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fads.twitter.com%2Fstart%3Fref=
+%3Dfr-em-tw-smbss_acq_blog_29-20171004-a%26utm_source%3Dlead-factory%26utm_=
+medium%3Demail%26utm_term%3Dtwitter_analytics%26utm_content%3D29%26utm_name=
+%3Dacq-chain-2017%26lang%3Dfr&amp;t=3D1&amp;cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D=
+&amp;sig=3Db6ea85cc37d70856f0f789b69455730b57126309&amp;iid=3D009e98211aa34=
+417ad2b25421817a60e&amp;uid=3D141178991&amp;nid=3D244+1561" target=3D"_blan=
+k" class=3D"bulletproof-btn-3" style=3D"color: #ffffff;text-decoration: non=
+e;border-style: none;border: 1px solid #A37CED;padding: 11px 20px;margin: 0=
+;font-size: 16px;font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica,=
+ Arial, sans-serif;-webkit-border-radius: 100px;-moz-border-radius: 100px;b=
+order-radius: 100px;display: inline-block;font-weight: 600;-webkit-font-smo=
+othing: antialiased;text-decoration:none;border-style:none;border:0;padding=
+:0;margin:0;font-size:12px;font-family:'HelveticaNeue', 'Helvetica Neue', H=
+elvetica, Arial, sans-serif;color:#ffffff;text-decoration:none;-webkit-bord=
+er-radius:100px;-moz-border-radius:100px;border-radius:100px;padding:11px 2=
+0px;border:1px solid #A37CED;display:inline-block;font-weight:bold;-webkit-=
+font-smoothing:antialiased;">
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> <strong>Tester les Pub=
+licit&eacute;s Twitter</strong>
+<!--[if gte mso 11]>&nbsp; &nbsp; &nbsp;<![endif]--> </a></td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+</tbody>
+</table> </td>
+</tr>
+<!--*********** end button ************-->
+</tbody>
+</table> </td>
+<td width=3D"90" style=3D"width: 90px;padding: 0;margin: 0;line-height: 1px=
+;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;" class=3D=
+"margins"></td>
+</tr>
+<tr>
+<td colspan=3D"3" height=3D"70" style=3D"height: 70px;padding: 0;margin: 0;=
+line-height: 1px;font-size: 1px;padding:0;margin:0;line-height:1px;font-siz=
+e:1px;" class=3D"btm-unit-height2"></td>
+</tr>
+</tbody>
+</table>
+<!--//////////////////// end text //////////////////////////-->
+<!--///////////////////// footer /////////////////////-->
+<table class=3D"collapse" id=3D"footer" align=3D"center" width=3D"680" styl=
+e=3D"width: 680px;background-color: #A37CED;padding: 0;margin: 0;line-heigh=
+t: 1px;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td height=3D"30" style=3D"height: 30;padding: 0;margin: 0;line-height: 1px=
+;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;"></td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding: 0;margin: 0;line-height: 1px;font-si=
+ze: 1px;padding:0;margin:0;line-height:1px;font-size:1px;"> <span class=3D"=
+small-copy" style=3D"font-family: 'HelveticaNeue', 'Helvetica Neue', Helvet=
+ica, Arial, sans-serif;font-size: 12px;line-height: 16px;font-weight: bold;=
+color: #ffffff;text-align: left;text-decoration: none;-webkit-font-smoothin=
+g: antialiased;font-family:'HelveticaNeue', 'Helvetica Neue', Helvetica, Ar=
+ial, sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#ffff=
+ff;text-align:left;text-decoration:none;-webkit-font-smoothing:antialiased;=
+"> <a href=3D"https://twitter.com/i/redirect?url=3Dhttps%3A%2F%2Fbusiness.t=
+witter.com%3Fref%3Dfr-em-tw-smbss_acq_blog_29-20171004-a%26utm_source%3Dlea=
+d-factory%26utm_medium%3Demail%26utm_term%3Dtwitter_analytics%26utm_content=
+%3D29%26utm_name%3Dacq-chain-2017%26lang%3Dfr&amp;t=3D1&amp;cn=3Dc21ic3NfYW=
+NxX2Jsb2dfMjk%3D&amp;sig=3D3d4c3802912a61d942a7f3f81a31b12447e1168f&amp;iid=
+=3D009e98211aa34417ad2b25421817a60e&amp;uid=3D141178991&amp;nid=3D244+1562"=
+ class=3D"small-copy" style=3D"text-decoration: none;border-style: none;bor=
+der: 0;padding: 0;margin: 0;font-family: 'HelveticaNeue', 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px;font-weight=
+: 600;color: #ffffff;text-align: left;-webkit-font-smoothing: antialiased;t=
+ext-decoration:none;border-style:none;border:0;padding:0;margin:0;font-fami=
+ly:'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-siz=
+e:12px;line-height:16px;font-weight:400;color:#ffffff;text-align:left;text-=
+decoration:none;-webkit-font-smoothing:antialiased;font-family:'HelveticaNe=
+ue', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12px;line-hei=
+ght:16px;font-weight:600;color:#ffffff;text-align:left;text-decoration:none=
+;-webkit-font-smoothing:antialiased;">business.twitter.com</a>&nbsp;&nbsp;|=
+&nbsp; <a href=3D"https://twitter.com/i/redirect?url=3Dhttp%3A%2F%2Fwww.twi=
+tter.com%2FTwitterBusiness%3Fref%3Dfr-em-tw-smbss_acq_blog_29-20171004-a%26=
+utm_source%3Dlead-factory%26utm_medium%3Demail%26utm_term%3Dtwitter_analyti=
+cs%26utm_content%3D29%26utm_name%3Dacq-chain-2017&amp;t=3D1&amp;cn=3Dc21ic3=
+NfYWNxX2Jsb2dfMjk%3D&amp;sig=3D76a424165df7867de469c1ce20616208980e7074&amp=
+;iid=3D009e98211aa34417ad2b25421817a60e&amp;uid=3D141178991&amp;nid=3D244+1=
+678" class=3D"small-copy" style=3D"text-decoration: none;border-style: none=
+;border: 0;padding: 0;margin: 0;font-family: 'HelveticaNeue', 'Helvetica Ne=
+ue', Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px;font-we=
+ight: 600;color: #ffffff;text-align: left;-webkit-font-smoothing: antialias=
+ed;text-decoration:none;border-style:none;border:0;padding:0;margin:0;font-=
+family:'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;font=
+-size:12px;line-height:16px;font-weight:400;color:#ffffff;text-align:left;t=
+ext-decoration:none;-webkit-font-smoothing:antialiased;font-family:'Helveti=
+caNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12px;line=
+-height:16px;font-weight:600;color:#ffffff;text-align:left;text-decoration:=
+none;-webkit-font-smoothing:antialiased;">@TwitterBusiness</a>&nbsp;&nbsp;|=
+&nbsp; <a href=3D"https://twitter.com/i/redirect?url=3Dhttp%3A%2F%2Fbusines=
+s.twitter.com%2Fhelp%3Fref%3Dfr-em-tw-smbss_acq_blog_29-20171004-a%26utm_so=
+urce%3Dlead-factory%26utm_medium%3Demail%26utm_term%3Dtwitter_analytics%26u=
+tm_content%3D29%26utm_name%3Dacq-chain-2017&amp;t=3D1&amp;cn=3Dc21ic3NfYWNx=
+X2Jsb2dfMjk%3D&amp;sig=3D5acf70841df8f4912821aa1598c9eeffa4417cc6&amp;iid=
+=3D009e98211aa34417ad2b25421817a60e&amp;uid=3D141178991&amp;nid=3D244+1679"=
+ class=3D"small-copy" style=3D"text-decoration: none;border-style: none;bor=
+der: 0;padding: 0;margin: 0;font-family: 'HelveticaNeue', 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif;font-size: 12px;line-height: 16px;font-weight=
+: 600;color: #ffffff;text-align: left;-webkit-font-smoothing: antialiased;t=
+ext-decoration:none;border-style:none;border:0;padding:0;margin:0;font-fami=
+ly:'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-siz=
+e:12px;line-height:16px;font-weight:400;color:#ffffff;text-align:left;text-=
+decoration:none;-webkit-font-smoothing:antialiased;font-family:'HelveticaNe=
+ue', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12px;line-hei=
+ght:16px;font-weight:600;color:#ffffff;text-align:left;text-decoration:none=
+;-webkit-font-smoothing:antialiased;">Aide</a>&nbsp;&nbsp;|&nbsp; <a href=
+=3D"https://twitter.com/i/u?t=3D1&amp;cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&amp;s=
+ig=3Dac0502edb39ef21003e2d8ba88a9b639c3803e15&amp;iid=3D009e98211aa34417ad2=
+b25421817a60e&amp;uid=3D141178991&amp;nid=3D244+26&amp;usbid=3D30" class=3D=
+"small-copy" style=3D"text-decoration: none;border-style: none;border: 0;pa=
+dding: 0;margin: 0;font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetic=
+a, Arial, sans-serif;font-size: 12px;line-height: 16px;font-weight: 600;col=
+or: #ffffff;text-align: left;-webkit-font-smoothing: antialiased;text-decor=
+ation:none;border-style:none;border:0;padding:0;margin:0;font-family:'Helve=
+ticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12px;li=
+ne-height:16px;font-weight:400;color:#ffffff;text-align:left;text-decoratio=
+n:none;-webkit-font-smoothing:antialiased;font-family:'HelveticaNeue', 'Hel=
+vetica Neue', Helvetica, Arial, sans-serif;font-size:12px;line-height:16px;=
+font-weight:600;color:#ffffff;text-align:left;text-decoration:none;-webkit-=
+font-smoothing:antialiased;">Se d&eacute;sinscrire</a> </span> </td>
+</tr>
+<tr>
+<td height=3D"10" style=3D"height: 10px;line-height: 1px;font-size: 1px;pad=
+ding: 0;margin: 0;padding:0;margin:0;line-height:1px;font-size:1px;"></td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding: 0;margin: 0;line-height: 1px;font-si=
+ze: 1px;padding:0;margin:0;line-height:1px;font-size:1px;"> <span class=3D"=
+small-copy" style=3D"font-family: 'HelveticaNeue', 'Helvetica Neue', Helvet=
+ica, Arial, sans-serif;font-size: 12px;line-height: 16px;font-weight: 400;c=
+olor: #ffffff;text-align: left;text-decoration: none;-webkit-font-smoothing=
+: antialiased;font-family:'HelveticaNeue', 'Helvetica Neue', Helvetica, Ari=
+al, sans-serif;font-size:12px;line-height:16px;font-weight:400;color:#fffff=
+f;text-align:left;text-decoration:none;-webkit-font-smoothing:antialiased;"=
+> L'email s'adresse &agrave; @ggg </span> </td>
+</tr>
+<tr>
+<td height=3D"6" style=3D"height: 6px;line-height: 1px;font-size: 1px;paddi=
+ng: 0;margin: 0;padding:0;margin:0;line-height:1px;font-size:1px;"></td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding: 0;margin: 0;line-height: 1px;font-si=
+ze: 1px;padding:0;margin:0;line-height:1px;font-size:1px;"> <span class=3D"=
+address"> <p style=3D"text-decoration: none;border-style: none;border: 0;pa=
+dding: 0px;margin: 0px;font-family: 'HelveticaNeue', 'Helvetica Neue', Helv=
+etica, Arial, sans-serif;-webkit-font-smoothing: antialiased;color: #794BC4
+;font-size: 12px;font-weight: normal;line-height: 12px;cursor: default;"> T=
+witter, Inc. 1355 Market Street, Suite 900 San Francisco, CA 94103</p> </sp=
+an> </td>
+</tr>
+<tr>
+<td height=3D"40" style=3D"height: 40;padding: 0;margin: 0;line-height: 1px=
+;font-size: 1px;padding:0;margin:0;line-height:1px;font-size:1px;"></td>
+</tr>
+</tbody>
+</table>
+<!--///////////////////// end footer /////////////////////--> </td>
+</tr>
+</tbody>
+</table>
+<div style=3D"display:none; white-space:nowrap; font:15px courier; color:#f=
+fffff;">
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</div>
+<img width=3D"1" height=3D"1" style=3D"display: block;margin:0;display:bloc=
+k;-ms-interpolation-mode:bicubic;border:none;outline:none;" src=3D"https://=
+twitter.com/scribe/ibis?t=3D1&amp;cn=3Dc21ic3NfYWNxX2Jsb2dfMjk%3D&amp;iid=
+=3D009e98211aa34417ad2b25421817a60e&amp;uid=3D141178991&amp;nid=3D244+20" /=
+>
+</body>
+</html>
+
+------=_Part_1190734_1586926425.1507187495448--
+
+

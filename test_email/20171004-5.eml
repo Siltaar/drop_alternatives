@@ -1,0 +1,273 @@
+Content-Type: multipart/mixed; boundary="===============0889417295214493405=="
+MIME-Version: 1.0
+Return-Path: <info-owner@list.bbb.fr>
+Delivered-To: aaa@aaa.fr
+X-policyd-weight: using cached result; rate: -6.1
+Received: by ccc (fdm 1.9, account "ddd")
+	with pop3 (version=TLSv1/SSLv3 DHE-RSA-AES256-GCM-SHA384 256 bits)
+	Wed, 04 Oct 2017 18:14:02 +0200
+Received: from mail.bbb.fr (bbb.fr [212.47.240.167])
+	(using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+	(No client certificate requested)
+	by eee.globenet.org (Postfix) with ESMTPS id BD3507655E
+	for <aaa@aaa.fr>; Wed,  4 Oct 2017 18:08:23 +0200 (CEST)
+Received: by mail.bbb.fr (Postfix, from userid 120)
+	id 9EF1B2233C0; Wed,  4 Oct 2017 18:08:21 +0200 (CEST)
+Message-Id: <sympa.1507133301.18524.16@list.bbb.fr>
+Date: Wed, 04 Oct 2017 18:08:21 +0200
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Auto-Submitted: auto-forwarded
+From: info-request@list.bbb.fr
+To: info-editor@list.bbb.fr
+Subject: Message =?UTF-8?Q?=C3=A0_mod=C3=A9rer?= de
+ contact@annoncedirect.top pour la liste info
+Reply-To: sympa@list.bbb.fr
+Content-Length: 10182
+
+--===============0889417295214493405==
+Content-Disposition: inline
+Content-Type: TEXT/PLAIN; charset="UTF-8"
+Content-Transfer-Encoding: QUOTED-PRINTABLE
+MIME-Version: 1.0
+Content-length: 928
+
+Un nouveau message de contact@annoncedirect.top pour la liste info est arri=
+v=C3=A9.
+
+IL y a 1 messages en attente de mod=C3=A9ration.
+Pour consulter la liste des messages en attente, veuillez cliquer sur le li=
+en
+suivant : <http://list.bbb.fr/wws/ticket/39749188173145>
+
+Pour diffuser le message ci-joint dans la liste info :
+<mailto:sympa@list.bbb.fr?subject=3DDISTRIBUTE%20info%20e55101d55012897c=
+2e5858f8414e62ba>
+ou envoyez un e-mail =C3=A0 sympa@list.bbb.fr avec comme sujet :
+DISTRIBUTE info e55101d55012897c2e5858f8414e62ba
+
+Pour refuser sa diffusion (il sera effac=C3=A9), cliquez ici :
+<mailto:sympa@list.bbb.fr?subject=3DREJECT%20info%20e55101d55012897c2e58=
+58f8414e62ba>
+ou envoyez un e-mail =C3=A0 sympa@list.bbb.fr avec comme sujet :
+REJECT info e55101d55012897c2e5858f8414e62ba
+
+La documentation relative =C3=A0 la mod=C3=A9ration des messages :
+<http://list.bbb.fr/wws/help/admin#moderate>
+
+--===============0889417295214493405==
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
+Content-Disposition: inline
+
+X-Sympa-To: info@list.bbb.fr
+Return-Path: <Contact@annoncedirect.top>
+Received: from mail.bbb.fr (localhost [127.0.0.1])
+	by mail.bbb.fr (Postfix) with ESMTP id CD70522333C
+	for <info@bbb.fr>; Wed,  4 Oct 2017 18:08:14 +0200 (CEST)
+Authentication-Results: mail.bbb.fr; dkim=permerror
+	reason="key not found"
+	header.d=annoncedirect.top header.i=@annoncedirect.top
+	header.b=nRCMxdBX; dkim-adsp=none (unprotected policy);
+	dkim-atps=neutral
+X-Fuglu-Suspect: 9a9ffb4b0a9d4426a7629507cc5eb14d
+X-Fuglu-Spamstatus: NO
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on bbb.fr
+X-Spam-Status: No, score=3.3 required=5.0 tests=DKIM_SIGNED,HTML_IMAGE_ONLY_28,
+	HTML_MESSAGE,T_DKIM_INVALID,URIBL_BLOCKED,URIBL_DBL_SPAM autolearn=no
+	autolearn_force=no
+Received: from mail.info (tempo9.annonceurs.xyz [80.211.193.29])
+	by mail.bbb.fr (Postfix) with ESMTP
+	for <info@bbb.fr>; Wed,  4 Oct 2017 18:08:14 +0200 (CEST)
+Message-Id: <M7ZICOO-I3RJ-DFWM-EAR5-CBWPJMNNII4@annoncedirect.top>
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=annoncedirect.top;
+	s=default; t=1507133292;
+	bh=XQjKuqGnqLWRo1eAmph6ZZOvlIQTax500ozttdZIrbA=;
+	h=From:To:Subject:Date:From;
+	b=nRCMxdBX7465SfslOmTV2tNcOH3mSYpSOEIl82TQ/q0udZdlA20cGd/kCrXcsdur+
+	 rA4eeeiJpYcmGiVb37WJr+aQ9vwNVAE5qP/pn5d/N29MA81HVP6w+OHKlRJ5VTdjcY
+	 /qUIkfhAcAAoffU705+6/2aSXewB9hQwZmAs2mHA=
+Mime-Version: 1.0
+From: Contact <Contact@annoncedirect.top>
+To: info infoaabbbbb.fr <info@bbb.fr>
+Subject: =?utf-8?Q?Une_forte_d=C3=A9livrabilit=C3=A9_de_vos_envois_de_mails_avec_nos_Serveur_SMTP_illimit=C3=A9s?=
+Date: Wed, 4 Oct 2017 18:08:10 +0200
+X-Mailer: info Mail (2.143270654453.6)
+Content-Type: multipart/alternative; Boundary="--=BOUNDARY_104188_YWXN_XHAM_JGKL_ERRN"
+
+Ce message est au format MIME. Comme votre logiciel de courrier ne comprend
+pas ce format, tout ou partie de ce message pourrait être illisible.
+
+----=BOUNDARY_104188_YWXN_XHAM_JGKL_ERRN
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour
+
+Vous cherchez un serveur SMTP illimit=C3=A9 et d=C3=A9di=C3=A9 ...
+
+Alors nos serveurs vont vous int=C3=A9resser :
+
+Avantages
+
+A partir de 99 Euros HT** et sans engagement, nos serveurs d=E2=80=99envoi =
+SMTP vous offrent :
+
+Une quantit=C3=A9 d=E2=80=99envoi illimit=C3=A9e.
+5 IP tournantes (ou 10 en option).
+La protection de votre acc=C3=A9s Internet.
+Un =C3=A9tat quotidien des emails envoy=C3=A9s.*
+Un suivi de tous vos envois en direct.*
+Les statistiques de lecture en temps r=C3=A9el.*
+Les statistiques de clics en temps r=C3=A9el.*
+La gestion automatique des d=C3=A9sabonnements.*
+Pour une meilleure d=C3=A9livrabilit=C3=A9 : Gestion des champs SPF et DKIM
+
+Vous continuez =C3=A0 utiliser vos propres listes de contacts. Seul l=E2=80=
+=99envoi passe par nos serveurs.
+
+Vous pouvez, sans changer vos habitudes, utiliser nos serveurs d=E2=80=99en=
+vois SMTP =C3=A0 la place de ceux de votre op=C3=A9rateur actuel.
+
+Pour en savoir plus veuillez <a href=3D"http://www.annoncedirect.top/6ffsf_=
+lk-d/">cliquer ici</a> .
+
+Cordialement
+<a href=3D"http://www.routemail.date/6ffsf_lk-d/">
+<img border=3D0 src=3D"http://www.annoncedirect.top/tel4.jpg"></a>
+
+
+
+* Option tracking offerte pendant 6 mois, puis 9 euros HT/mois. N=C3=A9cess=
+ite l=E2=80=99utilisation du logiciel d=E2=80=99envoi =C2=AB Max Bulk Maile=
+r Pro=C2=BB.
+** Offre "nouveau client". En promo le premier mois. 129 Euros HT hors prom=
+otion.
+
+Pour vous retirer de la newsletter :<a href=3D"http://www.annoncedirect.top=
+/cou-u/143270654453">suivez ce lien</a><br>Un d=C3=A9lai de 48 heures peut =
+tre n=C3=A9cessaire, en raison des envois d=C3=A9j=C3=A0 programm=C3=A9s et=
+ en cours.
+Veuillez, s'il vous pla=C3=AEt, ne pas r=C3=A9pondre =C3=A0 ce courriel.
+Merci =C3=A0 vous.
+<IMG SRC=3D"http://www.annoncedirect.top/6ffsf_lk-e/?email=3Dinfoaabbbbb=
+.fr&client=3D029&record029abcdeinfoaabbbbb.frabcdeclic1" width=3D2 heigh=
+t=3D2>
+
+<a href=3D"infoaabbbbb.fr?info"></a>
+
+----=BOUNDARY_104188_YWXN_XHAM_JGKL_ERRN
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<title>HTML Message</title>
+<meta name=3Dgenerator content=3DAdvanced HTML parser v2>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<td>
+<font face=3D'Helvetica'>Bonjour<br><br>Vous cherchez un serveur SMTP illim=
+it=C3=A9 et d=C3=A9di=C3=A9 ...<br><br>Alors nos serveurs vont vous int=C3=
+=A9resse</font><font face=3D'Helvetica' color=3D'#997F00'><i>r</i></font><f=
+ont face=3D'Helvetica' color=3D'#FF0000'><b> :<br><br>Avantages</b></font><=
+font face=3D'Helvetica'><br><br>A partir de 99 Euros HT** et sans engagemen=
+t, nos serveurs d&#146;envoi SMTP vous offrent :<br><br>Une quantit=C3=A9 d=
+&#146;envoi illimit=C3=A9e.<br>5 IP tournantes (ou 10 en option).<br>La pro=
+tection de votre acc=C3=A9s Internet.<br>Un =C3=A9tat quotidien des emails =
+envoy=C3=A9s.*<br>Un suivi de tous vos envois en direct.* <br>Les statistiq=
+ues de lecture en temps r=C3=A9el.*<br>Les statistiques de clics en temps r=
+=C3=A9el.*<br>La gestion automatique des d=C3=A9sabonnements.*<br>Pour une =
+meilleure d=C3=A9livrabilit=C3=A9 : Gestion des champs SPF et DKIM<br><br>V=
+ous continuez =C3=A0 utiliser vos propres listes de contacts. Seul l&#146;e=
+nvoi passe par nos serveurs.<br><br>Vous pouvez, sans changer vos habitudes=
+, utiliser nos serveurs d&#146;envois SMTP =C3=A0 la place de ceux de votre=
+ op=C3=A9rateur actuel. <br><br>Pour en savoir plus veuillez <a href=3D"htt=
+p://www.annoncedirect.top/6ffsf_lk-d/">cliquer ici</a> .<br><br>Cordialemen=
+t<br><a href=3D"http://www.routemail.date/6ffsf_lk-d/"><br><img border=3D0 =
+src=3D"http://www.annoncedirect.top/tel4.jpg"></a>  <br><br>  <br><br></fon=
+t><font face=3D'Helvetica' size=3D'2'>* Option tracking offerte pendant 6 m=
+ois, puis 9 euros HT/mois. N=C3=A9cessite l&#146;utilisation du logiciel d&=
+#146;envoi &laquo; Max Bulk Mailer Pro&raquo;.<br>** Offre "nouveau client"=
+. En promo le premier mois. 129 Euros HT hors promotion.<br><br>Pour vous r=
+etirer de la newsletter :<a href=3D"http://www.annoncedirect.top/cou-u/1432=
+70654453">suivez ce lien</a><br>Un d=C3=A9lai de 48 heures peut =C3=AAtre n=
+=C3=A9cessaire, en raison des envois d=C3=A9j=C3=A0 programm=C3=A9s et en c=
+ours.<br>Veuillez, s'il vous pla=C3=AEt, ne pas r=C3=A9pondre =C3=A0 ce cou=
+rriel.<br>Merci =C3=A0 vous.<br><IMG SRC=3D"http://www.annoncedirect.top/6f=
+fsf_lk-e/?email=3Dinfoaabbbbb.fr&client=3D029&record029abcdeinfoaabbtili=
+ma.frabcdeclic1" width=3D2 height=3D2><br><br><a href=3D"infoaabbbbb.fr?=
+info"></a></font>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+----=BOUNDARY_104188_YWXN_XHAM_JGKL_ERRN--
+
+
+--===============0889417295214493405==
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour
+
+Vous cherchez un serveur SMTP illimit=C3=A9 et d=C3=A9di=C3=A9 ...
+
+Alors nos serveurs vont vous int=C3=A9resser :
+
+Avantages
+
+A partir de 99 Euros HT** et sans engagement, nos serveurs d=E2=80=99envoi =
+SMTP vous offrent :
+
+Une quantit=C3=A9 d=E2=80=99envoi illimit=C3=A9e.
+5 IP tournantes (ou 10 en option).
+La protection de votre acc=C3=A9s Internet.
+Un =C3=A9tat quotidien des emails envoy=C3=A9s.*
+Un suivi de tous vos envois en direct.*
+Les statistiques de lecture en temps r=C3=A9el.*
+Les statistiques de clics en temps r=C3=A9el.*
+La gestion automatique des d=C3=A9sabonnements.*
+Pour une meilleure d=C3=A9livrabilit=C3=A9 : Gestion des champs SPF et DKIM
+
+Vous continuez =C3=A0 utiliser vos propres listes de contacts. Seul l=E2=80=
+=99envoi passe par nos serveurs.
+
+Vous pouvez, sans changer vos habitudes, utiliser nos serveurs d=E2=80=99en=
+vois SMTP =C3=A0 la place de ceux de votre op=C3=A9rateur actuel.
+
+Pour en savoir plus veuillez <a href=3D"http://www.annoncedirect.top/6ffsf_=
+lk-d/">cliquer ici</a> .
+
+Cordialement
+<a href=3D"http://www.routemail.date/6ffsf_lk-d/">
+<img border=3D0 src=3D"http://www.annoncedirect.top/tel4.jpg"></a>
+
+
+
+* Option tracking offerte pendant 6 mois, puis 9 euros HT/mois. N=C3=A9cess=
+ite l=E2=80=99utilisation du logiciel d=E2=80=99envoi =C2=AB Max Bulk Maile=
+r Pro=C2=BB.
+** Offre "nouveau client". En promo le premier mois. 129 Euros HT hors prom=
+otion.
+
+Pour vous retirer de la newsletter :<a href=3D"http://www.annoncedirect.top=
+/cou-u/143270654453">suivez ce lien</a><br>Un d=C3=A9lai de 48 heures peut =
+tre n=C3=A9cessaire, en raison des envois d=C3=A9j=C3=A0 programm=C3=A9s et=
+ en cours.
+Veuillez, s'il vous pla=C3=AEt, ne pas r=C3=A9pondre =C3=A0 ce courriel.
+Merci =C3=A0 vous.
+<IMG SRC=3D"http://www.annoncedirect.top/6ffsf_lk-e/?email=3Dinfoaabbbbb=
+.fr&client=3D029&record029abcdeinfoaabbbbb.frabcdeclic1" width=3D2 heigh=
+t=3D2>
+
+<a href=3D"infoaabbbbb.fr?info"></a>
+
+--===============0889417295214493405==--
+

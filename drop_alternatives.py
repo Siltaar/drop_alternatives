@@ -9,22 +9,13 @@ from io import TextIOWrapper
 from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
 from difflib import SequenceMatcher
-from lxml import html
-import sys
-import re
+import sys, re, html
 
 
 DEBUG = True
 DEBUG = False
-COMPARED_SIZE = 45
-re_strip = re.compile('https?://[^ >]+|\s+|\n+|\t+')
-re_junk_txt = re.compile('\*+|-+|#+|\[.*?\]|<.*?>')
-re_junk_html= re.compile('(<|^).*?>|&nbsp;')
-
-
-def debug(s):
-    if DEBUG:
-        print(s, file=sys.stderr)
+COMPARED_SIZE = 128
+re_strip = re.compile('<style>.*?</style>|\[[^\]]+\]|<[^>]+>|https?://[^ \n><]+|[\s\n\-*#:>|]+', re.DOTALL)
 
 
 def compose_message(orig, parts):
@@ -47,22 +38,24 @@ def drop_alternatives(msg_str):
 	eml = Parser().parsestr(msg_str);
 
 	if eml.is_multipart():
-		debug(' ')
+		if DEBUG: print(' ', file=sys.stderr)
 		kept_parts = []
 		html_parts = []
 		texts = []
 
 		for part in eml.walk():
-			if (part.get_content_maintype() == "multipart" or
-				part.get_content_type() == "message/external-body" or
+			if ("multipart" in part.get_content_maintype().lower() or
+				"message" in part.get_content_type().lower() or
 				part.get_payload() == ""):
 				continue
-			elif part.get_content_type() == "text/plain":
-				kept_parts.append(part)
-				texts.append(
-					part.get_payload(decode=True).decode('utf-8', 'ignore')[-20*COMPARED_SIZE:])
-			elif part.get_content_type() == "text/html":
+			elif 'html' in part.get_content_type().lower():
 				html_parts.append(part)
+			elif 'text' in part.get_content_type().lower():
+				kept_parts.append(part)
+				t = part.get_payload(decode=True).decode('utf-8', 'ignore')[-10*COMPARED_SIZE:]
+				t = re.sub(re_strip, '', t)
+				t = t[-COMPARED_SIZE:]
+				texts.append(t)
 			else:
 				kept_parts.append(part)
 
@@ -70,26 +63,22 @@ def drop_alternatives(msg_str):
 			recompose_msg = False
 
 			for h in html_parts:
-				h_txt = h.get_payload(decode=True).decode('utf-8', 'ignore')[-76*COMPARED_SIZE:]
+				h_txt = h.get_payload(decode=True).decode('utf-8', 'ignore')[-50*COMPARED_SIZE:]
+				h_txt = html.unescape(h_txt)
 				h_txt = re.sub(re_strip, '', h_txt)
-				# debug(h_txt)
-				h_txt = re.sub(re_junk_html, '', h_txt)
 				h_txt = h_txt[-COMPARED_SIZE:]
 
 				save_html = True
 
 				for i, t in enumerate(texts):
-					t = re.sub(re_strip, '', t)
-					t = re.sub(re_junk_txt, '', t)
-					t = t[-COMPARED_SIZE:]
-
 					diff_ratio = SequenceMatcher(None, a=h_txt, b=t).quick_ratio()
-					debug(h_txt+' '+t+' '+str(round(diff_ratio, 2)))
+					if DEBUG: print(h_txt+' '+t+' '+str(round(diff_ratio, 2)), file=sys.stderr)
 
-					if diff_ratio > 0.66:
+					if diff_ratio > 0.75:
 						save_html = False
 						recompose_msg = True
 						del texts[i]  # avoid comparing again with this text
+						break
 
 				if save_html:
 					kept_parts.append(h)
@@ -152,7 +141,11 @@ def test_drop_alternatives(msg_str):
 	multipart/mixed;text/plain;
 	>>> test_drop_alternatives(open('test_email/20171004-4.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
+	>>> test_drop_alternatives(open('test_email/20171004-5.eml', errors='ignore').read())
+	multipart/mixed;text/plain;text/plain;text/plain;
 	>>> test_drop_alternatives(open('test_email/20171005.eml', errors='ignore').read())
+	multipart/mixed;text/plain;
+	>>> test_drop_alternatives(open('test_email/20171005-3.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
 	"""
 	for p in drop_alternatives(msg_str).walk():

@@ -20,15 +20,15 @@ moderately safe:
 `match all action rewrite "python3 drop_alternatives.py" continue`
 
 == Tests
-Some _doctests_ are included. You can run them with the following command in
+Around 20 _doctests_ are included. You can run them with the following command in
 the cloned repository root:
 `python3 -m doctest drop_alternatives.py`
 
 No output means a success.
 
 == Author
-* 2010-2012: https://github.com/rbrito[rbrito] from a StackExchange https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970[thread].
 * 2017: Simon Descarpentries
+* 2010-2012: https://github.com/rbrito[rbrito] from a StackExchange https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970[thread].
 
 == Ressources
 Github repository : https://github.com/Siltaar/drop_alternatives

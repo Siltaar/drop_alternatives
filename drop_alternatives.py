@@ -44,15 +44,16 @@ def drop_alternatives(msg_str):
 		texts = []
 
 		for part in eml.walk():
-			if ("multipart" in part.get_content_maintype().lower() or
-				"message" in part.get_content_type().lower() or
+			if ("multipart" in part.get_content_maintype() or
+				"message" in part.get_content_type() or
 				part.get_payload() == ""):
 				continue
-			elif 'html' in part.get_content_type().lower():
+			elif 'html' in part.get_content_type():
 				html_parts.append(part)
-			elif 'text' in part.get_content_type().lower():
+			elif 'text' in part.get_content_type():
 				kept_parts.append(part)
-				t = part.get_payload(decode=True).decode('utf-8', 'ignore')[-10*COMPARED_SIZE:]
+				t = part.get_payload(decode=True).decode(
+					part.get_content_charset() or 'utf-8', 'ignore')[-10*COMPARED_SIZE:]
 				t = re.sub(re_strip, '', t)
 				t = t[-COMPARED_SIZE:]
 				texts.append(t)
@@ -63,7 +64,8 @@ def drop_alternatives(msg_str):
 			recompose_msg = False
 
 			for h in html_parts:
-				h_txt = h.get_payload(decode=True).decode('utf-8', 'ignore')[-50*COMPARED_SIZE:]
+				h_txt = h.get_payload(decode=True).decode(
+					part.get_content_charset() or 'utf-8', 'ignore')[-50*COMPARED_SIZE:]
 				h_txt = html.unescape(h_txt)
 				h_txt = re.sub(re_strip, '', h_txt)
 				h_txt = h_txt[-COMPARED_SIZE:]
@@ -150,7 +152,6 @@ def test_drop_alternatives(msg_str):
 	"""
 	for p in drop_alternatives(msg_str).walk():
 		print(p.get_content_type(), end=';')
-		# debug(str(p.get_payload()))
 	print('')
 
 

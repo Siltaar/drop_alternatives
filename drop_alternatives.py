@@ -12,10 +12,9 @@ from difflib import SequenceMatcher
 import sys, re, html
 
 
-DEBUG = True
-DEBUG = False
-COMPARED_SIZE = 128
-re_strip = re.compile('<style>.*?</style>|\[[^\]]+\]|<[^>]+>|https?://[^ \n><]+|[\s\n\-*#:>|]+', re.DOTALL)
+DEBUG = 0
+COMPARED_SIZE = 90
+re_strip = re.compile('<(title|style.*?)>.*?</[^>]+|<[^>]+|https?://[^ >]+|[\s\n\-*#:>|]+', re.DOTALL)
 
 
 def compose_message(orig, parts):
@@ -53,9 +52,9 @@ def drop_alternatives(msg_str):
 			elif 'text' in part.get_content_type():
 				kept_parts.append(part)
 				t = part.get_payload(decode=True).decode(
-					part.get_content_charset() or 'utf-8', 'ignore')[-10*COMPARED_SIZE:]
+					part.get_content_charset() or 'utf-8', 'ignore')[:5*COMPARED_SIZE]
 				t = re.sub(re_strip, '', t)
-				t = t[-COMPARED_SIZE:]
+				t = t[:COMPARED_SIZE]
 				texts.append(t)
 			else:
 				kept_parts.append(part)
@@ -65,15 +64,15 @@ def drop_alternatives(msg_str):
 
 			for h in html_parts:
 				h_txt = h.get_payload(decode=True).decode(
-					part.get_content_charset() or 'utf-8', 'ignore')[-50*COMPARED_SIZE:]
+						part.get_content_charset() or 'utf-8', 'ignore')[:300*COMPARED_SIZE]
 				h_txt = html.unescape(h_txt)
 				h_txt = re.sub(re_strip, '', h_txt)
-				h_txt = h_txt[-COMPARED_SIZE:]
+				h_txt = h_txt[:COMPARED_SIZE]
 
 				save_html = True
 
 				for i, t in enumerate(texts):
-					diff_ratio = SequenceMatcher(None, a=h_txt, b=t).quick_ratio()
+					diff_ratio = SequenceMatcher(None,a=h_txt, b=t).quick_ratio()
 					if DEBUG: print(h_txt+' '+t+' '+str(round(diff_ratio, 2)), file=sys.stderr)
 
 					if diff_ratio > 0.75:
@@ -148,6 +147,8 @@ def test_drop_alternatives(msg_str):
 	>>> test_drop_alternatives(open('test_email/20171005.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
 	>>> test_drop_alternatives(open('test_email/20171005-3.eml', errors='ignore').read())
+	multipart/mixed;text/plain;
+	>>> test_drop_alternatives(open('test_email/20171011.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
 	"""
 	for p in drop_alternatives(msg_str).walk():

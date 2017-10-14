@@ -52,7 +52,7 @@ def drop_alternatives(msg_str):
 			elif 'text' in part.get_content_type():
 				kept_parts.append(part)
 				t = part.get_payload(decode=True).decode(
-					part.get_content_charset() or 'utf-8', 'ignore')[:5*COMPARED_SIZE]
+					get_content_charset(part), 'ignore')[:5*COMPARED_SIZE]
 				t = re.sub(re_strip, '', t)
 				t = t[:COMPARED_SIZE]
 				texts.append(t)
@@ -64,7 +64,7 @@ def drop_alternatives(msg_str):
 
 			for h in html_parts:
 				h_txt = h.get_payload(decode=True).decode(
-						part.get_content_charset() or 'utf-8', 'ignore')[:300*COMPARED_SIZE]
+					get_content_charset(part), 'ignore')[:300*COMPARED_SIZE]
 				h_txt = html.unescape(h_txt)
 				h_txt = re.sub(re_strip, '', h_txt)
 				h_txt = h_txt[:COMPARED_SIZE]
@@ -88,6 +88,15 @@ def drop_alternatives(msg_str):
 				return compose_message(eml, kept_parts)
 
 	return eml
+
+
+def get_content_charset(part):
+	c = part.get_content_charset('utf8')
+
+	if 'cp' in c:
+		c = c.replace('-', '')  # prevents LookupError: unknown encoding: cp-850
+
+	return c
 
 
 def test_drop_alternatives(msg_str):

@@ -91,10 +91,16 @@ def drop_alternatives(msg_str):
 
 
 def get_content_charset(part):
-	c = part.get_content_charset('utf8')
+	c = part.get_content_charset('utf-8')
 
 	if 'cp' in c:
 		c = c.replace('-', '')  # prevents LookupError: unknown encoding: cp-850
+
+	try:  # tests if encoding is valid for Python
+		''.encode(c)
+	except LookupError:
+		print('Unknown encoding %s' % c, file=sys.stderr)
+		return 'utf-8'
 
 	return c
 

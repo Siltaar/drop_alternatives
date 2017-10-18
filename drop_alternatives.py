@@ -13,8 +13,10 @@ import sys, re, html
 
 
 DEBUG = 0
-COMPARED_SIZE = 90
-re_strip = re.compile('<(title|style.*?)>.*?</[^>]+|<[^>]+|https?://[^ >]+|[\s\n\-*#:>|]+', re.DOTALL)
+COMPARED_SIZE = 256
+re_strip = re.compile(
+	'<(title|style.*?)>.*?</[^>]+|<[^>]+|https?://[^ >]+|\[[^\]+]\]|[\s\n\-*#:>|=\.]+',
+	re.DOTALL)
 
 
 def compose_message(orig, parts):
@@ -37,7 +39,6 @@ def drop_alternatives(msg_str):
 	eml = Parser().parsestr(msg_str);
 
 	if eml.is_multipart():
-		if DEBUG: print(' ', file=sys.stderr)
 		kept_parts = []
 		html_parts = []
 		texts = []
@@ -52,7 +53,7 @@ def drop_alternatives(msg_str):
 			elif 'text' in part.get_content_type():
 				kept_parts.append(part)
 				t = part.get_payload(decode=True).decode(
-					get_content_charset(part), 'ignore')[:5*COMPARED_SIZE]
+					get_content_charset(part), 'ignore')[:3*COMPARED_SIZE]
 				t = re.sub(re_strip, '', t)
 				t = t[:COMPARED_SIZE]
 				texts.append(t)
@@ -64,18 +65,19 @@ def drop_alternatives(msg_str):
 
 			for h in html_parts:
 				h_txt = h.get_payload(decode=True).decode(
-					get_content_charset(part), 'ignore')[:300*COMPARED_SIZE]
-				h_txt = html.unescape(h_txt)
+					get_content_charset(part), 'ignore')[:110*COMPARED_SIZE]
+				h_txt = html.unescape(h_txt)  # convert entities to text
 				h_txt = re.sub(re_strip, '', h_txt)
 				h_txt = h_txt[:COMPARED_SIZE]
 
 				save_html = True
 
 				for i, t in enumerate(texts):
-					diff_ratio = SequenceMatcher(None,a=h_txt, b=t).quick_ratio()
-					if DEBUG: print(h_txt+' '+t+' '+str(round(diff_ratio, 2)), file=sys.stderr)
+					diff_ratio = SequenceMatcher(None,a=h_txt, b=t).ratio()
+					if DEBUG:
+						print('\nH '+h_txt+'\nT '+t+' '+str(diff_ratio), file=sys.stderr, end=V)
 
-					if diff_ratio > 0.75:
+					if diff_ratio > 0.50:
 						save_html = False
 						recompose_msg = True
 						del texts[i]  # avoid comparing again with this text
@@ -85,6 +87,7 @@ def drop_alternatives(msg_str):
 					kept_parts.append(h)
 
 			if recompose_msg:
+				if DEBUG: print(' .', file=sys.stderr, end='')
 				return compose_message(eml, kept_parts)
 
 	return eml
@@ -165,10 +168,25 @@ def test_drop_alternatives(msg_str):
 	multipart/mixed;text/plain;
 	>>> test_drop_alternatives(open('test_email/20171011.eml', errors='ignore').read())
 	multipart/mixed;text/plain;
+	>>> test_drop_alternatives(open('test_email/20171018.eml', errors='ignore').read())
+	multipart/mixed;text/plain;
 	"""
 	for p in drop_alternatives(msg_str).walk():
 		print(p.get_content_type(), end=';')
 	print('')
+
+
+def test_with_bad_encoding(msg_str):
+	"""
+	>>> test_with_bad_encoding(open('test_email/20171017.eml', errors='ignore').read())
+	multipart/mixed;text/plain;
+	"""
+	for p in drop_alternatives(msg_str).walk():
+		print(p.get_content_type(), end=';')
+	print('')
+
+
+V = ''
 
 
 if __name__ == "__main__":

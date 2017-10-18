@@ -9,10 +9,7 @@ https://github.com/nicm/fdm[FDM] or some other mail delivery agent.
 It tries to be moderately conservative and only act when things are
 moderately safe:
 
-* if the message is `multipart` and has a `text/plain` and a `text/html`
-  part, keep the `text/plain` part only ;
-* if the situation is more complicated, drop `text/html` parts that are 75%
-  identical to `text/plain` parts ;
+* drops the `text/html` parts that have a 50% corresponding `text/plain` part ;
 * in all other cases keep the message intact.
 
 == `fdm.conf` example :
@@ -21,10 +18,11 @@ moderately safe:
 
 == Tests
 Around 20 _doctests_ are included. You can run them with the following command in
-the cloned repository root:
+the cloned repository root: +
 `python3 -m doctest drop_alternatives.py`
 
-No output means a success.
+In a general rule no output means a success. Currently we have a wanted : +
+`Unknown encoding utf-8_tarace`
 
 == Author
 * 2017: Simon Descarpentries

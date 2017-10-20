@@ -54,7 +54,7 @@ def drop_alternatives(msg_str):
 			elif 'plain' in part.get_content_type():
 				kept_parts.append(part)
 				t = part.get_payload(decode=True).decode(
-					get_content_charset(part), 'ignore')[:3*COMPARED_SIZE]
+					get_content_charset(part), 'ignore')[:10*COMPARED_SIZE]
 				t = re.sub(re_strip, '', t)
 				t = t[:COMPARED_SIZE]
 				texts.append(t)
@@ -170,6 +170,8 @@ def test_drop_alternatives(msg_str):
 	>>> test_drop_alternatives(open('test_email/20171011.eml', errors='ignore').read())
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171018.eml', errors='ignore').read())
+	multipart/mixed text/plain
+	>>> test_drop_alternatives(open('test_email/20171020.eml', errors='ignore').read())
 	multipart/mixed text/plain
 	"""
 	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str).walk()]))

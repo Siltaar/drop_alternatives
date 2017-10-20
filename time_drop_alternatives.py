@@ -12,6 +12,7 @@ from drop_alternatives import test_drop_alternatives
 2017-10-13 : 21 tests ; 6.14s ; 2.92ms/t (compares 90c, from the begining, strip style & title)
 2017-10-13 : 21 tests ; 5.44s ; 2.59ms/t (simplify regexp)
 2017-10-18 : 22 tests ; 6,80s ; 3.09ms/t (compares 256c, use best ratio function)
+2017-10-20 : 22 tests ; 6,70s ; 3.04ms/t (no more .*? nor re.DOTALL in regex)
 """
 
 from datetime import datetime

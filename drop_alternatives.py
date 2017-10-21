@@ -3,7 +3,6 @@
 # author : Simon Descarpentries, 2017-10
 # licence: GPLv3
 
-
 from __future__ import print_function
 from io import TextIOWrapper
 from email.parser import Parser
@@ -14,8 +13,8 @@ import re
 
 
 DEBUG = 0
-re_strip = re.compile(b'<(tit|sty|scr|o:)[^>]+>[^<]+</[^>]+>|<[^>]+>|https?://[^ >]+|&[^;]+;')
-bad_char = b' \n\r\t-*#:>|=.'
+re_strip = re.compile(b'<(tit|sty|scr|o:)[^>]+>[^/]+/[^>]+|<[^>]+|https?://[^ >]+|&[^;]+;')
+bad_char = b' \t\n\r\f\v\xc2\xa0-*#:>|=.'
 
 
 def compose_message(orig, parts):
@@ -44,7 +43,6 @@ def drop_alternatives(msg_str):
 
 		if DEBUG: print('', file=stderr)
 		for part in eml.walk():
-			# if DEBUG: print(part.get_content_type(), file=stderr)
 			if ("multipart" in part.get_content_maintype() or
 				"message" in part.get_content_type() or
 				part.get_payload() == ""):
@@ -55,7 +53,6 @@ def drop_alternatives(msg_str):
 				kept_parts.append(part)
 				texts.append(get_txt(part, 2560))
 			else:
-				# if DEBUG: print('kept '+part.get_content_type(), file=stderr)
 				kept_parts.append(part)
 
 		if html_parts:
@@ -100,7 +97,7 @@ def test_drop_alternatives(msg_str):
 	text/plain
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n<body>A</body><style><!--body{color red;}--></style>')
+	... '--\\nContent-Type: text/html;\\n<body>A</body><style> <!--body{color red;}--></style>')
 	multipart/mixed text/plain
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
@@ -157,6 +154,8 @@ def test_drop_alternatives(msg_str):
 	>>> test_drop_alternatives(open('test_email/20171018.eml').read())
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171018-2.eml').read())
+	multipart/mixed text/plain
+	>>> test_drop_alternatives(open('test_email/20171018-3.eml').read())
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171020.eml').read())
 	multipart/mixed text/plain

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 # coding: utf-8
 # author : Simon Descarpentries, 2017-10
 # licence: GPLv3
@@ -20,6 +20,7 @@ from drop_alternatives import test_drop_alternatives
 2017-10-20 : 22 tests ; 6,70s ; 3.04ms/t (no more .*? nor re.DOTALL in regex)
 2017-10-21 : 24 tests ; 6.64s ; 2,76ms/t (strip scripts, no more decode / bytes only)
 2017-10-21 : 24 tests ; 5.43s ; 2,26ms/t (run via python2)
+2017-10-21 : 25 tests ; 5.72s ; 2,28ms/t (deal with <style><!-- without .*? and re.DOTALL)
 """
 
 from datetime import datetime

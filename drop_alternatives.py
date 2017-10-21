@@ -9,7 +9,7 @@ from io import TextIOWrapper
 from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
 from difflib import SequenceMatcher
-from sys import stdin, stderr
+from sys import stdin, stderr, version_info
 import re
 
 

@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# coding: utf-8
+# author : Simon Descarpentries, 2017-10
+# licence: GPLv3
+
 import doctest
 from drop_alternatives import test_drop_alternatives
 
@@ -15,6 +19,7 @@ from drop_alternatives import test_drop_alternatives
 2017-10-18 : 22 tests ; 6,80s ; 3.09ms/t (compares 256c, use best ratio function)
 2017-10-20 : 22 tests ; 6,70s ; 3.04ms/t (no more .*? nor re.DOTALL in regex)
 2017-10-21 : 24 tests ; 6.64s ; 2,76ms/t (strip scripts, no more decode / bytes only)
+2017-10-21 : 24 tests ; 5.43s ; 2,26ms/t (run via python2)
 """
 
 from datetime import datetime

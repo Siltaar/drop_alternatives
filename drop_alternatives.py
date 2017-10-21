@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # coding: utf-8
-# author : Simon Descarpentries, 2017-09
+# author : Simon Descarpentries, 2017-10
 # licence: GPLv3
 
 
@@ -126,43 +126,46 @@ def test_drop_alternatives(msg_str):
 	... '--\\nContent-Type: text/html;\\nB\\n'
 	... '--\\nContent-Type: text/html;\\nC')
 	multipart/mixed text/plain text/plain text/html
-	>>> test_drop_alternatives(open('test_email/20160916.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20160916.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20170901.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20170901.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20170917.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20170917.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20170925.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20170925.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171003.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171003.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171003-2.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171003-2.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171004.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171004.eml').read())
 	multipart/mixed text/plain text/plain
-	>>> test_drop_alternatives(open('test_email/20171004-2.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171004-2.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171004-3.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171004-3.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171004-4.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171004-4.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171004-5.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171004-5.eml').read())
 	multipart/mixed text/plain text/plain text/plain
-	>>> test_drop_alternatives(open('test_email/20171005.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171005.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171005-3.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171005-3.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171011.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171011.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171018.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171018.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171018-2.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171018-2.eml').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171020.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171020.eml').read())
 	multipart/mixed text/plain
 	"""
 	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str).walk()]))
 
 
 if __name__ == "__main__":
-	print(drop_alternatives(TextIOWrapper(stdin.buffer, errors='ignore').read()))
+	if version_info.major > 2:
+		print(drop_alternatives(TextIOWrapper(stdin.buffer, errors='ignore').read()))
+	else:
+		print(drop_alternatives(stdin.read()))

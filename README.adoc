@@ -12,17 +12,22 @@ moderately safe:
 * drops the `text/html` parts that have a 50% corresponding `text/plain` part ;
 * in all other cases keep the message intact.
 
-== `fdm.conf` example :
+== Performance note
+In a quest for performance, I compared Python 3 and Python 2 versions of the
+code. Python 2.7 appeared to be 20% quicker than Python 3.4 in Debian
+stable 8.9 for the 100 runs of the 24 _doctests_ (at 2017-10-21, see
+`time_drop_alternatives.py` comments for more details). So I kept using Python
+2 and made a cross-compatible version.
 
-`match all action rewrite "python3 drop_alternatives.py" continue`
+== `fdm.conf` example :
+`match all action rewrite "python2 -SE drop_alternatives.py" continue`
 
 == Tests
 Around 20 _doctests_ are included. You can run them with the following command in
 the cloned repository root: +
-`python3 -m doctest drop_alternatives.py`
+`python -m doctest drop_alternatives.py`
 
-In a general rule no output means a success. Currently we have a wanted : +
-`Unknown encoding utf-8_tarace`
+No output means a success.
 
 == Author
 * 2017: Simon Descarpentries

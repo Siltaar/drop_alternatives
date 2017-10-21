@@ -1,0 +1,715 @@
+Return-Path: 0102015f2fbc5d11-48008497-e958-4413-b953-a84fec25742f-000000@feedback-ses.trainline.fr
+Received: by aaa (fdm 1.9, account "eee")
+	with imap (version=TLSv1/SSLv3 ECDHE-RSA-AES128-GCM-SHA256 128 bits)
+	Wed, 18 Oct 2017 15:49:03 +0200
+Received: from 10.128.63.16 (LHLO lpn-prd-vrin015) (10.128.63.16) by
+ lpn-prd-mstr021 with LMTP; Wed, 18 Oct 2017 15:46:37 +0200 (CEST)
+Received: from lpn-prd-vrin015 (localhost [127.0.0.1])
+	by lpn-prd-vrin015 (Postfix) with ESMTP id E8816683046
+	for <ddd@laposte.net>; Wed, 18 Oct 2017 15:46:36 +0200 (CEST)
+Received: from a53-145.smtp-out.eu-west-1.amazonses.com (a53-145.smtp-out.eu-west-1.amazonses.com [54.240.53.145])
+	(using TLSv1 with cipher ECDHE-RSA-AES128-SHA (128/128 bits))
+	(No client certificate requested)
+	by lpn-prd-vrin015 (Postfix) with ESMTPS id 693E067B418
+	for <ddd@laposte.net>; Wed, 18 Oct 2017 15:46:36 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=w3jqpdk27wji4v2g442nrcwr5blmzccw; d=trainline.fr; t=1508334395;
+	h=Date:From:To:Message-ID:Subject:Mime-Version:Content-Type:Content-Transfer-Encoding;
+	bh=aD69g2KQKAT1cxCkLOe71KMJLC1Gahk4jWhWk0cwk4M=;
+	b=Nfr/r4oBX/4saazCOd21PcFKgheFfwahDH3X/uN627wrXsjWoJuSys9kM2gFQOa6
+	lUkz21tek16gwsL7UqWZvwNz5kb567kh9uUUX6ryIbnSf/2XnaLS+X8U1p+kC0NZE5N
+	WMuLPW0I1kaSMH6qxff/usnh+dcsEZhvM4kthCwY=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=shh3fegwg5fppqsuzphvschd53n6ihuv; d=amazonses.com; t=1508334395;
+	h=Date:From:To:Message-ID:Subject:Mime-Version:Content-Type:Content-Transfer-Encoding:Feedback-ID;
+	bh=aD69g2KQKAT1cxCkLOe71KMJLC1Gahk4jWhWk0cwk4M=;
+	b=RdNP1ujoKCiv95ROVGx+QMm//dAjsj0QTY+opU96eX9pUHnrH3hOBD5jkKSZDt56
+	poN1W5HvdirWYrn6hUOMdT2zpd9M8TNg3AQLzhzVUIVvE3433xoWq6Ju8iCqvAixod2
+	04plbZTTfPy3+7k1ya+yxXHfTJBap2l7FmIhkYAI=
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=trainline.fr;
+	s=2010ct; t=1508334393;
+	bh=aD69g2KQKAT1cxCkLOe71KMJLC1Gahk4jWhWk0cwk4M=;
+	h=From:To:Subject:From;
+	b=TY3MFpHoKu0QWwNB+75WSzz/I3/iWYm5Hz/PT+OfX17gHDAjW+Pxq/wb16anN85Kc
+	 tZbly2bcxf5fhQU6PrxmloRYrev+Nf7cKpe/mL5rro7gxtxvpZb8MIxhvjy2+CDBai
+	 L6qbEqGVZVBgCvHmN5L4WNs8Q41lz5yYL19FsvK8=
+Date: Wed, 18 Oct 2017 13:46:34 +0000
+From: Trainline <guichet@trainline.fr>
+To: ddd@laposte.net
+Message-ID: <0102015f2fbc5d11-48008497-e958-4413-b953-a84fec25742f-000000@eu-west-1.amazonses.com>
+Subject: Votre billet aller-retour Paris - Amiens (17 nov. 16:31 et 20 nov.
+ 08:38)
+Mime-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--==_mimepart_59e75b39a8777_28fb31b05068682";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-CT-Routing: transac
+X-SES-Outgoing: 2017.10.18-54.240.53.145
+Feedback-ID: 1.eu-west-1.XJ9m85joxIKYhvyNFsAc7spDzQeR2lhexS8zMCkRgw0=:AmazonSES
+Authentication-Results: helo=a53-145.smtp-out.eu-west-1.amazonses.com; spf=pass smtp.mailfrom=0102015f2fbc5d11-48008497-e958-4413-b953-a84fec25742f-000000@feedback-ses.trainline.fr; dkim=pass header.d=trainline.fr; dmarc=pass D=trainline.fr alignspf=pass aligndkim=pass
+X-VR-FullState: 0
+X-VR-Score: 50
+X-VR-Cause-1: gggruggvucftvghtrhhoucdtuddrgedttddrudeigdejtdcutefuodetggdotefrodftvfcurfhrohhf
+X-VR-Cause-2: ihhlvgemucfntefrqffuvffgpdggtfgfnhhsuhgsshgtrhhisggvnecuuegrihhlohhuthemucehtddt
+X-VR-Cause-3: necuhdfknhhvihhsihgslhgvucifohhrughsucdlhedtmdenucfjughrpeffhffvkffugggtgfesmhej
+X-VR-Cause-4: reertddtjeenucfhrhhomhepvfhrrghinhhlihhnvgcuoehguhhitghhvghtsehtrhgrihhnlhhinhgv
+X-VR-Cause-5: rdhfrheqnecuffhomhgrihhnpegrphhplhgvrdgtohhmpdhgohhoghhlvgdrtghomhdpthhrrghinhhl
+X-VR-Cause-6: ihhnvgdrfhhrnecukfhppeehgedrvdegtddrheefrddugeehnecurfgrrhgrmhephhgvlhhopegrheef
+X-VR-Cause-7: qddugeehrdhsmhhtphdqohhuthdrvghuqdifvghsthdquddrrghmrgiiohhnshgvshdrtghomhdpihhn
+X-VR-Cause-8: vghtpeehgedrvdegtddrheefrddugeehpdhmrghilhhfrhhomheptddutddvtdduhehfvdhfsggthegu
+X-VR-Cause-9: udduqdegkedttdekgeeljedqvgelheekqdeggedufedqsgelheefqdgrkeegfhgvtgdvheejgedvfhdq
+X-VR-Cause-10: tddttddttddtsehfvggvuggsrggtkhdqshgvshdrthhrrghinhhlihhnvgdrfhhrpdhrtghpthhtohep
+X-VR-Cause-11: shhimhhonhdruggvshgtrghrphgvnhhtrhhivghssehlrghpohhsthgvrdhnvght
+X-VR-AvState: No
+X-VR-State: 0
+Content-Length: 23742
+
+
+----==_mimepart_59e75b39a8777_28fb31b05068682
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59e75b39a8644_28fb31b05068554";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59e75b39a8644_28fb31b05068554
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour,
+
+
+Votre billet command=C3=A9 le 18 octobre =C3=A0 15:46 est pr=C3=AAt.
+
+
+
+Aller=C2=A0: Paris - Amiens
+----------------------
+
+vendredi 17 novembre 2017=C2=A0:
+
+  =E2=80=A2 16h31 Paris Gare du Nord
+  =E2=80=A2 17h40 Amiens
+  =E2=80=A2 Intercit=C3=A9s 2025
+  =E2=80=A2 Passager=C2=A0: bbb
+
+Prix=C2=A0:=C2=A011,00=C2=A0=E2=82=AC
+
+
+
+
+Retour=C2=A0: Amiens - Paris
+-----------------------
+
+lundi 20 novembre 2017=C2=A0:
+
+  =E2=80=A2 08h38 Amiens
+  =E2=80=A2 09h56 Paris Gare du Nord
+  =E2=80=A2 Intercit=C3=A9s 12010
+  =E2=80=A2 Passager=C2=A0: bbb
+
+Prix=C2=A0:=C2=A010,00=C2=A0=E2=82=AC
+
+
+
+Obtenir votre billet
+--------------------
+
+Vous trouverez en pi=C3=A8ce jointe votre e-billet au format PDF. Vous po=
+uvez l=E2=80=99imprimer sur une feuille au format A4 ou pr=C3=A9senter le=
+ code-barres sur notre application iPhone ou Android. Vous pouvez aussi l=
+=E2=80=99imprimer =C3=A0 une borne SNCF=C2=A0: dans le cadre =C2=AB=C2=A0=
+e-billet=C2=A0=C2=BB, cliquez sur =C2=AB=C2=A0=C3=89dition de confirmatio=
+ns et m=C3=A9mos=C2=A0=C2=BB, puis sur =C2=AB=C2=A0R=C3=A9f=C3=A9rence de=
+ dossier=C2=A0=C2=BB.
+
+
+R=C3=A9f=C3=A9rence=C2=A0: TGGEFT / ccc
+
+
+
+Ouvrir sur le web ou dans l=E2=80=99application
+https://www.trainline.fr/order/ie544gitiaub7
+
+
+
+
+
+Conditions d=E2=80=99=C3=A9change et de remboursement
+----------------------------------------
+
+ALLER
+
+  Prem=E2=80=99s
+
+  =E2=80=A2 =C3=89change=C2=A0:
+    =
+
+    Non=C2=A0=C3=A9changeable.
+
+  =E2=80=A2 Annulation et remboursement=C2=A0:
+    =
+
+    Non=C2=A0remboursable.
+
+
+RETOUR
+
+  Prem=E2=80=99s
+
+  =E2=80=A2 =C3=89change=C2=A0:
+    =
+
+    Non=C2=A0=C3=A9changeable.
+
+  =E2=80=A2 Annulation et remboursement=C2=A0:
+    =
+
+    Non=C2=A0remboursable.
+
+
+
+=C3=89changer ou annuler=C2=A0:
+
+
+  Pour annuler ou =C3=A9changer vos billets, cliquez sur =C2=AB=C2=A0Annu=
+lation=E2=80=A6=C2=A0=C2=BB depuis la page de votre commande. En cas d=E2=
+=80=99urgence, vous pouvez aussi les annuler en contactant la SNCF par t=C3=
+=A9l=C3=A9phone au 3635.
+
+
+Informations pratiques
+----------------------
+
+Dur=C3=A9e d=E2=80=99embarquement=C2=A0:
+
+  Sans aller jusqu=E2=80=99=C3=A0 vous dire comment g=C3=A9rer votre vie,=
+ nous vous conseillons d=E2=80=99arriver =C3=A0 la gare au moins 20 minut=
+es avant le d=C3=A9part, en tout cas pas apr=C3=A8s, si possible. Les por=
+tes du train peuvent =C3=AAtre ferm=C3=A9es 2 minutes avant le d=C3=A9par=
+t, donc pour =C3=A9viter de rester =C3=A0 quai, mieux vaut ne pas trop tr=
+a=C3=AEner.
+
+
+
+=C3=89v=C3=A9nement pour calendrier=C2=A0:
+
+  Vous pouvez t=C3=A9l=C3=A9charger un =C3=A9v=C3=A9nement .ics pour ajou=
+ter ce voyage =C3=A0 votre calendrier=C2=A0: https://www.trainline.fr/cal=
+endars/travels/vnwirucimkncmd/zfzqnsmllv.ics
+
+Aide en ligne=C2=A0:
+
+  Si vous avez une question ou un p=C3=A9pin, un petit tour sur notre sit=
+e d=E2=80=99aide pourrait vous d=C3=A9panner=C2=A0: https://aide.trainlin=
+e.fr.
+
+
+Cet e-mail ne peut pas servir de billet ni de facture.
+
+
+
+P.-S. Gagnez du temps la prochaine fois
+---------------------------------------
+Cr=C3=A9ez-vous un compte pour votre prochaine r=C3=A9servation. Il vous =
+servira pour toutes les autres, car nous gardons au chaud toutes les info=
+rmations qu=E2=80=99il vous faut. Et en plus c=E2=80=99est gratuit.
+
+
+
+
+Bon voyage,
+
+Trainline
+https://www.trainline.fr/
+
+Pour sauver des arbres, mangez des castors et n=E2=80=99imprimez pas cet =
+e-mail.
+
+Capitaine=C2=A0Train SAS op=C3=A9rant sous le nom de Trainline - 20 Rue S=
+aint Georges, 75009 Paris - Soci=C3=A9t=C3=A9 au capital de 118 513,94 eu=
+ros - RCS Paris 512 277 450 - Immatriculation IM078100022 au registre des=
+ op=C3=A9rateurs de voyages et de s=C3=A9jours situ=C3=A9 au 79-81, rue d=
+e Clichy, 75009 Paris.
+
+----==_mimepart_59e75b39a8644_28fb31b05068554
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww=
+w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+  <meta name=3D"format-detection" content=3D"telephone=3Dno, date=3Dno">
+  <style type=3D"text/css">
+    @media only screen and (max-device-width: 480px) {
+      .button {
+        display: block !important;
+        text-align: center !important;
+        margin-bottom: 24px;
+      }
+
+      .content-margin {
+        width: 4% !important;
+      }
+    }
+
+    @media only screen and (max-device-width: 600px) {
+      .pnr, .journey, .coupon, .refund, .invitation-link {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border-width: 1px 0 !important;
+        border-radius: 0 !important;
+      }
+    }
+  </style>
+  =
+
+  <title>Votre billet aller-retour Paris - Amiens (17 nov. 16:31 et 20 no=
+v. 08:38)</title>
+</head>
+<body style=3D"font:10px Helvetica,Arial,sans-serif;letter-spacing:0.2px;=
+line-height:1.6em;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%=
+;background-color:#DCE3E6;padding:0;margin:0;width:100% !important">
+<script type=3D"application/ld+json">
+    [{"@context":"http://schema.org","@type":"TrainReservation","bookingA=
+gent":{"@type":"Organization","name":"Trainline","email":"guichet@trainli=
+ne.fr"},"bookingTime":"2017-10-18T15:41:00+02:00","cancelReservationUrl":=
+"https://www.trainline.fr/tickets","modifiedTime":"2017-10-18T15:46:19+02=
+:00","modifyReservationUrl":"https://www.trainline.fr/tickets","reservati=
+onFor":{"@type":"TrainTrip","arrivalStation":{"@type":"TrainStation","nam=
+e":"Paris Gare du Nord","geo":{"@type":"GeoCoordinates","latitude":48.880=
+185,"longitude":2.355151}},"arrivalTime":"2017-11-20T09:56:00+01:00","dep=
+artureStation":{"@type":"TrainStation","name":"Amiens","geo":{"@type":"Ge=
+oCoordinates","latitude":49.890746,"longitude":2.312592}},"departureTime"=
+:"2017-11-20T08:38:00+01:00","trainCompany":{"@type":"Organization","name=
+":"SNCF"},"trainName":"Intercit=C3=A9s","trainNumber":"12010"},"reservati=
+onNumber":"TGGEFT","reservationStatus":"http://schema.org/ReservationConf=
+irmed","reservedTicket":{"@type":"Ticket","underName":{"@type":"Person","=
+name":"bbb Descarpentries"},"ticketedSeat":{"@type":"Seat","seatingType=
+":"Economy"},"ticketToken":"aztecCode:i0CVTGGEFT003642483121104/05/1984FR=
+PNOFRQAM0202517/110029090166270902074     ccc              SIM=
+ON2    0          00000"},"underName":{"@type":"Person","name":"bbb Des=
+carpentries"},"url":"https://www.trainline.fr/tickets"},{"@context":"http=
+://schema.org","@type":"TrainReservation","bookingAgent":{"@type":"Organi=
+zation","name":"Trainline","email":"guichet@trainline.fr"},"bookingTime":=
+"2017-10-18T15:41:00+02:00","cancelReservationUrl":"https://www.trainline=
+.fr/tickets","modifiedTime":"2017-10-18T15:46:19+02:00","modifyReservatio=
+nUrl":"https://www.trainline.fr/tickets","reservationFor":{"@type":"Train=
+Trip","arrivalStation":{"@type":"TrainStation","name":"Amiens","geo":{"@t=
+ype":"GeoCoordinates","latitude":49.890746,"longitude":2.312592}},"arriva=
+lTime":"2017-11-17T17:40:00+01:00","departureStation":{"@type":"TrainStat=
+ion","name":"Paris Gare du Nord","geo":{"@type":"GeoCoordinates","latitud=
+e":48.880185,"longitude":2.355151}},"departureTime":"2017-11-17T16:31:00+=
+01:00","trainCompany":{"@type":"Organization","name":"SNCF"},"trainName":=
+"Intercit=C3=A9s","trainNumber":"2025"},"reservationNumber":"TGGEFT","res=
+ervationStatus":"http://schema.org/ReservationConfirmed","reservedTicket"=
+:{"@type":"Ticket","underName":{"@type":"Person","name":"bbb Descarpent=
+ries"},"ticketedSeat":{"@type":"Seat","seatingType":"Economy"},"ticketTok=
+en":"aztecCode:i0CVTGGEFT003642483121104/05/1984FRPNOFRQAM0202517/1100290=
+90166270902074     ccc              SIMON2    0          00000=
+"},"underName":{"@type":"Person","name":"bbb Descarpentries"},"url":"ht=
+tps://www.trainline.fr/tickets"}]
+
+</script>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" id=3D"background"=
+ class=3D"main-background" style=3D"mso-table-lspace:0pt;mso-table-rspace=
+:0pt;font-family:Helvetica,Arial,Verdana,sans-serif;border-collapse:colla=
+pse;background-color:#DCE3E6;margin:0;padding:0;width:100% !important">
+  <tr>
+    <td valign=3D"top" align=3D"center">
+      <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"co=
+ntent" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;font-family:Hel=
+vetica,Arial,Verdana,sans-serif;border-collapse:collapse">
+        <tr>
+          <td align=3D"center" class=3D"header-logo" style=3D"padding-top=
+:20px;padding-bottom:20px">
+            <img src=3D"https://www.trainline.eu/external_assets/emails/t=
+l-header-logo.png" alt=3D"Trainline" width=3D"105" height=3D"22" style=3D=
+"-ms-interpolation-mode:bicubic">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=
+=3D"message" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;font-fami=
+ly:Helvetica,Arial,Verdana,sans-serif;border-collapse:collapse;color:#6D6=
+D6D !important;border:1px solid #dbdce0 !important;border-top:0 none !imp=
+ortant;border-bottom-color:#c6c7cc !important;border-radius:5px !importan=
+t;box-shadow:0 1px #dbdce0 !important;font-family:Helvetica,Arial,Verdana=
+,sans-serif !important">
+              <tr>
+                <td colspan=3D"4" height=3D"40" class=3D"header-row" styl=
+e=3D"background-color:white;border-top-left-radius:5px !important;border-=
+top-right-radius:5px !important"></td>
+              </tr>
+                <tr><td class=3D"content-margin" width=3D"8%" style=3D"ba=
+ckground-color:white"></td><td class=3D"main-content" width=3D"600" style=
+=3D"font-size:14px;line-height:20px;padding-bottom:0.5em;background-color=
+:white;font-family:Helvetica,Arial,Verdana,sans-serif;text-align:left;col=
+or:#3e414a !important">
+    <p style=3D"margin:0 0 1em 0">Bonjour bbb,</p>
+      <p style=3D"margin:0 0 1em 0">Votre billet command=C3=A9 le 18 octo=
+bre =C3=A0 15:46 est pr=C3=AAt.</p>
+</td><td class=3D"content-margin" width=3D"8%" style=3D"background-color:=
+white"></td></tr>
+  <tr><td class=3D"content-margin" width=3D"8%" style=3D"background-color=
+:white"></td><td class=3D"main-content" width=3D"600" style=3D"font-size:=
+14px;line-height:20px;padding-bottom:0.5em;background-color:white;font-fa=
+mily:Helvetica,Arial,Verdana,sans-serif;text-align:left;color:#3e414a !im=
+portant">
+      =
+
+<div class=3D"journey" style=3D"border:1px solid #d9d9dc;border-radius:5p=
+x;padding:1em 1.3em;margin-bottom:1em;padding: 1.4em 1.8em 0.8em">
+
+  <table style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;font-family:H=
+elvetica,Arial,Verdana,sans-serif;border-collapse:collapse;font-size:14px=
+;line-height:20px;width:100%;color:#3e414a !important;margin-bottom: 0.5e=
+m;">
+    <tr>
+      <td style=3D"font-weight: bold;">
+        Aller=C2=A0: Paris =E2=86=92 Amiens
+        -
+        vendredi 17 novembre 2017
+      </td>
+      <td style=3D"text-align: right; font-weight: bold;">
+        11,00=C2=A0=E2=82=AC
+      </td>
+    </tr>
+  </table>
+
+
+
+  <table style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;font-family:H=
+elvetica,Arial,Verdana,sans-serif;border-collapse:collapse;font-size:14px=
+;line-height:20px;width:100%;color:#3e414a !important">
+    <tr>
+      <td style=3D"width: 50px;">
+        <strong class=3D"timestamp" style=3D"color:#4B96F8">16h31</strong=
+>
+      </td>
+      <td>
+        Paris Gare du Nord
+      </td>
+      <td rowspan=3D"2" class=3D"right" style=3D"text-align:right">
+        Intercit=C3=A9s 2025
+      </td>
+    </tr>
+    <tr>
+      <td style=3D"width: 50px;">
+        <strong class=3D"timestamp" style=3D"color:#4B96F8">17h40</strong=
+>
+      </td>
+      <td>
+        Amiens
+      </td>
+    </tr>
+      <tr>
+        <td></td>
+        <td colspan=3D"2">
+          Passager=C2=A0: bbb
+        </td>
+      </tr>
+
+  </table>
+
+
+
+</div>
+
+
+      =
+
+<div class=3D"journey" style=3D"border:1px solid #d9d9dc;border-radius:5p=
+x;padding:1em 1.3em;margin-bottom:1em;padding: 1.4em 1.8em 0.8em">
+
+  <table style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;font-family:H=
+elvetica,Arial,Verdana,sans-serif;border-collapse:collapse;font-size:14px=
+;line-height:20px;width:100%;color:#3e414a !important;margin-bottom: 0.5e=
+m;">
+    <tr>
+      <td style=3D"font-weight: bold;">
+        Retour=C2=A0: Amiens =E2=86=92 Paris
+        -
+        lundi 20 novembre 2017
+      </td>
+      <td style=3D"text-align: right; font-weight: bold;">
+        10,00=C2=A0=E2=82=AC
+      </td>
+    </tr>
+  </table>
+
+
+
+  <table style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;font-family:H=
+elvetica,Arial,Verdana,sans-serif;border-collapse:collapse;font-size:14px=
+;line-height:20px;width:100%;color:#3e414a !important">
+    <tr>
+      <td style=3D"width: 50px;">
+        <strong class=3D"timestamp" style=3D"color:#4B96F8">08h38</strong=
+>
+      </td>
+      <td>
+        Amiens
+      </td>
+      <td rowspan=3D"2" class=3D"right" style=3D"text-align:right">
+        Intercit=C3=A9s 12010
+      </td>
+    </tr>
+    <tr>
+      <td style=3D"width: 50px;">
+        <strong class=3D"timestamp" style=3D"color:#4B96F8">09h56</strong=
+>
+      </td>
+      <td>
+        Paris Gare du Nord
+      </td>
+    </tr>
+      <tr>
+        <td></td>
+        <td colspan=3D"2">
+          Passager=C2=A0: bbb
+        </td>
+      </tr>
+
+  </table>
+
+
+
+</div>
+
+</td><td class=3D"content-margin" width=3D"8%" style=3D"background-color:=
+white"></td></tr>
+  <tr><td class=3D"content-margin" width=3D"8%" style=3D"background-color=
+:white"></td><td class=3D"main-content" width=3D"600" style=3D"font-size:=
+14px;line-height:20px;padding-bottom:0.5em;background-color:white;font-fa=
+mily:Helvetica,Arial,Verdana,sans-serif;text-align:left;color:#3e414a !im=
+portant">
+    <h2 style=3D"margin:0 0 0.5em 0;font-size:17px;font-weight:bold;line-=
+height:1.3em">Obtenir votre billet</h2>
+    <p style=3D"margin:0 0 1em 0"></p><p style=3D"margin:0 0 1em 0">Vous =
+trouverez en pi=C3=A8ce jointe votre e-billet au format PDF. Vous pouvez,=
+ au choix=C2=A0:</p>
+<ul style=3D"padding-left:2em">
+<li>imprimer ce PDF sur une feuille au format A4=C2=A0;</li>
+<li>pr=C3=A9senter le code-barres sur notre application <a href=3D"https:=
+//itunes.apple.com/app/id599502670" style=3D"color:#14B69F;text-decoratio=
+n:inherit">iPhone</a> ou <a href=3D"https://play.google.com/store/apps/de=
+tails?id=3Dcom.capitainetrain.android&amp;hl=3Dfr" style=3D"color:#14B69F=
+;text-decoration:inherit">Android</a>=C2=A0;</li>
+<li>imprimer une confirmation =C3=A0 une borne SNCF=C2=A0: dans le cadre =
+=C2=AB=C2=A0e-billet=C2=A0=C2=BB, cliquez sur =C2=AB=C2=A0=C3=89dition de=
+ confirmations et m=C3=A9mos=C2=A0=C2=BB, puis sur =C2=AB=C2=A0R=C3=A9f=C3=
+=A9rence de dossier=C2=A0=C2=BB.</li>
+</ul>
+
+
+  <p style=3D"margin:0 0 1em 0">
+    R=C3=A9f=C3=A9rence=C2=A0:
+    <strong class=3D"reference" style=3D"color:#01C3A7">TGGEFT / DESCARPE=
+NTRIES</strong>
+  </p>
+
+
+
+</td><td class=3D"content-margin" width=3D"8%" style=3D"background-color:=
+white"></td></tr>
+    <tr><td class=3D"content-margin" width=3D"8%" style=3D"background-col=
+or:white"></td><td class=3D"main-content" width=3D"600" style=3D"font-siz=
+e:14px;line-height:20px;padding-bottom:0.5em;background-color:white;font-=
+family:Helvetica,Arial,Verdana,sans-serif;text-align:left;color:#3e414a !=
+important">
+      <p class=3D"center-for-button" style=3D"margin:0 0 1em 0;text-align=
+:center;margin:2em 0;margin: 1em 0 2.5em 0;">
+        <a class=3D"button" href=3D"https://www.trainline.fr/order/ie544g=
+itiaub7dj" style=3D"color:#14B69F;text-decoration:inherit;font-size:=
+13px;font-weight:bold;color:white;padding:12px 22px;border-radius:4px;tex=
+t-decoration:none;background-color:#01C3A7;text-transform:uppercase;displ=
+ay:inline-block;box-shadow:0 -1px #008673 inset">Ouvrir sur le web ou dan=
+s l=E2=80=99application</a>
+      </p>
+</td><td class=3D"content-margin" width=3D"8%" style=3D"background-color:=
+white"></td></tr>
+
+  <tr><td class=3D"content-margin" width=3D"8%" style=3D"background-color=
+:white"></td><td class=3D"main-content" width=3D"600" style=3D"font-size:=
+14px;line-height:20px;padding-bottom:0.5em;background-color:white;font-fa=
+mily:Helvetica,Arial,Verdana,sans-serif;text-align:left;color:#3e414a !im=
+portant">
+    <h2 style=3D"margin:0 0 0.5em 0;font-size:17px;font-weight:bold;line-=
+height:1.3em">Conditions d=E2=80=99=C3=A9change et de remboursement</h2>
+
+      <p style=3D"margin:0 0 1em 0"><strong>ALLER</strong></p>
+      =
+
+
+      <p style=3D"margin:0 0 1em 0">Prem=E2=80=99s</p>
+      <p style=3D"margin:0 0 1em 0">
+        <strong>=C3=89change=C2=A0:</strong><br>
+        Non=C2=A0=C3=A9changeable.
+      </p>
+      <p style=3D"margin:0 0 1em 0">
+        <strong>Annulation et remboursement=C2=A0:</strong><br>
+        Non=C2=A0remboursable.
+      </p>
+
+
+      <p style=3D"margin:0 0 1em 0"><strong>RETOUR</strong></p>
+      =
+
+
+      <p style=3D"margin:0 0 1em 0">Prem=E2=80=99s</p>
+      <p style=3D"margin:0 0 1em 0">
+        <strong>=C3=89change=C2=A0:</strong><br>
+        Non=C2=A0=C3=A9changeable.
+      </p>
+      <p style=3D"margin:0 0 1em 0">
+        <strong>Annulation et remboursement=C2=A0:</strong><br>
+        Non=C2=A0remboursable.
+      </p>
+
+</td><td class=3D"content-margin" width=3D"8%" style=3D"background-color:=
+white"></td></tr>
+  <tr><td class=3D"content-margin" width=3D"8%" style=3D"background-color=
+:white"></td><td class=3D"main-content" width=3D"600" style=3D"font-size:=
+14px;line-height:20px;padding-bottom:0.5em;background-color:white;font-fa=
+mily:Helvetica,Arial,Verdana,sans-serif;text-align:left;color:#3e414a !im=
+portant">
+    =
+
+
+
+<p style=3D"margin:0 0 1em 0"><strong>=C3=89changer ou annuler</strong><b=
+r>Pour annuler vos billets  ouvrez-les <a href=3D"https://www.trainline.f=
+r/order/ie544gitiaub7dj" style=3D"color:#14B69F;text-decoration:inhe=
+rit">sur le web ou dans l'application</a>. En cas d=E2=80=99urgence, vous=
+ pouvez aussi contacter la SNCF par t=C3=A9l=C3=A9phone, au 36 35, pour d=
+emander une annulation.</p>
+
+</td><td class=3D"content-margin" width=3D"8%" style=3D"background-color:=
+white"></td></tr>
+  <tr><td class=3D"content-margin" width=3D"8%" style=3D"background-color=
+:white"></td><td class=3D"main-content" width=3D"600" style=3D"font-size:=
+14px;line-height:20px;padding-bottom:0.5em;background-color:white;font-fa=
+mily:Helvetica,Arial,Verdana,sans-serif;text-align:left;color:#3e414a !im=
+portant">
+    <hr style=3D"margin:1.5em 0;border:0 none;border-bottom:1px solid #d9=
+d9dc;height:1px">
+    <h2 style=3D"margin:0 0 0.5em 0;font-size:17px;font-weight:bold;line-=
+height:1.3em">Informations pratiques</h2>
+
+    <p style=3D"margin:0 0 1em 0"><strong>Dur=C3=A9e d=E2=80=99embarqueme=
+nt</strong><br>Sans aller jusqu=E2=80=99=C3=A0 vous dire comment g=C3=A9r=
+er votre vie, nous vous conseillons d=E2=80=99arriver =C3=A0 la gare au m=
+oins 20 minutes avant le d=C3=A9part, en tout cas pas apr=C3=A8s, si poss=
+ible. Les portes du train peuvent =C3=AAtre ferm=C3=A9es 2 minutes avant =
+le d=C3=A9part, donc pour =C3=A9viter de rester =C3=A0 quai, mieux vaut n=
+e pas trop tra=C3=AEner.</p>
+
+
+
+
+    <p style=3D"margin:0 0 1em 0"><strong>=C3=89v=C3=A9nement pour calend=
+rier</strong><br>Vous pouvez t=C3=A9l=C3=A9charger <a href=3D"https://www=
+.trainline.fr/calendars/travels/vnwirucimkncmd/zfzqnsmll.ics" style=3D=
+"color:#14B69F;text-decoration:inherit">un =C3=A9v=C3=A9nement .ics</a> p=
+our ajouter ce voyage =C3=A0 votre calendrier.</p>
+    <p style=3D"margin:0 0 1em 0"><strong>Aide en ligne</strong><br>Si vo=
+us avez une question ou un p=C3=A9pin, un petit tour sur notre <a href=3D=
+"https://aide.trainline.fr" style=3D"color:#14B69F;text-decoration:inheri=
+t">site d=E2=80=99aide</a> pourrait vous d=C3=A9panner.</p>
+    <p style=3D"margin:0 0 1em 0">Cet e-mail ne peut pas servir de billet=
+ ni de facture.</p>
+</td><td class=3D"content-margin" width=3D"8%" style=3D"background-color:=
+white"></td></tr>
+
+  <tr><td class=3D"content-margin" width=3D"8%" style=3D"background-color=
+:white"></td><td class=3D"main-content" width=3D"600" style=3D"font-size:=
+14px;line-height:20px;padding-bottom:0.5em;background-color:white;font-fa=
+mily:Helvetica,Arial,Verdana,sans-serif;text-align:left;color:#3e414a !im=
+portant">
+    <p style=3D"margin:0 0 1em 0">Bon voyage,</p>
+    <p class=3D"signature-name" style=3D"margin:0 0 1em 0;font-weight:bol=
+d;margin-bottom:0.2em">
+  Trainline
+</p>
+<p style=3D"margin:0 0 1em 0">
+  <a href=3D"https://www.trainline.fr/" style=3D"color:#14B69F;text-decor=
+ation:inherit">https://www.trainline.fr/</a>
+</p>
+</td><td class=3D"content-margin" width=3D"8%" style=3D"background-color:=
+white"></td></tr>
+
+    <tr><td class=3D"content-margin" width=3D"8%" style=3D"background-col=
+or:white"></td><td class=3D"main-content" width=3D"600" style=3D"font-siz=
+e:14px;line-height:20px;padding-bottom:0.5em;background-color:white;font-=
+family:Helvetica,Arial,Verdana,sans-serif;text-align:left;color:#3e414a !=
+important">
+      <hr style=3D"margin:1.5em 0;border:0 none;border-bottom:1px solid #=
+d9d9dc;height:1px">
+      <h2 style=3D"margin:0 0 0.5em 0;font-size:17px;font-weight:bold;lin=
+e-height:1.3em">P.-S. Gagnez du temps la prochaine fois</h2>
+      <p style=3D"margin:0 0 1em 0"><a href=3D"https://www.trainline.fr/o=
+rder/ie544gitiaub7dju" style=3D"color:#14B69F;text-decoration:inherit=
+">Cr=C3=A9ez-vous un compte</a> pour votre prochaine r=C3=A9servation. Il=
+ vous servira pour toutes les autres, car nous gardons au chaud toutes le=
+s informations qu=E2=80=99il vous faut. Et en plus c=E2=80=99est gratuit.=
+</p>
+</td><td class=3D"content-margin" width=3D"8%" style=3D"background-color:=
+white"></td></tr>
+              <tr>
+                <td colspan=3D"4" height=3D"30" class=3D"footer-row" styl=
+e=3D"background-color:white;border-bottom-left-radius:5px !important;bord=
+er-bottom-right-radius:5px !important"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td align=3D"center" class=3D"footer" style=3D"padding-top:20px=
+;padding-bottom:20px;font-size:13px;max-width:600px;color:#8b8d92 !import=
+ant">
+              <p style=3D"margin:0 0 1em 0">    Pour sauver des arbres, m=
+angez des castors et n=E2=80=99imprimez pas cet e-mail.
+</p>
+            <p class=3D"legal" style=3D"margin:0 0 1em 0;font-size:9px;co=
+lor:#8C9DA1;line-height:1.3em;padding-left:5px">
+              Capitaine=C2=A0Train SAS op=C3=A9rant sous le nom de Trainl=
+ine<br>
+20 Rue Saint Georges, 75009 Paris - Soci=C3=A9t=C3=A9 au capital de 105 9=
+03,62 euros - RCS Paris 512 277 450<br> =
+
+Immatriculation IM078100022 au registre des op=C3=A9rateurs de voyages et=
+ de s=C3=A9jours situ=C3=A9 au 79-81, rue de Clichy, 75009 Paris.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+----==_mimepart_59e75b39a8644_28fb31b05068554--
+
+----==_mimepart_59e75b39a8777_28fb31b05068682
+Content-Type: message/external-body; access-type=x-mutt-deleted;
+	expiration="Sat, 21 Oct 2017 10:10:04 +0200"; length=670626
+
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename=TGGEFT-XXX-ccc.pdf
+Content-ID: <59e75b39b10cb_28fb31b05068873.prod.capitainetrain.com.mail>
+
+
+----==_mimepart_59e75b39a8777_28fb31b05068682--
+

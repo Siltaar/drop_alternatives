@@ -10,12 +10,12 @@ from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
 from difflib import SequenceMatcher
 from sys import stdin, stderr
-import re, html
+import re
 
 
 DEBUG = 0
-COMPARED_SIZE = 256
-re_strip = re.compile('<(tit|sty|o:)[^>]+>[^<]+</[^>]+|<[^>]+|https?://[^ >]+|[\s\n\-*#:>|=.]+')
+re_strip = re.compile(b'<(tit|sty|scr|o:)[^>]+>[^<]+</[^>]+>|<[^>]+>|https?://[^ >]+|&[^;]+;')
+bad_char = b' \n\r\t-*#:>|=.'
 
 
 def compose_message(orig, parts):
@@ -53,11 +53,7 @@ def drop_alternatives(msg_str):
 				html_parts.append(part)
 			elif 'plain' in part.get_content_type():
 				kept_parts.append(part)
-				t = part.get_payload(decode=True).decode(
-					get_content_charset(part), 'ignore')[:10*COMPARED_SIZE]
-				t = re.sub(re_strip, '', t)
-				t = t[:COMPARED_SIZE]
-				texts.append(t)
+				texts.append(get_txt(part, 2560))
 			else:
 				# if DEBUG: print('kept '+part.get_content_type(), file=stderr)
 				kept_parts.append(part)
@@ -66,20 +62,17 @@ def drop_alternatives(msg_str):
 			recompose_msg = False
 
 			for h in html_parts:
-				h_txt = h.get_payload(decode=True).decode(
-					get_content_charset(part), 'ignore')[:110*COMPARED_SIZE]
-				h_txt = html.unescape(h_txt)  # convert entities to text
-				h_txt = re.sub(re_strip, '', h_txt)
-				h_txt = h_txt[:COMPARED_SIZE]
-
+				h_txt = get_txt(h, 28000)
 				save_html = True
 
 				for i, t in enumerate(texts):
-					diff_ratio = SequenceMatcher(None,a=h_txt, b=t).ratio()
+					idem_ratio = SequenceMatcher(None,a=h_txt, b=t).ratio()
 					if DEBUG:
-						print('h: '+h_txt+'\nt: '+t+' '+str(diff_ratio), file=stderr)
+						print(b'h: '+h_txt, file=stderr)
+						print(b't: '+t, file=stderr, end=' ')
+						print(idem_ratio, file=stderr)
 
-					if diff_ratio > 0.50:
+					if idem_ratio > 0.50:
 						save_html = False
 						recompose_msg = True
 						del texts[i]  # avoid comparing again with this text
@@ -94,19 +87,11 @@ def drop_alternatives(msg_str):
 	return eml
 
 
-def get_content_charset(part):
-	c = part.get_content_charset('utf-8')
-
-	if 'cp' in c:
-		c = c.replace('-', '')  # prevents LookupError: unknown encoding: cp-850
-
-	try:  # tests if encoding is valid for Python
-		''.encode(c)
-	except LookupError:
-		print('Unknown encoding %s' % c, file=stderr)
-		return 'utf-8'
-
-	return c
+def get_txt(part, raw_len, bad_char=bad_char):
+	t = part.get_payload(decode=True)[:raw_len]
+	t = re_strip.sub(b'', t)
+	t = t.translate(None, bad_char)
+	return t[:256]
 
 
 def test_drop_alternatives(msg_str):
@@ -171,15 +156,9 @@ def test_drop_alternatives(msg_str):
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171018.eml', errors='ignore').read())
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171020.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171018-2.eml', errors='ignore').read())
 	multipart/mixed text/plain
-	"""
-	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str).walk()]))
-
-
-def test_with_bad_encoding(msg_str):
-	"""
-	>>> test_with_bad_encoding(open('test_email/20171017.eml', errors='ignore').read())
+	>>> test_drop_alternatives(open('test_email/20171020.eml', errors='ignore').read())
 	multipart/mixed text/plain
 	"""
 	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str).walk()]))

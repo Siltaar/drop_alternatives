@@ -7,6 +7,9 @@ import doctest
 from drop_alternatives import test_drop_alternatives
 
 """
+CPU: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+OS : Debian Jessie 8.9
+
 2017-10-03 : 11 tests ; 3.34s ; 3.03ms/t
 2017-10-03 : 11 tests ; 2.24s ; 2.06ms/t (regex del spaces ; compares 200c)
 2017-10-03 : 13 tests ; 2.75s ; 2.11ms/t (deps on lxml, compares 100c)

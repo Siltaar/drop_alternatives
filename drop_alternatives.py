@@ -34,14 +34,16 @@ def compose_message(orig, parts):
 
 
 def drop_alternatives(msg_str):
-	eml = Parser().parsestr(msg_str);
+	eml = Parser().parsestr(msg_str)
 
 	if eml.is_multipart():
 		kept_parts = []
 		html_parts = []
 		texts = []
 
-		if DEBUG: print('', file=stderr)
+		if DEBUG:
+			print('', file=stderr)
+
 		for part in eml.walk():
 			if ("multipart" in part.get_content_maintype() or
 				"message" in part.get_content_type() or
@@ -63,7 +65,7 @@ def drop_alternatives(msg_str):
 				save_html = True
 
 				for i, t in enumerate(texts):
-					idem_ratio = SequenceMatcher(None,a=h_txt, b=t).ratio()
+					idem_ratio = SequenceMatcher(None, a=h_txt, b=t).ratio()
 					if DEBUG:
 						print(b'h: '+h_txt, file=stderr)
 						print(b't: '+t, file=stderr, end=' ')

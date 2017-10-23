@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python2
 # coding: utf-8
 # author : Simon Descarpentries, 2017-10
 # licence: GPLv3
@@ -12,7 +12,6 @@ from sys import stdin, stderr, version_info
 from re import compile as c_re
 
 
-DEBUG = 1
 re_strip = c_re(b'<(tit|sty|scr|o:|[^y]+y:n)[^>]+>[^/]+/[^>]+|<[^>]+|https?://[^ >]+|&[^;]+;')
 bad_char = b' \t\n\r\xc2\xa0#->='  # exists \v Vertical tab ; \f From feed
 
@@ -33,16 +32,13 @@ def compose_message(orig, parts):
 	return wanted
 
 
-def drop_alternatives(msg_str, DEBUG=DEBUG):
+def drop_alternatives(msg_str, debug=0):
 	eml = Parser().parsestr(msg_str)
 
 	if eml.is_multipart():
 		kept_parts = []
 		html_parts = []
 		texts = []
-
-		if DEBUG:
-			print('', file=stderr)
 
 		for part in eml.walk():
 			if ("multipart" in part.get_content_maintype() or
@@ -58,6 +54,9 @@ def drop_alternatives(msg_str, DEBUG=DEBUG):
 				kept_parts.append(part)
 
 		if html_parts:
+			if debug:
+				print(b'', file=stderr)
+
 			recompose_msg = False
 
 			for h in html_parts:
@@ -66,7 +65,7 @@ def drop_alternatives(msg_str, DEBUG=DEBUG):
 
 				for i, t in enumerate(texts):
 					idem_ratio = SequenceMatcher(None, a=h_txt, b=t).ratio()
-					if DEBUG:
+					if debug:
 						print(b'h: '+h_txt, file=stderr)
 						print(b't: '+t, file=stderr, end=' ')
 						print(idem_ratio, file=stderr)
@@ -93,7 +92,8 @@ def get_txt(part, raw_len, bad_char=bad_char):
 	return t[:199]
 
 
-def test_drop_alternatives(msg_str, DEBUG=DEBUG):
+DEBUG = 1
+def test_drop_alternatives(msg_str, debug):
 	"""
 	>>> test_drop_alternatives('Content-Type: text/plain;\\nA', DEBUG)
 	text/plain
@@ -164,12 +164,10 @@ def test_drop_alternatives(msg_str, DEBUG=DEBUG):
 	>>> test_drop_alternatives(open('test_email/20171022.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	"""
-	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str, DEBUG).walk()]))
+	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str, debug).walk()]))
 
 
 if __name__ == "__main__":
-	DEBUG = 0
-
 	if version_info.major > 2:
 		print(drop_alternatives(TextIOWrapper(stdin.buffer, errors='ignore').read()))
 	else:

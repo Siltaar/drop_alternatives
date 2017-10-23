@@ -1,0 +1,271 @@
+Return-Path: 2017102218081057280d8b2cce4622aca9773cae80p0eu@bounces.amazon.fr
+Received: by bbb (fdm 1.9, account "aaa")
+ with imap (version=TLSv1/SSLv3 ECDHE-RSA-AES128-GCM-SHA256 128 bits)
+ Sun, 22 Oct 2017 20:14:02 +0200
+Received: from lpn-prd-vrin018.laposte (LHLO lpn-prd-vrin018) (10.128.63.19)
+ by lpn-prd-mstr044 with LMTP; Sun, 22 Oct 2017 20:08:13 +0200 (CEST)
+Received: from lpn-prd-vrin018 (localhost [127.0.0.1])
+ by lpn-prd-vrin018 (Postfix) with ESMTP id 2DEB2145FDEE
+ for <ccc@laposte.net>; Sun, 22 Oct 2017 20:08:13 +0200 (CEST)
+Received: from lux.smtp-out.eu-west-1.amazonses.com
+ (lux.smtp-out.eu-west-1.amazonses.com [176.32.127.141])
+ (using TLSv1 with cipher ECDHE-RSA-AES128-SHA (128/128 bits))
+ (No client certificate requested)
+ by lpn-prd-vrin018 (Postfix) with ESMTPS id 1185B145E801
+ for <ccc@laposte.net>; Sun, 22 Oct 2017 20:08:13 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+ s=4msp3wqictn6pnyynh3gkjvd5ucl727y; d=amazon.fr; t=1508695692;
+ h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date;
+ bh=EbEMofN4PXBEvXypaJTRPhONTq1+CmDYNUlYMYUTxcQ=;
+ b=yIwbtvjFpZ1Qy9tfLY/f4lJ3+layymWauM+LNytl6J9BJ6kRymcWmv1M3nKqyruZ
+ lpbx/FpIQ2a9kka/Y+HlTt5RJ9DU+ojF2apjDeV45qozF0Xvnar03zvtYQi/SK9UJSc
+ wehjMns4H+GF6fR8sPTBa6NZ0F3uX4uxz19PHUpE=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+ s=shh3fegwg5fppqsuzphvschd53n6ihuv; d=amazonses.com; t=1508695692;
+ h=From:To:Message-ID:Subject:MIME-Version:Content-Type:Date:Feedback-ID;
+ bh=EbEMofN4PXBEvXypaJTRPhONTq1+CmDYNUlYMYUTxcQ=;
+ b=Mzf7v4bkip+WoFVnlh1jiQ1SakjDJllCDXa3PLNOq8qB/0sVDSRlLursTFVmlSma
+ 039gO6n5GgeU52AY2/TjNk1QFZtKsJXPQYBEDHfPA4IrhnfrKbv/LLrDpge8U4uMqFB
+ TvGoi2ZBmqEWpZ7xmloKYbj1Ii+Iz5XS7G8sPiPI=
+From: "Amazon.fr" <modification-compte@amazon.fr>
+To: ccc@laposte.net
+Message-ID: <0102015f45454c4f-d18aa1b7-2844-4376-aad4-611b2e03910a-000000@eu-west-1.amazonses.com>
+Subject: =?UTF-8?Q?Confirmation_de_l=E2=80=99avantage_li=C3=A9_=C3=A0_?=
+ =?UTF-8?Q?votre_commande_408-6819683-0581926?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="----=_Part_1307985_1420815061.1508695690317"
+X-AMAZON-MAIL-RELAY-TYPE: notification
+Bounces-to: 2017102218081057280d8b2cce4622aca9773cae80p0eu@bounces.amazon.fr
+X-AMAZON-METADATA: CA=CXD1WWITP5CFD-CU=A2X40H1Y62J31G-RI=A1JO0Z163XJVP0
+X-Original-MessageID: <urn.rtn.msg.2017102218081057280d8b2cce4622aca9773cae80p0eu@1508695690318.rtn-svc-eu-back-m4l1a-6827c059.eu-west-1.amazon.com>
+Date: Sun, 22 Oct 2017 18:08:10 +0000
+X-SES-Outgoing: 2017.10.22-10.42.156.44
+Feedback-ID: 1.eu-west-1.KxLUKazDI5D9NzBxTS3SoD/MTlcLZY0yvg8x5uoOkSk=:AmazonSES
+Authentication-Results: helo=lux.smtp-out.eu-west-1.amazonses.com; spf=pass
+ smtp.mailfrom=2017102218081057280d8b2cce4622aca9773cae80p0eu@bounces.amazon.fr;
+ dkim=pass header.d=amazon.fr;
+ dmarc=pass D=amazon.fr alignspf=pass aligndkim=pass
+X-VR-FullState: 0
+X-VR-Score: 0
+X-VR-Cause-1: gggruggvucftvghtrhhoucdtuddrgedttddrvdeggdduvdefucetufdoteggodetrfdotffvucfrrhho
+X-VR-Cause-2: fhhilhgvmecunfetrffquffvgfdpggftfghnshhusghstghrihgsvgenuceurghilhhouhhtmecuhedt
+X-VR-Cause-3: tdenucenucfjughrpefhvffkufggtgffsegrtdersgdttdejnecuhfhrohhmpedftehmrgiiohhnrdhf
+X-VR-Cause-4: rhdfuceomhhoughifhhitggrthhiohhnqdgtohhmphhtvgesrghmrgiiohhnrdhfrheqnecuffhomhgr
+X-VR-Cause-5: ihhnpegrmhgriihonhdrfhhrnecukfhppedujeeirdefvddruddvjedrudegudenucfrrghrrghmpehh
+X-VR-Cause-6: vghloheplhhugidrshhmthhpqdhouhhtrdgvuhdqfigvshhtqddurdgrmhgriihonhhsvghsrdgtohhm
+X-VR-Cause-7: pdhinhgvthepudejiedrfedvrdduvdejrddugedupdhmrghilhhfrhhomhepvddtudejuddtvddvudek
+X-VR-Cause-8: tdekuddtheejvdektdgukegsvdgttggvgeeivddvrggtrgeljeejfegtrggvkedtphdtvghusegsohhu
+X-VR-Cause-9: nhgtvghsrdgrmhgriihonhdrfhhrpdhrtghpthhtohepshhilhhtrggrrheslhgrphhoshhtvgdrnhgv
+X-VR-Cause-10: th
+X-VR-AvState: No
+X-VR-State: 0
+Content-Length: 9712
+
+------=_Part_1307985_1420815061.1508695690317
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+Votre commande r=C3=A9cente no  408-6819683-0581926 vous donne droit =C3=A0=
+ un code promotionnel que nous avons imput=C3=A9 =C3=A0 votre compte. Ce cr=
+=C3=A9dit sera automatiquement appliqu=C3=A9 =C3=A0 votre prochain achat =
+=C3=A9ligible.
+
+Vous trouverez des informations compl=C3=A9mentaires sur cette offre ici : =
+http://www.amazon.fr/b?ie=3DUTF8&node=3D4121683031
+
+Pour b=C3=A9n=C3=A9ficier d'une r=C3=A9duction de 10=E2=82=AC valable sur u=
+ne s=C3=A9lection de DVD, Blu-ray & S=C3=A9ries TV ajoutez =C3=A0 votre pan=
+ier un ou plusieurs produits de la s=C3=A9lection.
+
+Sur la page r=C3=A9capitulative de votre commande, la r=C3=A9duction de 10=
+=E2=82=AC sera alors appliqu=C3=A9e.
+
+Ce bon de r=C3=A9duction doit =C3=AAtre utilis=C3=A9 avant le 13 f=C3=A9vri=
+er 2018. Cette offre est sujette =C3=A0 ces termes et conditions : http://w=
+ww.amazon.fr/gp/promotions/details/A1RZ0SQT0H64C8
+
+Merci d'avoir choisi Amazon.fr.
+
+. . .
+
+Pour toutes questions suppl=C3=A9mentaires, nous vous conseillons de consul=
+ter nos pages d'aide =C3=A0 l'adresse suivante : http://www.amazon.fr/aide
+
+Note: cet e-mail vous a =C3=A9t=C3=A9 envoy=C3=A9 =C3=A0 titre de confirmat=
+ion. L'adresse d'exp=C3=A9dition ne peut pas recevoir de messages: merci de=
+ ne pas r=C3=A9pondre a ce message.
+
+------=_Part_1307985_1420815061.1508695690317
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+</head>
+<body><img width=3D"1" height=3D"1" src=3D"https://www.amazon.fr/gp/r.html?=
+C=3DKK7U46CW0QO7&K=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:2017102218081057280d8b2c=
+ce4622aca9773cae80p0eu&R=3D3R258UXPFQH7H&T=3DO&U=3Dhttps%3A%2F%2Fimages-eu.=
+ssl-images-amazon.com%2Fimages%2FG%2F01%2Fnav%2Ftransp.gif&A=3DAMSYIVMPEI0O=
+2VEA7HGLV4OMC9KA&H=3DJIQE40AE8BR58UTRFNHLYA8XTCMA&ref_=3Dpe_2862781_2198713=
+91_opens" />
+
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tr bgcolor=3D"#FFFFFF">
+  <td align=3D"left">
+  <a rel=3D"nofollow" target=3D"_blank"href=3D"https://www.amazon.fr/gp/r.h=
+tml?C=3DKK7U46CW0QO7&K=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:2017102218081057280d=
+8b2cce4622aca9773cae80p0eu&R=3D3R258UXPFQH7H&T=3DC&U=3Dhttp%3A%2F%2Fwww.ama=
+zon.fr%2F%3Fref_%3Dpe_2862781_219871391&A=3D4GMIEBHCMCMPXZ1QQBV3AUGP5IOA&H=
+=3D3N8AC1MDC6EKKI4WVMXQHJ0MWEMA&ref_=3Dpe_2862781_219871391">
+    <img src=3D"http://g-ecx.images-amazon.com/images/G/08/icons/amazon-log=
+o.gif"
+     width=3D"148" alt=3D"Amazon.fr Logo" height=3D"43" border=3D"0" /></a>
+  </td>
+  <td align=3D"right">
+  <img src=3D"http://g-ecx.images-amazon.com/images/G/08/x-locale/common/ri=
+ght-topnav-default._V199187895_.gif"
+      width=3D"241" usemap=3D"#right_top_nav_map" height=3D"18" border=3D"0=
+" alt=3D"" />
+        <map name=3D"right_top_nav_map">
+            <area shape=3D"rect" target=3D"_blank"
+                href=3D"https://www.amazon.fr/gp/r.html?C=3DKK7U46CW0QO7&K=
+=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:2017102218081057280d8b2cce4622aca9773cae80=
+p0eu&R=3D3R258UXPFQH7H&T=3DC&U=3Dhttp%3A%2F%2Fwww.amazon.fr%2Fgp%2Fcart%2Fv=
+iew.html%2Fref%3Dpe_2862781_219871391_gno_cart&A=3DHITTMAZXNRP0Z27FX9AKKO6V=
+VE4A&H=3D4LV5ATBDYEL2EREWC6NRBHAFQCCA&ref_=3Dpe_2862781_219871391_gno_cart"
+                coords=3D"0,0,27,18" alt=3D"" />
+            <area shape=3D"rect" target=3D"_blank"
+                href=3D"https://www.amazon.fr/gp/f.html?C=3DKK7U46CW0QO7&K=
+=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:2017102218081057280d8b2cce4622aca9773cae80=
+p0eu&R=3D3R258UXPFQH7H&T=3DC&U=3Dhttp%3A%2F%2Fwww.amazon.fr%2Fgp%2Fregistry=
+%2Fwishlist%2Fref%3Dpe_2862781_219871391_topnav_wishlist_&A=3DTTWAKWTB0PEMO=
+FSADUEYJOWFNOAA&H=3DAJPUCNPLRRE9RZU0CZEP84ZMHIGA&ref_=3Dpe_2862781_21987139=
+1_topnav_wishlist_"
+                coords=3D"29,0,113,18" alt=3D"" />
+            <area shape=3D"rect" target=3D"_blank"
+                href=3D"https://www.amazon.fr/gp/r.html?C=3DKK7U46CW0QO7&K=
+=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:2017102218081057280d8b2cce4622aca9773cae80=
+p0eu&R=3D3R258UXPFQH7H&T=3DC&U=3Dhttps%3A%2F%2Fwww.amazon.fr%2Fgp%2Fcss%2Fh=
+omepage.html%3Fref_%3Dpe_2862781_219871391&A=3DO4INZM0LLSNLNPFJ5A0T4JKGACMA=
+&H=3DUYDBXBJXDAYJL4VOHJFELQAZG2OA&ref_=3Dpe_2862781_219871391"
+                coords=3D"121,0,204,18" alt=3D"" />
+            <area shape=3D"rect" target=3D"_blank"
+                href=3D"https://www.amazon.fr/gp/r.html?C=3DKK7U46CW0QO7&K=
+=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:2017102218081057280d8b2cce4622aca9773cae80=
+p0eu&R=3D3R258UXPFQH7H&T=3DC&U=3Dhttp%3A%2F%2Fwww.amazon.fr%2Fgp%2Fhelp%2Fc=
+ustomer%2Fdisplay.html%3Fie%3DUTF8%26nodeId%3D559912%26ref_%3Dpe_2862781_21=
+9871391&A=3DUTJKXIWFJB4MEK2AFGZ3L9RPZW0A&H=3DKWOB06BBHNBAQMCGJIW8IFIAQN0A&r=
+ef_=3Dpe_2862781_219871391"
+                coords=3D"216,0,241,18" alt=3D"" />
+        </map>=20
+  </td>
+</tr>
+</table>
+
+<table width=3D"90%" border=3D"0" cellspacing=3D"0" cellpadding=3D"1" align=
+=3D"center" bgcolor=3D"#006699">
+<tr>
+  <td>
+    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"5" =
+align=3D"center" bgcolor=3D"#FFFFFF">
+    <tr valign=3D"top">
+      <td bgcolor=3D"#FFFFFF">
+        <font face=3D"verdana,arial,helvetica" size=3D"-1">
+
+        <p>Votre commande r=C3=A9cente no 408-6819683-0581926 vous donne dr=
+oit =C3=A0 un code promotionnel que vous pourrez utiliser lors d'un prochai=
+n achat =C3=A9ligible.</p>
+
+        <table cellpadding=3D"4" cellspacing=3D"0" border=3D"0" width=3D"10=
+0%">
+        <tr>
+          <td colspan=3D"1" bgcolor=3D"#006699">
+            <font color=3D"#ffffff" face=3D"verdana,arial,helvetica" size=
+=3D"-1">
+            <b>D=C3=A9tails de la promotion</b>
+            </font>
+          </td>
+        </tr>
+        </table>
+
+        <p>Vous trouverez des informations compl=C3=A9mentaires sur cette o=
+ffre <a href=3D"https://www.amazon.fr/gp/r.html?C=3DKK7U46CW0QO7&K=3D23TLTG=
+OEQN6PF&M=3Durn:rtn:msg:2017102218081057280d8b2cce4622aca9773cae80p0eu&R=3D=
+3R258UXPFQH7H&T=3DC&U=3Dhttp%3A%2F%2Fwww.amazon.fr%2Fb%3Fie%3DUTF8%26node%3=
+D4121683031%26ref_%3Dpe_2862781_219871391&A=3DCQZZFYKP9KOTBTPGLT6ABKZ7BDQA&=
+H=3DM7HL2BQSRU3R9AZ9XCOBYUFAEKSA&ref_=3Dpe_2862781_219871391">ici</a>.</p>
+
+<p>Pour b&eacute;n&eacute;ficier d'une r&eacute;duction de 10&euro; valable=
+ sur une s&eacute;lection de DVD, Blu-ray &amp; S&eacute;ries TV ajoutez &a=
+grave; votre panier un ou plusieurs produits de la s&eacute;lection.<br/><b=
+r/>Sur la page r&eacute;capitulative de votre commande, la r&eacute;duction=
+ de 10&euro; sera alors appliqu&eacute;e.</p>
+
+        <p>Ce bon de r=C3=A9duction doit =C3=AAtre utilis=C3=A9 avant le 13=
+ f=C3=A9vrier 2018. Cette offre est sujette =C3=A0 ces <a href=3D"https://w=
+ww.amazon.fr/gp/f.html?C=3DKK7U46CW0QO7&K=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:2=
+017102218081057280d8b2cce4622aca9773cae80p0eu&R=3D3R258UXPFQH7H&T=3DC&U=3Dh=
+ttp%3A%2F%2Fwww.amazon.fr%2Fgp%2Fpromotions%2Fdetails%2FA1RZ0SQT0H64C8%3Fre=
+f_%3Dpe_2862781_219871391&A=3DRBOAHMPCPK6ZIGHZYVFIT7G0PH0A&H=3DQERQ14ANHUHL=
+TSPBRYPCK5GJ7HKA&ref_=3Dpe_2862781_219871391">termes et conditions</a>.</p>
+
+        <p>Merci d'avoir choisi Amazon.fr.</p>
+
+        <p><b><a rel=3D"nofollow" target=3D"_blank"href=3D"https://www.amaz=
+on.fr/gp/r.html?C=3DKK7U46CW0QO7&K=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:20171022=
+18081057280d8b2cce4622aca9773cae80p0eu&R=3D3R258UXPFQH7H&T=3DC&U=3Dhttp%3A%=
+2F%2Fwww.amazon.fr%3Fref_%3Dpe_2862781_219871391&A=3DLOBR7WQODFSGWYEYJLEZZH=
+TTWTAA&H=3D9OBINH9AMAUE3BT3AYXSTCSMRAUA&ref_=3Dpe_2862781_219871391">Amazon=
+.fr</a></b></p>
+
+        </font>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <font face=3D"verdana,arial,helvetica" size=3D"-1">
+          <hr noshade size=3D"1" />
+
+          <p>Pour toutes questions suppl=C3=A9mentaires, nous vous conseill=
+ons de consulter nos pages d'aide <a href=3D"https://www.amazon.fr/gp/f.htm=
+l?C=3DKK7U46CW0QO7&K=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:2017102218081057280d8b=
+2cce4622aca9773cae80p0eu&R=3D3R258UXPFQH7H&T=3DC&U=3Dhttp%3A%2F%2Fwww.amazo=
+n.fr%2Faide%3Fref_%3Dpe_2862781_219871391&A=3D5PL20WGEOMDQUYOAQN4NN1NAMSUA&=
+H=3DKC6GM751STJTXXZITHZE6CWMJQQA&ref_=3Dpe_2862781_219871391">=C3=A0 l'adre=
+sse suivante</a>.</p>
+
+          <p>Note: cet e-mail vous a =C3=A9t=C3=A9 envoy=C3=A9 =C3=A0 titre=
+ de confirmation. L'adresse d'exp=C3=A9dition ne peut pas recevoir de messa=
+ges: merci de ne pas r=C3=A9pondre a ce message.</p>
+
+          <p><img src=3D"http://g-ecx.images-amazon.com/images/G/08/x-local=
+e/common/icons/icon-unsubscribe._V2022883986_.gif" width=3D"17" height=3D"1=
+5" border=3D"0" alt=3D"" />&nbsp; Vous souhaitez ne pas recevoir de message=
+s HTML ? <a rel=3D"nofollow" target=3D"_blank" href=3D"https://www.amazon.f=
+r/gp/f.html?C=3DKK7U46CW0QO7&K=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:201710221808=
+1057280d8b2cce4622aca9773cae80p0eu&R=3D3R258UXPFQH7H&T=3DC&U=3Dhttps%3A%2F%=
+2Fwww.amazon.fr%2Fgp%2Fgss%2Fccp%3Fref_%3Dpe_2862781_219871391&A=3DNMTKNKCA=
+PFAAVRVPZOIYJON2VH0A&H=3D2IVAVANCOXMHAAFU6GHPNJNDYKGA&ref_=3Dpe_2862781_219=
+871391">Cliquez ici</a>.</p>
+
+        </font>
+      </td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+<img width=3D"1" height=3D"1" src=3D"https://www.amazon.fr/gp/r.html?C=3DKK=
+7U46CW0QO7&K=3D23TLTGOEQN6PF&M=3Durn:rtn:msg:2017102218081057280d8b2cce4622=
+aca9773cae80p0eu&R=3D3R258UXPFQH7H&T=3DE&U=3Dhttps%3A%2F%2Fimages-eu.ssl-im=
+ages-amazon.com%2Fimages%2FG%2F01%2Fnav%2Ftransp.gif&A=3DQNIMNU00TAHCNH1ZBO=
+ISL69M0BKA&H=3DZGJHR28CUF5ILUQ8XVMCXIRWBLCA&ref_=3Dpe_2862781_219871391_ope=
+n" /></body>
+</html>
+------=_Part_1307985_1420815061.1508695690317--
+

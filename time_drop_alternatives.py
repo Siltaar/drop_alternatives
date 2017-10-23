@@ -3,7 +3,8 @@
 # author : Simon Descarpentries, 2017-10
 # licence: GPLv3
 
-import doctest
+from doctest import run_docstring_examples
+from datetime import datetime
 from drop_alternatives import test_drop_alternatives
 
 """
@@ -24,12 +25,13 @@ OS : Debian Jessie 8.9
 2017-10-21 : 24 tests ; 6.64s ; 2,76ms/t (strip scripts, no more decode / bytes only)
 2017-10-21 : 24 tests ; 5.43s ; 2,26ms/t (run via python2)
 2017-10-21 : 25 tests ; 5.72s ; 2,28ms/t (deal with <style><!-- without .*? and re.DOTALL)
+2017-10-23 : 26 tests ; 7.53s ; 2,89ms/t (deal with display:none without .*?, compares 199c)
 """
 
-from datetime import datetime
+DEBUG = 0
 startTime = datetime.now()
 
 for i in range(0,100):
-	doctest.run_docstring_examples(test_drop_alternatives, globals())
+	run_docstring_examples(test_drop_alternatives, globals())
 
 print(datetime.now() - startTime)

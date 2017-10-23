@@ -9,12 +9,12 @@ from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
 from difflib import SequenceMatcher
 from sys import stdin, stderr, version_info
-import re
+from re import compile as c_re
 
 
-DEBUG = 0
-re_strip = re.compile(b'<(tit|sty|scr|o:)[^>]+>[^/]+/[^>]+|<[^>]+|https?://[^ >]+|&[^;]+;')
-bad_char = b' \t\n\r\f\v\xc2\xa0-*#:>|=.'
+DEBUG = 1
+re_strip = c_re(b'<(tit|sty|scr|o:|[^y]+y:n)[^>]+>[^/]+/[^>]+|<[^>]+|https?://[^ >]+|&[^;]+;')
+bad_char = b' \t\n\r\xc2\xa0#->='  # exists \v Vertical tab ; \f From feed
 
 
 def compose_message(orig, parts):
@@ -33,7 +33,7 @@ def compose_message(orig, parts):
 	return wanted
 
 
-def drop_alternatives(msg_str):
+def drop_alternatives(msg_str, DEBUG=DEBUG):
 	eml = Parser().parsestr(msg_str)
 
 	if eml.is_multipart():
@@ -53,7 +53,7 @@ def drop_alternatives(msg_str):
 				html_parts.append(part)
 			elif 'plain' in part.get_content_type():
 				kept_parts.append(part)
-				texts.append(get_txt(part, 2560))
+				texts.append(get_txt(part, 1500))
 			else:
 				kept_parts.append(part)
 
@@ -90,82 +90,86 @@ def get_txt(part, raw_len, bad_char=bad_char):
 	t = part.get_payload(decode=True)[:raw_len]
 	t = re_strip.sub(b'', t)
 	t = t.translate(None, bad_char)
-	return t[:256]
+	return t[:199]
 
 
-def test_drop_alternatives(msg_str):
+def test_drop_alternatives(msg_str, DEBUG=DEBUG):
 	"""
-	>>> test_drop_alternatives('Content-Type: text/plain;\\nA')
+	>>> test_drop_alternatives('Content-Type: text/plain;\\nA', DEBUG)
 	text/plain
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n<body>A</body><style> <!--body{color red;}--></style>')
+	... '--\\nContent-Type: text/html;\\n<body>A</body><style>\\n <!--body{color red;}', DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n<html>\\t\\t\\t\\t\\t\\t\\t<p>A</p>')
+	... '--\\nContent-Type: text/html;\\n<html>\\t\\t\\t\\t\\t\\t\\t<p>A</p>', DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n<html>B')
+	... '--\\nContent-Type: text/html;\\n<html>B', DEBUG)
 	multipart/mixed text/plain text/html
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
 	... '--\\nContent-Type: text/plain;\\nB\\n'
-	... '--\\nContent-Type: text/html;\\nB')
+	... '--\\nContent-Type: text/html;\\nB', DEBUG)
 	multipart/mixed text/plain text/plain
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
 	... '--\\nContent-Type: text/plain;\\nB\\n'
-	... '--\\nContent-Type: text/html;\\n<p>C</p>')
+	... '--\\nContent-Type: text/html;\\n<p>C</p>', DEBUG)
 	multipart/mixed text/plain text/plain text/html
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
 	... '--\\nContent-Type: text/plain;\\nB\\n'
 	... '--\\nContent-Type: text/html;\\nB\\n'
-	... '--\\nContent-Type: text/html;\\nC')
+	... '--\\nContent-Type: text/html;\\nC', DEBUG)
 	multipart/mixed text/plain text/plain text/html
-	>>> test_drop_alternatives(open('test_email/20160916.eml').read())
+	>>> test_drop_alternatives(open('test_email/20160916.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20170901.eml').read())
+	>>> test_drop_alternatives(open('test_email/20170901.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20170917.eml').read())
+	>>> test_drop_alternatives(open('test_email/20170917.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20170925.eml').read())
+	>>> test_drop_alternatives(open('test_email/20170925.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171003.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171003.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171003-2.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171003-2.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171004.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171004.eml').read(), DEBUG)
 	multipart/mixed text/plain text/plain
-	>>> test_drop_alternatives(open('test_email/20171004-2.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171004-2.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171004-3.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171004-3.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171004-4.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171004-4.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171004-5.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171004-5.eml').read(), DEBUG)
 	multipart/mixed text/plain text/plain text/plain
-	>>> test_drop_alternatives(open('test_email/20171005.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171005.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171005-3.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171005-3.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171011.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171011.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171018.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171018.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171018-2.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171018-2.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171018-3.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171018-3.eml').read(), DEBUG)
 	multipart/mixed text/plain
-	>>> test_drop_alternatives(open('test_email/20171020.eml').read())
+	>>> test_drop_alternatives(open('test_email/20171020.eml').read(), DEBUG)
+	multipart/mixed text/plain
+	>>> test_drop_alternatives(open('test_email/20171022.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	"""
-	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str).walk()]))
+	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str, DEBUG).walk()]))
 
 
 if __name__ == "__main__":
+	DEBUG = 0
+
 	if version_info.major > 2:
 		print(drop_alternatives(TextIOWrapper(stdin.buffer, errors='ignore').read()))
 	else:

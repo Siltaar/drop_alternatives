@@ -9,7 +9,7 @@ https://github.com/nicm/fdm[FDM] or some other mail delivery agent.
 It tries to be moderately conservative and only act when things are
 moderately safe:
 
-* drops the `text/html` parts that have a 50% corresponding `text/plain` part ;
+* drops the `text/html` parts that have a corresponding `text/plain` part ;
 * in all other cases keep the message intact.
 
 == Performance note

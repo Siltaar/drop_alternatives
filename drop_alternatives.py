@@ -9,12 +9,13 @@ from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
 from difflib import SequenceMatcher
 from sys import stdin, stderr, version_info
-from re import compile as c_re
+from re import DOTALL, compile as compile_re
 
 
-re_strip = c_re(b'<(tit|sty|scr|o:|[^y]+y:n)[^>]+>[^/]+/[^>]+|<[^>]+|https?://[^ >]+|&[^;]+;')
-bad_char = b' \t\n\r\xc2\xa0#->='  # exists \v Vertical tab ; \f From feed
-
+re_html = compile_re(
+	b'<(tit|sty|scr|o:|[^y]+y:n).*?</[^>]+|<[^>]+|[\d+]|&[^;]+;|[^\s\n\r<]{25,}',
+	DOTALL)
+bad_char = b' \t\n\r\xc2\xa0\'#->=:*]['  # exist: \v Vertical tab ; \f From feed
 
 def compose_message(orig, parts):
 	wanted = MIMEMultipart()
@@ -49,7 +50,7 @@ def drop_alternatives(msg_str, debug=0):
 				html_parts.append(part)
 			elif 'plain' in part.get_content_type():
 				kept_parts.append(part)
-				texts.append(get_txt(part, 1500))
+				texts.append(get_txt(part, 2500))
 			else:
 				kept_parts.append(part)
 
@@ -60,17 +61,17 @@ def drop_alternatives(msg_str, debug=0):
 			recompose_msg = False
 
 			for h in html_parts:
-				h_txt = get_txt(h, 28000)
+				h_txt = get_txt(h, 20000)
 				save_html = True
 
 				for i, t in enumerate(texts):
-					idem_ratio = SequenceMatcher(None, a=h_txt, b=t).ratio()
+					idem_ratio = SequenceMatcher(None, a=h_txt, b=t).quick_ratio()
 					if debug:
 						print(b'h: '+h_txt, file=stderr)
 						print(b't: '+t, file=stderr, end=' ')
 						print(idem_ratio, file=stderr)
 
-					if idem_ratio > 0.50:
+					if idem_ratio > 0.85:
 						save_html = False
 						recompose_msg = True
 						del texts[i]  # avoid comparing again with this text
@@ -86,10 +87,10 @@ def drop_alternatives(msg_str, debug=0):
 
 
 def get_txt(part, raw_len, bad_char=bad_char):
-	t = part.get_payload(decode=True)[:raw_len]
-	t = re_strip.sub(b'', t)
+	t = part.get_payload(decode=True)[-raw_len:]
+	t = re_html.sub(b'', t)
 	t = t.translate(None, bad_char)
-	return t[:199]
+	return t[-256:]
 
 
 DEBUG = 1
@@ -99,7 +100,7 @@ def test_drop_alternatives(msg_str, debug):
 	text/plain
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n<body>A</body><style>\\n <!--body{color red;}', DEBUG)
+	... '--\\nContent-Type: text/html;\\n\\n <!--body{color red;}--> \\n</style>A', DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
@@ -162,6 +163,10 @@ def test_drop_alternatives(msg_str, debug):
 	>>> test_drop_alternatives(open('test_email/20171020.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171022.eml').read(), DEBUG)
+	multipart/mixed text/plain
+	>>> test_drop_alternatives(open('test_email/20171023.eml').read(), DEBUG)
+	multipart/mixed text/plain
+	>>> test_drop_alternatives(open('test_email/20171025.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	"""
 	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str, debug).walk()]))

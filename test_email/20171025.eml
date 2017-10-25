@@ -1,0 +1,492 @@
+Return-Path: <bounce+45048967.5414.8747.35346@lescomptes.fr>
+Delivered-To: aaa@aaa.fr
+X-policyd-weight: using cached result; rate: 0.25
+Authentication-Results: zat.globenet.org; dkim=pass
+ reason="2048-bit key; insecure key"
+ header.d=lescomptes.fr header.i=infomediation@lescomptes.fr
+ header.b=Rm91BPxk; dkim-adsp=pass; dkim-atps=neutral
+Received: by bbb (fdm 1.9, account "ccc@ccc")
+ with pop3 (version=TLSv1/SSLv3 DHE-RSA-AES256-GCM-SHA384 256 bits)
+ Wed, 25 Oct 2017 13:49:01 +0200
+Received: from vip.april.org (virola.april.org [62.210.101.52])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by zat.globenet.org (Postfix) with ESMTPS id 6CDF676393
+ for <aaa@aaa.fr>; Wed, 25 Oct 2017 13:47:35 +0200 (CEST)
+Received: by vip.april.org (Postfix)
+ id 0AD4625F; Wed, 25 Oct 2017 13:47:35 +0200 (CEST)
+Delivered-To: sddd@april.org
+Received: from localhost (localhost [127.0.0.1])
+ by vip.april.org (Postfix) with ESMTP id DBB90129
+ for <sddd@april.org>; Wed, 25 Oct 2017 13:47:34 +0200 (CEST)
+Authentication-Results: vip.april.org; dkim=pass (2048-bit key;
+ unprotected) header.d=lescomptes.fr header.i=infomediation@lescomptes.fr
+ header.b="Rm91BPxk"; dkim-atps=neutral
+X-Virus-Scanned: Debian amavisd-new at april.org
+X-Spam-Flag: NO
+X-Spam-Score: -2.02
+X-Spam-Level:
+X-Spam-Status: No, score=-2.02 tagged_above=-9999 required=5
+ tests=[BAYES_00=-1.9, DKIM_SIGNED=0.1, DKIM_VALID=-0.1,
+ DKIM_VALID_AU=-0.1, HTML_MESSAGE=0.001, RCVD_IN_DNSWL_NONE=-0.0001,
+ RCVD_IN_MSPIKE_H4=-0.01, RCVD_IN_MSPIKE_WL=-0.01, SPF_PASS=-0.001]
+ autolearn=ham autolearn_force=no
+Received: from vip.april.org ([127.0.0.1])
+ by localhost (mail.april.org [127.0.0.1]) (amavisd-new, port 10024)
+ with ESMTP id CxaWlgFVAPVn for <sddd@april.org>;
+ Wed, 25 Oct 2017 13:47:33 +0200 (CEST)
+Received: from mailer2.vertical-mail.com (mailer2.vertical-mail.com
+ [217.174.218.130])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by vip.april.org (Postfix) with ESMTPS id B08FB294
+ for <sddd@april.org>; Wed, 25 Oct 2017 13:47:32 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=lescomptes.fr;
+ h=To:Subject:Message-Id:List-Unsubscribe:From:Reply-to:
+ Content-Transfer-Encoding:MIME-Version:Content-Type:Date;
+ i=infomediation@lescomptes.fr;
+ bh=poxiBHT2FBrbCsAvYz1/PEV0CtR461qg/E8c2iK4P84=;
+ b=Rm91BPxkA5Gl5vjhJSXN2G8eUjOg+nfADrEe4zoqmBzh0yxwdzefsd2uySF7DDFxebEvAhfed4uv
+ QV2XxDqaXTIpnU1MYkRMm4mM98sgCbVbzmLdfAlA6z1wJDb41LV9OKhdapB2KVlW+3QHBzW4kCzI
+ bAKq3o3pH+fdLVutAyVQquuOEz0zFmFnjmGbkFqKHqKtMX0lXnh8MzT3XtAz3/SGVpw0Ye7Jf98/
+ dFxnX9LS39jxLW2QYownqM0fehc0RE3S6hCIeTbM3Q4gBSVa03kfHwOdfbZuXHeyugRCIu/2RZHl
+ Xk4zcpGUySIijWML4ZBCUtjGmcQIjL36tIatKw==
+To: sddd@april.org
+Subject: =?ISO-8859-15?Q?=C9conomisez=20sur=20vos=20factures=20d=27=E9nergie?=
+Message-Id: <20171025134732.45048967-35346-8747@lescomptes.fr>
+Feedback-ID: 35346:45048967:1:1
+List-Unsubscribe: <mailto:opposition@vertical-mail.com>
+From: "Direct Energie Pro" <infomediation@lescomptes.fr>
+Reply-to: infomediation@lescomptes.fr
+X-Sender: infomediation@lescomptes.fr
+Content-Transfer-Encoding: 8bit
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="00-d82f03e780dc938d3d3e85596132da14"
+Date: Wed, 25 Oct 2017 13:47:32 +0200
+Content-Length: 30662
+
+This is a multi-part message in MIME format .
+
+--00-d82f03e780dc938d3d3e85596132da14
+Content-Type: text/plain; charset=ISO-8859-15
+
+Monsieur ddd,
+
+Professionnels, payez votre gaz et électricité moins cher
+Artisans, commerçants, professions libérales économisez jusqu'à 10% sur vos factures d'énergie
+> Plus d'infos :
+http://www.vminfo.fr/page,98721,45048967,5414,8747,35346,h78t9s58.html
+
+
+En tant que professionnel, avec Direct Energie, vos économies sont garanties dans la durée. Vous consommez au meilleur prix, les avantages en plus :
+
+- Un service client élu pour la 10ème fois consécutive "Service Client de l'année"
+- Votre installation reste identique : même compteur
+- Vous pouvez changer de fournisseur en tout simplicité, en quelques minutes
+
+Renseignez-vous vite sur les offres d'électricité et de gaz adaptées à votre entreprise
+
+> Combien allez-vous économiser ? Renseignez-vous ici :
+http://www.vminfo.fr/page,98721,45048967,5414,8747,35346,h78t9s58.html
+
+
+--------------------------------------
+
+Vous recevez ce message car votre adresse e-mail est référencée dans la base de données Kompass.	Conformément à la loi "informatique et libertés" du 6 janvier 1978, vous disposez d'un droit d'accès et de rectification aux données personnelles vous concernant.- Pour vous désabonner des envois faits par notre annonceur sur cette base, suivez ce lien www.vminfos.com/opposition/index3.php4Si vous ne souhaitez plus recevoir de mail de la part de tous les annonceurs utilisant la base de données Kompass, suivez ce lien www.kompass.fr/unsubscribe.php?KIDNous pouvons utiliser des cookies ou des technologies similaires pour vous permettre de disposer de services et d'offres adaptés à vos centres d'intérêts.En acceptant de recevoir des emails de notre part, vous acceptez l'utilisation de ces technologies : pour en savoir plus, suivez ce lien :http://www.vminfos.com/informations-sur-les-cookies/
+
+
+Vertical-Mail® - Tous droits réservés©
+
+--00-d82f03e780dc938d3d3e85596132da14
+Content-Type: text/html; charset=ISO-8859-15
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+	<title>Direct Energie - mon &eacute;nergie, tout simplement</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta property="og:image" content="http://www.vminfos.com/solodirect1710leads/visuals/vignette.jpg" />
+	<meta property="og:title" content="Direct Energie" />
+	<meta property="og:description" content="mon &eacute;nergie, tout simplement" />
+	<link rel="shortcut icon" href="https://www.direct-energie.com/typo3conf/ext/de_site_package/Resources/Public/Dist/Icons/favicon.ico" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<style type="text/css">
+		.lienmention { color:#CCCCCC; }
+		/* Forcer l'allignement du message dans hotmail */
+		.ExternalClass { width:100%; }
+		/* Pour &eacute;viter les changement de taille de texte sur mobile */
+		body { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }
+		/* Pour supprimer les bordure sur les tableaux */
+		table td { border-collaspse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; margin:0; padding:0; }
+
+		img { margin:0; padding:0; }
+
+		@media only screen and (max-width: 3000px), (max-device-width: 3000px) {
+			*[class~=general] { width:640px!important; }
+			*[class~=p_desktop] { padding-left: 5px!important; padding-right: 5px!important; }
+		}
+
+		@media only screen and (max-width: 639px), (max-device-width: 639px) {
+			*[class~=general] { width:320px!important; }
+			*[class~=p_desktop] { padding-left: 0!important; padding-right: 0!important; }
+
+			/* Modifier les dimentions en homothétie */
+			*[class~=resize320] {
+				width:320px!important;
+				height:auto!important;
+			}
+			*[class~=resize270] {
+				width:270px!important;
+				height:auto!important;
+			}
+
+			/* Modifier la largeur de façon non homothétique */
+			*[class~=w320] { width:320px!important; }
+			*[class~=w318] { width:318px!important; }
+			*[class~=w310] { width:310px!important; }
+			*[class~=w300] { width:300px!important; }
+			*[class~=w280] { width:280px!important; }
+			*[class~=w40] { width:40px!important; }
+			*[class~=w20] { width:20px!important; }
+			*[class~=w10] { width:10px!important; }
+
+			/* Modifier la hauteur de façon non homothétique */
+			*[class~=h19] { height:19px!important; }
+
+			/* Supprimer le padding (ne fonctionne pas sous app gmail android => voir parades.txt) */
+			*[class~=p0] { padding:0!important; }
+			*[class~=pl80] { padding-left:80px !important; }
+
+			/* Supprimer le margin */
+			*[class~=m0] { padding:0!important; }
+
+			/* changer la taille de la typo (ne fonctionne pas sous app gmail android) */
+			*[class~=f22] { font-size:22px!important; }
+			*[class~=fcenter] { text-align:center!important; }
+			*[class~=center] { margin:0 auto!important; }
+			*[class~=none] { display:none; }
+			*[class~=show] { display:block !important; margin: 0 auto; padding:0; overflow : visible !important; max-height:inherit !important; }
+		}
+	</style>
+	<!--[if gte mso 9]>
+	<xml>
+	  <o:OfficeDocumentSettings>
+		<o:AllowPNG/>
+		<o:PixelsPerInch>96</o:PixelsPerInch>
+	 </o:OfficeDocumentSettings>
+	</xml>
+<![endif]-->
+</head>
+
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0" bgcolor="#363636" text="#000000">
+<center>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#363636">
+	<tr>
+		<td align="center" bgcolor="#363636">
+
+		<!--[if (gte mso 9)|(IE)]>
+			<table border="0" cellpadding="0" cellspacing="0" width="640" style="width:640px;" class="general"><tr><td align="left" valign="top">
+			<![endif]-->
+
+			<table cellspacing="0" cellpadding="0" border="0" style="width:100%; Max-Width:640px;" class="general"><tr><td>
+																				<table width="100%" cellpadding="0" cellspacing="0" border="0" class="general">
+											<tr>
+							<td height="40" align="center"><font face="Arial, Helvetica, sans-serif" color="#CCCCCC" style="font-size:11px; height:40px;">
+								Monsieur ddd, Professionnels, payez votre gaz et &eacute;lectricit&eacute;&nbsp;MOINS&nbsp;CHER<br />Si&nbsp;ce message ne s'affiche pas correctement, <a href="http://www.vminfo.fr/page,98722,45048967,5414,8747,35346,h78t9s58.html" target="_blank"  id="link-01"><font color="#CCCCCC">consultez-le en&nbsp;ligne</font></a>							</font></td>
+						</tr>
+						<tr><td height="1" style="height:1px; line-height:1px"><a href="http://www.vminfo.fr/page,95843,45048967,5414,8747,35346,h78t9s58.html"><img src="https://www.vminfos.com/visuals/blank.gif" width="1" height="1" border="0" style="display:block" /></a></td></tr>
+										</table>
+
+
+									<!-- Tableau général -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="w320" bgcolor="#FFFFFF">
+
+		<tr>
+		<td bgcolor="#363636">
+			<table width="310" style="width:310px;" align="left" cellpadding="0" cellspacing="0" border="0" class="320">
+				<!--<tr><td height="26" colspan="2" style="height:26px; line-height:26px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td></tr>-->
+				<tr>
+					<td align="left" style="font-family:Arial, Helvetica, sans-serif; font-size:14px;" class="pl80"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0; color: #FFFFFF;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_logo_direct_energie.gif" width="150" height="68" style="display:block; border:0;" alt="Direct Energie" /></a></td>
+				</tr>
+			</table>
+			<table width="320" style="width:320px;" align="right" cellpadding="0" cellspacing="0" border="0">
+				<tr><td height="20" colspan="2" style="height:20px; line-height:20px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td></tr>
+				<tr>
+					<td width="5" style="width:5px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+					<td width="310" align="center" style="width:310px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color: #ffffff;">
+						<a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="text-decoration: none; color:#ffffff;">
+							<strong style="color: #ffe400;">Artisans, commer&ccedil;ants, professions lib&eacute;rales</strong><br />
+							&Eacute;conomisez jusqu'&agrave; 10%<br />
+							sur vos factures d'&eacute;nergie - <span style="text-decoration: underline;">Plus d'infos</span>
+						</a>
+					</td>
+					<td width="5" style="width:5px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="28" style="height:28px; line-height:28px;" bgcolor="#363636"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+	</tr>
+
+		<tr>
+		<td bgcolor="#ffd400">
+			<table width="320" style="width:320px;" align="left" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td width="320" align="left" style="width:320px; font-family:Arial, Helvetica, sans-serif; font-size:14px;"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_visu.jpg" width="320" height="245" style="display:block; border:0;" alt="" /></a></td>
+				</tr>
+			</table>
+			<table width="300" height="221" style="width:300px; height:221px;" align="right" cellpadding="0" cellspacing="0" border="0" class="w310">
+				<tr><td height="28" colspan="2" style="height:28px; line-height:28px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td></tr>
+				<tr>
+					<td width="290" align="center" style="width:290px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color: #363636;"  class="w300">
+						<a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="text-decoration: none; color:#363636;">
+							<strong style="font-size:20px;">Professionnels,<br />payez votre gaz et &eacute;lectricit&eacute;</strong><br />
+							<strong style="font-size:40px; color: #363636; text-transform: uppercase;">moins cher</strong>
+						</a>
+						<br /><br />
+						<a href="http://www.vminfo.fr/page,98719,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="color:#dc0f82;"><strong>Cliquez ici pour en savoir plus</strong></a><br />
+						<strong>ou</strong>
+					</td>
+					<td width="15" style="width:15px;" class="w10"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+				</tr>
+				<tr><td height="10" colspan="2" style="height:10px; line-height:10px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td></tr>
+				<tr>
+					<td width="290" align="center" style="width:290px;" class="w300">
+						<table width="224" style="width:224px;" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+							<tr>
+								<td width="23" height="34" style="width:23px; height:34px;"><a href="http://www.vminfo.fr/page,98723,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bt_rappel_left.gif" width="23" height="34" style="display:block; border:0;" alt="" /></a></td>
+								<td width="197" height="34" align="center" valign="middle" style="width:197px; height:34px; font-family:Arial, Helvetica, sans-serif; font-size:17px; color: #333333;"><a href="http://www.vminfo.fr/page,98723,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="text-decoration: none; color:#333333;"><strong>Faites-vous rappeler</strong></a></td>
+								<td width="4" height="34" style="width:4px; height:34px;"><a href="http://www.vminfo.fr/page,98723,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bt_rappel_right.gif" width="4" height="34" style="display:block; border:0;" alt="" /></a></td>
+							</tr>
+						</table>
+					</td>
+					<td width="15" style="width:15px;" class="w10"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+				</tr>
+				<tr><td height="10" colspan="2" style="height:10px; line-height:10px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td></tr>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+		<td height="30" style="height:30px; line-height:30px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+	</tr>
+
+		<tr>
+		<td align="left" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#212121; padding-left:22px; padding-right:22px;">
+			<a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="text-decoration: none; color:#212121;">
+				Monsieur ddd,<br />
+				<br />
+				<strong>En tant que professionnel, avec&nbsp;Direct&nbsp;Energie, vos&nbsp;&eacute;conomies sont garanties dans la&nbsp;dur&eacute;e.</strong> <span style="color: #dc0f82;">Vous consommez au&nbsp;meilleur prix, les&nbsp;avantages en&nbsp;plus&nbsp;:</span>
+			</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td height="12" style="height:12px; line-height:12px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+	</tr>
+
+		<tr>
+		<td align="left" class="p_desktop">
+			<table width="210" style="width:210px; border: 0;" align="left" cellpadding="0" cellspacing="0" border="0" class="w320">
+				<tr><td height="20" colspan="3" style="height:20px; line-height:20px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td></tr>
+				<tr>
+					<td width="18" style="width:18px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+					<td width="174" align="left" style="width:174px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" class="w280">
+						<table width="174" style="border:0; width: 174px;" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+							<tr>
+								<td height="80" colspan="3"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_top_perso.gif" width="174" height="80" style="display:block; border:0;" alt="" ></a></td>
+							</tr>
+							<tr>
+								<td width="8" style="width: 8px;"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_left.gif" width="8" height="102" style="display:block; border:0;" alt="" ></a></td>
+								<td width="158" align="center" valign="top" style="width: 158px; font-family: Arial, Helvetica, 'sans-serif'; font-size: 14px; color: #212121;">
+									<a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="text-decoration: none; color: #212121;">
+										<span style="font-size: 10px;">&nbsp;</span><br>
+										Un service client &eacute;lu<br>
+										pour la 10&egrave;me fois<br>
+										cons&eacute;cutive<br>
+										<strong>&ldquo;Service Client<br>
+										de l'ann&eacute;e&rdquo;</strong>
+									</a>
+								</td>
+								<td width="8" style="width: 8px;"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_right.gif" width="8" height="102" style="display:block; border:0;" alt="" ></a></td>
+							</tr>
+							<tr>
+								<td height="15" colspan="3" style="height: 15px; line-height: 15px;"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_bottom.gif" width="174" height="15" style="display:block; border:0;" alt="" ></a></td>
+							</tr>
+						</table>
+					</td>
+					<td width="18" style="width:18px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+				</tr>
+			</table>
+			<table width="210" style="width:210px; border: 0;" align="left" cellpadding="0" cellspacing="0" border="0" class="w320">
+				<tr><td height="20" colspan="3" style="height:20px; line-height:20px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td></tr>
+				<tr>
+					<td width="18" style="width:18px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+					<td width="174" align="left" style="width:174px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" class="w280">
+						<table width="174" style="border:0; width: 174px;" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+							<tr>
+								<td height="80" colspan="3"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_top_compteur.gif" width="174" height="80" style="display:block; border:0;" alt="" ></a></td>
+							</tr>
+							<tr>
+								<td width="8" style="width: 8px;"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_left.gif" width="8" height="102" style="display:block; border:0;" alt="" ></a></td>
+								<td width="158" align="center" valign="top" style="width: 158px; font-family: Arial, Helvetica, 'sans-serif'; font-size: 14px; color: #212121;">
+									<a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="text-decoration: none; color: #212121;">
+										<span style="font-size: 10px;">&nbsp;</span><br>
+										Votre installation<br>
+										reste identique :<br>
+										<strong>m&ecirc;me compteur</strong>
+									</a>
+								</td>
+								<td width="8" style="width: 8px;"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_right.gif" width="8" height="102" style="display:block; border:0;" alt="" ></a></td>
+							</tr>
+							<tr>
+								<td height="15" colspan="3" style="height: 15px; line-height: 15px;"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_bottom.gif" width="174" height="15" style="display:block; border:0;" alt="" ></a></td>
+							</tr>
+						</table>
+					</td>
+					<td width="18" style="width:18px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+				</tr>
+			</table>
+			<table width="210" style="width:210px; border: 0;" align="left" cellpadding="0" cellspacing="0" border="0" class="w320">
+				<tr><td height="20" colspan="3" style="height:20px; line-height:20px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td></tr>
+				<tr>
+					<td width="18" style="width:18px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+					<td width="174" align="left" style="width:174px; font-family:Arial, Helvetica, sans-serif; font-size:14px;" class="w280">
+						<table width="174" style="border:0; width: 174px;" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+							<tr>
+								<td height="80" colspan="3"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_top_ampoule.gif" width="174" height="80" style="display:block; border:0;" alt="" ></a></td>
+							</tr>
+							<tr>
+								<td width="8" style="width: 8px;"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_left.gif" width="8" height="102" style="display:block; border:0;" alt="" ></a></td>
+								<td width="158" align="center" valign="top" style="width: 158px; font-family: Arial, Helvetica, 'sans-serif'; font-size: 14px; color: #212121;">
+									<a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="text-decoration: none; color: #212121;">
+										<span style="font-size: 10px;">&nbsp;</span><br>
+										Vous pouvez<br>
+										changer de<br>
+										fournisseur en tout<br>
+										<strong>simplicit&eacute;, en<br>
+										quelques minutes</strong>
+									</a>
+								</td>
+								<td width="8" style="width: 8px;"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_right.gif" width="8" height="102" style="display:block; border:0;" alt="" ></a></td>
+							</tr>
+							<tr>
+								<td height="15" colspan="3" style="height: 15px; line-height: 15px;"><a href="http://www.vminfo.fr/page,98718,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bloc_bottom.gif" width="174" height="15" style="display:block; border:0;" alt="" ></a></td>
+							</tr>
+						</table>
+					</td>
+					<td width="18" style="width:18px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td height="18" style="height:18px; line-height:18px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+	</tr>
+
+		<tr>
+		<td bgcolor="#ffd400">
+			<table width="320" style="width:320px;" align="left" cellpadding="0" cellspacing="0" border="0">
+				<tr><td height="20" colspan="2" style="height:20px; line-height:20px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td></tr>
+				<tr>
+					<td width="20" style="width:20px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+					<td width="280" align="left" style="width:280px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color: #212121;">
+						<strong><span style="text-decoration: underline; color: #dc0f82;">Renseignez-vous vite</span><br />
+						sur les offres d'&eacute;lectricit&eacute;<br />
+						et de gaz adapt&eacute;es &agrave; votre entreprise</strong>
+					</td>
+					<td width="20" style="width:20px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+				</tr>
+			</table>
+			<table width="300" style="width:300px;" align="left" cellpadding="0" cellspacing="0" border="0">
+				<tr><td height="20" colspan="2" style="height:20px; line-height:20px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td></tr>
+				<tr>
+					<td width="20" style="width:20px;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+					<td width="280" align="left" style="width:280px; font-family:Arial, Helvetica, sans-serif; font-size:14px;">
+						<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF">
+							<tr>
+								<td width="5" height="53" style="width:5px; height:53px;"><a href="http://www.vminfo.fr/page,98720,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bt_economie_left.gif" width="5" height="53" style="display:block; border:0;" alt="" /></a></td>
+								<td height="53" align="center" valign="middle" style="height:53px; font-family:Arial, Helvetica, sans-serif; font-size:16px; color: #333328;">
+									<a href="http://www.vminfo.fr/page,98720,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="text-decoration: none; color:#333328;">
+										<strong>Combien allez-vous &eacute;conomiser&nbsp;?</strong><br>
+										<span style="color: #dc0f82;">Renseignez-vous&nbsp;ici</span>
+									</a>
+								</td>
+								<td width="5" height="53" style="width:5px; height:53px;"><a href="http://www.vminfo.fr/page,98720,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="border:0;"><img src="http://www.vminfos.com/solodirect1710leads/visuals/ml_bt_economie_right.gif" width="5" height="53" style="display:block; border:0;" alt="" /></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td height="20" style="height:20px; line-height:20px;" bgcolor="#ffd400"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+	</tr>
+
+	<tr>
+		<td height="10" style="height:10px; line-height:10px;" bgcolor="#363636"><img src="http://www.vminfos.com/solodirect1710leads/visuals/blank.gif" width="1" height="1" style="display:block; border:0;" alt="" /></td>
+	</tr>
+	<tr>
+		<td style="font-family: Arial, Helvetica, 'sans-serif'; font-size: 10px; color: #808080;" bgcolor="#363636">
+			<br />
+			voir conditions sur site <a href="http://www.vminfo.fr/page,98724,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="color:#808080;">http://professionnels.direct-energie.com/</a>
+		</td>
+	</tr>
+</table>
+
+
+										<br />
+								<table width="100%" cellpadding="0" cellspacing="0" border="0" class="general">
+									<tr>
+						<td height="25" align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:13px; height:25px;"><img alt="" src="http://www.vminfos.com/visuals/solo_foot_im01.gif" width="24" height="13" align="absmiddle" /><a href="http://www.vminfo.fr/page,98725,45048967,5414,8747,35346,h78t9s58.html" id="link-02" style="color:#CCCCCC">Pour transf&eacute;rer cet e-mail</a></td>
+					</tr>
+								</table>
+
+
+						<br />
+							<!-- SNIP -->
+								<table width="100%" cellpadding="0" cellspacing="0" border="0" class="general">
+									<tr>
+						<td align="left"><font face="Arial, Helvetica, sans-serif" size="1" style="font-size:9px;" color="#CCCCCC">Vous recevez ce message car votre adresse e-mail est référencée dans la base de données Kompass.<BR>	Conformément à la loi "informatique et libertés" du 6 janvier 1978, vous disposez d'un droit d'accès et de rectification aux données personnelles vous concernant.<BR>- Pour vous désabonner des envois faits par notre annonceur sur cette base, <A HREF="http://www.vminfos.com/opposition/index3.php4?dest=Direct Energie&email=sddd@april.org&member=&contact_id=45048967&base_id=5414&campaign_id=8747&sending_id=35346" CLASS=lienmention>cliquer ici</A><BR><BR>Si vous ne souhaitez plus recevoir de mail de la part de tous les annonceurs utilisant la base de données Kompass, <A HREF="http://www.kompass.fr/unsubscribe.php?KID=sddd@april.orgSIMON ddd&Kmatricule=&rooter=KERNIX" CLASS=lienmention>cliquez ici</A>.<br />Nous pouvons utiliser des cookies ou
+des technologies similaires pour vous permettre de disposer de services et d'offres adapt&eacute;s &agrave; vos centres d'int&eacute;r&ecirc;ts. <br />En acceptant de recevoir des emails de notre part, vous acceptez l'utilisation de ces technologies : <a href="http://www.vminfos.com/informations-sur-les-cookies/" class="lienmention">cliquez-ici</a> pour en savoir plus.</font></td>
+					</tr>
+								</table>
+								<!-- END SNIP -->
+
+
+										<br />
+								<table width="100%" cellpadding="0" cellspacing="0" border="0" class="general">
+									<tr>
+						<td align="right" style="font-family:Arial, Helvetica, sans-serif; font-size:11px;"><strong><a href="http://www.vminfo.fr/page,95872,45048967,5414,8747,35346,h78t9s58.html" target="_blank" style="color:#CCCCCC">Vertical-Mail&reg; - Tous droits r&eacute;serv&eacute;s&copy;</a></strong><br /><br /></td>
+					</tr>
+								</table>
+
+		</td></tr></table>
+
+			<!--[if (gte mso 9)|(IE)]>
+			</td></tr></table>
+			<![endif]-->
+		</td>
+	</tr>
+	<tr><td height="1" style="height:1px; line-height:1px;"><a href="http://www.vminfo.fr/page,95872,45048967,5414,8747,35346,h78t9s58.html/scan/footer.html"><img src="https://www.vminfos.com/visuals/blank.gif" width="1" height="1" border="0" style="display:block" /></a></td></tr>
+</table>
+
+<img src="https://adnext.fr/track.adv?ap=6661&product=VMCP_V1" width="1" height="1" style="width:1px; height:1px" />
+
+</center>
+<img class="olink" src="http://www.vminfo.fr/front/push/image,45048967,5414,8747,35346.gif" border="0" alt="" width="1" height="1" /></body>
+</html>
+
+
+--00-d82f03e780dc938d3d3e85596132da14--
+
+
+

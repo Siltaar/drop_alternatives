@@ -13,9 +13,21 @@ from re import DOTALL, compile as compile_re
 
 
 re_html = compile_re(
-	b'<(tit|sty|scr|o:|[^y]+y:n).*?</[^>]+|<[^>]+|[\d+]|&[^;]+;|[^\s\n\r<]{25,}',
+	# b'(<(tit|sty|scr|[^y]*y:n)|^).*?</(tit|sty|scr)[^>]*|(<|^)[^>]*>|[\d*]|&[^;]*;|[^\s\n\r<]{25,}',
+	b'<(tit|sty|scr|o:P|[^y]*y:n).*?</[^>]*|<[^>]*|[\d*]|&[^;]*;|[^\s\n\r<]{25,}',
+	# match and so remove :
+	# - title, style, script, o:PixelsPerInch, display:none HTML tags and their text leafs
+	# - all HTML tags,  # even if cut at the begining
+	# - links prefix in converted texts
+	# - HTML entities
+	# - chunks of symbols without spaces too big to be words (such as URL)
 	DOTALL)
 bad_char = b' \t\n\r\xc2\xa0\'#->=:*]['  # exist: \v Vertical tab ; \f From feed
+W  = b'\033[0m'  # white (normal)
+G  = b'\033[1;30m' # grey
+R  = b'\033[1;31m' # bold red
+Y  = b'\033[1;33m' # bold yellow
+B  = b'\033[1;37m' # bold white
 
 def compose_message(orig, parts):
 	wanted = MIMEMultipart()
@@ -55,21 +67,22 @@ def drop_alternatives(msg_str, debug=0):
 				kept_parts.append(part)
 
 		if html_parts:
-			if debug:
-				print(b'', file=stderr)
-
 			recompose_msg = False
 
 			for h in html_parts:
-				h_txt = get_txt(h, 20000)
+				h_txt = get_txt(h, 15000)
+				len_h_txt = len(h_txt)
 				save_html = True
 
 				for i, t in enumerate(texts):
-					idem_ratio = SequenceMatcher(None, a=h_txt, b=t).quick_ratio()
+					s = min(len_h_txt, len(t))
+					idem_ratio = SequenceMatcher(None, a=h_txt[-s:], b=t[-s:]).quick_ratio()
+
 					if debug:
-						print(b'h: '+h_txt, file=stderr)
-						print(b't: '+t, file=stderr, end=' ')
-						print(idem_ratio, file=stderr)
+						print((not i and G or B) + h_txt + W + ' H', file=stderr)
+						print(t+' T', file=stderr, end=' ')
+						C = idem_ratio < 0.85 and R or idem_ratio < 0.90 and Y or W
+						print(C + bytes(idem_ratio)[:5] + W, file=stderr)
 
 					if idem_ratio > 0.85:
 						save_html = False
@@ -100,7 +113,7 @@ def test_drop_alternatives(msg_str, debug):
 	text/plain
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'
-	... '--\\nContent-Type: text/html;\\n\\n <!--body{color red;}--> \\n</style>A', DEBUG)
+	... '--\\nContent-Type: text/html;\\n <sty> B <!-- D -->/* C */\\n</sty>A', DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
 	... '--\\nContent-Type: text/plain;\\nA\\n'

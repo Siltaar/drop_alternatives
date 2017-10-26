@@ -23,11 +23,12 @@ stable 8.9 for the 100 runs of the 24 _doctests_ (at 2017-10-21, see
 `match all action rewrite "python2 -SE drop_alternatives.py" continue`
 
 == Tests
-Around 20 _doctests_ are included. You can run them with the following command in
+Around 30 _doctests_ are included. You can run them with the following command in
 the cloned repository root: +
 `python -m doctest drop_alternatives.py`
 
-No output means a success.
+Outputs HTML text to compare in bold (grey 1st, white others), bad marks in yellow and failed in red.
+Best view with a 265 character wide capable console.
 
 == Author
 * 2017: Simon Descarpentries

@@ -27,6 +27,7 @@ OS : Debian Jessie 8.9
 2017-10-21 : 25 tests ; 5.72s ; 2,28ms/t (deal with <style><!-- without .*? and re.DOTALL)
 2017-10-23 : 26 tests ; 7.53s ; 2,89ms/t (deal with display:none without .*?, compares 199c)
 2017-10-25 : 28 tests ; 8.22s ; 2,93ms/t (CSS /* */ proof, compares 256c backward, quick_ratio)
+2017-10-26 : 28 tests ; 8.10s ; 2.89ms/t (simplify regexp, .+ -> .*, compares min(len()))
 """
 
 DEBUG = 0

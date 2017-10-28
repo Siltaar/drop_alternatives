@@ -28,7 +28,7 @@ the cloned repository root: +
 `python -m doctest drop_alternatives.py`
 
 Outputs HTML text to compare in bold (grey 1st, white others), bad marks in yellow and failed in red.
-Best view with a 265 character wide capable console.
+Best viewed with a 265 character wide capable console.
 
 == Author
 * 2017: Simon Descarpentries

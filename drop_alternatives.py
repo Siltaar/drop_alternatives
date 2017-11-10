@@ -13,7 +13,6 @@ from re import DOTALL, compile as compile_re
 
 
 re_html = compile_re(
-	# b'(<(tit|sty|scr|[^y]*y:n)|^).*?</(tit|sty|scr)[^>]*|(<|^)[^>]*>|[\d*]|&[^;]*;|[^\s\n\r<]{25,}',
 	b'<(tit|sty|scr|o:P|[^y]*y:n).*?</[^>]*|<[^>]*|[\d*]|&[^;]*;|[^\s\n\r<]{25,}',
 	# match and so remove :
 	# - title, style, script, o:PixelsPerInch, display:none HTML tags and their text leafs
@@ -54,37 +53,50 @@ def drop_alternatives(msg_str, debug=0):
 		texts = []
 
 		for part in eml.walk():
+			# debug and print('part content_type '+part.get_content_type(), file=stderr)
+
 			if ("multipart" in part.get_content_maintype() or
-				"message" in part.get_content_type() or
-				part.get_payload() == ""):
+				"message" in part.get_content_type()):
 				continue
 			elif 'html' in part.get_content_type():
 				html_parts.append(part)
+				# debug and print('got HTML', file=stderr)
 			elif 'plain' in part.get_content_type():
 				kept_parts.append(part)
-				texts.append(get_txt(part, 2500))
+				texts.append(get_txt(part, 2000))
+				# debug and print('got TEXT', file=stderr)
 			else:
 				kept_parts.append(part)
+				# debug and print('kept part '+part.get_content_type(), file=stderr)
 
 		if html_parts:
 			recompose_msg = False
 
 			for h in html_parts:
-				h_txt = get_txt(h, 15000)
-				len_h_txt = len(h_txt)
+				h_txt_1, h_txt_2 = get_txt(h, 28000)
+				len_h_txt_1 = len(h_txt_1)
+				len_h_txt_2 = len(h_txt_2)
 				save_html = True
 
 				for i, t in enumerate(texts):
-					s = min(len_h_txt, len(t))
-					idem_ratio = SequenceMatcher(None, a=h_txt[-s:], b=t[-s:]).quick_ratio()
+					t_1, t_2 = t
+					s_1 = min(len_h_txt_1, len(t_1))
+					s_2 = min(len_h_txt_2, len(t_2))
+					idem_ratio_1 = SequenceMatcher(None, a=h_txt_1[:s_1], b=t_1[:s_1]).quick_ratio()
+					idem_ratio_2 = SequenceMatcher(None, a=h_txt_2[-s_2:], b=t_2[-s_2:]).quick_ratio()
+					idem_ratio = (idem_ratio_1 + idem_ratio_2) / 2
 
 					if debug:
-						print((not i and G or B) + h_txt + W + ' H', file=stderr)
-						print(t+' T', file=stderr, end=' ')
-						C = idem_ratio < 0.85 and R or idem_ratio < 0.90 and Y or W
-						print(C + bytes(idem_ratio)[:5] + W, file=stderr)
+						ir = ' '+color_ratio(idem_ratio)
 
-					if idem_ratio > 0.85:
+						if idem_ratio_1 < 0.9:
+							print((not i and G or B) + h_txt_1[:256] + W + ' H', file=stderr)
+							print(t_1[:256]+' T '+color_ratio(idem_ratio_1)+ir, file=stderr)
+						if idem_ratio_2 < 0.9:
+							print((not i and G or B) + h_txt_2[-256:] + W + ' H', file=stderr)
+							print(t_2[:256]+' T '+color_ratio(idem_ratio_2)+ir, file=stderr)
+
+					if idem_ratio > 0.825:
 						save_html = False
 						recompose_msg = True
 						del texts[i]  # avoid comparing again with this text
@@ -100,10 +112,19 @@ def drop_alternatives(msg_str, debug=0):
 
 
 def get_txt(part, raw_len, bad_char=bad_char):
-	t = part.get_payload(decode=True)[-raw_len:]
-	t = re_html.sub(b'', t)
-	t = t.translate(None, bad_char)
-	return t[-256:]
+	t = part.get_payload(decode=True)
+	t_start = t[:raw_len]
+	t_end = t[-raw_len:]
+	t_start = re_html.sub(b'', t_start)
+	t_start = t_start.translate(None, bad_char)
+	t_end = re_html.sub(b'', t_end)
+	t_end = t_end.translate(None, bad_char)
+	return t_start[:256], t_end[-256:]  # Python 2 ratio() changes its behavior after 199c
+
+
+def color_ratio(ratio):
+	C = ratio < 0.825 and R or ratio < 0.9 and Y or W
+	return C + bytes(ratio)[:5] + W
 
 
 DEBUG = 1
@@ -156,13 +177,13 @@ def test_drop_alternatives(msg_str, debug):
 	>>> test_drop_alternatives(open('test_email/20171004-2.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171004-3.eml').read(), DEBUG)
-	multipart/mixed text/plain
+	multipart/mixed text/plain application/octet-stream
 	>>> test_drop_alternatives(open('test_email/20171004-4.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171004-5.eml').read(), DEBUG)
 	multipart/mixed text/plain text/plain text/plain
 	>>> test_drop_alternatives(open('test_email/20171005.eml').read(), DEBUG)
-	multipart/mixed text/plain
+	multipart/mixed text/plain image/png
 	>>> test_drop_alternatives(open('test_email/20171005-3.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171011.eml').read(), DEBUG)
@@ -170,7 +191,7 @@ def test_drop_alternatives(msg_str, debug):
 	>>> test_drop_alternatives(open('test_email/20171018.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171018-2.eml').read(), DEBUG)
-	multipart/mixed text/plain
+	multipart/mixed text/plain application/pdf
 	>>> test_drop_alternatives(open('test_email/20171018-3.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171020.eml').read(), DEBUG)
@@ -181,6 +202,8 @@ def test_drop_alternatives(msg_str, debug):
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171025.eml').read(), DEBUG)
 	multipart/mixed text/plain
+	>>> test_drop_alternatives(open('test_email/20171109.eml').read(), DEBUG)
+	multipart/mixed text/plain image/png
 	"""
 	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str, debug).walk()]))
 

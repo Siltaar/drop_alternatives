@@ -28,6 +28,7 @@ OS : Debian Jessie 8.9
 2017-10-23 : 26 tests ; 7.53s ; 2,89ms/t (deal with display:none without .*?, compares 199c)
 2017-10-25 : 28 tests ; 8.22s ; 2,93ms/t (CSS /* */ proof, compares 256c backward, quick_ratio)
 2017-10-26 : 28 tests ; 8.10s ; 2.89ms/t (simplify regexp, .+ -> .*, compares min(len()))
+2017-11-10 : 29 tests ; 10.7s ; 3.68ms/t (keep joint files, quick_ratio() on [:256] & [-256:])
 """
 
 DEBUG = 0

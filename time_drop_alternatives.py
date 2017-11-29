@@ -29,6 +29,7 @@ OS : Debian Jessie 8.9
 2017-10-25 : 28 tests ; 8.22s ; 2,93ms/t (CSS /* */ proof, compares 256c backward, quick_ratio)
 2017-10-26 : 28 tests ; 8.10s ; 2.89ms/t (simplify regexp, .+ -> .*, compares min(len()))
 2017-11-10 : 29 tests ; 10.7s ; 3.68ms/t (keep joint files, quick_ratio() on [:256] & [-256:])
+2017-11-22 : 30 tests ; 11.9s ; 3.96ms/t (read 40kc of HTML, remove all <*:…></…> which is slow)
 """
 
 DEBUG = 0

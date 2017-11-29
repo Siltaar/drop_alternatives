@@ -13,9 +13,9 @@ from re import DOTALL, compile as compile_re
 
 
 re_html = compile_re(
-	b'<(tit|sty|scr|o:P|[^y]*y:n).*?</[^>]*|<[^>]*|[\d*]|&[^;]*;|[^\s\n\r<]{25,}',
+	b'<(tit|sty|scr|.:|[^y]*y:n).*?</[^>]*|<[^>]*|[\d*]|&[^;]*;|[^\s\n\r<]{25,}',
 	# match and so remove :
-	# - title, style, script, o:PixelsPerInch, display:none HTML tags and their text leafs
+	# - title, style, script, o:… / w:…, display:none HTML tags and their text leafs
 	# - all HTML tags,  # even if cut at the begining
 	# - links prefix in converted texts
 	# - HTML entities
@@ -73,7 +73,7 @@ def drop_alternatives(msg_str, debug=0):
 			recompose_msg = False
 
 			for h in html_parts:
-				h_txt_1, h_txt_2 = get_txt(h, 28000)
+				h_txt_1, h_txt_2 = get_txt(h, 40000)
 				len_h_txt_1 = len(h_txt_1)
 				len_h_txt_2 = len(h_txt_2)
 				save_html = True
@@ -82,18 +82,18 @@ def drop_alternatives(msg_str, debug=0):
 					t_1, t_2 = t
 					s_1 = min(len_h_txt_1, len(t_1))
 					s_2 = min(len_h_txt_2, len(t_2))
-					idem_ratio_1 = SequenceMatcher(None, a=h_txt_1[:s_1], b=t_1[:s_1]).quick_ratio()
-					idem_ratio_2 = SequenceMatcher(None, a=h_txt_2[-s_2:], b=t_2[-s_2:]).quick_ratio()
+					idem_ratio_1 = SequenceMatcher(a=h_txt_1[:s_1], b=t_1[:s_1]).quick_ratio()
+					idem_ratio_2 = SequenceMatcher(a=h_txt_2[-s_2:], b=t_2[-s_2:]).quick_ratio()
 					idem_ratio = (idem_ratio_1 + idem_ratio_2) / 2
 
 					if debug:
 						ir = ' '+color_ratio(idem_ratio)
 
 						if idem_ratio_1 < 0.9:
-							print((not i and G or B) + h_txt_1[:256] + W + ' H', file=stderr)
+							print((not i and G or B) + h_txt_1[:256] + W + ' H 1', file=stderr)
 							print(t_1[:256]+' T '+color_ratio(idem_ratio_1)+ir, file=stderr)
 						if idem_ratio_2 < 0.9:
-							print((not i and G or B) + h_txt_2[-256:] + W + ' H', file=stderr)
+							print((not i and G or B) + h_txt_2[-256:] + W + ' H 2', file=stderr)
 							print(t_2[:256]+' T '+color_ratio(idem_ratio_2)+ir, file=stderr)
 
 					if idem_ratio > 0.825:

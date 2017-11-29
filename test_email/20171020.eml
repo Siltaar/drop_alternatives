@@ -5,26 +5,26 @@ X-Spam-Checker-Version: SpamAssassin 3.3.2 (2011-06-06) on
 X-Spam-Level:
 X-Spam-Status: No, score=0.0 required=5.0 tests=HTML_MESSAGE,URIBL_BLOCKED
 	autolearn=ham version=3.3.2
-X-Original-To: contact.bbb@antipub.org
-Delivered-To: contact.bbb@antipub.org
+X-Original-To: contact.bbb@ddd.org
+Delivered-To: contact.bbb@ddd.org
 Received: by ccc (fdm 1.9, account "contact.bbb@antipub")
 	with imap (version=TLSv1/SSLv3 DHE-RSA-AES256-GCM-SHA384 256 bits)
 	Fri, 20 Oct 2017 16:42:02 +0200
 Received: from smtp26.services.sfr.fr (smtp26.services.sfr.fr [93.17.128.163])
 	by panel.vitry.ouvaton.coop (Postfix) with ESMTPS id 4950CA5AE9
-	for <contact.bbb@antipub.org>; Fri, 20 Oct 2017 16:37:26 +0200 (CEST)
+	for <contact.bbb@ddd.org>; Fri, 20 Oct 2017 16:37:26 +0200 (CEST)
 Received-SPF: none (no valid SPF record)
 Received: from wsfrf1421 (wsfrf1421 [10.18.204.35])
 	by msfrf2604.sfr.fr (SMTP Server) with ESMTP id 156451C00701E
-	for <contact.bbb@antipub.org>; Fri, 20 Oct 2017 16:37:26 +0200 (CEST)
+	for <contact.bbb@ddd.org>; Fri, 20 Oct 2017 16:37:26 +0200 (CEST)
 Received: from wsfrf1421 (wsfrf1421 [10.18.204.35])
 	by msfrf2604.sfr.fr (SMTP Server) with ESMTP
-	for <contact.bbb@antipub.org>; Fri, 20 Oct 2017 16:37:26 +0200 (CEST)
+	for <contact.bbb@ddd.org>; Fri, 20 Oct 2017 16:37:26 +0200 (CEST)
 Date: Fri, 20 Oct 2017 16:37:26 +0200 (CEST)
 From: aaa@club-internet.fr
 Sender: aaa@club-internet.fr
 Reply-To: aaa@club-internet.fr
-To: contact.bbb@antipub.org
+To: contact.bbb@ddd.org
 Message-ID: <522029980.206716.1508510246014.JavaMail.www@wsfrf1421>
 Subject:
  =?utf-8?Q?L'abolition_de_la_publicit=C3=A9,_roman_feuilleton_en_ligne?=

@@ -87,14 +87,14 @@ def drop_alternatives(msg_str, debug=0):
 					idem_ratio = (idem_ratio_1 + idem_ratio_2) / 2
 
 					if debug:
-						ir = ' '+color_ratio(idem_ratio)
+						ir = b' '+color_ratio(idem_ratio)
 
 						if idem_ratio_1 < 0.9:
-							print((not i and G or B) + h_txt_1[:256] + W + ' H 1', file=stderr)
-							print(t_1[:256]+' T '+color_ratio(idem_ratio_1)+ir, file=stderr)
+							print((not i and G or B) + h_txt_1[:256] + W + b' H 1', file=stderr)
+							print(t_1[:256]+b' T '+color_ratio(idem_ratio_1)+ir, file=stderr)
 						if idem_ratio_2 < 0.9:
-							print((not i and G or B) + h_txt_2[-256:] + W + ' H 2', file=stderr)
-							print(t_2[:256]+' T '+color_ratio(idem_ratio_2)+ir, file=stderr)
+							print((not i and G or B) + h_txt_2[-256:] + W + b' H 2',file=stderr)
+							print(t_2[:256]+b' T '+color_ratio(idem_ratio_2)+ir, file=stderr)
 
 					if idem_ratio > 0.825:
 						save_html = False
@@ -124,7 +124,7 @@ def get_txt(part, raw_len, bad_char=bad_char):
 
 def color_ratio(ratio):
 	C = ratio < 0.825 and R or ratio < 0.9 and Y or W
-	return C + bytes(ratio)[:5] + W
+	return C + bytes(int(ratio*100)) + W
 
 
 DEBUG = 1

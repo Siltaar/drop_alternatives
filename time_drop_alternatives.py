@@ -30,6 +30,7 @@ OS : Debian Jessie 8.9
 2017-10-26 : 28 tests ; 8.10s ; 2.89ms/t (simplify regexp, .+ -> .*, compares min(len()))
 2017-11-10 : 29 tests ; 10.7s ; 3.68ms/t (keep joint files, quick_ratio() on [:256] & [-256:])
 2017-11-22 : 30 tests ; 11.9s ; 3.96ms/t (read 40kc of HTML, remove all <*:…></…> which is slow)
+2017-12-20 : 30 tests ; 11.2s ; 3.74ms/t (full bytes, display int ratio)
 """
 
 DEBUG = 0

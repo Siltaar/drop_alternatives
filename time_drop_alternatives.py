@@ -31,6 +31,14 @@ OS : Debian Jessie 8.9
 2017-11-10 : 29 tests ; 10.7s ; 3.68ms/t (keep joint files, quick_ratio() on [:256] & [-256:])
 2017-11-22 : 30 tests ; 11.9s ; 3.96ms/t (read 40kc of HTML, remove all <*:…></…> which is slow)
 2017-12-20 : 30 tests ; 11.2s ; 3.74ms/t (full bytes, display int ratio)
+
+Linux 4.9.0-5-amd64 #1 SMP Debian 4.9.65-3+deb9u2 (2018-01-04) x86_64 GNU/Linux
+Debian 9.3
+Python 2.7.13
+
+2018-01-11 : 30 tests ; 11.7s ; 3.91ms/t (major system update, lost perf…)
+
+
 """
 
 DEBUG = 0

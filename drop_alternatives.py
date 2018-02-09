@@ -28,21 +28,6 @@ R  = '\033[1;31m' # bold red
 Y  = '\033[1;33m' # bold yellow
 B  = '\033[1;37m' # bold white
 
-def compose_message(orig, parts):
-	wanted = MIMEMultipart()
-	unwanted_fields = ["content-length", "content-type", "lines", "status"]
-
-	for field in unwanted_fields:
-		del orig[field]
-
-	for k, v in orig.items():  # `orig` have only headers as its items
-		wanted[k] = v
-
-	for p in parts:
-		wanted.attach(p)
-
-	return wanted
-
 
 def drop_alternatives(msg_str, debug=0):
 	eml = Parser().parsestr(msg_str)
@@ -90,11 +75,11 @@ def drop_alternatives(msg_str, debug=0):
 						ir = ' '+color_ratio(idem_ratio)
 
 						if idem_ratio_1 < 0.9:
-							print((not i and G or B) + str(h_txt_1[:256]) + W + ' H 1', file=stderr)
-							print(str(t_1[:256])+' T '+color_ratio(idem_ratio_1)+ir, file=stderr)
+							print(i and B or G + str(h_txt_1[:256]) + W + ' H 1', file=stderr)
+							print(str(t_1[:256])+' T '+color_ratio(idem_ratio_1)+ir,file=stderr)
 						if idem_ratio_2 < 0.9:
-							print((not i and G or B) + str(h_txt_2[-256:]) + W + ' H 2', file=stderr)
-							print(str(t_2[:256])+' T '+color_ratio(idem_ratio_2)+ir, file=stderr)
+							print(i and B or G + str(h_txt_2[-256:]) + W + ' H 2', file=stderr)
+							print(str(t_2[:256])+' T '+color_ratio(idem_ratio_2)+ir,file=stderr)
 
 					if idem_ratio > 0.825:
 						save_html = False
@@ -125,6 +110,22 @@ def get_txt(part, raw_len, bad_char=bad_char):
 def color_ratio(ratio):
 	C = ratio < 0.825 and R or ratio < 0.9 and Y or W
 	return str(C + str(int(ratio*100)) + W)
+
+
+def compose_message(orig, parts):
+	wanted = MIMEMultipart()
+	unwanted_fields = ["content-length", "content-type", "lines", "status"]
+
+	for field in unwanted_fields:
+		del orig[field]
+
+	for k, v in orig.items():  # `orig` have only headers as its items
+		wanted[k] = v
+
+	for p in parts:
+		wanted.attach(p)
+
+	return wanted
 
 
 DEBUG = 1

@@ -1,0 +1,1114 @@
+Return-Path: <aaa@gmail.com>
+Delivered-To: eee@eee.ee
+X-policyd-weight: using cached result; rate: -7
+Authentication-Results: fff.globenet.org; dkim=pass
+ reason="2048-bit key; insecure key"
+ header.d=gmail.com header.i=@gmail.com header.b=Fod4X+3A;
+ dkim-adsp=pass; dkim-atps=neutral
+Received: by ccc (fdm 1.9, account "ddd")
+ with imap (version=TLSv1/SSLv3 DHE-RSA-AES256-GCM-SHA384 256 bits)
+ Wed, 14 Mar 2018 19:56:01 +0100
+Received: from mail-qt0-f195.google.com (mail-qt0-f195.google.com
+ [209.85.216.195])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by fff.globenet.org (Postfix) with ESMTPS id B5FFA7651F
+ for <eee@eee.ee>; Wed, 14 Mar 2018 19:50:44 +0100 (CET)
+Received: by mail-qt0-f195.google.com with SMTP id j4so4583369qth.8
+ for <eee@eee.ee>; Wed, 14 Mar 2018 11:50:44 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:from:date:message-id:subject:to;
+ bh=zwVChy6oq7k+/n1rMMtp5RLIwInmPjOoNuNwa02BvHI=;
+ b=Fod4X+3Ah8ZzdKyceHPo681Q5EXRMfw6ukMnGYCCYxlipHICd0BgEhQCr38RFAXMVa
+ BAdNb3dd3/0WikwjnBYdE04ZWE0dOvX98fkGKcGw4bvVWBG6XTQb3U4mPiW3Ir5Gf0qI
+ 0BXB3/zzooEF6Ojnk8qMkTqbwVjPUrOXefLelaEyFj2t4jelXc78QigJ4YClz4r73PUW
+ JRMoLUOlqGn63XWF/wkNUrlEjLptUNf3psx+SvTfNwrxx42ogSOQz98BzmBH6Yzkr+0W
+ R+Kt64Ees2b2WL8/6RTp2eE23P4DmxGDHa3naWKdfOa3N7ySfQhYx09CuVNjd7a9X+vJ
+ i4yw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+ bh=zwVChy6oq7k+/n1rMMtp5RLIwInmPjOoNuNwa02BvHI=;
+ b=BazvPz2XRICF+bEK4bOJItFEx4Jp6WltGZijhZKOB1KyyUHoJPaM0qmjyw5ABaltvz
+ SU+fQcZes1ymTtJbjK44pJF9EY3QosxAsSBEUeUjq8bUrq8rbfewZg6fdv4C/oxx66V8
+ VsWQFyi5bUHnyDOocmuMCxELZGPihTBG66g5NaY7Vx9np+zkPbMoJeqJ8pbDQfk1vQs/
+ SWrjlFmvVBdp1O9emIo3piQxLbNN4CRZcejiDcW3xFnXH0WmGkCsGbF04Szkae/Hy3D+
+ 1qopdZA1Q16hPIG96tZyqEcHzEpIKYaontp2aVS88+JHaPEHUjmzhBZcS5+GThi/Q0Ga
+ yViw==
+X-Gm-Message-State: AElRT7HBg+MAnkn4yQ8lsU8wpuxohTeBHQ1r6RVDpCGlINUc3ARD90hx
+ wmtC/00n3aUNpomzKDwQ8qKKW+sdFx0Qgy1Lnxo=
+X-Google-Smtp-Source: AG47ELup3ZRx9sLQqHbChCRvtP7ffVsj4rROJZxSDO2FKBfDJytJMswoOfL4V6RUusQDZBcyQSQGKGO0tB6h2lTXioc=
+X-Received: by 10.237.35.133 with SMTP id j5mr608384qtc.122.1521053442732;
+ Wed, 14 Mar 2018 11:50:42 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.237.41.231 with HTTP; Wed, 14 Mar 2018 11:50:22 -0700 (PDT)
+From: Famille bbb <aaa@gmail.com>
+Date: Wed, 14 Mar 2018 19:50:22 +0100
+Message-ID: <CAKk6viiA6AjzLFJmToz1oof1=K+rbxArmq83UWLw5riBQeqicA@mail.gmail.com>
+Subject: =?UTF-8?Q?ggg_hhh_=2D_un_album_qui_se_fera_par_la_finance_s?=
+ =?UTF-8?Q?olidaire_gr=C3=A2ce_=C3=A0_votre_engagement?=
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="001a1139fa60237ab3056763da49"
+Content-Length: 62195
+
+--001a1139fa60237ab3056763da49
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ggg hhh le groupe gggb=C3=A9 bien connu dans nos campagnes ont bes=
+oin d
+evous pour pouvoir sortir leur nouvel album.
+Merci d'avance
+Bises =C3=A0 tous
+Maryl=C3=A8ne et Roland
+
+Nous avons besoin de votre soutient lien ici helloasso.com/associations/
+ggg-hhh/collectes/ggg-hhh-jarabi-ballan avec 75 pr=C3=A9command
+
+
+Vous ne voyez pas ce message ? *Ouvrir dans un navigateur*
+<https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2BrLV=
+QteXrAf1-2BCCUMfLhzl75RovCHBH-2Bqd7okL6MgBocTOOwAZ2ipfMdronRghxY0azFqOjVWXZ=
+0Y19dZNtvvqfVZ5VR5MfOUjbMTawyNQcP_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7=
+N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4d=
+ULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4=
+X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9N=
+xsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr8=
+9M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGER=
+IAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpkoTebj=
+XPBlHd-2B4RnRm0CPpeZjVN5dCNfrMcOd2bWhqPS9IPGNGZEWZWz5rQ7ON7kUkfKcdSlDQqBHQZ=
+MIp3c1tUR802cxPUguzB8fDkW5jGidYk3tojllQwTjtvU5tGWTsnNKRt5QbVub88vVl2AVc-3D>
+[image: ggg hhh - JARABI BALLANYfinancement participatif du deuxi=C3=
+=A8me
+album]
+<https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2BrLV=
+QteXrAf1-2BCCUMfLhzl75RovCHBH-2Bqd7okL6MgBocTOOwAZ2ipfMdronRghxY0azFqOjVWXZ=
+0Y19dZNtvvqeg-2FJUP7XAdQgzV6N-2B7q1fljTzk4ipTlV0WGmQbhJd4iIzetyqzEUFcAvfb7N=
+MkItE-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0YpwD=
+ZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H=
+0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL=
+-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqLl3=
+APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddehvQ=
+iEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5Is=
+lCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDplzk9S9cNsE-2FhmxoaeiY17feTkrxpD=
+sIUq2XXEfQCluXe1QvG6lXGtFfoxLqIVziDorc6xGJv0KZORptXvn87r89LVSECkZQyuAlAj-2B=
+ri3x39Y-2BrFxGsdtFaN3x41-2FK7UCcChgX0gEilgcW5r8UUpbc-3D>
+
+ Nous avons besoin de votre soutient
+
+lien ici helloasso.com/associations/ggg-hhh/
+collectes/ggg-hhh-jarabi-ballan
+<https://u3420225.ct.sendgrid.net/wf/click?upn=3D4OJxc0dni44LO-2Bu0qbWxVzY8=
+LtjXZV2XsJPG-2Bh1N0VGpITE7HsC0eJecMRVlF2jhoAZDpUThmhBFm1wCBhCwCkmoRZ1wuvQJn=
+8u6wfQu-2B-2FAZ4zqWxkX1UKZ6NGaKKPvM_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7h=
+Q7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef=
+4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bh=
+g4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX=
+9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1M=
+r89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qG=
+ERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpjEDt=
+Jlq2jyjF4UjJ1ZmuhnoCREiyHkN1YdqYdiGRFIyYVYSoUBlXhXqOYLPZJRYtDfizmBuWzxI6xlC=
+t-2FMAYA1A-2BTR-2FvZgTmZwWuKayq4z9ofz3bVYX4Xv0e-2F63VK5v6y6wnm6yYQHWNg6VFcV=
+KDVc-3D>
+
+avec 75 pr=C3=A9commandes de l'album coupl=C3=A9es =C3=A0 une adh=C3=A9sion
+
+ nous arriverons =C3=A0 atteindre nos objectifs.
+
+Nous souhaitons sortir le deuxi=C3=A8me album de ggg hhh intitul=C3=A9=
+ Djarabi
+Ballany. Un album en deux parties. La premi=C3=A8re partie est faite de hui=
+t
+nouvelles compositions du groupe refl=C3=A9tant l'=C3=A9volution de celui-c=
+i depuis
+son premier album sorti en 2014. Les huit titres ont =C3=A9t=C3=A9 enregist=
+r=C3=A9s en
+juin 2017 chez nos amis du studio Adjololo =C3=A0 Freign=C3=A9. La deuxi=C3=
+=A8me partie de
+l'album fait la part belle aux collaborations et aux rencontres faites sur
+les routes, il y aura deux titres de jazz avec les amis de West Of The
+World, un groupe imagin=C3=A9 par le contre bassiste australien Ashley De N=
+eef,
+il y aura =C3=A9galement une reprise du titre Benkady produit par les fr=C3=
+=A8res
+Jackfruits de Parthenay et une collaboration avec nos amis du groupe de
+reggae breton Misty K dub. =C3=A9coutez quelque titres en version d=C3=A9mo=
+:
+soundcloud.com/ggghhh/balafon-de-papa-demo/sets
+<https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2Bljl=
+RbO7rWzxrs55TK6tCSPY7Jg7MzrcNdNf2er663g0vYRrrCnosH0AO-2F6S9WQ4k0F0xpp6FYQe-=
+2FTVQnqsASEg-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWT=
+bN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4M=
+JPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48=
+q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI6=
+81tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8=
+yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7q=
+FTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpsFUHieQ-2F7c2IlCVbtYh7qe=
+lgmqYfaRfe70kufqb0o1bxDVvybfB4wal4PesdjKWp0mvF6nMTeyFptL3nMNMKTh-2FrETQLpA1=
+Aki61MRKbPszghrIw7pCR30l7r4wrweMmQxGR-2Fev71n88Rp53xN21o8-3D>
+
+
+
+En 2014 ce mode de finacement =C3=A0  lancer le groupe ggg hhh sur les
+route de France, nous ne pouvez pas imagniner les impact que cela =C3=A0 eu=
+ sur
+la qualit=C3=A9 d evie du groupe au ggg Faso.
+
+
+
+En effet depuis 2014 le groupe est venu 7 fois en France, c'est gr=C3=A2ce =
+=C3=A0 cet
+album Nay=C3=A9rina que vous aviez soutenu.
+
+Grace =C3=A0 ces tourn=C3=A9es les artistes de ggg hhh financent en to=
+talit=C3=A9 la
+scolarit=C3=A9 de leurs enfants. gr=C3=A2ce =C3=A0 cet album et les tourn=
+=C3=A9es qu'il a
+engendr=C3=A9, la maman de Adama, Solo et Ousmane a un puits directement da=
+ns la
+cour de sa maison ce qui profite =C3=A9galement =C3=A0 tout le voisinage, e=
+nfin
+depuis cet =C3=A9t=C3=A9, les ggg hhh lui ont construit de vrai latrin=
+es et un
+coin ferm=C3=A9 pour sa toilette.
+
+
+
+ggg hhh c'est aussi des milliers d'enfants rencontr=C3=A9s dans les =
+=C3=A9coles
+dans le cadre d'action d'=C3=A9ducation =C3=A0 la citoyennet=C3=A9 et d'=C3=
+=A9ducation contre
+le racisme. des centaines de concerts partout en France mais aussi en
+Belgique et en Suisse.
+
+
+
+Vous voyez chers amis que votre don nous a permis de grandir et a permis =
+=C3=A0
+l'un des objectifs principaux de l'association qui est  de participer au
+mieux vivre des artistes dans leur pays.
+
+
+
+Nous voil=C3=A0 aujourd'hui dans une nouvelle =C3=A9tapes du projet et pour=
+ le faire
+=C3=A9voluer, il a =C3=A9t=C3=A9 d=C3=A9cid=C3=A9 de donner un nouvel =C3=
+=A9lan au groupe avec un
+deuxi=C3=A8me album plus proche de l'=C3=A9volution musicale du groupe
+
+
+
+Les artistes nous demandent aujourd'hui de participer au financement de
+leur acc=C3=A8s =C3=A0 la propri=C3=A9t=C3=A9. Nous esp=C3=A9rons qu'ils y =
+arriveront  avec vous et
+avec le soutient de l'association. Mais l'=C3=A9tape essentielle de ce nouv=
+eau
+d=C3=A9fis commence pas le financement de ce deuxi=C3=A8me album.
+
+
+
+Aujourd'hui nous comptons une nouvelle fois sur vous, sur votre g=C3=A9n=C3=
+=A9rosit=C3=A9
+et sur votre engagement aupr=C3=A8s des artistes de ggg hhh, aupr=C3=
+=A8s de
+l'association ggg hhh cr=C3=A9=C3=A9e pour les soutenir. ce don est d=
+=C3=A9ductible =C3=A0
+66% sur votre imposition 2018, un re=C3=A7u de don est t=C3=A9l=C3=A9charge=
+able
+directement via le site partenaire Helloasso.
+
+
+
+Pour nous permettre de grandir plus loin et avec vous, vous pouvez
+=C3=A9galement adh=C3=A9rer =C3=A0 l'association et ainsi rejoindre notre m=
+ouvement en
+faveur de la musique africaine. ce mouvement  agit sur les artistes que
+nous d=C3=A9fendons.
+
+
+
+Merci de votre engagement.
+
+Bertrand iii:
+
+Origine du projet
+
+L=E2=80=99association ggg hhh a le plaisir de vous pr=C3=A9senter le
+groupe ggg hhh, la troupe qui vit au ggg Faso sera de
+retour en France et en Europe en 2018 pour une tourn=C3=A9e d=E2=80=99=C3=
+=A9t=C3=A9 qui
+commencera  mi-avril et se terminera d=C3=A9but septembre.
+
+Cette tourn=C3=A9e promotionnera le nouvel album qui para=C3=AEtra en avril=
+ 2018,
+l'album intitul=C3=A9 Djarabi Ballan rend hommage =C3=A0 la culture ggg=
+b=C3=A9 et aux
+anc=C3=AAtres du groupe, griots balafonistes depuis plusieurs g=C3=A9n=C3=
+=A9rations.
+
+
+
+ggg hhh  vient depuis plusieurs ann=C3=A9es maintenant pour des centai=
+nes
+de dates, c'est l'un des groupes les plus excitant de la sc=C3=A8ne africai=
+ne
+traditionnelle.Le spectacle riche et vari=C3=A9 est ouvert =C3=A0 tous les =
+publics,
+il entra=C3=AEne le spectateur et l'emm=C3=A8ne dans un voyage initiatique =
+ des rues
+de =E2=80=99Ouagadougou aux villages les plus recul=C3=A9s du ggg Faso.
+
+Des festivals de r=C3=A9f=C3=A9rence dans les musiques africaines et les mu=
+siques du
+monde  nous ont fait confiance, Ing=C3=A9nieuse Afrique, Sam Africa, Musiqu=
+es
+d=E2=80=99Ici et d=E2=80=99Ailleurs, Les Mangeurs de Lune, Le festival des =
+Pays du Sahel,
+Afrik O=E2=80=99Bendy, La nuit gggb=C3=A9, Le R=C3=AAve de l=E2=80=99Ab=
+orig=C3=A8ne,  Wassa=E2=80=99N Africa,
+Terres de Cultures, Zaka Africa, Festival Adjololo, Africlap, Lembr=E2=80=
+=99Africa
+etc=E2=80=A6.
+
+Le groupe continu pendant ses tourn=C3=A9es =C3=A0 rencontrer les =C3=A9l=
+=C3=A8ves de tout
+=C3=A2ges, ils sensibilisent ainsi  les plus jeunes aux questions solidaire=
+s et
+ils expliquent l'int=C3=A9r=C3=AAt de faire perdurer leur culture et leur m=
+usique.
+Par ces actions  l=E2=80=99association participe pleinement =C3=A0 ces obje=
+ctifs
+d=E2=80=99=C3=A9ducation =C3=A0 la citoyennet=C3=A9 et d'=C3=A9ducation art=
+istique.
+
+A quoi servira l'argent collect=C3=A9 ?
+
+Si l'enregistrement de l'album a d=C3=A9j=C3=A0 =C3=A9t=C3=A9 financ=C3=A9,=
+  il reste encore  le
+mixage et le mastering =C3=A0 finir. Nous souhaitons continuer de travaille=
+r
+avec les amis du studio Adjololo chez qui nous avons fait
+l'enregistrement.  C'est l'ing=C3=A9nieur du son Antoine Livenais qui finir=
+a le
+mixage en collaboration avec le groupe. Ils ont aussi une grande exp=C3=A9r=
+ience
+en la mati=C3=A8re avec des projets comme Kunb=C3=A9, Akeiko=C3=AF ou encor=
+e Yelemba
+d'Abidjan.  tarif 400=E2=82=AC
+
+Il reste =C3=A9galement l'infographie, la pochette qui sera orchestr=C3=A9e=
+ par
+Nicolas Mamet alias Kouakou qui a collabor=C3=A9 avec des artistes de renom=
+m=C3=A9
+comme Winston McAnuff, Jaqee; Nzela, le label Makasound et bien d'autres
+encore.Nous avons travaill=C3=A9 avec Kouakou =C3=A9galement sur la pochett=
+e de
+TisDass. Tarif:  400=E2=82=AC
+
+Nous souhaitons sortir l'album en version digisleeve, =C3=A9cologique et jo=
+li,
+nous en sortirons 500 exemplaires dont 100 pour la promotion et la
+recherche de concerts pour la tourn=C3=A9e 2019. tarif: 640=E2=82=AC.
+
+P
+[image: This is the video]
+<https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2BrLV=
+QteXrAf1-2BCCUMfLhzl75RovCHBH-2Bqd7okL6MgBocTOOwAZ2ipfMdronRghxY0azFqOjVWXZ=
+0Y19dZNtvvqf4BAb3LnUSJnJ6lnlQQwJsNyBstORYT-2BA3mMSufrjUDPc8VR0o7hMx0F3MezTJ=
+4AE-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZM=
+IV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0s=
+ubfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2=
+FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqLl3AP=
+UvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiE=
+KFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5IslC=
+IaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpiu9fJGIC0DQbqk0jvPbXWVvXNyBBEUcaw=
+B6AyCvM8jkeg7FhlqxdZiqn9xefHhsNRwA3etCGGWOK5TZwzzzsKGieYzp2o8znh7l7R0X43LUO=
+F8KjphRzUK9L6ZtqvSR3r2biW7eDZ6GKqCr3fijjjc-3D>
+[image: This is the footer]
+<https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2BrLV=
+QteXrAf1-2BCCUMfLhzl75RovCHBH-2Bqd7okL6MgBocTOOwAZ2ipfMdronRghxY0azFqOjVWXZ=
+0Y19dZNtvvqcrX-2BlwdAqzTrmCdvO6-2B2G0YRLABggAFL9Vl9iC0Q5wKbkkygqhr53LROU-2B=
+xuhn8WU-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0Yp=
+wDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz=
+7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrB=
+kL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqL=
+l3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddeh=
+vQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5=
+IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpv7fv7ZTNtVFVI7GnREBNqop5o6JUG=
+7C5ZDZSITQ6wwNzcKbtT6o1hCDXgVwT926qkBkmYS5gyHgn2EGLiiuqCgLdmyMCHX09rmfyvbQl=
+Uba32SjEP5UH5O-2FJwf326ymnV4KPKeeKtYZpm8sNmzvM34-3D>
+
+Vous avez re=C3=A7u cet email car vous =C3=AAtes abonn=C3=A9 *=C3=A0 ce sit=
+e*
+<https://u3420225.ct.sendgrid.net/wf/click?upn=3DVoVjK0tZxJrqLju1pZf4ncTPB9=
+PezHP7rKsLVLLqoktDlVntQTh3SKOgCJuqyNEP_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mg=
+m7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB=
+8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S=
+0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUl=
+dGX9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9=
+f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC=
+0qGERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpt=
+KXpsajfnUWvfo-2Bf2qsnoP2U7u3IMsWz2AL7A3ttMCy-2F8skABkjjZ24amvyxYXl5rY95-2F-=
+2BsO8b8g8KEX5-2BNIK7PAaBqon0vHo904FlcrGaZdikKlUiBDxtLDdt12F7RnL9gotdxwvpWFJ=
+JoeC0gii8-3D>
+
+Si vous pensez avoir re=C3=A7u cet email par erreur ou si vous souhaitez vo=
+us
+d=C3=A9sabonner, *cliquez ici*
+<https://u3420225.ct.sendgrid.net/wf/click?upn=3DVoVjK0tZxJrqLju1pZf4nc-2F5=
+myXOwwg7pFN7PKpn57s-2FhCNpM41bCdqkjPEBb5VQKDPp9qAGqf-2BAmDZpm9X6SXMPTydJy6l=
+-2Fjk9MW4swDAdGLVY5T6zQrNOEZEnZUakSeETiPfdWrcSDrJ6lY5AwdAwZzq4Odrdngl9HScXO=
+IVu1QU-2FGTcAAeZQ7jWLfU-2Fjsw0tc7X8wseC5ITShs9I-2FqO4xJrE9tSqnv69EsEUKV4HCV=
+qXx-2FWlwIFcANA9ul9RhfoYZoFRq4Yt0wuUDRHy-2FSI4iP-2BBA9C0VM6cPEITprar7QtgjF6=
+yMUOx8Zj8l7y4tcQMrqOTuc3BxIVKDU0ALpW2uxgkKyDS1HxTUzCOY-2F1G8LU-2FGpRCVJsIU3=
+wNyWhTxiPkvzJNRWEzdUGtFgSxuBQIE2MbVVoGcGOxzVyK9kmRKgnvnKWIieOLQc72uFmWsGYGM=
+DrdXj-2FGssilu9zk6kfwQw4sfCP-2FOL21h-2Bicp5r8bMUn6Eh1cn-2Bujye9-2FNqtbA8fB4=
+BM1MKoLj0KcQp-2FLzNacQcqf-2FX99KlKhVeEgiEeq5QoHDiGpM2v0shQZAacpp5C54ZktIkH4=
+-2BB4Bz8L78mcslAtHdnfJp7enG3pmlJ1iIJyAj-2FA-2F0Es5qwvjpzhJddpM5XXgba3yrfCJf=
+Q8zOIz4zqYoUZVLPvC-2F0kbho13sieDHGbwZKDXbcNaOB6xWA6pQtkhTz-2Bqkb3QGfnR60l6I=
+mm3RHTDWZeylXsCQ7nQYiIdbSLNx8vU-2BYjBkuoe0tY41Ij7eNYJQC-2F-2B-2FYvgNSDNJQpx=
+OpKHADnwWryq5tcMjA2EYWGYzS3Y6V4wdbL56SP2TpmnwCiW0JIyQ6pZokQ3oyy19TiGVT8qlXi=
+ox8Vma49kOliuz0b-2B0xcN1hZuPiCdqfNVpmef4-2BRjyD9UneR5DUF-2FayQrZMAkGUSYTNyl=
+tFpHN-2BVBQ-2B89RiUpux1x2fRvfx49Mr6GaDKMtCHsIKqOQNHv6ruRHY3rsFC-2FIq3QFsxiE=
+EBXVJ3oSl1pkpwTZhbMp6RiYoW9cvMdNp2BNm1yPopK4uYLxp6dgNdgOGw9C8tu-2FEtkokEXeU=
+H1v7mxUZiIdpIzMUP-2BG-2Fk0LKrsgejdAL877-2BiM5ogJs-2BstXNMm9M5MZGDUT1NCAuD7o=
+V8nhB-2F3l3OtNF3R0R3XwQB7Vb8MAARp-2BrN4LUsOdvloKkA3Sh0Cz8-2Bmg-2BEjXa4a3TNj=
+wl3SaHFlpqPYZ2d-2FVmbiiwUMVDgkdtDdnAeuGi3hvMjuj-2BKRIYA86WbB7vg7n5SKh_-2FD5=
+TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vF=
+Ft3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUv=
+NRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHC=
+GhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaX=
+wSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHK=
+XDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3=
+K4yf4v2V9HiCZvzsESJm05lQ3SlnDppuTDn9PY8G8ErD7LgOK4PPkTWqreV6H9eq5PexeDO93AW=
+4I9sI-2Bo32uCtqC6ca2mk79bzmaZkIArYzWJx6YVI5cezjLBEcM7kOUfhG-2Bj4hRmzdvAtSgJ=
+DleIORhhDi7-2FJikLKp2LkuUxSekYJ76zCU-3D>
+
+--001a1139fa60237ab3056763da49
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><div class=3D"gmail_quote">ggg hhh le groupe Burk=
+inab=C3=A9 bien connu dans nos campagnes ont besoin d evous pour pouvoir so=
+rtir leur nouvel album.<br></div><div class=3D"gmail_quote">Merci d&#39;ava=
+nce<br></div><div class=3D"gmail_quote">Bises =C3=A0 tous<br></div><div cla=
+ss=3D"gmail_quote">Maryl=C3=A8ne et Roland<br></div><div class=3D"gmail_quo=
+te"><br><u></u>
+
+ =20
+ =20
+
+<div marginwidth=3D"0" marginheight=3D"0" bgcolor=3D"#f1f1f1" style=3D"marg=
+in:0px;padding:0px;background-color:#f1f1f1;font-family:Helvetica,Arial,san=
+s-serif">
+  <p style=3D"padding:0;margin:0;display:none;opacity:0;color:transparent;f=
+ont-size:1px;height:0;width:0;line-height:1px;max-height:0px;max-width:0px;=
+overflow:hidden">Nous avons besoin de votre soutient lien ici <a href=3D"ht=
+tp://helloasso.com/associations/ggg-hhh/collectes/ggg-hhh-jarabi-=
+ballan" target=3D"_blank">helloasso.com/associations/<wbr>ggg-hhh/coll=
+ectes/<wbr>ggg-hhh-jarabi-ballan</a> avec 75 pr=C3=A9command</p>
+  <center>
+    <table style=3D"min-width:780px;width:100%;background-color:#f1f1f1" ce=
+llspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f1f1f1" align=3D"center" bord=
+er=3D"0" width=3D"100%">
+      <tbody><tr>
+        <td valign=3D"top" align=3D"center">
+          <table style=3D"min-width:780px;width:780px;table-layout:fixed" c=
+ellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f1f1f1" align=3D"center" bor=
+der=3D"0" width=3D"780">
+            <tbody><tr>
+              <td>
+                <div style=3D"white-space:nowrap;font-size:15px;font-family=
+:courier;line-height:0">
+                  =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0
+                  =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0
+                  =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0
+                </div>
+              </td>
+            </tr>
+            <tr><td><img src=3D"https://u3420225.ct.sendgrid.net/wf/open?up=
+n=3D-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3=
+FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subf=
+vV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2Flv=
+VcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqLl3APUvt=
+F0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFU=
+XnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5IslCIaH=
+nZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpnYw8XkY6qDF33eO2hu3FZPQS3hwy-2F8zGPc=
+1Cckhcj0xaibluA8rxCmweTwLOwWVYTqPaFDVKTeFCy6SCCc78LGWKux9NZcpLxqA-2Fn9TYBdL=
+G66yqIFfTCasFUXp06uP9HBDXWGNcMN7KjjzYhlUDuhG-2BHVMWl4-2B52WJNLV6zgAb" alt=
+=3D"" style=3D"height:1px!important;width:1px!important;border-width:0!impo=
+rtant;margin-top:0!important;margin-bottom:0!important;margin-right:0!impor=
+tant;margin-left:0!important;padding-top:0!important;padding-bottom:0!impor=
+tant;padding-right:0!important;padding-left:0!important" height=3D"1" borde=
+r=3D"0" width=3D"1"></td></tr>            <tr>
+              <td style=3D"text-align:center;padding-top:20px;padding-botto=
+m:20px;font-size:9px!important" valign=3D"top" align=3D"center">
+                <p style=3D"padding:0;margin:0;font-family:Helvetica,Arial,=
+sans-serif;font-size:9px!important;line-height:2"><a href=3D"https://u34202=
+25.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2BrLVQteXrAf1-2BCCUM=
+fLhzl75RovCHBH-2Bqd7okL6MgBocTOOwAZ2ipfMdronRghxY0azFqOjVWXZ0Y19dZNtvvqfVZ5=
+VR5MfOUjbMTawyNQcP_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3=
+XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKT=
+S4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVC=
+G48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSs=
+DI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGR=
+GB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93u=
+q7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpkoTebjXPBlHd-2B4RnRm0=
+CPpeZjVN5dCNfrMcOd2bWhqPS9IPGNGZEWZWz5rQ7ON7kUkfKcdSlDQqBHQZMIp3c1tUR802cxP=
+UguzB8fDkW5jGidYk3tojllQwTjtvU5tGWTsnNKRt5QbVub88vVl2AVc-3D" alt=3D"View in=
+ a browser" style=3D"text-decoration:none;color:#3899ec" target=3D"_blank">=
+Vous ne voyez pas ce message ? <b><u>Ouvrir dans un navigateur</u></b></a><=
+/p>
+              </td>
+            </tr>
+            <tr><td style=3D"text-align:center" valign=3D"top" align=3D"cen=
+ter"><table style=3D"font-size:0;line-height:0;border-collapse:collapse;bor=
+der-spacing:0;border:0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center=
+" height=3D"163" border=3D"0" width=3D"780">
+  <tbody><tr style=3D"padding:0;margin:0;border:none">
+    <td style=3D"padding:0;margin:0;border:none" valign=3D"top">
+                    <a href=3D"https://u3420225.ct.sendgrid.net/wf/click?up=
+n=3D2UnknJPiULUaVFttRiAq-2BrLVQteXrAf1-2BCCUMfLhzl75RovCHBH-2Bqd7okL6MgBocT=
+OOwAZ2ipfMdronRghxY0azFqOjVWXZ0Y19dZNtvvqeg-2FJUP7XAdQgzV6N-2B7q1fljTzk4ipT=
+lV0WGmQbhJd4iIzetyqzEUFcAvfb7NMkItE-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mg=
+m7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB=
+8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S=
+0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUl=
+dGX9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9=
+f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC=
+0qGERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpl=
+zk9S9cNsE-2FhmxoaeiY17feTkrxpDsIUq2XXEfQCluXe1QvG6lXGtFfoxLqIVziDorc6xGJv0K=
+ZORptXvn87r89LVSECkZQyuAlAj-2Bri3x39Y-2BrFxGsdtFaN3x41-2FK7UCcChgX0gEilgcW5=
+r8UUpbc-3D" target=3D"_blank"><img usemap=3D"#m_8347606825014079549_4cfdf06=
+f-6beb-49ab-9548-33c57909747d-region0" src=3D"https://images-wixmp-a87e9a90=
+1094cb6400f2e0ce.wixmp.com/images/7265eb15-4925-4551-831e-bfacd3c9f84a-0922=
+05fe-d575-4a94-8329-6ed5b8a5087d_region0.png" alt=3D"ggg hhh - JARABI =
+BALLANYfinancement participatif du deuxi=C3=A8me album" style=3D"border:0;m=
+ax-width:100%" height=3D"163" width=3D"780"></a>
+        <map name=3D"m_8347606825014079549_4cfdf06f-6beb-49ab-9548-33c57909=
+747d-region0" style=3D"outline:none">
+                  </map>
+          </td>
+  </tr>
+  </tbody></table></td></tr>
+
+
+ =20
+   =20
+   =20
+ =20
+ =20
+ =20
+  <tr><td style=3D"text-align:center" valign=3D"top" align=3D"center"><tabl=
+e style=3D"font-size:0;line-height:0;border-collapse:collapse;border-spacin=
+g:0;border:0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" height=
+=3D"137" border=3D"0" width=3D"780" background=3D"https://images-wixmp-a87e=
+9a901094cb6400f2e0ce.wixmp.com/images/7265eb15-4925-4551-831e-bfacd3c9f84a-=
+b2b2ff5e-b878-4b4c-a370-cf4ae169ce3c_region1.png">
+  <tbody><tr style=3D"padding:0;margin:0;border:none">
+    <td style=3D"padding:0;margin:0;border:none" valign=3D"top">
+             =20
+        <table style=3D"border-collapse:collapse;border-spacing:0;border:0"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">
+        <tbody><tr>
+          <td style=3D"text-align:left;padding:20px 70px 20px 70px" align=
+=3D"left"><p style=3D"font-size:21px;font-family:georgia,serif;font-weight:=
+400;color:rgb(73,73,71);line-height:31px;padding:0px;margin:0px;text-align:=
+center"><span style=3D"font-size:21px;font-family:georgia,serif;font-weight=
+:400;color:rgb(73,73,71);line-height:31px">=C2=A0Nous avons besoin de votre=
+ soutient </span></p><p style=3D"font-size:16px;font-family:georgia,serif;f=
+ont-weight:400;color:rgb(73,73,71);line-height:24px;padding:0px;margin:0px;=
+text-align:center"><span style=3D"font-size:16px;font-family:georgia,serif;=
+font-weight:400;color:rgb(73,73,71);line-height:24px">lien ici=C2=A0<a href=
+=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3D4OJxc0dni44LO-2Bu0qbWxV=
+zY8LtjXZV2XsJPG-2Bh1N0VGpITE7HsC0eJecMRVlF2jhoAZDpUThmhBFm1wCBhCwCkmoRZ1wuv=
+QJn8u6wfQu-2B-2FAZ4zqWxkX1UKZ6NGaKKPvM_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mg=
+m7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB=
+8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S=
+0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUl=
+dGX9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9=
+f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC=
+0qGERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpj=
+EDtJlq2jyjF4UjJ1ZmuhnoCREiyHkN1YdqYdiGRFIyYVYSoUBlXhXqOYLPZJRYtDfizmBuWzxI6=
+xlCt-2FMAYA1A-2BTR-2FvZgTmZwWuKayq4z9ofz3bVYX4Xv0e-2F63VK5v6y6wnm6yYQHWNg6V=
+FcVKDVc-3D" rel=3D"noopener noreferrer" style=3D"font-family:georgia,serif;=
+font-weight:400;font-size:16px;color:rgb(16,159,255);line-height:24px;text-=
+decoration:none" target=3D"_blank">helloasso.com/<wbr>associations/ggg-=
+hhh/<wbr>collectes/ggg-hhh-jarabi-<wbr>ballan</a></span></p><p style=
+=3D"color:rgb(51,51,51);font-size:14px;font-style:normal;font-weight:400;fo=
+nt-family:georgia,serif;line-height:21px;padding:0px;margin:0px;text-align:=
+center"><span style=3D"font-weight:700;font-family:georgia,serif;font-size:=
+14px;color:rgb(51,51,51);line-height:21px">avec 75 pr=C3=A9commandes de l&#=
+39;album coupl=C3=A9es =C3=A0 une adh=C3=A9sion </span></p><p style=3D"colo=
+r:rgb(51,51,51);font-size:14px;font-style:normal;font-weight:400;font-famil=
+y:georgia,serif;line-height:21px;padding:0px;margin:0px;text-align:center">=
+<span style=3D"font-weight:700;font-family:georgia,serif;font-size:14px;col=
+or:rgb(51,51,51);line-height:21px">=C2=A0nous arriverons =C3=A0=C2=A0attein=
+dre nos objectifs.=C2=A0</span></p></td>
+        </tr>
+        </tbody></table>
+       =20
+                </td>
+  </tr>
+  </tbody></table></td></tr>
+
+
+ =20
+   =20
+   =20
+ =20
+ =20
+ =20
+  <tr><td style=3D"text-align:center" valign=3D"top" align=3D"center"><tabl=
+e style=3D"font-size:0;line-height:0;border-collapse:collapse;border-spacin=
+g:0;border:0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" height=
+=3D"943" border=3D"0" width=3D"780" background=3D"https://images-wixmp-a87e=
+9a901094cb6400f2e0ce.wixmp.com/images/7265eb15-4925-4551-831e-bfacd3c9f84a-=
+1d9e0079-16b1-4d4b-aa01-30ca0dab81e4_region2.png">
+  <tbody><tr style=3D"padding:0;margin:0;border:none">
+    <td style=3D"padding:0;margin:0;border:none" valign=3D"top">
+             =20
+        <table style=3D"border-collapse:collapse;border-spacing:0;border:0"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">
+        <tbody><tr>
+          <td style=3D"text-align:left;padding:20px 70px 20px 70px" align=
+=3D"left"><p style=3D"color:rgb(51,51,51);font-size:14px;font-style:normal;=
+font-weight:400;text-align:left;font-family:georgia,serif;line-height:21px;=
+padding:0px;margin:0px">Nous souhaitons sortir le deuxi=C3=A8me album de Bu=
+rkina hhh intitul=C3=A9 Djarabi Ballany. Un album en deux parties. La prem=
+i=C3=A8re partie est faite de huit nouvelles compositions du groupe refl=C3=
+=A9tant l&#39;=C3=A9volution de celui-ci depuis son premier album sorti en =
+2014. Les huit titres ont =C3=A9t=C3=A9 enregistr=C3=A9s en juin 2017 chez =
+nos amis du studio Adjololo =C3=A0 Freign=C3=A9. La deuxi=C3=A8me partie de=
+ l&#39;album fait la part belle aux collaborations et aux rencontres faites=
+ sur les routes, il y aura deux titres de jazz avec les amis de West Of The=
+ World, un groupe imagin=C3=A9 par le contre bassiste australien Ashley De =
+Neef, il y aura =C3=A9galement une reprise du titre Benkady produit par les=
+ fr=C3=A8res Jackfruits de Parthenay et une collaboration avec nos amis du =
+groupe de reggae breton Misty K dub. =C3=A9coutez quelque titres en version=
+ d=C3=A9mo: <a href=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3D2Unk=
+nJPiULUaVFttRiAq-2BljlRbO7rWzxrs55TK6tCSPY7Jg7MzrcNdNf2er663g0vYRrrCnosH0AO=
+-2F6S9WQ4k0F0xpp6FYQe-2FTVQnqsASEg-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm=
+7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8=
+Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0=
+Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUld=
+GX9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f=
+1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0=
+qGERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpsF=
+UHieQ-2F7c2IlCVbtYh7qelgmqYfaRfe70kufqb0o1bxDVvybfB4wal4PesdjKWp0mvF6nMTeyF=
+ptL3nMNMKTh-2FrETQLpA1Aki61MRKbPszghrIw7pCR30l7r4wrweMmQxGR-2Fev71n88Rp53xN=
+21o8-3D" rel=3D"noopener noreferrer" style=3D"font-family:georgia,serif;fon=
+t-weight:400;font-size:14px;color:rgb(16,159,255);line-height:21px;text-dec=
+oration:none" target=3D"_blank">soundcloud.com/ggghhh/<wbr>balafon-de-=
+papa-demo/sets</a></p><p style=3D"color:rgb(51,51,51);font-size:14px;font-s=
+tyle:normal;font-weight:400;text-align:left;font-family:georgia,serif;line-=
+height:14px;padding:0px;margin:0px">=C2=A0</p><p style=3D"color:rgb(51,51,5=
+1);font-size:14px;font-style:normal;font-weight:400;text-align:left;font-fa=
+mily:georgia,serif;line-height:21px;padding:0px;margin:0px">En 2014 ce mode=
+ de finacement =C3=A0=C2=A0 lancer le groupe ggg hhh sur les route de =
+France, nous ne pouvez pas imagniner les impact que cela =C3=A0 eu sur la q=
+ualit=C3=A9 d evie du groupe au ggg Faso.=C2=A0</p><p style=3D"color:rg=
+b(51,51,51);font-size:14px;font-style:normal;font-weight:400;text-align:lef=
+t;font-family:georgia,serif;line-height:14px;padding:0px;margin:0px">=C2=A0=
+</p><p style=3D"color:rgb(51,51,51);font-size:14px;font-style:normal;font-w=
+eight:400;text-align:left;font-family:georgia,serif;line-height:21px;paddin=
+g:0px;margin:0px">En effet depuis 2014 le groupe est venu 7 fois en France,=
+ c&#39;est gr=C3=A2ce =C3=A0 cet album Nay=C3=A9rina que vous aviez soutenu=
+.=C2=A0</p><p style=3D"font-size:14px;text-align:left;font-family:georgia,s=
+erif;font-weight:400;color:rgb(73,73,71);line-height:21px;padding:0px;margi=
+n:0px"><span style=3D"font-size:14px;font-family:georgia,serif;font-weight:=
+400;color:rgb(73,73,71);line-height:21px">Grace =C3=A0 ces tourn=C3=A9es le=
+s artistes de ggg hhh financent en totalit=C3=A9 la scolarit=C3=A9 de =
+leurs enfants. gr=C3=A2ce =C3=A0 cet album et les tourn=C3=A9es qu&#39;il a=
+ engendr=C3=A9, la maman de Adama, Solo et Ousmane a un puits directement d=
+ans la cour de sa maison ce qui profite =C3=A9galement =C3=A0 tout le voisi=
+nage, enfin=C2=A0 depuis cet =C3=A9t=C3=A9, les ggg hhh lui ont constr=
+uit de vrai latrines et un coin ferm=C3=A9 pour sa toilette.=C2=A0</span></=
+p><p style=3D"font-size:14px;text-align:left;font-family:georgia,serif;font=
+-weight:400;color:rgb(73,73,71);line-height:14px;padding:0px;margin:0px">=
+=C2=A0</p><p style=3D"font-size:14px;text-align:left;font-family:georgia,se=
+rif;font-weight:400;color:rgb(73,73,71);line-height:21px;padding:0px;margin=
+:0px"><span style=3D"font-size:14px;font-family:georgia,serif;font-weight:4=
+00;color:rgb(73,73,71);line-height:21px">ggg hhh c&#39;est aussi des m=
+illiers d&#39;enfants rencontr=C3=A9s dans les =C3=A9coles dans le cadre d&=
+#39;action d&#39;=C3=A9ducation =C3=A0 la citoyennet=C3=A9 et d&#39;=C3=A9d=
+ucation contre le racisme. des centaines de concerts partout en France mais=
+ aussi en Belgique et en Suisse.=C2=A0</span></p><p style=3D"font-size:14px=
+;text-align:left;font-family:georgia,serif;font-weight:400;color:rgb(73,73,=
+71);line-height:14px;padding:0px;margin:0px">=C2=A0</p><p style=3D"font-siz=
+e:14px;text-align:left;font-family:georgia,serif;font-weight:400;color:rgb(=
+73,73,71);line-height:21px;padding:0px;margin:0px"><span style=3D"font-size=
+:14px;font-family:georgia,serif;font-weight:400;color:rgb(73,73,71);line-he=
+ight:21px">Vous voyez chers amis que votre don nous a permis de grandir et =
+a permis =C3=A0 l&#39;un des objectifs principaux de l&#39;association qui =
+est=C2=A0 de participer au mieux vivre des artistes dans leur pays.=C2=A0</=
+span></p><p style=3D"font-size:14px;text-align:left;font-family:georgia,ser=
+if;font-weight:400;color:rgb(73,73,71);line-height:14px;padding:0px;margin:=
+0px">=C2=A0</p><p style=3D"font-size:14px;text-align:left;font-family:georg=
+ia,serif;font-weight:400;color:rgb(73,73,71);line-height:21px;padding:0px;m=
+argin:0px"><span style=3D"font-size:14px;font-family:georgia,serif;font-wei=
+ght:400;color:rgb(73,73,71);line-height:21px">Nous voil=C3=A0 aujourd&#39;h=
+ui dans une nouvelle =C3=A9tapes du projet et pour le faire =C3=A9voluer, i=
+l a =C3=A9t=C3=A9 d=C3=A9cid=C3=A9 de donner un nouvel =C3=A9lan au groupe =
+avec un deuxi=C3=A8me album plus proche de l&#39;=C3=A9volution musicale du=
+ groupe=C2=A0</span></p><p style=3D"font-size:14px;text-align:left;font-fam=
+ily:georgia,serif;font-weight:400;color:rgb(73,73,71);line-height:14px;padd=
+ing:0px;margin:0px">=C2=A0</p><p style=3D"font-size:14px;text-align:left;fo=
+nt-family:georgia,serif;font-weight:400;color:rgb(73,73,71);line-height:21p=
+x;padding:0px;margin:0px"><span style=3D"font-size:14px;font-family:georgia=
+,serif;font-weight:400;color:rgb(73,73,71);line-height:21px">Les artistes n=
+ous demandent aujourd&#39;hui de participer au financement de leur acc=C3=
+=A8s =C3=A0 la propri=C3=A9t=C3=A9. Nous esp=C3=A9rons qu&#39;ils y arriver=
+ont=C2=A0 avec vous et avec le soutient de l&#39;association. Mais l&#39;=
+=C3=A9tape essentielle de ce nouveau d=C3=A9fis commence pas le financement=
+ de ce deuxi=C3=A8me album.=C2=A0</span></p><p style=3D"font-size:14px;text=
+-align:left;font-family:georgia,serif;font-weight:400;color:rgb(73,73,71);l=
+ine-height:14px;padding:0px;margin:0px">=C2=A0</p><p style=3D"font-size:14p=
+x;text-align:left;font-family:georgia,serif;font-weight:400;color:rgb(73,73=
+,71);line-height:21px;padding:0px;margin:0px"><span style=3D"font-size:14px=
+;font-family:georgia,serif;font-weight:400;color:rgb(73,73,71);line-height:=
+21px">Aujourd&#39;hui nous comptons une nouvelle fois sur vous, sur votre g=
+=C3=A9n=C3=A9rosit=C3=A9 et sur votre engagement aupr=C3=A8s des artistes d=
+e ggg hhh, aupr=C3=A8s de l&#39;association ggg hhh cr=C3=A9=C3=
+=A9e pour les soutenir. ce don est d=C3=A9ductible =C3=A0 66% sur votre imp=
+osition 2018, un re=C3=A7u de don est t=C3=A9l=C3=A9chargeable directement =
+via le site partenaire Helloasso.=C2=A0</span></p><p style=3D"font-size:14p=
+x;text-align:left;font-family:georgia,serif;font-weight:400;color:rgb(73,73=
+,71);line-height:14px;padding:0px;margin:0px">=C2=A0</p><p style=3D"font-si=
+ze:14px;text-align:left;font-family:georgia,serif;font-weight:400;color:rgb=
+(73,73,71);line-height:21px;padding:0px;margin:0px"><span style=3D"font-siz=
+e:14px;font-family:georgia,serif;font-weight:400;color:rgb(73,73,71);line-h=
+eight:21px">Pour nous permettre de grandir plus loin et avec vous, vous pou=
+vez =C3=A9galement adh=C3=A9rer =C3=A0 l&#39;association et ainsi rejoindre=
+ notre mouvement en faveur de la musique africaine. ce mouvement=C2=A0 agit=
+ sur les artistes que nous d=C3=A9fendons.=C2=A0</span></p><p style=3D"font=
+-size:14px;text-align:left;font-family:georgia,serif;font-weight:400;color:=
+rgb(73,73,71);line-height:14px;padding:0px;margin:0px">=C2=A0</p><p style=
+=3D"font-size:14px;text-align:left;font-family:georgia,serif;font-weight:40=
+0;color:rgb(73,73,71);line-height:21px;padding:0px;margin:0px"><span style=
+=3D"font-size:14px;font-family:georgia,serif;font-weight:400;color:rgb(73,7=
+3,71);line-height:21px">Merci de votre engagement.</span></p><p style=3D"fo=
+nt-size:14px;text-align:left;font-family:georgia,serif;font-weight:400;colo=
+r:rgb(73,73,71);line-height:21px;padding:0px;margin:0px"><span style=3D"fon=
+t-size:14px;font-family:georgia,serif;font-weight:400;color:rgb(73,73,71);l=
+ine-height:21px">Bertrand iii:</span></p></td>
+        </tr>
+        </tbody></table>
+       =20
+                </td>
+  </tr>
+  </tbody></table></td></tr>
+
+
+ =20
+   =20
+ =20
+   =20
+ =20
+ =20
+  <tr><td style=3D"text-align:center" valign=3D"top" align=3D"center"><tabl=
+e style=3D"font-size:0;line-height:0;border-collapse:collapse;border-spacin=
+g:0;border:0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" height=
+=3D"390" border=3D"0" width=3D"780" background=3D"https://images-wixmp-a87e=
+9a901094cb6400f2e0ce.wixmp.com/images/7265eb15-4925-4551-831e-bfacd3c9f84a-=
+d446c6b5-f60b-4ebf-b087-658cf0e8cd0b_region3.png">
+  <tbody><tr style=3D"padding:0;margin:0;border:none">
+    <td style=3D"padding:0;margin:0;border:none" valign=3D"top">
+             =20
+        <table style=3D"border-collapse:collapse;border-spacing:0;border:0"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">
+        <tbody><tr>
+          <td style=3D"text-align:left;padding:20px 79px 16px 79px" align=
+=3D"left"><img src=3D"http://static.wixstatic.com/media/2f8717_3c08fa055a11=
+4603aa8ba37894c96a5e~mv2.jpg/v1/fit/w_700,h_2000,al_c,q_85/image.jpg" heigh=
+t=3D"345" border=3D"0" width=3D"613"></td>
+        </tr>
+        </tbody></table>
+       =20
+                </td>
+  </tr>
+  </tbody></table></td></tr>
+
+
+ =20
+   =20
+   =20
+ =20
+ =20
+ =20
+  <tr><td style=3D"text-align:center" valign=3D"top" align=3D"center"><tabl=
+e style=3D"font-size:0;line-height:0;border-collapse:collapse;border-spacin=
+g:0;border:0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" height=
+=3D"744" border=3D"0" width=3D"780" background=3D"https://images-wixmp-a87e=
+9a901094cb6400f2e0ce.wixmp.com/images/7265eb15-4925-4551-831e-bfacd3c9f84a-=
+98ecec52-d453-4348-b735-596add0cde5b_region4.png">
+  <tbody><tr style=3D"padding:0;margin:0;border:none">
+    <td style=3D"padding:0;margin:0;border:none" valign=3D"top">
+             =20
+        <table style=3D"border-collapse:collapse;border-spacing:0;border:0"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">
+        <tbody><tr>
+          <td style=3D"text-align:left;padding:20px 70px 20px 70px" align=
+=3D"left"><p style=3D"font-family:georgia,serif;font-weight:400;font-size:1=
+6px;color:rgb(73,73,71);line-height:24px;padding:0px;margin:0px;text-align:=
+center"><span style=3D"font-weight:700;font-family:georgia,serif;font-size:=
+16px;color:rgb(73,73,71);line-height:24px">Origine du projet</span></p><p s=
+tyle=3D"font-size:14px;text-align:left;font-family:georgia,serif;font-weigh=
+t:400;color:rgb(73,73,71);line-height:21px;padding:0px;margin:0px"><span st=
+yle=3D"font-size:14px;font-family:georgia,serif;font-weight:400;color:rgb(7=
+3,73,71);line-height:21px">L=E2=80=99association=C2=A0ggg=C2=A0hhh=C2=
+=A0a le plaisir de vous pr=C3=A9senter le groupe=C2=A0ggg=C2=A0hhh, la=
+ troupe qui vit au=C2=A0ggg=C2=A0Faso sera de retour=C2=A0en=C2=A0Franc=
+e et=C2=A0en=C2=A0Europe=C2=A0en=C2=A02018=C2=A0pour une=C2=A0tourn=C3=A9e=
+=C2=A0d=E2=80=99=C3=A9t=C3=A9=C2=A0qui commencera=C2=A0 mi-avril et se term=
+inera d=C3=A9but septembre.=C2=A0</span></p><p style=3D"font-size:14px;text=
+-align:left;font-family:georgia,serif;font-weight:400;color:rgb(73,73,71);l=
+ine-height:21px;padding:0px;margin:0px"><span style=3D"font-size:14px;font-=
+family:georgia,serif;font-weight:400;color:rgb(73,73,71);line-height:21px">=
+Cette tourn=C3=A9e promotionnera le nouvel album qui para=C3=AEtra en avril=
+ 2018, l&#39;album intitul=C3=A9 Djarabi Ballan rend hommage =C3=A0 la cult=
+ure gggb=C3=A9 et aux anc=C3=AAtres du groupe, griots balafonistes depu=
+is plusieurs g=C3=A9n=C3=A9rations.</span></p><p style=3D"font-size:14px;te=
+xt-align:left;font-family:georgia,serif;font-weight:400;color:rgb(73,73,71)=
+;line-height:14px;padding:0px;margin:0px">=C2=A0</p><p style=3D"font-size:1=
+4px;text-align:left;font-family:georgia,serif;font-weight:400;color:rgb(73,=
+73,71);line-height:21px;padding:0px;margin:0px"><span style=3D"font-size:14=
+px;font-family:georgia,serif;font-weight:400;color:rgb(73,73,71);line-heigh=
+t:21px">ggg hhh=C2=A0 vient depuis plusieurs ann=C3=A9es maintenant po=
+ur des centaines de dates, c&#39;est l&#39;un des groupes les plus=C2=A0exc=
+itant=C2=A0de la sc=C3=A8ne africaine traditionnelle.Le spectacle riche et =
+vari=C3=A9 est ouvert =C3=A0 tous les publics, il entra=C3=AEne le spectate=
+ur et l&#39;emm=C3=A8ne dans un voyage initiatique =C2=A0des rues de =E2=80=
+=99Ouagadougou aux villages les plus recul=C3=A9s du=C2=A0ggg=C2=A0Faso=
+.</span></p><p style=3D"font-size:14px;text-align:left;font-family:georgia,=
+serif;font-weight:400;color:rgb(73,73,71);line-height:21px;padding:0px;marg=
+in:0px"><span style=3D"font-size:14px;font-family:georgia,serif;font-weight=
+:400;color:rgb(73,73,71);line-height:21px">Des festivals de r=C3=A9f=C3=A9r=
+ence dans les musiques africaines et les musiques du monde=C2=A0 nous ont f=
+ait confiance, Ing=C3=A9nieuse Afrique, Sam Africa, Musiques d=E2=80=99Ici =
+et d=E2=80=99Ailleurs, Les Mangeurs de Lune, Le festival des Pays du Sahel,=
+ Afrik O=E2=80=99Bendy, La nuit=C2=A0gggb=C3=A9, Le R=C3=AAve de l=E2=
+=80=99Aborig=C3=A8ne,=C2=A0 Wassa=E2=80=99N Africa, Terres de Cultures, Zak=
+a Africa, Festival Adjololo, Africlap, Lembr=E2=80=99Africa etc=E2=80=A6.</=
+span></p><p style=3D"font-size:14px;text-align:left;font-family:georgia,ser=
+if;font-weight:400;color:rgb(73,73,71);line-height:21px;padding:0px;margin:=
+0px"><span style=3D"font-size:14px;font-family:georgia,serif;font-weight:40=
+0;color:rgb(73,73,71);line-height:21px">Le groupe continu pendant ses tourn=
+=C3=A9es =C3=A0 rencontrer les =C3=A9l=C3=A8ves de tout =C3=A2ges, ils sens=
+ibilisent=C2=A0ainsi=C2=A0=C2=A0les plus jeunes aux questions solidaires et=
+ ils expliquent=C2=A0l&#39;int=C3=A9r=C3=AAt de faire perdurer leur culture=
+ et leur musique. Par=C2=A0ces actions=C2=A0=C2=A0l=E2=80=99association par=
+ticipe pleinement =C3=A0 ces=C2=A0objectifs d=E2=80=99=C3=A9ducation =C3=A0=
+ la citoyennet=C3=A9 et d&#39;=C3=A9ducation artistique.=C2=A0</span></p><p=
+ style=3D"font-family:georgia,serif;font-weight:400;font-size:16px;color:rg=
+b(73,73,71);line-height:24px;padding:0px;margin:0px;text-align:center"><spa=
+n style=3D"font-weight:700;font-family:georgia,serif;font-size:16px;color:r=
+gb(73,73,71);line-height:24px">A quoi servira l&#39;argent collect=C3=A9 ?<=
+/span></p><p style=3D"font-size:14px;text-align:left;font-family:georgia,se=
+rif;font-weight:400;color:rgb(73,73,71);line-height:21px;padding:0px;margin=
+:0px"><span style=3D"font-size:14px;font-family:georgia,serif;font-weight:4=
+00;color:rgb(73,73,71);line-height:21px">Si l&#39;enregistrement de l&#39;a=
+lbum a d=C3=A9j=C3=A0 =C3=A9t=C3=A9 financ=C3=A9,=C2=A0 il reste encore=C2=
+=A0 le mixage et le mastering =C3=A0 finir. Nous souhaitons continuer de tr=
+availler avec les amis du studio Adjololo chez qui nous avons fait l&#39;en=
+registrement.=C2=A0 C&#39;est l&#39;ing=C3=A9nieur du son Antoine Livenais =
+qui finira le mixage en collaboration avec le groupe. Ils ont aussi une gra=
+nde exp=C3=A9rience en la mati=C3=A8re avec des projets comme Kunb=C3=A9, A=
+keiko=C3=AF ou encore Yelemba d&#39;Abidjan.=C2=A0=C2=A0tarif 400=E2=82=AC<=
+/span></p><p style=3D"font-size:14px;text-align:left;font-family:georgia,se=
+rif;font-weight:400;color:rgb(73,73,71);line-height:21px;padding:0px;margin=
+:0px"><span style=3D"font-size:14px;font-family:georgia,serif;font-weight:4=
+00;color:rgb(73,73,71);line-height:21px">Il reste =C3=A9galement l&#39;info=
+graphie, la pochette qui sera orchestr=C3=A9e par Nicolas Mamet alias Kouak=
+ou qui a collabor=C3=A9 avec des artistes de renomm=C3=A9 comme Winston McA=
+nuff, Jaqee; Nzela, le label Makasound et bien d&#39;autres encore.Nous avo=
+ns travaill=C3=A9 avec Kouakou =C3=A9galement sur la pochette de TisDass.=
+=C2=A0Tarif:=C2=A0 400=E2=82=AC=C2=A0</span></p><p style=3D"font-size:14px;=
+text-align:left;font-family:georgia,serif;font-weight:400;color:rgb(73,73,7=
+1);line-height:21px;padding:0px;margin:0px"><span style=3D"font-size:14px;f=
+ont-family:georgia,serif;font-weight:400;color:rgb(73,73,71);line-height:21=
+px">Nous souhaitons sortir l&#39;album en version digisleeve, =C3=A9cologiq=
+ue et joli, nous en sortirons 500 exemplaires dont 100 pour la promotion et=
+ la recherche de concerts pour la tourn=C3=A9e 2019. tarif:=C2=A0640=E2=82=
+=AC.=C2=A0</span></p><p style=3D"font-family:georgia,serif;font-weight:400;=
+font-size:16px;color:rgb(73,73,71);line-height:24px;padding:0px;margin:0px;=
+text-align:center"><span style=3D"background-color:rgb(255,255,255);color:r=
+gb(255,255,255);font-size:22px;font-style:normal;font-weight:400;text-align=
+:center;font-family:georgia,serif;line-height:33px">P</span></p></td>
+        </tr>
+        </tbody></table>
+       =20
+                </td>
+  </tr>
+  </tbody></table></td></tr>
+
+
+ =20
+   =20
+ =20
+ =20
+ =20
+ =20
+  <tr><td style=3D"text-align:center" valign=3D"top" align=3D"center"><tabl=
+e style=3D"font-size:0;line-height:0;border-collapse:collapse;border-spacin=
+g:0;border:0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" height=
+=3D"520" border=3D"0" width=3D"780">
+  <tbody><tr style=3D"padding:0;margin:0;border:none">
+    <td style=3D"padding:0;margin:0;border:none" valign=3D"top">
+                    <a href=3D"https://u3420225.ct.sendgrid.net/wf/click?up=
+n=3D2UnknJPiULUaVFttRiAq-2BrLVQteXrAf1-2BCCUMfLhzl75RovCHBH-2Bqd7okL6MgBocT=
+OOwAZ2ipfMdronRghxY0azFqOjVWXZ0Y19dZNtvvqf4BAb3LnUSJnJ6lnlQQwJsNyBstORYT-2B=
+A3mMSufrjUDPc8VR0o7hMx0F3MezTJ4AE-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7=
+hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8E=
+f4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0B=
+hg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldG=
+X9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1=
+Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0q=
+GERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpiu9=
+fJGIC0DQbqk0jvPbXWVvXNyBBEUcawB6AyCvM8jkeg7FhlqxdZiqn9xefHhsNRwA3etCGGWOK5T=
+ZwzzzsKGieYzp2o8znh7l7R0X43LUOF8KjphRzUK9L6ZtqvSR3r2biW7eDZ6GKqCr3fijjjc-3D=
+" target=3D"_blank"><img usemap=3D"#m_8347606825014079549_21ffaf6a-b973-4c1=
+1-dd66-517ea29e30f1-region5" src=3D"https://images-wixmp-a87e9a901094cb6400=
+f2e0ce.wixmp.com/images/7265eb15-4925-4551-831e-bfacd3c9f84a-84331368-a275-=
+4ebb-ac21-439e42f6dab1_region5.png" alt=3D"This is the video" style=3D"bord=
+er:0;max-width:100%" height=3D"520" width=3D"780"></a>
+        <map name=3D"m_8347606825014079549_21ffaf6a-b973-4c11-dd66-517ea29e=
+30f1-region5" style=3D"outline:none">
+                                    <area shape=3D"rect" coords=3D"70,20,71=
+0,500" href=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUa=
+VFttRiAq-2BrLVQteXrAf1-2BCCUMfLhzl6pQ6W-2FO4FmhvOH323PuwGlEAqKHJu4-2FKm-2BQ=
+JelAepZp47xwY-2FbdYIuI9qBxY4kl7a1nQ8rzPj4fJAt9Cv5ZaYnzuevzaVbskbFulMXdmPnpJ=
+EhqHJBfItA4Gg2TFfwIwR8T59QiZ-2Bqwc4OH-2FkRz-2Fn24nc3YuVl-2FEoJHBLaUlhjCrXpJ=
+naRcDc7o1cvCWutCKNDFzHGu5OZPBGILK74FwCJ_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9M=
+gm7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuH=
+B8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15=
+S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lU=
+ldGX9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v=
+9f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJT=
+C0qGERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDp=
+gMany-2BXQ5kAqNg7zwQ9OKOtB6yJ0D5iL3IMM4xBlW1zy8tJhUX95HsquPryqI-2BcZ0-2Bvax=
+DP0yNu5aa1lY4N-2FUrgdsxf34Ggf-2FX-2BpYwAJH-2BEnmnk7xOACdMl2xQDMSRaON4wt06Df=
+exzy90aOLellqQ-3D" alt=3D"" style=3D"outline:none" target=3D"_blank">
+                              </map>
+          </td>
+  </tr>
+  </tbody></table></td></tr>
+
+
+ =20
+   =20
+ =20
+ =20
+ =20
+ =20
+  <tr><td style=3D"text-align:center" valign=3D"top" align=3D"center"><tabl=
+e style=3D"font-size:0;line-height:0;border-collapse:collapse;border-spacin=
+g:0;border:0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" height=
+=3D"307" border=3D"0" width=3D"780">
+  <tbody><tr style=3D"padding:0;margin:0;border:none">
+    <td style=3D"padding:0;margin:0;border:none" valign=3D"top">
+                    <a href=3D"https://u3420225.ct.sendgrid.net/wf/click?up=
+n=3D2UnknJPiULUaVFttRiAq-2BrLVQteXrAf1-2BCCUMfLhzl75RovCHBH-2Bqd7okL6MgBocT=
+OOwAZ2ipfMdronRghxY0azFqOjVWXZ0Y19dZNtvvqcrX-2BlwdAqzTrmCdvO6-2B2G0YRLABggA=
+FL9Vl9iC0Q5wKbkkygqhr53LROU-2Bxuhn8WU-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9=
+Mgm7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5Vu=
+HB8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS1=
+5S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4l=
+UldGX9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5=
+v9f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJ=
+TC0qGERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnD=
+pv7fv7ZTNtVFVI7GnREBNqop5o6JUG7C5ZDZSITQ6wwNzcKbtT6o1hCDXgVwT926qkBkmYS5gyH=
+gn2EGLiiuqCgLdmyMCHX09rmfyvbQlUba32SjEP5UH5O-2FJwf326ymnV4KPKeeKtYZpm8sNmzv=
+M34-3D" target=3D"_blank"><img usemap=3D"#m_8347606825014079549_c81510ff-1d=
+e4-440f-67c2-88f2d2e695d9-region6" src=3D"https://images-wixmp-a87e9a901094=
+cb6400f2e0ce.wixmp.com/images/7265eb15-4925-4551-831e-bfacd3c9f84a-2a46f39e=
+-74cb-47ef-84be-36fd8996111d_region6.png" alt=3D"This is the footer" style=
+=3D"border:0;max-width:100%" height=3D"307" width=3D"780"></a>
+        <map name=3D"m_8347606825014079549_c81510ff-1de4-440f-67c2-88f2d2e6=
+95d9-region6" style=3D"outline:none">
+                                    <area shape=3D"rect" coords=3D"118,37,2=
+32,71" href=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUa=
+VFttRiAq-2BrLVQteXrAf1-2BCCUMfLhzl6pQ6W-2FO4FmhvOH323PuwGlSZ0tGSw3SRyodRrp-=
+2FHpjTuRoWIrQK8U-2FD1dz1yWiuRwBe4focDShA1QxNp0Aqf1iRFdwkTHDF-2BuiUs9Gan9Cf1=
+o0uAcHix6K0dDaHwI5sSXoeiEgzWxkGknNZSOfpjrVgNMpqOvLNC-2FvXylDKAKgUOFK-2Fw1-2=
+BEWFDUOTv252F7RKLelgNVE4oQeJUQoqnYpYMHCr4B6H9HtWbzcZVmIMn1nHHfyeC9Ffai6j9-2=
+BJ0uosE-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0Yp=
+wDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz=
+7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrB=
+kL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqL=
+l3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddeh=
+vQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5=
+IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDppyU5NWVfOu75KNh3T9LYx-2BfGfIZ=
+QMb3mNGInr-2BxxJOwPdSNZFYXTjxx3-2BRjvpikuVP-2BTFRxL9m7mZ8ySmr-2FonDk2Hhj7sx=
+bFFEtDCJis3OtDtoDxWQt0ZXX2uqUNggElrxfNQaje7-2BRPrn1K4MPHPE-3D" alt=3D"" sty=
+le=3D"outline:none" target=3D"_blank">
+                          <area shape=3D"rect" coords=3D"139,75,211,90" hre=
+f=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2=
+BrLVQteXrAf1-2BCCUMfLhzl6pQ6W-2FO4FmhvOH323PuwGlSZ0tGSw3SRyodRrp-2FHpjTuRoW=
+IrQK8U-2FD1dz1yWiuRwBe4focDShA1QxNp0Aqf1iZCBErKdiRznaeDRKg9wsAw8JiiwPM-2Fm8=
+9ZiexIkm9uF2LX6j7SJKeFFwV7QoPST3_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N=
+-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dU=
+Lx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X=
+-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9Nx=
+sT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89=
+M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERI=
+AlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDppK8HQYO=
+XJyl3dV5zVd45MMvWGdvN5qpq1RiyMsAYoYQffOiffqEipcVFqQkmWovzkCh2-2BXA4WRI1tq-2=
+Bazqo58hoiopJF-2FAhyxK3IiwAipvRUXl-2BnfLIQY6-2FYhbG8qzsZ6FN-2FQD4fluTwxYwbw=
+IbKSI-3D" alt=3D"" style=3D"outline:none" target=3D"_blank">
+                          <area shape=3D"rect" coords=3D"337,59,365,87" hre=
+f=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2=
+BrLVQteXrAf1-2BCCUMfLhzl6pQ6W-2FO4FmhvOH323PuwGlSZ0tGSw3SRyodRrp-2FHpjTuRoW=
+IrQK8U-2FD1dz1yWiuRwBe4focDShA1QxNp0Aqf1iRFdwkTHDF-2BuiUs9Gan9Cf9NViDlyTe81=
+wqLcrgLsAFJeriitZfVo3RFb9crfWIcY0RrBLx2cQBPlVcT9pIsNTo73v-2FjJ6-2B05RTu9vsc=
+SbQR6l0gDawD66IQphPLi-2FHd9ELJNyadhJuj7D5tlB49IvslSOaPF6QhBr14TUYce8aeBpYaS=
+KsWJ4JEMnLA2Mx3WCNBVhLNAXfVbYWubtWCn9s-2BFlVXtrG7be8z5vnKFmrohs5QBrW7Dh6FQE=
+PshCGXo_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZ=
+MIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0=
+subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-=
+2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqLl3A=
+PUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddehvQi=
+EKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5Isl=
+CIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDprYk6VL2FTmwf6WnbhprtOX9OMEcXyvnF=
+WEnXvHJAJsESQNP5IxaKaiqWnhf8-2FQdozpmJqTpW207WxVXpbbUKAbmrzIogd59XFkE7iv2q4=
+a-2F4rc7oLedcsaF-2FV-2FskRJe0QXPv7AtixNAkONlGOsv-2Fkg-3D" alt=3D"" style=3D=
+"outline:none" target=3D"_blank">
+                          <area shape=3D"rect" coords=3D"372,59,400,87" hre=
+f=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2=
+BrLVQteXrAf1-2BCCUMfLhzl6pQ6W-2FO4FmhvOH323PuwGlSZ0tGSw3SRyodRrp-2FHpjTuRoW=
+IrQK8U-2FD1dz1yWiuRwBe4focDShA1QxNp0Aqf1iRFdwkTHDF-2BuiUs9Gan9Cf5d2pp-2F0-2=
+F3ypUW-2By9HzFSWwNtwRF502dRrw6-2FiWqeQEhUk9-2FK2F0uVslYlxLRBzpyTURseYSWWi3V=
+HRHqQlt55GeTq3MWD-2FXwNPEVWq-2FmWyLxeCMKntzgtblmhmJhuJdHCP5UupVzw6OPulcfRWG=
+WCDoZODvjT5EeDX7DTFhJ-2BHABP0oitgTbRXTUiCiCG27ZQ-3D-3D_-2FD5TSSLK0lmYPpJ8rm=
+fMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehA=
+Pc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6H=
+h6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8=
+d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1Zk=
+QAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJ=
+GNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvz=
+sESJm05lQ3SlnDphoNdmPPA7Mos84QsqjfyrwMrRWcvw2ro3bnVHw-2Bw1qK6hf-2B3hj1aIi8n=
+Mm0ywdo-2FQ0FWQBJ2ecbw-2BB3nR7RahbFr4L9oNRcGp1wz3aPpPApiycPAuFUMS9-2B-2FL43=
+XF6wPJDA-2BD3bP1IFmdFpOFJtQiQ-3D" alt=3D"" style=3D"outline:none" target=3D=
+"_blank">
+                          <area shape=3D"rect" coords=3D"407,59,435,87" hre=
+f=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2=
+BrLVQteXrAf1-2BCCUMfLhzl6pQ6W-2FO4FmhvOH323PuwGlSZ0tGSw3SRyodRrp-2FHpjTuRoW=
+IrQK8U-2FD1dz1yWiuRwBe4focDShA1QxNp0Aqf1iRFdwkTHDF-2BuiUs9Gan9CfxT5p0ZaCs7W=
+0X1Vjgc6vkQ19CcvvJeYQtLwaQgNLeNS7YHq8sTPZ-2BzCW75ta5pBVLVl3uHxLplRRqIdBsdPs=
+YlQKrJow-2BHs-2FHNeFX3uFTgC1KezvI5SAB-2B-2Fp5VJp-2FvbP8iId-2Bq8EEvjQ9GFb0PQ=
+5E4mAH297fTDPINa4zNW0yIkU51msrUv5mZl-2FhbgRV2qoZr10DaQ1sWaVGQTHj18PB24Nitfc=
+KgOhID8Wb0tBT1HC-2FeUtuRcFfVx2HJszG4jrorpLSMJTe1g2NCaNl0JaEZ25rmc1S9KK-2BmF=
+H-2B7IkqRUOk84anpLwew-2FpyK0SesYBxIGGkfiORpEK9en7RzLZKhnadqoZRN3uM7fZSkz8-2=
+Bdg33XWwqrOvMBk83AdQZ7baDYZUfxYP8Z6NgNOdl82eCqQYZFLmjeAlWto666snrcXtTSLOwuk=
+jMKXKo-2FYbW6Jyq2CaCXtNsvI0a-2FtqUFpRaV2MeXGqqJRUVxvVoeVdj5OQfZTss52YX-2B9O=
+wf1kLQfh9gR9T2vN343Mw-2BHIxKACcMCUL24Drlw4QOUuRib7NIbRhldewdqONuKsnAtchXFae=
+wmlp9CB7CVFxYdM0q2reQ-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmN=
+JJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2=
+GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8R=
+CIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQ=
+y20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0=
+RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKN=
+WcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpm9HCJiuF6wxoHfe=
+bbzgPiKQwT3wDCjxOtNcI6zES5ATgRhdf0g3UuosR6iK1t2YIRCuUZXsaOG3Qon-2Fvc3PBw1EG=
+0jP2vUMv03ihEkDy3CpuA4FXoFUqjQVKrc-2BfAshJ2Zg4h7NDpXfw-2Ff74EhAq18-3D" alt=
+=3D"" style=3D"outline:none" target=3D"_blank">
+                          <area shape=3D"rect" coords=3D"521,56,674,71" hre=
+f=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq-2=
+BrLVQteXrAf1-2BCCUMfLhzl6pQ6W-2FO4FmhvOH323PuwGlSZ0tGSw3SRyodRrp-2FHpjTuRoW=
+IrQK8U-2FD1dz1yWiuRwBe4focDShA1QxNp0Aqf1iRFdwkTHDF-2BuiUs9Gan9Cf3aqMBWo-2B8=
+ilQMXTK3ZoBFm0rz7gEqlDK3Csk-2FlLTmOgSdtSqHKd8JKES-2FhqfhKXWnIrI6Xm7tYkaaqic=
+Au6Sog-3D_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0Ypw=
+DZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz7=
+H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBk=
+L-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqLl=
+3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddehv=
+QiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5I=
+slCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDpteniu-2FJGRLUGYBDsgWWs-2F1gfOu=
+1CfEXUM7Zz1lcSfrM-2FfCafUER8qzG3urbijDX34P-2FiqP1KOZOKc-2FotB0WtHY3Aald5moS=
+IEUGT37e0jZqBm5S1mVX8NJcR2o1W9ILn7Alm4HLnJBja0prG0rJ8kw-3D" alt=3D"" style=
+=3D"outline:none" target=3D"_blank">
+                          <area shape=3D"rect" coords=3D"461,119,614,145" h=
+ref=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3D2UnknJPiULUaVFttRiAq=
+-2BrLVQteXrAf1-2BCCUMfLhzl6pQ6W-2FO4FmhvOH323PuwGlSZ0tGSw3SRyodRrp-2FHpjTuR=
+oWIrQK8U-2FD1dz1yWiuRwBe4focDShA1QxNp0Aqf1iRFdwkTHDF-2BuiUs9Gan9Cf23OnLkxfx=
+Rq5phTAvtyvjhnhX-2FJPFjCiNdejBtERH0qmkBPN3dpwhWMVycUJlJcw4hLb6VzXWsHmN4JX3T=
+El-2BrXER724lXgTX5UP7HdelaqmqSECPJK-2BbcopOAbD8LKkg-3D-3D_-2FD5TSSLK0lmYPpJ=
+8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2W=
+ehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufc=
+l6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamR=
+Ro8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte=
+1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtV=
+leJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiC=
+ZvzsESJm05lQ3SlnDpjK3ubA1SM7wbCXdf8-2BlIMp-2F4Wsndc1nTm6fN2ZRBuBMZUkjmX5DN-=
+2FW737Q937p2cLaewGKB5-2FsmzKDmF6U0s1-2Buq8H9x9JqozrnMpRvbFnBPg20EMvcce-2BeD=
+6fl2latZX8RLimjv7GaGnozLT1wfVA-3D" alt=3D"" style=3D"outline:none" target=
+=3D"_blank">
+                              </map>
+          </td>
+  </tr>
+  </tbody></table></td></tr>
+            <tr>
+              <td style=3D"text-align:center;padding-top:20px;padding-botto=
+m:20px;font-size:9px!important" valign=3D"top" align=3D"center">
+                <p style=3D"padding:0;margin:0;font-family:Helvetica,Arial,=
+sans-serif;font-size:9px!important;line-height:2"><a href=3D"https://u34202=
+25.ct.sendgrid.net/wf/click?upn=3DVoVjK0tZxJrqLju1pZf4ncTPB9PezHP7rKsLVLLqo=
+ktDlVntQTh3SKOgCJuqyNEP_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJ=
+JITA3XWTbN0YpwDZMIV3FLWC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2G=
+hsIKTS4MJPqWz7H0subfvV6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RC=
+IDCVCG48q3WrBkL-2FlvVcKKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy=
+20mSsDI681tqLl3APUvtF0UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0R=
+nyvGRGB8yddehvQiEKFUXnC-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNW=
+cG93uq7qFTou5IslCIaHnZeb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDptKXpsajfnUWvfo-2=
+Bf2qsnoP2U7u3IMsWz2AL7A3ttMCy-2F8skABkjjZ24amvyxYXl5rY95-2F-2BsO8b8g8KEX5-2=
+BNIK7PAaBqon0vHo904FlcrGaZdikKlUiBDxtLDdt12F7RnL9gotdxwvpWFJJoeC0gii8-3D" a=
+lt=3D"Site" style=3D"text-decoration:none;color:#3899ec" target=3D"_blank">=
+Vous avez re=C3=A7u cet email car vous =C3=AAtes abonn=C3=A9 <b><u>=C3=A0 c=
+e site</u></b></a></p>                <p style=3D"padding:0;margin:0;font-f=
+amily:Helvetica,Arial,sans-serif;font-size:9px!important;line-height:2"><a =
+href=3D"https://u3420225.ct.sendgrid.net/wf/click?upn=3DVoVjK0tZxJrqLju1pZf=
+4nc-2F5myXOwwg7pFN7PKpn57s-2FhCNpM41bCdqkjPEBb5VQKDPp9qAGqf-2BAmDZpm9X6SXMP=
+TydJy6l-2Fjk9MW4swDAdGLVY5T6zQrNOEZEnZUakSeETiPfdWrcSDrJ6lY5AwdAwZzq4Odrdng=
+l9HScXOIVu1QU-2FGTcAAeZQ7jWLfU-2Fjsw0tc7X8wseC5ITShs9I-2FqO4xJrE9tSqnv69EsE=
+UKV4HCVqXx-2FWlwIFcANA9ul9RhfoYZoFRq4Yt0wuUDRHy-2FSI4iP-2BBA9C0VM6cPEITprar=
+7QtgjF6yMUOx8Zj8l7y4tcQMrqOTuc3BxIVKDU0ALpW2uxgkKyDS1HxTUzCOY-2F1G8LU-2FGpR=
+CVJsIU3wNyWhTxiPkvzJNRWEzdUGtFgSxuBQIE2MbVVoGcGOxzVyK9kmRKgnvnKWIieOLQc72uF=
+mWsGYGMDrdXj-2FGssilu9zk6kfwQw4sfCP-2FOL21h-2Bicp5r8bMUn6Eh1cn-2Bujye9-2FNq=
+tbA8fB4BM1MKoLj0KcQp-2FLzNacQcqf-2FX99KlKhVeEgiEeq5QoHDiGpM2v0shQZAacpp5C54=
+ZktIkH4-2BB4Bz8L78mcslAtHdnfJp7enG3pmlJ1iIJyAj-2FA-2F0Es5qwvjpzhJddpM5XXgba=
+3yrfCJfQ8zOIz4zqYoUZVLPvC-2F0kbho13sieDHGbwZKDXbcNaOB6xWA6pQtkhTz-2Bqkb3QGf=
+nR60l6Imm3RHTDWZeylXsCQ7nQYiIdbSLNx8vU-2BYjBkuoe0tY41Ij7eNYJQC-2F-2B-2FYvgN=
+SDNJQpxOpKHADnwWryq5tcMjA2EYWGYzS3Y6V4wdbL56SP2TpmnwCiW0JIyQ6pZokQ3oyy19TiG=
+VT8qlXiox8Vma49kOliuz0b-2B0xcN1hZuPiCdqfNVpmef4-2BRjyD9UneR5DUF-2FayQrZMAkG=
+USYTNyltFpHN-2BVBQ-2B89RiUpux1x2fRvfx49Mr6GaDKMtCHsIKqOQNHv6ruRHY3rsFC-2FIq=
+3QFsxiEEBXVJ3oSl1pkpwTZhbMp6RiYoW9cvMdNp2BNm1yPopK4uYLxp6dgNdgOGw9C8tu-2FEt=
+kokEXeUH1v7mxUZiIdpIzMUP-2BG-2Fk0LKrsgejdAL877-2BiM5ogJs-2BstXNMm9M5MZGDUT1=
+NCAuD7oV8nhB-2F3l3OtNF3R0R3XwQB7Vb8MAARp-2BrN4LUsOdvloKkA3Sh0Cz8-2Bmg-2BEjX=
+a4a3TNjwl3SaHFlpqPYZ2d-2FVmbiiwUMVDgkdtDdnAeuGi3hvMjuj-2BKRIYA86WbB7vg7n5SK=
+h_-2FD5TSSLK0lmYPpJ8rmfMfmBT4j9rctl9Mgm7hQ7N-2BRXtmNJJITA3XWTbN0YpwDZMIV3FL=
+WC3m2vFFt3L2DbiRl2WehAPc3YhVrVsHG5VuHB8Ef4dULx0UJdy2GhsIKTS4MJPqWz7H0subfvV=
+6oAzbUvNRlBYARN1Ufcl6Hh6WvdaIIDASkS15S0Bhg4X-2Fdfg8RCIDCVCG48q3WrBkL-2FlvVc=
+KKM8mHCGhEVyWEgkamRRo8d31d-2Ff7n3R4lUldGX9NxsT-2FSUQy20mSsDI681tqLl3APUvtF0=
+UXFOnaXwSWh4pj-2Fte1ZkQAC4Ugd3nhVaH5v9f1Mr89M1Ikl4T0RnyvGRGB8yddehvQiEKFUXn=
+C-2BdHKXDFBxeAvWXtVleJGNUlSHmZ4w0NLJTC0qGERIAlI1QaKNWcG93uq7qFTou5IslCIaHnZ=
+eb7ePR3K4yf4v2V9HiCZvzsESJm05lQ3SlnDppuTDn9PY8G8ErD7LgOK4PPkTWqreV6H9eq5Pex=
+eDO93AW4I9sI-2Bo32uCtqC6ca2mk79bzmaZkIArYzWJx6YVI5cezjLBEcM7kOUfhG-2Bj4hRmz=
+dvAtSgJDleIORhhDi7-2FJikLKp2LkuUxSekYJ76zCU-3D" alt=3D"Unsubscribe" style=
+=3D"text-decoration:none;color:#3899ec" target=3D"_blank">Si vous pensez av=
+oir re=C3=A7u cet email par erreur ou si vous souhaitez vous d=C3=A9sabonne=
+r, <b><u>cliquez ici</u></b></a></p>              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+ =20
+</div>
+</div><br></div>
+
+--001a1139fa60237ab3056763da49--
+

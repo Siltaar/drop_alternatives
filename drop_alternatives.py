@@ -13,10 +13,11 @@ from re import DOTALL, compile as compile_re
 
 
 re_html = compile_re(
-	b'<(tit|sty|scr|.:|[^y]*y:n).*?</[^>]*|<[^>]*|[\d*]|&[^;]*;|[^\s\n\r<]{25,}',
+	b'<(tit|sty|scr|.:|[^y]*y:n).*?</[^>]*|<!--.*?-->|<[^>]*|[\d*]|&[^;]*;|[^\s\n\r<]{25,}',
 	# match and so remove :
 	# - title, style, script, o:… / w:…, display:none HTML tags and their text leafs
 	# - all HTML tags,  # even if cut at the begining
+	# - HTML comments
 	# - links prefix in converted texts
 	# - HTML entities
 	# - chunks of symbols without spaces too big to be words (such as URL)
@@ -27,7 +28,9 @@ G  = '\033[1;30m' # grey
 R  = '\033[1;31m' # bold red
 Y  = '\033[1;33m' # bold yellow
 B  = '\033[1;37m' # bold white
-
+LEN = 280
+LIM = .82
+BON = .91
 
 def drop_alternatives(msg_str, debug=0):
 	eml = Parser().parsestr(msg_str)
@@ -48,7 +51,7 @@ def drop_alternatives(msg_str, debug=0):
 				# debug and print('got HTML', file=stderr)
 			elif 'plain' in part.get_content_type():
 				kept_parts.append(part)
-				texts.append(get_txt(part, 2000))
+				texts.append(get_txt(part, 2300))
 				# debug and print('got TEXT', file=stderr)
 			else:
 				kept_parts.append(part)
@@ -74,14 +77,14 @@ def drop_alternatives(msg_str, debug=0):
 					if debug:
 						ir = ' '+color_ratio(idem_ratio)
 
-						if idem_ratio_1 < 0.9:
-							print(i and B or G + str(h_txt_1[:256]) + W + ' H 1', file=stderr)
-							print(str(t_1[:256])+' T '+color_ratio(idem_ratio_1)+ir,file=stderr)
-						if idem_ratio_2 < 0.9:
-							print(i and B or G + str(h_txt_2[-256:]) + W + ' H 2', file=stderr)
-							print(str(t_2[:256])+' T '+color_ratio(idem_ratio_2)+ir,file=stderr)
+						if idem_ratio_1 < LIM:
+							print(i and B or G + str(h_txt_1[:LEN]) + W + ' H 1', file=stderr)
+							print(str(t_1[:LEN])+' T '+color_ratio(idem_ratio_1)+ir,file=stderr)
+						if idem_ratio_2 < LIM:
+							print(i and B or G + str(h_txt_2[-LEN:]) + W + ' H 2', file=stderr)
+							print(str(t_2[:LEN])+' T '+color_ratio(idem_ratio_2)+ir,file=stderr)
 
-					if idem_ratio > 0.825:
+					if idem_ratio_1 > BON or idem_ratio_2 > BON or idem_ratio > LIM:
 						save_html = False
 						recompose_msg = True
 						del texts[i]  # avoid comparing again with this text
@@ -104,11 +107,11 @@ def get_txt(part, raw_len, bad_char=bad_char):
 	t_start = t_start.translate(None, bad_char)
 	t_end = re_html.sub(b'', t_end)
 	t_end = t_end.translate(None, bad_char)
-	return t_start[:256], t_end[-256:]  # Python 2 ratio() changes its behavior after 199c
+	return t_start[:LEN], t_end[-LEN:]  # Python 2 ratio() changes its behavior after 199c
 
 
 def color_ratio(ratio):
-	C = ratio < 0.825 and R or ratio < 0.9 and Y or W
+	C = ratio < LIM and R or ratio < BON and Y or W
 	return str(C + str(int(ratio*100)) + W)
 
 
@@ -205,6 +208,12 @@ def test_drop_alternatives(msg_str, debug):
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20171109.eml').read(), DEBUG)
 	multipart/mixed text/plain image/png
+	>>> test_drop_alternatives(open('test_email/20180312.eml').read(), DEBUG)
+	multipart/mixed text/plain
+	>>> test_drop_alternatives(open('test_email/20180314.eml').read(), DEBUG)
+	multipart/mixed text/plain
+	>>> test_drop_alternatives(open('test_email/20180315.eml').read(), DEBUG)
+	multipart/mixed text/plain
 	"""
 	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str, debug).walk()]))
 

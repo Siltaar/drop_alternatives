@@ -1,0 +1,603 @@
+Return-Path: noreply@b.linternaute.com
+Received: by bbb (fdm 1.9, account "ccc")
+ with imap (version=TLSv1/SSLv3 ECDHE-RSA-AES128-GCM-SHA256 128 bits)
+ Wed, 14 Mar 2018 12:14:01 +0100
+Received: from lpn-prd-vrin012.laposte (LHLO lpn-prd-vrin012) (10.128.63.13)
+ by lpn-prd-mstr044 with LMTP; Wed, 14 Mar 2018 12:11:26 +0100 (CET)
+Received: from lpn-prd-vrin012 (localhost [127.0.0.1])
+ by lpn-prd-vrin012 (Postfix) with ESMTP id 20FF31202C9
+ for <aaa@aaa.aa>; Wed, 14 Mar 2018 12:11:26 +0100 (CET)
+Received: from robin.benchmark.fr (robin.benchmark.fr [195.248.250.76])
+ by lpn-prd-vrin012 (Postfix) with ESMTP id 8FB4B120AD6
+ for <aaa@aaa.aa>; Wed, 14 Mar 2018 12:11:22 +0100 (CET)
+Received: from copainsdavant.linternaute.com (unknown [192.168.0.140])
+ by robin.benchmark.fr (Postfix) with SMTP id 1A1F930853768
+ for <aaa@aaa.aa>; Wed, 14 Mar 2018 12:11:22 +0100 (CET)
+Date: Wed, 14 Mar 2018 12:11:22 +0100
+To: aaa@aaa.aa
+From: Copains d'avant <copainsdavant@b.linternaute.com>
+Reply-To: Copains d'avant <service.copainsdavant@copainsdavant.com>
+Subject: =?UTF-8?B?Vm91cyBjb25uYWlzc2V6IHBldXQgw6p0cmUg?=
+ =?UTF-8?B?QWxpY2UgTEVJVEFPIEZFUk5BTkRFUyA=?=
+ =?UTF-8?B?KEZFUk5BTkRFUyksIE15cmlhbSBDT1NTQVJUIA==?=
+ =?UTF-8?B?ZXQgSmVhbi1sb3VpcyBOQVZBUlJPLCA=?=
+ =?UTF-8?B?aW5zY3JpdHMgw6AgbCd1bml2ZXJzaXTDqSA=?=
+ =?UTF-8?B?RnJhbsOnb2lzIFJhYmVsYWlzIDogVG91cnMg?= =?UTF-8?B?Pw==?=
+Message-ID: <5aa9035a-84b8-4e59-bee8-516e00000000@copainsdavant.com>
+X-Priority: 3
+List-Unsubscribe: <http://copainsdavant.linternaute.com/mail/cc4d3c5e1b9974ee6d36b816b4f187eb667daaa83b9bd3895234a7deb84a3b13/1/unsubscribe?email=siltaar%40laposte.net>
+Errors-To: Copains d'avant <service.copainsdavant@b.copainsdavant.com>
+X-Mailer: Copains d'avant Mailer
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="alt-c06df7a7dbd8c34e8bb5e1ebd4f22c4f"
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=b.linternaute.com;
+ s=mail; t=1521025882;
+ bh=d/Qqb6vIoqg6BWamWb8rHICgyUYIG/0sp6YzbHaToRo=;
+ h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:
+ Mime-Version:Content-Type;
+ b=qdxtT72c2TP1+x9OyxXvyj3JFakE7sMH0vwXjIzk92eHEOhfIRUk1z1O1yt4+EAFH
+ dA4solYvWrtYAlGBM6/X96m10V5UMoRxpLTV08RorVF959vp+UZ0FsErU5OZNdX8pI
+ p3GSX+sUDdVNRH3LH/MFiGd0XYbMgXtpxpIrfuD0=
+Authentication-Results: helo=robin.benchmark.fr;
+ spf=pass smtp.mailfrom=noreply@b.linternaute.com;
+ dkim=pass header.d=b.linternaute.com;
+ dmarc=pass D=b.linternaute.com alignspf=pass aligndkim=pass
+X-VR-FullState: 13
+X-VR-Score: 10
+X-VR-Cause-1: gggruggvucftvghtrhhoucdtuddrgedtgedrtddvgddvfecutefuodetggdotefrodftvfcurfhrohhf
+X-VR-Cause-2: ihhlvgemucfntefrqffuvffgpdggtfgfnhhsuhgsshgtrhhisggvnecuuegrihhlohhuthemucehtddt
+X-VR-Cause-3: necuufhotghirghlpfgvthifohhrkhdqqdevohhprghinhhsffgrvhgrnhhtucdluddtmdenucfjughr
+X-VR-Cause-4: peffvffhrhfukffrjfgvofggtgesrgdtreerredtudenucfhrhhomhepvehophgrihhnshcuugdkrghv
+X-VR-Cause-5: rghnthcuoegtohhprghinhhsuggrvhgrnhhtsegsrdhlihhnthgvrhhnrghuthgvrdgtohhmqeenucff
+X-VR-Cause-6: ohhmrghinheplhhinhhtvghrnhgruhhtvgdrtghomhdptggtmhgsvghntghhmhgrrhhkrdgtohhmpdhj
+X-VR-Cause-7: ohhurhhnrghlughunhgvthdrtghomhenucfkphepudelhedrvdegkedrvdehtddrjeeinecurfgrrhgr
+X-VR-Cause-8: mhephhgvlhhopehrohgsihhnrdgsvghntghhmhgrrhhkrdhfrhdpihhnvghtpeduleehrddvgeekrddv
+X-VR-Cause-9: hedtrdejiedpmhgrihhlfhhrohhmpehnohhrvghplhihsegsrdhlihhnthgvrhhnrghuthgvrdgtohhm
+X-VR-Cause-10: pdhrtghpthhtohepshhilhhtrggrrheslhgrphhoshhtvgdrnhgvthenucevlhhushhtvghrufhiiigv
+X-VR-Cause-11: pedvfe
+X-VR-State: 0
+Content-Length: 40477
+
+
+--alt-c06df7a7dbd8c34e8bb5e1ebd4f22c4f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour ddd EEE, voici les membres de copains d'avant que vous=
+ pourriez conna=C3=AEtre.=0ANouveaut=C3=A9s dans votre r=C3=A9seau=0A=0AAli=
+ce LEITAO FERNANDES (FERNANDES) (http://copainsdavant.linternaute.com/p/ali=
+ce-leitao-fernandes-fernandes-2714425?utm_content=3DyouKnowThem&camtk=3D011=
+3631647022397)=0ABOULOGNE BILLANCOURT=09Universit&eacute; Fran&ccedil;ois R=
+abelais : Tours (/e/universite-francois-rabelais-tours-22117?utm_content=3D=
+youKnowThem&camtk=3D0113631647022397)=0AMyriam COSSART (http://copainsdavan=
+t.linternaute.com/p/myriam-cossart-12162229?utm_content=3DyouKnowThem&camtk=
+=3D0113631647022397)=0ANANTES=09Universit&eacute; Fran&ccedil;ois Rabelais =
+: Tours (/e/universite-francois-rabelais-tours-22117?utm_content=3DyouKnowT=
+hem&camtk=3D0113631647022397)=0AJean-louis NAVARRO (http://copainsdavant.li=
+nternaute.com/p/jean-louis-navarro-433371?utm_content=3DyouKnowThem&camtk=
+=3D0113631647022397)=0ADRANCY=09Universit&eacute; Fran&ccedil;ois Rabelais =
+: Tours (/e/universite-francois-rabelais-tours-22117?utm_content=3DyouKnowT=
+hem&camtk=3D0113631647022397)=0AC=C3=A9line LAOUAS (ROUGERIE) (http://copai=
+nsdavant.linternaute.com/p/celine-laouas-rougerie-5012163?utm_content=3Dyou=
+KnowThem&camtk=3D0113631647022397)=0AALGER=09Universit&eacute; Fran&ccedil;=
+ois Rabelais : Tours (/e/universite-francois-rabelais-tours-22117?utm_conte=
+nt=3DyouKnowThem&camtk=3D0113631647022397)=0AWilly RAMOS (http://copainsdav=
+ant.linternaute.com/p/willy-ramos-4794520?utm_content=3DyouKnowThem&camtk=
+=3D0113631647022397)=0ATOURS=09Universit&eacute; Fran&ccedil;ois Rabelais :=
+ Tours (/e/universite-francois-rabelais-tours-22117?utm_content=3DyouKnowTh=
+em&camtk=3D0113631647022397)=0AWilliam MILOT (http://copainsdavant.linterna=
+ute.com/p/william-milot-5924138?utm_content=3DyouKnowThem&camtk=3D011363164=
+7022397)=0AGRENADE=09Universit&eacute; Fran&ccedil;ois Rabelais : Tours (/e=
+/universite-francois-rabelais-tours-22117?utm_content=3DyouKnowThem&camtk=
+=3D0113631647022397)=0ANicolas LEDAIN (http://copainsdavant.linternaute.com=
+/p/nicolas-ledain-5999725?utm_content=3DyouKnowThem&camtk=3D011363164702239=
+7)=0ATOURS=09Universit&eacute; Fran&ccedil;ois Rabelais : Tours (/e/univers=
+ite-francois-rabelais-tours-22117?utm_content=3DyouKnowThem&camtk=3D0113631=
+647022397)=0AClaude OESINGER (http://copainsdavant.linternaute.com/p/claude=
+-oesinger-15673545?utm_content=3DyouKnowThem&camtk=3D0113631647022397)=0ALA=
+ ROCHE SUR YON=09Universit&eacute; Fran&ccedil;ois Rabelais : Tours (/e/uni=
+versite-francois-rabelais-tours-22117?utm_content=3DyouKnowThem&camtk=3D011=
+3631647022397)=0A=0A=0Ahttps://copainsdavant.linternaute.com/p/edit_general=
+_profile?camtk=3D0113631647022397=0A=0ASi vous souhaitez ne plus recevoir c=
+es alertes, vous pouvez modifier vos param=C3=A8tres =C3=A0 cette adresse :=
+=0Ahttp://copainsdavant.linternaute.com/mail/cc4d3c5e1b9974ee6d36b816b4f187=
+eb667daaa83b9bd3895234a7deb84a3b13/1/unsubscribe?email=3Dsiltaar%40laposte.=
+net
+
+
+--alt-c06df7a7dbd8c34e8bb5e1ebd4f22c4f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">=0A<html xmlns=3D"http://www.=
+w3.org/1999/xhtml">=0A    <head>=0A        <meta http-equiv=3D"Content-Type=
+" content=3D"text/html; charset=3Diso-8859-1" />=0A        <title>Linternau=
+te</title>=0A=0A        <!-- http://www.quirksmode.org/blog/archives/2010/0=
+9/combining_meta.html -->=0A        <!--=0A        / le device width de l'i=
+phone 3 et 4 est le meme 320 X 480=0A        / ne pas specifier de taille s=
+ur les <img /> de skin car quand les images de sont desactiv&eacute;s cela =
+prend de la place pour rien=0A        / skinn&eacute; les alt=3D""=0A      =
+  / l'appli mail de l'iphone ne prend pas en compte les styles pour le mode=
+ paysage=0A        -->=0A        <meta name=3D"viewport" content=3D"width=
+=3Ddevice-width, initial-scale=3D1.0, maximum-scale=3D2.0" />=0A        <st=
+yle type=3D"text/css">=0A            /*http://webdesign.tutsplus.com/fr/art=
+icles/creating-a-simple-responsive-html-email--webdesign-12978*/=0A=0A     =
+       .ExternalClass {width:100%;}=0A            .ExternalClass, .External=
+Class p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .Exte=
+rnalClass div {=0A                line-height: 100%;}=0A            body {-=
+webkit-text-size-adjust:none; -ms-text-size-adjust:none;}=0A            bod=
+y {margin:0; padding:0; min-width: 100%!important;}=0A            table td =
+{border-collapse:collapse;}=0A            /* surcharge pour orange.fr */   =
+          =0A            .table {width: 640px;}=0A            .table td{bor=
+der-bottom: 0; line-height: normal; height: auto; padding:0;}=0A           =
+ #logo {float: none;margin-top: 0;}=0A=0A=0A            p {margin:0; paddin=
+g:0; margin-bottom:0;}=0A=0A=0A            @media only screen and (max-widt=
+h: 480px) {=0A=0A                a[href^=3D"tel"], a[href^=3D"sms"]{ text-d=
+ecoration: none;color: #333333; pointer-events: none;cursor: default; }=0A =
+               .mobile_link a[href^=3D"tel"],=0A                .mobile_lin=
+k a[href^=3D"sms"]{ .text-decoration: default; .color: #e41129 !important; =
+.pointer-events: auto; .cursor: default }=0A=0A                td[class=3Dl=
+ogoMarge]{ padding-left:0 !important }=0A=0A                table[class=3Dt=
+able]{ width: 320px !important; table-layout: fixed; overflow: hidden }=0A =
+               td[class=3Dcell]{ width: 300px !important; padding:10px !imp=
+ortant; }=0A=0A                table[class=3Dcol-2-fluid], table.col-2-flui=
+d{float:none !important;width: 100% !important}=0A                td[class=
+=3DfullImage]{padding-right:0 !important}=0A                td[class=3Dfull=
+Image] img{ width: 100% !important}=0A                table[class=3DfullBut=
+ton],table[class=3DfullButton] td, center[class=3DfullButton]{width:100% !i=
+mportant;}=0A=0A                table[class~=3Dhide],td[class~=3Dhide],tr[c=
+lass~=3Dhide]{ display: none !important; }=0A=0A                div[class=
+=3Dtitle1],td[class=3Dtitle1],h4[class=3Dtitle1]{ font-size: 18px !importan=
+t; line-height:normal !important }=0A=0A                div[class=3Dcontent=
+1],td[class=3Dcontent1],span[class=3Dcontent1],a[class=3Dcontent1]{ font-si=
+ze: 16px !important; line-height:normal !important }=0A=0A                t=
+d[class=3DtopL]{ padding-left:10px !important }=0A                td[class=
+=3DtopR]{ padding-right:10px !important }=0A                td[class=3Dbody=
+Pad]{ padding:0 !important }=0A                td[class=3Dbox]{height:auto =
+!important;}=0A            }=0A=0A            /* solution pour Apple Mail *=
+/=0A            @media only screen and (min-width: 641px) {=0A             =
+   .table {width: 640px !important;}=0A                .col355 {width: 355p=
+x!important;}=0A                .col340{width: 340px!important;}=0A        =
+        .col290{width: 290px!important;}=0A            }=0A        </style>=
+=0A    </head>=0A=0A<body yahoo bgcolor=3D"#ffffff" style=3D"width:100% !im=
+portant; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0=
+; padding:0; background:#ffffff">            =0A=0A    <table bgcolor=3D"#f=
+fffff" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=0A =
+       <tr>=0A            <td bgcolor=3D"#ffffff" width=3D"100%" class=3D"b=
+odyPad" style=3D"padding-left:20px;padding-right:20px" align=3D"center">=0A=
+                =0A                <table width=3D"640" height=3D"78" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" class=3D"table=
+">=0A                    <tr>=0A                        <td class=3D"logoMa=
+rge" bgcolor=3D"#e41129" width=3D"100%" height=3D"78" valign=3D"top" style=
+=3D"padding-left:10px;color:#ffffff;font-size:14px;font-family:'Helvetica N=
+eue',Helvetica,Arial,sans-serif;">                                         =
+                                                     =0A                   =
+         <a href=3D"http://copainsdavant.linternaute.com?utm_source=3Dfr_co=
+painsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzRecap" clas=
+s=3D"logo-link">=0A                                <b></b>=0A              =
+                  <img id=3D"logo" style=3D"display:block;color:#ffffff;fon=
+t-size:22px;font-weight:bold" border=3D"0" src=3D"http://copainsdavant.lint=
+ernaute.com/img/copains-davant-linternaute.png?2" width=3D"320" height=3D"7=
+8" alt=3D"http://copainsdavant.linternaute.com" /></a>=0A                  =
+      </td>                            =0A                    </tr>=0A     =
+           </table>                                                        =
+    =0A=0A                =0A=0A                <table width=3D"640" bgcolo=
+r=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"cen=
+ter" class=3D"table">=0A                          =0A                    <t=
+r>=0A                        <td width=3D"640" class=3D"cell" style=3D"padd=
+ing-top:20px; padding-right:19px; padding-bottom:20px; padding-left:19px; b=
+order-left:1px solid #cbcbcb; border-right:1px solid #cbcbcb">             =
+           =0A                            <table width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center">=0A    <tr>=0A      =
+  <td></td>=0A    </tr>=0A</table>=0A=0A<table width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0">=0A    <tr>=0A        <td class=3D"co=
+ntent1" style=3D";color:#666666;font-size:12px;font-family:arial;margin:0;p=
+adding:0 0 20px 0;font-weight:normal;line-height:16px">=0A            Bonjo=
+ur ddd EEE, voici les membres de Copains d'Avant que vous pour=
+riez conna=C3=AEtre.        </td>=0A    </tr>=0A</table>=0A=0A<table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=0A=09<tr>=0A   =
+     <td class=3D"title2" width=3D"100%" bgcolor=3D"#e41129" style=3D"paddi=
+ng:6px 12px;text-align:center;color:#ffffff;font-size:14px;font-family:Aria=
+l,'Helvetica Neue',Helvetica,sans-serif;text-transform:uppercase;margin:0;f=
+ont-weight:normal">=0A            <strong>Vous les connaissez peut =C3=
+=AAtre</strong>=0A        </td>=0A    </tr>=0A    <tr>=0A=09=09<td style=3D=
+"padding:20px 0">=0A=09=09=09<table class=3D"col-2-fluid" width=3D"290" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left" style=3D"float=
+:left;">=0A=09=09=09=09<tr>=0A=0A=09=09=09=0A=09=09=09=0A=09=09=09=09=09<td=
+ valign=3D"top" align=3D"center" border=3D"0"  width=3D"50%">=0A=09=09=09=
+=09=09=09<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0">=0A=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td align=3D"=
+center" valing=3D"top" border=3D"0" style=3D"color:#333333 !important;font-=
+size:12px;font-family:arial;margin:0;padding:0 0 5px 0;font-weight:normal;"=
+>=0A=09=09=09=09=09=09=09=09=09<a style=3D"text-decoration:none;color:#3333=
+33" href=3D"http://copainsdavant.linternaute.com/p/alice-leitao-fernandes-f=
+ernandes-2714425?utm_content=3DyouKnowThem&camtk=3D0113631647022397&utm_sou=
+rce=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizz=
+Recap">=0A=09=09=09=09=09=09=09=09=09<strong>Alice LEITAO FERNANDES (FERNAN=
+DES)</strong>=0A=09=09=09=09=09=09=09=09=09</a>=0A=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=0A=09=09=09=
+=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"pa=
+dding-bottom:5px">=0A=09=09=09=09=09=09=09=09=09<a style=3D"text-decoration=
+:none;color:#333333" href=3D"http://copainsdavant.linternaute.com/p/alice-l=
+eitao-fernandes-fernandes-2714425?utm_content=3DyouKnowThem&camtk=3D0113631=
+647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3Din=
+scriptionAndQuizzRecap"><img width=3D"100" src=3D"http://image-uniservice.c=
+opainsdavant.com/image/180/6/1694406405/9128659.jpg" />=0A=09=09=09=09=09=
+=09=09=09=09</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09</t=
+r>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=
+=09<td align=3D"center" style=3D"color:#333333 !important;font-size:10px;fo=
+nt-family:arial;margin:0;padding:0;">=0A=09=09=09=09=09=09=09=09=09<a style=
+=3D"color:#333333;text-decoration:none" href=3D"http://copainsdavant.linter=
+naute.com/e/universite-francois-rabelais-tours-22117?utm_content=3DyouKnowT=
+hem&camtk=3D0113631647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmai=
+l&utm_campaign=3DinscriptionAndQuizzRecap">Universit&eacute; Fran&ccedil;oi=
+s Rabelais : Tours</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=
+=09</tr>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09</table>=09=09=09=09=09=
+=09=0A=09=09=09=09=09</td>=0A=09=09=09=09=09=0A=09=09=09=09=0A=09=09=09=0A=
+=09=09=09=09=09<td valign=3D"top" align=3D"center" border=3D"0"  width=3D"5=
+0%">=0A=09=09=09=09=09=09<table width=3D"100%" cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0">=0A=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=
+=09<td align=3D"center" valing=3D"top" border=3D"0" style=3D"color:#333333 =
+!important;font-size:12px;font-family:arial;margin:0;padding:0 0 5px 0;font=
+-weight:normal;">=0A=09=09=09=09=09=09=09=09=09<a style=3D"text-decoration:=
+none;color:#333333" href=3D"http://copainsdavant.linternaute.com/p/myriam-c=
+ossart-12162229?utm_content=3DyouKnowThem&camtk=3D0113631647022397&utm_sour=
+ce=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzR=
+ecap">=0A=09=09=09=09=09=09=09=09=09<strong>Myriam COSSART</strong>=0A=09=
+=09=09=09=09=09=09=09=09</a>=0A=09=09=09=09=09=09=09=09=09<br />=09=09=09=
+=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=0A=09=09=09=09=09=09=09<t=
+r>=0A=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-bottom:5=
+px">=0A=09=09=09=09=09=09=09=09=09<a style=3D"text-decoration:none;color:#3=
+33333" href=3D"http://copainsdavant.linternaute.com/p/myriam-cossart-121622=
+29?utm_content=3DyouKnowThem&camtk=3D0113631647022397&utm_source=3Dfr_copai=
+nsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzRecap"><img wi=
+dth=3D"100" src=3D"http://image-uniservice.copainsdavant.com/image/180/3/20=
+50385158/7069870.jpg" />=0A=09=09=09=09=09=09=09=09=09</a>=0A=09=09=09=09=
+=09=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=0A=09=09=09=09=09=09=09=09=
+=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td align=3D"center" style=
+=3D"color:#333333 !important;font-size:10px;font-family:arial;margin:0;padd=
+ing:0;">=0A=09=09=09=09=09=09=09=09=09<a style=3D"color:#333333;text-decora=
+tion:none" href=3D"http://copainsdavant.linternaute.com/e/universite-franco=
+is-rabelais-tours-22117?utm_content=3DyouKnowThem&camtk=3D0113631647022397&=
+utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionA=
+ndQuizzRecap">Universit&eacute; Fran&ccedil;ois Rabelais : Tours</a>=0A=09=
+=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=0A=09=09=09=09=09=
+=09=09=09=09=09=09=09=09</table>=09=09=09=09=09=09=0A=09=09=09=09=09</td>=
+=0A=09=09=09=09=09=0A=09=09=09=09=0A=09=09=09=09=09=09=09</tr>=0A=09=09=09<=
+/table>=0A=0A=09=09=09=0A=09=09=09=09<table class=3D"col-2-fluid" width=3D"=
+290" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"right">=0A=
+=0A=09=09=09=09<tr>=0A=09=09=09=0A=09=09=09=09=09<td valign=3D"top" align=
+=3D"center" border=3D"0"  width=3D"50%">=0A=09=09=09=09=09=09<table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=0A=09=09=09=09=
+=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td align=3D"center" valing=3D"top"=
+ border=3D"0" style=3D"color:#333333 !important;font-size:12px;font-family:=
+arial;margin:0;padding:0 0 5px 0;font-weight:normal;">=0A=09=09=09=09=09=09=
+=09=09=09<a style=3D"text-decoration:none;color:#333333" href=3D"http://cop=
+ainsdavant.linternaute.com/p/jean-louis-navarro-433371?utm_content=3DyouKno=
+wThem&camtk=3D0113631647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dm=
+ail&utm_campaign=3DinscriptionAndQuizzRecap">=0A=09=09=09=09=09=09=09=09=09=
+<strong>Jean-louis NAVARRO</strong>=0A=09=09=09=09=09=09=09=09=09</a>=0A=09=
+=09=09=09=09=09=09=09=09<br />=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=
+=09=09=09</tr>=0A=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td al=
+ign=3D"center" style=3D"padding-bottom:5px">=0A=09=09=09=09=09=09=09=09=09<=
+a style=3D"text-decoration:none;color:#333333" href=3D"http://copainsdavant=
+.linternaute.com/p/jean-louis-navarro-433371?utm_content=3DyouKnowThem&camt=
+k=3D0113631647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_ca=
+mpaign=3DinscriptionAndQuizzRecap"><img width=3D"100" src=3D"http://copains=
+davant.linternaute.com/skin/common/img/cda/man/anonymousL.jpg" />=0A=09=09=
+=09=09=09=09=09=09=09</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=
+=09=09</tr>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=
+=09=09=09=09<td align=3D"center" style=3D"color:#333333 !important;font-siz=
+e:10px;font-family:arial;margin:0;padding:0;">=0A=09=09=09=09=09=09=09=09=
+=09<a style=3D"color:#333333;text-decoration:none" href=3D"http://copainsda=
+vant.linternaute.com/e/universite-francois-rabelais-tours-22117?utm_content=
+=3DyouKnowThem&camtk=3D0113631647022397&utm_source=3Dfr_copainsdavant&utm_m=
+edium=3Dmail&utm_campaign=3DinscriptionAndQuizzRecap">Universit&eacute; Fra=
+n&ccedil;ois Rabelais : Tours</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=
+=09=09=09=09=09</tr>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09</table>=09=
+=09=09=09=09=09=0A=09=09=09=09=09</td>=0A=09=09=09=09=09=0A=09=09=09=09=0A=
+=09=09=09=0A=09=09=09=09=09<td valign=3D"top" align=3D"center" border=3D"0"=
+  width=3D"50%">=0A=09=09=09=09=09=09<table width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0">=0A=09=09=09=09=09=09=09<tr>=0A=09=09=09=
+=09=09=09=09=09<td align=3D"center" valing=3D"top" border=3D"0" style=3D"co=
+lor:#333333 !important;font-size:12px;font-family:arial;margin:0;padding:0 =
+0 5px 0;font-weight:normal;">=0A=09=09=09=09=09=09=09=09=09<a style=3D"text=
+-decoration:none;color:#333333" href=3D"http://copainsdavant.linternaute.co=
+m/p/celine-laouas-rougerie-5012163?utm_content=3DyouKnowThem&camtk=3D011363=
+1647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3Di=
+nscriptionAndQuizzRecap">=0A=09=09=09=09=09=09=09=09=09<strong>C=C3=A9line =
+LAOUAS (ROUGERIE)</strong>=0A=09=09=09=09=09=09=09=09=09</a>=0A=09=09=09=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=
+=0A=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td align=3D"center"=
+ style=3D"padding-bottom:5px">=0A=09=09=09=09=09=09=09=09=09<a style=3D"tex=
+t-decoration:none;color:#333333" href=3D"http://copainsdavant.linternaute.c=
+om/p/celine-laouas-rougerie-5012163?utm_content=3DyouKnowThem&camtk=3D01136=
+31647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3D=
+inscriptionAndQuizzRecap"><img width=3D"100" src=3D"http://copainsdavant.li=
+nternaute.com/skin/common/img/cda/female/anonymousL.jpg" />=0A=09=09=09=09=
+=09=09=09=09=09</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09=
+</tr>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=
+=09=09<td align=3D"center" style=3D"color:#333333 !important;font-size:10px=
+;font-family:arial;margin:0;padding:0;">=0A=09=09=09=09=09=09=09=09=09<a st=
+yle=3D"color:#333333;text-decoration:none" href=3D"http://copainsdavant.lin=
+ternaute.com/e/universite-francois-rabelais-tours-22117?utm_content=3DyouKn=
+owThem&camtk=3D0113631647022397&utm_source=3Dfr_copainsdavant&utm_medium=3D=
+mail&utm_campaign=3DinscriptionAndQuizzRecap">Universit&eacute; Fran&ccedil=
+;ois Rabelais : Tours</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=
+=09=09</tr>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09</table>=09=09=09=09=
+=09=09=0A=09=09=09=09=09</td>=0A=09=09=09=09=09=0A=09=09=09=09=0A=09=09=09=
+=09=09=09=09</tr>=0A=09=09=09</table>=0A=0A=09=09=09=09=09=09=09</td></tr>=
+=0A=09=09=09=09<tr><td style=3D"padding-bottom:20px">=0A=09=09=09=0A=09=09=
+=09=09<table class=3D"col-2-fluid" width=3D"290" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" align=3D"left">=0A=0A=09=09=09=09<tr>=0A=09=09=09=0A=
+=09=09=09=09=09<td valign=3D"top" align=3D"center" border=3D"0"  width=3D"5=
+0%">=0A=09=09=09=09=09=09<table width=3D"100%" cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0">=0A=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=
+=09<td align=3D"center" valing=3D"top" border=3D"0" style=3D"color:#333333 =
+!important;font-size:12px;font-family:arial;margin:0;padding:0 0 5px 0;font=
+-weight:normal;">=0A=09=09=09=09=09=09=09=09=09<a style=3D"text-decoration:=
+none;color:#333333" href=3D"http://copainsdavant.linternaute.com/p/willy-ra=
+mos-4794520?utm_content=3DyouKnowThem&camtk=3D0113631647022397&utm_source=
+=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzRec=
+ap">=0A=09=09=09=09=09=09=09=09=09<strong>Willy RAMOS</strong>=0A=09=09=09=
+=09=09=09=09=09=09</a>=0A=09=09=09=09=09=09=09=09=09<br />=09=09=09=09=09=
+=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=0A=09=09=09=09=09=09=09<tr>=0A=
+=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"padding-bottom:5px">=
+=0A=09=09=09=09=09=09=09=09=09<a style=3D"text-decoration:none;color:#33333=
+3" href=3D"http://copainsdavant.linternaute.com/p/willy-ramos-4794520?utm_c=
+ontent=3DyouKnowThem&camtk=3D0113631647022397&utm_source=3Dfr_copainsdavant=
+&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzRecap"><img width=3D"1=
+00" src=3D"http://image-uniservice.copainsdavant.com/image/180/6/1254288336=
+/10371663.jpg" />=0A=09=09=09=09=09=09=09=09=09</a>=0A=09=09=09=09=09=09=09=
+=09</td>=0A=09=09=09=09=09=09=09</tr>=0A=09=09=09=09=09=09=09=09=09=09=09=
+=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"color=
+:#333333 !important;font-size:10px;font-family:arial;margin:0;padding:0;">=
+=0A=09=09=09=09=09=09=09=09=09<a style=3D"color:#333333;text-decoration:non=
+e" href=3D"http://copainsdavant.linternaute.com/e/universite-francois-rabel=
+ais-tours-22117?utm_content=3DyouKnowThem&camtk=3D0113631647022397&utm_sour=
+ce=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzR=
+ecap">Universit&eacute; Fran&ccedil;ois Rabelais : Tours</a>=0A=09=09=09=09=
+=09=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=0A=09=09=09=09=09=09=09=09=
+=09=09=09=09=09</table>=09=09=09=09=09=09=0A=09=09=09=09=09</td>=0A=09=09=
+=09=09=09=0A=09=09=09=09=0A=09=09=09=0A=09=09=09=09=09<td valign=3D"top" al=
+ign=3D"center" border=3D"0"  width=3D"50%">=0A=09=09=09=09=09=09<table widt=
+h=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=0A=09=09=09=09=
+=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td align=3D"center" valing=3D"top"=
+ border=3D"0" style=3D"color:#333333 !important;font-size:12px;font-family:=
+arial;margin:0;padding:0 0 5px 0;font-weight:normal;">=0A=09=09=09=09=09=09=
+=09=09=09<a style=3D"text-decoration:none;color:#333333" href=3D"http://cop=
+ainsdavant.linternaute.com/p/william-milot-5924138?utm_content=3DyouKnowThe=
+m&camtk=3D0113631647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&=
+utm_campaign=3DinscriptionAndQuizzRecap">=0A=09=09=09=09=09=09=09=09=09<str=
+ong>William MILOT</strong>=0A=09=09=09=09=09=09=09=09=09</a>=0A=09=09=09=09=
+=09=09=09=09=09<br />=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09<=
+/tr>=0A=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td align=3D"cen=
+ter" style=3D"padding-bottom:5px">=0A=09=09=09=09=09=09=09=09=09<a style=3D=
+"text-decoration:none;color:#333333" href=3D"http://copainsdavant.linternau=
+te.com/p/william-milot-5924138?utm_content=3DyouKnowThem&camtk=3D0113631647=
+022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3Dinscr=
+iptionAndQuizzRecap"><img width=3D"100" src=3D"http://copainsdavant.lintern=
+aute.com/skin/common/img/cda/man/anonymousL.jpg" />=0A=09=09=09=09=09=09=09=
+=09=09</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=0A=
+=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<t=
+d align=3D"center" style=3D"color:#333333 !important;font-size:10px;font-fa=
+mily:arial;margin:0;padding:0;">=0A=09=09=09=09=09=09=09=09=09<a style=3D"c=
+olor:#333333;text-decoration:none" href=3D"http://copainsdavant.linternaute=
+.com/e/universite-francois-rabelais-tours-22117?utm_content=3DyouKnowThem&c=
+amtk=3D0113631647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm=
+_campaign=3DinscriptionAndQuizzRecap">Universit&eacute; Fran&ccedil;ois Rab=
+elais : Tours</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09</=
+tr>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09</table>=09=09=09=09=09=09=0A=
+=09=09=09=09=09</td>=0A=09=09=09=09=09=0A=09=09=09=09=0A=09=09=09=09=09=09=
+=09</tr>=0A=09=09=09</table>=0A=0A=09=09=09=0A=09=09=09=09<table class=3D"c=
+ol-2-fluid" width=3D"290" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" =
+align=3D"right">=0A=0A=09=09=09=09<tr>=0A=09=09=09=0A=09=09=09=09=09<td val=
+ign=3D"top" align=3D"center" border=3D"0"  width=3D"50%">=0A=09=09=09=09=09=
+=09<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=
+=0A=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td align=3D"center"=
+ valing=3D"top" border=3D"0" style=3D"color:#333333 !important;font-size:12=
+px;font-family:arial;margin:0;padding:0 0 5px 0;font-weight:normal;">=0A=09=
+=09=09=09=09=09=09=09=09<a style=3D"text-decoration:none;color:#333333" hre=
+f=3D"http://copainsdavant.linternaute.com/p/nicolas-ledain-5999725?utm_cont=
+ent=3DyouKnowThem&camtk=3D0113631647022397&utm_source=3Dfr_copainsdavant&ut=
+m_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzRecap">=0A=09=09=09=09=09=
+=09=09=09=09<strong>Nicolas LEDAIN</strong>=0A=09=09=09=09=09=09=09=09=09</=
+a>=0A=09=09=09=09=09=09=09=09=09<br />=09=09=09=09=09=09=09=09</td>=0A=09=
+=09=09=09=09=09=09</tr>=0A=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=
+=09<td align=3D"center" style=3D"padding-bottom:5px">=0A=09=09=09=09=09=09=
+=09=09=09<a style=3D"text-decoration:none;color:#333333" href=3D"http://cop=
+ainsdavant.linternaute.com/p/nicolas-ledain-5999725?utm_content=3DyouKnowTh=
+em&camtk=3D0113631647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail=
+&utm_campaign=3DinscriptionAndQuizzRecap"><img width=3D"100" src=3D"http://=
+image-uniservice.copainsdavant.com/image/180/7/1157138792/2574271.jpg" />=
+=0A=09=09=09=09=09=09=09=09=09</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=
+=09=09=09=09=09</tr>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>=0A=09=
+=09=09=09=09=09=09=09<td align=3D"center" style=3D"color:#333333 !important=
+;font-size:10px;font-family:arial;margin:0;padding:0;">=0A=09=09=09=09=09=
+=09=09=09=09<a style=3D"color:#333333;text-decoration:none" href=3D"http://=
+copainsdavant.linternaute.com/e/universite-francois-rabelais-tours-22117?ut=
+m_content=3DyouKnowThem&camtk=3D0113631647022397&utm_source=3Dfr_copainsdav=
+ant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzRecap">Universit&ea=
+cute; Fran&ccedil;ois Rabelais : Tours</a>=0A=09=09=09=09=09=09=09=09</td>=
+=0A=09=09=09=09=09=09=09</tr>=0A=09=09=09=09=09=09=09=09=09=09=09=09=09</ta=
+ble>=09=09=09=09=09=09=0A=09=09=09=09=09</td>=0A=09=09=09=09=09=0A=09=09=09=
+=09=0A=09=09=09=0A=09=09=09=09=09<td valign=3D"top" align=3D"center" border=
+=3D"0"  width=3D"50%">=0A=09=09=09=09=09=09<table width=3D"100%" cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0">=0A=09=09=09=09=09=09=09<tr>=0A=09=
+=09=09=09=09=09=09=09<td align=3D"center" valing=3D"top" border=3D"0" style=
+=3D"color:#333333 !important;font-size:12px;font-family:arial;margin:0;padd=
+ing:0 0 5px 0;font-weight:normal;">=0A=09=09=09=09=09=09=09=09=09<a style=
+=3D"text-decoration:none;color:#333333" href=3D"http://copainsdavant.linter=
+naute.com/p/claude-oesinger-15673545?utm_content=3DyouKnowThem&camtk=3D0113=
+631647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=
+=3DinscriptionAndQuizzRecap">=0A=09=09=09=09=09=09=09=09=09<strong>Claude O=
+ESINGER</strong>=0A=09=09=09=09=09=09=09=09=09</a>=0A=09=09=09=09=09=09=09=
+=09=09<br />=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=0A=
+=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td align=3D"center" st=
+yle=3D"padding-bottom:5px">=0A=09=09=09=09=09=09=09=09=09<a style=3D"text-d=
+ecoration:none;color:#333333" href=3D"http://copainsdavant.linternaute.com/=
+p/claude-oesinger-15673545?utm_content=3DyouKnowThem&camtk=3D01136316470223=
+97&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3Dinscripti=
+onAndQuizzRecap"><img width=3D"100" src=3D"http://copainsdavant.linternaute=
+.com/skin/common/img/cda/man/anonymousL.jpg" />=0A=09=09=09=09=09=09=09=09=
+=09</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=0A=09=
+=09=09=09=09=09=09=09=09=09=09=09=09=09<tr>=0A=09=09=09=09=09=09=09=09<td a=
+lign=3D"center" style=3D"color:#333333 !important;font-size:10px;font-famil=
+y:arial;margin:0;padding:0;">=0A=09=09=09=09=09=09=09=09=09<a style=3D"colo=
+r:#333333;text-decoration:none" href=3D"http://copainsdavant.linternaute.co=
+m/e/universite-francois-rabelais-tours-22117?utm_content=3DyouKnowThem&camt=
+k=3D0113631647022397&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_ca=
+mpaign=3DinscriptionAndQuizzRecap">Universit&eacute; Fran&ccedil;ois Rabela=
+is : Tours</a>=0A=09=09=09=09=09=09=09=09</td>=0A=09=09=09=09=09=09=09</tr>=
+=0A=09=09=09=09=09=09=09=09=09=09=09=09=09</table>=09=09=09=09=09=09=0A=09=
+=09=09=09=09</td>=0A=09=09=09=09=09=0A=09=09=09=09=0A=09=09=09=09</tr>=0A=
+=09=09=09</table>=0A=09=09</td>=0A=09</tr>=0A</table>=0A=0A<table width=3D"=
+100%" bgcolor=3D"#ffffff" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">=
+=0A=09<tr>=0A=09=09<td>=0A=09=09=09<table class=3D"col-2-fluid" width=3D"28=
+5" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"left" style=3D=
+"float:left">=0A=09<tr>=0A        <td class=3D"title2" width=3D"100%" bgcol=
+or=3D"#e41129" style=3D"padding:6px 12px;text-align:center;color:#ffffff;fo=
+nt-size:14px;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;text-t=
+ransform:uppercase;margin:0;font-weight:normal">=0A            <strong>Les =
+derniers Quiz</strong>=0A        </td>=0A    </tr>=0A=09<tr>=0A=09=09<td st=
+yle=3D"padding-top:20px">=0A=09=09=09<table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%">=0A=09=09=09=09=09=09=09=09<tr>=0A=09=09=
+=09=09=09<td class=3D"content1" style=3D"color:#333333 !important;font-size=
+:12px;font-family:arial;margin:0;padding:0 5px 20px 0;font-weight:normal;">=
+=0A=09=09=09=09=09=09<a href=3D"http://www.linternaute.com/actualite/questi=
+onnaire/fiche/202108/d/f/1?utm_content=3DlastQuiz&camtk=3D0113631647022397&=
+utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionA=
+ndQuizzRecap" style=3D"color:#333333;text-decoration:none">Connaissez-vous =
+les inventeurs des objets qui peuplent votre quotidien ?</a>=0A=09=09=09=09=
+=09</td>=0A=09=09=09=09=09<td align=3D"right" style=3D"padding:0 0 20px 0" =
+width=3D"80">=0A=09=09=09=09=09=09<!--[if mso]>=0A                         =
+   <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" href=3D"http://www.linternaute.com/actuali=
+te/questionnaire/fiche/202108/d/f/1?utm_content=3DlastQuiz&camtk=3D01136316=
+47022397" style=3D"v-text-anchor:middle;width:80px; height:40px;" arcsize=
+=3D"10%" stroke=3D"f" fillcolor=3D"#e41129">=0A                            =
+<w:anchorlock/>=0A                                <center style=3D"color:#f=
+fffff;color:#ffffff;font-size:14px;font-family:'Helvetica Neue',Helvetica,A=
+rial,sans-serif;font-weight:bold;text-transform:uppercase;height:40px;width=
+:100%;display:block">=0A                                Jouez              =
+                  </center>=0A                            </v:roundrect>=0A=
+                        <![endif]--> =0A                        <![if !mso]=
+>=0A                        <table cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0">=0A                            <tr>=0A                            =
+    <td bgcolor=3D"#e41129" align=3D"center" height=3D"40" width=3D"80" sty=
+le=3D"color:#ffffff;font-size:14px;font-family:'Helvetica Neue',Helvetica,A=
+rial,sans-serif;font-weight:bold;text-transform:uppercase;padding:0;-webkit=
+-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;display:bl=
+ock"><a href=3D"http://www.linternaute.com/actualite/questionnaire/fiche/20=
+2108/d/f/1?utm_content=3DlastQuiz&camtk=3D0113631647022397&utm_source=3Dfr_=
+copainsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzRecap" st=
+yle=3D"color:#ffffff; text-decoration:none; line-height:40px; width:100%; d=
+isplay:inline-block">Jouez</a></td>=0A                            </tr>=0A =
+                       </table>=0A                        <![endif]>=0A=09=
+=09=09=09=09</td>=0A=09=09=09=09</tr>=0A=09=09=09=09=09=09=09</table>=0A=09=
+=09</td>=0A=09</tr>=0A</table><table cellspacing=3D"0" cellpadding=3D"0" bo=
+rder=3D"0" class=3D"col-2-fluid" align=3D"right" width=3D"285">=0A         =
+           <tr>=0A                    <td bgcolor=3D"#e41129" valign=3D"mid=
+dle" style=3D"background:#e41129; padding:15px;height:168px" class=3D"box">=
+=0A                        <table width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0">=0A                             <tr>=0A             =
+                   <td class=3D"content1" style=3D"padding-bottom:10px;colo=
+r:#fffffe;font-size:24px;font-family:arial;margin-top:0;margin-bottom:0;pad=
+ding-top:0;font-weight:normal;">=0A                                    <a s=
+tyle=3D"color:#ffffff;text-decoration:none;" href=3D"https://copainsdavant.=
+linternaute.com/p/edit_general_profile?camtk=3D0113631647022397&utm_source=
+=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzRec=
+ap">Augmentez vos chances de retrouvailles en compl=C3=A9tant votre profil<=
+/a>=0A                                </td>=0A                            <=
+/tr>=0A                            <tr>=0A                                <=
+td>=0A                                    <!--[if mso]>=0A                 =
+                       <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vm=
+l" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https://copain=
+sdavant.linternaute.com/p/edit_general_profile?camtk=3D0113631647022397" st=
+yle=3D"v-text-anchor:middle;width:200px; height:40px;" arcsize=3D"10%" stro=
+ke=3D"f" fillcolor=3D"#ffffff">=0A                                        <=
+w:anchorlock/>=0A                                            <center class=
+=3D"fullButton" style=3D"color:#e41129;font-size:18px;font-family:'Helvetic=
+a Neue',Helvetica,Arial,sans-serif;font-weight:bold;text-transform:uppercas=
+e;height:40px;width:100%;display:block">=0A                                =
+            J'y vais                                            </center>=
+=0A                                        </v:roundrect>=0A               =
+                     <![endif]--> =0A                                    <!=
+[if !mso]>=0A                                    <table class=3D"fullButton=
+" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%">=0A      =
+                                  <tr>=0A                                  =
+          <td bgcolor=3D"#ffffff" align=3D"center" height=3D"40" width=3D"1=
+00%" style=3D"color:#ffffff;font-size:18px;font-family:'Helvetica Neue',Hel=
+vetica,Arial,sans-serif;font-weight:bold;text-transform:uppercase;padding:0=
+;-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;di=
+splay:block"><a href=3D"https://copainsdavant.linternaute.com/p/edit_genera=
+l_profile?camtk=3D0113631647022397&utm_source=3Dfr_copainsdavant&utm_medium=
+=3Dmail&utm_campaign=3DinscriptionAndQuizzRecap" style=3D"color:#e41129; te=
+xt-decoration:none; line-height:40px; width:100%; display:inline-block">J'y=
+ vais</a></td>=0A                                        </tr>=0A          =
+                          </table>=0A                                    <!=
+[endif]>=0A                                </td>=0A                        =
+    </tr>=0A                        </table>=0A                    </td>=0A=
+                </tr>=0A                </table>    =0A=0A=09=09</td>=0A=09=
+</tr>=0A</table>=0A=0A<table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" align=3D"center">=0A=09<tr>=0A=09=09<td></td>=0A=09</tr=
+>=0A</table>=0A=0A<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0">=0A=09<tr>=0A=09=09<td class=3D"content1" style=3D"padding:15=
+px 0;color:#666666;font-size:10px;font-family:arial;margin:0;padding:0;font=
+-weight:normal;line-height:16px">=0A=09=09=09Si vous souhaitez ne plus rece=
+voir ces alertes, vous pouvez modifier vos param=C3=A8tres en =09=09=09=09=
+=0A=09=09=09<a href=3D"http://copainsdavant.linternaute.com/mail/cc4d3c5e1b=
+9974ee6d36b816b4f187eb667daaa83b9bd3895234a7deb84a3b13/1/unsubscribe?email=
+=3Dsiltaar%40laposte.net&utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&ut=
+m_campaign=3DinscriptionAndQuizzRecap" style=3D"color:#666666;">=0A=09=09=
+=09=09cliquant ici=09=09=09</a>=09=0A=09=09</td>=0A=09</tr>=0A</table>=0A  =
+                      </td>=0A                    </tr>=0A                <=
+/table>=0A=0A                <!-- FOOTER DE LA NEWSLETTER -->=0A=0A        =
+        <table width=3D"640" cellpadding=3D"8" cellspacing=3D"0" border=3D"=
+0" bgcolor=3D"#ebebeb" align=3D"center" class=3D"table">=0A                =
+    <tr>=0A                        <td align=3D"center" width=3D"100%" bgco=
+lor=3D"#ebebeb" style=3D"border-left:1px solid #cbcbcb; border-right:1px so=
+lid #cbcbcb; border-bottom:1px solid #cbcbcb;padding:5px;color:#303030;font=
+-size:12px;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;">=0A   =
+                         <a href=3D"http://www.ccmbenchmark.com/advertising=
+/fr/qui-sommes-nous/" style=3D"color:#303030">Qui sommes nous ?</a> |=0A   =
+                         <a href=3D"http://copainsdavant.linternaute.com/co=
+ntact/?utm_source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3Dinscr=
+iptionAndQuizzRecap" style=3D"color:#303030">Contact</a> |=0A              =
+              <a href=3D"http://www.ccmbenchmark.com/advertising/fr/" style=
+=3D"color:#303030">Publicit=C3=A9</a> |=0A                            <a hr=
+ef=3D"http://www.ccmbenchmark.com/advertising/fr/qui-sommes-nous/" style=3D=
+"color:#303030">La soci=C3=A9t=C3=A9</a> |=0A                            <a=
+ href=3D"http://emploi.journaldunet.com/entreprise/benchmark-group/offres-e=
+mploi/206/" style=3D"color:#303030">Recrutements</a> |=0A                  =
+          <a href=3D"http://www.linternaute.com/menubas/donperso.shtml?utm_=
+source=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQu=
+izzRecap" style=3D"color:#303030">Donn=C3=A9es personnelles</a> |=0A       =
+                     <a href=3D"http://www.ccmbenchmark.com/mentions-legale=
+s" style=3D"color:#303030">Mentions l=C3=A9gales</a>=0A                    =
+    </td>=0A                    </tr>=0A                </table>=0A=0A     =
+           <!-- BOTTOM DE LA NEWSLETTER -->=0A=0A                <table wid=
+th=3D"640" height=3D"50" cellpadding=3D"10" cellspacing=3D"0" border=3D"0" =
+bgcolor=3D"#ffffff" align=3D"center" class=3D"table">=0A                   =
+ <tr>=0A                        <td align=3D"center" valign=3D"top" width=
+=3D"100%" bgcolor=3D"#ffffff" style=3D"margin-top:0;margin-bottom:0;padding=
+:5px 0;color:#333333;font-size:12px;font-family:Arial,'Helvetica Neue',Helv=
+etica,sans-serif;">=0A                            <a href=3D"https://copain=
+sdavant.linternaute.com/p/edit_general_profile?utm_source=3Dfr_copainsdavan=
+t&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzRecap" style=3D"color=
+:#303030">Modifier mon adresse de r=C3=A9ception</a> |=0A                  =
+          <a href=3D"http://copainsdavant.linternaute.com/p/edit/?utm_sourc=
+e=3Dfr_copainsdavant&utm_medium=3Dmail&utm_campaign=3DinscriptionAndQuizzRe=
+cap#alert" style=3D"color:#303030">G=C3=A9rer mes alertes mail</a>=0A      =
+                  </td>=0A                    </tr>=0A                </tab=
+le>=0A=0A            </td>=0A        </tr>=0A    </table>=0A        <img sr=
+c=3D"http://copainsdavant.linternaute.com/mail/0113631647022397/pixel.gif" =
+/>=0A        </body>=0A</html>=0A
+
+
+--alt-c06df7a7dbd8c34e8bb5e1ebd4f22c4f--
+
+
+

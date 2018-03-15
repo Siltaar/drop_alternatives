@@ -16,8 +16,12 @@ moderately safe:
 In a quest for performance, I compared Python 3 and Python 2 versions of the
 code. Python 2.7 appeared to be 20% quicker than Python 3.4 in Debian
 stable 8.9 for the 100 runs of the 24 _doctests_ (at 2017-10-21, see
-`time_drop_alternatives.py` comments for more details). So I kept using Python
-2 and made a cross-compatible version.
+`time_drop_alternatives.py` comments for more details).
+
+Python 2.7.13 still appear to be 10% quicker than Python 3.5.3 in Debian stable
+9.3 for 5 time 10 runs of 33 tests (at 2018-03-15).
+
+So I kept using Python 2 and made a cross-compatible version.
 
 == `fdm.conf` example :
 `match all action rewrite "python2 -SE drop_alternatives.py" continue`
@@ -28,10 +32,10 @@ the cloned repository root: +
 `python -m doctest drop_alternatives.py`
 
 Outputs HTML text to compare in bold (grey 1st, white others), bad marks in yellow and failed in red.
-Best viewed with a 265 character wide capable console.
+Best viewed with a 290 character wide capable console.
 
 == Author
-* 2017: Simon Descarpentries
+* 2017-····: Simon Descarpentries
 * 2010-2012: https://github.com/rbrito[rbrito] from a StackExchange https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970[thread].
 
 == Ressources

@@ -12,25 +12,25 @@ from sys import stdin, stderr, version_info
 from re import DOTALL, compile as compile_re
 
 
-re_html = compile_re(
-	b'<(tit|sty|scr|.:|[^y]*y:n).*?</[^>]*|<!--.*?-->|<[^>]*|[\d*]|&[^;]*;|[^\s\n\r<]{25,}',
-	# match and so remove :
-	# - title, style, script, o:… / w:…, display:none HTML tags and their text leafs
-	# - all HTML tags,  # even if cut at the begining
-	# - HTML comments
-	# - links prefix in converted texts
-	# - HTML entities
-	# - chunks of symbols without spaces too big to be words (such as URL)
+purge_html_re = compile_re(  # match, to remove :
+	b'<(tit|sty|scr|.:|[^y]*y\s*:\s*n).*?</[^>]*|'
+	# - title, style, script, o:, w:, style="display:none" HTML tags, text leaf, partial ending
+	b'<!--.*?-->|'  # - HTML comments
+	b'<[^>]*|'      # - all complete HTML tags,  # some may be cut at the end/begining
+	b'[\d*]|'       # - links prefix in converted texts
+	b'&[^;]*;|'     # - HTML entities
+	b'[^\s\n\r<]{25,}',  # - chunks of symbols without spaces too big to be words (such as URL)
 	DOTALL)
-bad_char = b' \t\n\r\xc2\xa0\'#->=:*]['  # exist: \v Vertical tab ; \f From feed
-W  = '\033[0m'  # white (normal)
-G  = '\033[1;30m' # grey
-R  = '\033[1;31m' # bold red
-Y  = '\033[1;33m' # bold yellow
-B  = '\033[1;37m' # bold white
+bad_chars = b' \t\n\r\xc2\xa0\'#->=:*]['  # exist: \v Vertical tab ; \f From feed
+W = '\033[0m'  # white (normal)
+G = '\033[1;30m'  # grey
+R = '\033[1;31m'  # bold red
+Y = '\033[1;33m'  # bold yellow
+B = '\033[1;37m'  # bold white
 LEN = 280
 LIM = .82
 BON = .91
+
 
 def drop_alternatives(msg_str, debug=0):
 	eml = Parser().parsestr(msg_str)
@@ -70,21 +70,21 @@ def drop_alternatives(msg_str, debug=0):
 					t_1, t_2 = t
 					s_1 = min(len_h_txt_1, len(t_1))
 					s_2 = min(len_h_txt_2, len(t_2))
-					idem_ratio_1 = SequenceMatcher(a=h_txt_1[:s_1], b=t_1[:s_1]).quick_ratio()
-					idem_ratio_2 = SequenceMatcher(a=h_txt_2[-s_2:], b=t_2[-s_2:]).quick_ratio()
-					idem_ratio = (idem_ratio_1 + idem_ratio_2) / 2
+					eq_ratio_1 = SequenceMatcher(a=h_txt_1[:s_1], b=t_1[:s_1]).quick_ratio()
+					eq_ratio_2 = SequenceMatcher(a=h_txt_2[-s_2:], b=t_2[-s_2:]).quick_ratio()
+					eq_ratio = (eq_ratio_1 + eq_ratio_2) / 2
 
 					if debug:
-						ir = ' '+color_ratio(idem_ratio)
+						ir = ' '+color_ratio(eq_ratio)
 
-						if idem_ratio_1 < LIM:
+						if eq_ratio_1 < LIM:
 							print(i and B or G + str(h_txt_1[:LEN]) + W + ' H 1', file=stderr)
-							print(str(t_1[:LEN])+' T '+color_ratio(idem_ratio_1)+ir,file=stderr)
-						if idem_ratio_2 < LIM:
+							print(str(t_1[:LEN])+' T '+color_ratio(eq_ratio_1)+ir, file=stderr)
+						if eq_ratio_2 < LIM:
 							print(i and B or G + str(h_txt_2[-LEN:]) + W + ' H 2', file=stderr)
-							print(str(t_2[:LEN])+' T '+color_ratio(idem_ratio_2)+ir,file=stderr)
+							print(str(t_2[:LEN])+' T '+color_ratio(eq_ratio_2)+ir, file=stderr)
 
-					if idem_ratio_1 > BON or idem_ratio_2 > BON or idem_ratio > LIM:
+					if eq_ratio_1 > BON or eq_ratio_2 > BON or eq_ratio > LIM:
 						save_html = False
 						recompose_msg = True
 						del texts[i]  # avoid comparing again with this text
@@ -99,14 +99,14 @@ def drop_alternatives(msg_str, debug=0):
 	return eml
 
 
-def get_txt(part, raw_len, bad_char=bad_char):
+def get_txt(part, raw_len, bad_chars=bad_chars):
 	t = part.get_payload(decode=True)
 	t_start = t[:raw_len]
 	t_end = t[-raw_len:]
-	t_start = re_html.sub(b'', t_start)
-	t_start = t_start.translate(None, bad_char)
-	t_end = re_html.sub(b'', t_end)
-	t_end = t_end.translate(None, bad_char)
+	t_start = purge_html_re.sub(b'', t_start)
+	t_start = t_start.translate(None, bad_chars)
+	t_end = purge_html_re.sub(b'', t_end)
+	t_end = t_end.translate(None, bad_chars)
 	return t_start[:LEN], t_end[-LEN:]  # Python 2 ratio() changes its behavior after 199c
 
 
@@ -132,6 +132,8 @@ def compose_message(orig, parts):
 
 
 DEBUG = 1
+
+
 def test_drop_alternatives(msg_str, debug):
 	"""
 	>>> test_drop_alternatives('Content-Type: text/plain;\\nA', DEBUG)
@@ -219,7 +221,7 @@ def test_drop_alternatives(msg_str, debug):
 
 
 if version_info.major > 2:  # In Python 3: str is the new unicode
-    unicode = str
+	unicode = str
 
 if __name__ == "__main__":
 	if version_info.major > 2:

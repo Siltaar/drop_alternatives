@@ -22,7 +22,7 @@ re_html = compile_re(
 	# - HTML entities
 	# - chunks of symbols without spaces too big to be words (such as URL)
 	DOTALL)
-bad_char = b' \t\n\r\xc2\xa0\'#->=:*]['  # exist: \v Vertical tab ; \f From feed
+bad_char = b' \t\n\r\xc2\xa0\'#->=:*][+_()/|•.,@\\'  # exist: \v Vertical tab ; \f From feed
 W  = '\033[0m'  # white (normal)
 G  = '\033[1;30m' # grey
 R  = '\033[1;31m' # bold red
@@ -51,7 +51,7 @@ def drop_alternatives(msg_str, debug=0):
 				# debug and print('got HTML', file=stderr)
 			elif 'plain' in part.get_content_type():
 				kept_parts.append(part)
-				texts.append(get_txt(part, 2300))
+				texts.append(get_txt(part, 5000))
 				# debug and print('got TEXT', file=stderr)
 			else:
 				kept_parts.append(part)
@@ -61,15 +61,13 @@ def drop_alternatives(msg_str, debug=0):
 			recompose_msg = False
 
 			for h in html_parts:
-				h_txt_1, h_txt_2 = get_txt(h, 40000)
-				len_h_txt_1 = len(h_txt_1)
-				len_h_txt_2 = len(h_txt_2)
+				h_txt_1, h_txt_2 = get_txt(h, 30000)
+				len_h_txt_1, len_h_txt_2 = len(h_txt_1), len(h_txt_2)
 				save_html = True
 
 				for i, t in enumerate(texts):
 					t_1, t_2 = t
-					s_1 = min(len_h_txt_1, len(t_1))
-					s_2 = min(len_h_txt_2, len(t_2))
+					s_1, s_2 = min(len_h_txt_1, len(t_1)), min(len_h_txt_2, len(t_2))
 					idem_ratio_1 = SequenceMatcher(a=h_txt_1[:s_1], b=t_1[:s_1]).quick_ratio()
 					idem_ratio_2 = SequenceMatcher(a=h_txt_2[-s_2:], b=t_2[-s_2:]).quick_ratio()
 					idem_ratio = (idem_ratio_1 + idem_ratio_2) / 2
@@ -77,12 +75,14 @@ def drop_alternatives(msg_str, debug=0):
 					if debug:
 						ir = ' '+color_ratio(idem_ratio)
 
+						# if True:
 						if idem_ratio_1 < LIM:
-							print(i and B or G + str(h_txt_1[:LEN]) + W + ' H 1', file=stderr)
-							print(str(t_1[:LEN])+' T '+color_ratio(idem_ratio_1)+ir,file=stderr)
+							print((i and B or G) + str(h_txt_1) + W + ' <H', file=stderr)
+							print(str(t_1)+' T '+color_ratio(idem_ratio_1)+ir,file=stderr)
+						# if True:
 						if idem_ratio_2 < LIM:
-							print(i and B or G + str(h_txt_2[-LEN:]) + W + ' H 2', file=stderr)
-							print(str(t_2[:LEN])+' T '+color_ratio(idem_ratio_2)+ir,file=stderr)
+							print((i and B or G) + str(h_txt_2) + W + ' H>', file=stderr)
+							print(str(t_2)+' T '+color_ratio(idem_ratio_2)+ir,file=stderr)
 
 					if idem_ratio_1 > BON or idem_ratio_2 > BON or idem_ratio > LIM:
 						save_html = False
@@ -213,6 +213,8 @@ def test_drop_alternatives(msg_str, debug):
 	>>> test_drop_alternatives(open('test_email/20180314.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20180315.eml').read(), DEBUG)
+	multipart/mixed text/plain
+	>>> test_drop_alternatives(open('test_email/20180319.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	"""
 	print(' '.join([p.get_content_type() for p in drop_alternatives(msg_str, debug).walk()]))

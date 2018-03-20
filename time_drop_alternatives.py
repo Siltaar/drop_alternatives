@@ -39,6 +39,7 @@ Python 2.7.13
 2018-01-11 : 30 tests ; 11.7s ; 3.91ms/t (major system update, lost perf…)
 2018-03-14 : 32 tests ; 13.1s ; 4.09ms/t (remove HTML comments ; LEN=280 ; LIM=.82 ; BON=.91)
 2018-03-15 : 33 tests ; 1.42s ; 4.3 ms/t ( / 10 instead of / 100 in measurements)
+2018-03-19 : 34 tests ; 1.50s ; 4.44ms/t (clean more ASCII art, 'cause EFF…)
 
 
 """

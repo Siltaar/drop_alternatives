@@ -5,7 +5,7 @@ Authentication-Results: ccc.globenet.org; dkim=pass
 	reason="1024-bit key; insecure key"
 	header.d=framalistes.org header.i=eee-request@framalistes.org
 	header.b=FuSuL+Zg; dkim-adsp=pass; dkim-atps=neutral
-Received: by bbb (fdm 1.9, account "silt@d12s")
+Received: by bbb (fdm 1.9, account "hhh")
 	with pop3 (version=TLSv1/SSLv3 DHE-RSA-AES256-GCM-SHA384 256 bits)
 	Wed, 04 Oct 2017 04:42:02 +0200
 Received: from rod2.framasoft.org (rod2.framasoft.org [46.4.207.252])

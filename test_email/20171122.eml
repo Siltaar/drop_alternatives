@@ -1,19 +1,19 @@
-Return-Path: <charlotte.puma@bred.fr>
-Delivered-To: siltaer@d12s.work
-Received: by tabr (fdm 1.9, account "silt@gandi") 
+Return-Path: <aaa@bred.fr>
+Delivered-To: bbb@bbb.bb
+Received: by ccc (fdm 1.9, account "ddd")
  with imap (version=TLSv1/SSLv3 ECDHE-RSA-AES128-GCM-SHA256 128 bits)
  Thu, 23 Nov 2017 10:56:02 +0100
 Received: from spool.mail.gandi.net (mspool3-d.mgt.gandi.net [10.0.21.134])
  by nmboxes66.sd2.0x35.net (Postfix) with ESMTP id 9B5B72889F
- for <siltaer@d12s.work>; Thu, 23 Nov 2017 10:52:12 +0100 (CET)
+ for <bbb@bbb.bb>; Thu, 23 Nov 2017 10:52:12 +0100 (CET)
 Received: from acoeuro.com (unknown [IPv6:2001:4b98:dc0:43:216:3eff:febf:d9a6])
  by spool.mail.gandi.net (Postfix) with ESMTPS id 5E327116158
- for <siltaer@d12s.work>; Thu, 23 Nov 2017 10:52:12 +0100 (CET)
+ for <bbb@bbb.bb>; Thu, 23 Nov 2017 10:52:12 +0100 (CET)
 Received: from mail-eopbgr30121.outbound.protection.outlook.com
  ([40.107.3.121] helo=EUR03-AM5-obe.outbound.protection.outlook.com)
  by acoeuro.com with esmtp (Exim 4.89)
- (envelope-from <charlotte.puma@bred.fr>) id 1eHoB2-0007Sk-5B
- for simon@acoeuro.com; Thu, 23 Nov 2017 10:52:12 +0100
+ (envelope-from <aaa@bred.fr>) id 1eHoB2-0007Sk-5B
+ for ddd@acoeuro.com; Thu, 23 Nov 2017 10:52:12 +0100
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=bredonline.onmicrosoft.com; s=selector1-bred-fr;
  h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
@@ -27,8 +27,8 @@ Received: from AM0PR0702MB3554.eurprd07.prod.outlook.com
  ([fe80::b0c0:c7e5:f12c:ddbd]) by AM0PR0702MB3554.eurprd07.prod.outlook.com
  ([fe80::b0c0:c7e5:f12c:ddbd%13]) with mapi id 15.20.0282.002; Thu, 23 Nov
  2017 09:52:01 +0000
-From: "CHARLOTTE PUMA [BRED-9121]" <charlotte.puma@bred.fr>
-To: "'simon@acoeuro.com'" <simon@acoeuro.com>
+From: "aaa [BRED-9121]" <aaa@bred.fr>
+To: "'ddd@acoeuro.com'" <ddd@acoeuro.com>
 Subject: =?Windows-1252?Q?RE:_R=E9silier_la_CB_la_plus_ch=E8re_d'Acoeuro?=
 Thread-Topic: =?Windows-1252?Q?RE:_R=E9silier_la_CB_la_plus_ch=E8re_d'Acoeuro?=
 Thread-Index: AdNkQLKD3IRiUbfuR6SNgOqPct5GqA==
@@ -37,7 +37,7 @@ Message-ID: <AM0PR0702MB3554C3A9A814E505DE73CF2D88210@AM0PR0702MB3554.eurprd07.p
 Accept-Language: fr-FR, en-US
 Content-Language: fr-FR
 X-MS-Has-Attach: yes
-X-MS-TNEF-Correlator: 
+X-MS-TNEF-Correlator:
 x-originating-ip: [91.220.246.24]
 x-ms-publictraffictype: Email
 x-microsoft-exchange-diagnostics: 1; AM0PR0702MB3554;
@@ -50,24 +50,24 @@ x-ms-office365-filtering-ht: Tenant
 x-ms-office365-filtering-correlation-id: 38ea67d1-5752-4b77-03a9-08d53257d815
 x-microsoft-antispam: UriScan:; BCL:0; PCL:0;
  RULEID:(4534020)(4602075)(4627115)(201703031133081)(201702281549075)(48565401081)(5600024)(4604075)(2017052603258)(49563074);
- SRVR:AM0PR0702MB3554; 
+ SRVR:AM0PR0702MB3554;
 x-ms-traffictypediagnostic: AM0PR0702MB3554:
 authentication-results: spf=none (sender IP is )
- smtp.mailfrom=charlotte.puma@bred.fr; 
+ smtp.mailfrom=aaa@bred.fr;
 bredmsginterne: Yes
 x-microsoft-antispam-prvs: <AM0PR0702MB3554D10D716638123C73CA1F88210@AM0PR0702MB3554.eurprd07.prod.outlook.com>
-x-exchange-antispam-report-test: UriScan:(227612066756510)(21748063052155)(222209717133561); 
+x-exchange-antispam-report-test: UriScan:(227612066756510)(21748063052155)(222209717133561);
 x-exchange-antispam-report-cfa-test: BCL:0; PCL:0;
  RULEID:(100000700101)(100105000095)(100000701101)(100105300095)(100000702101)(100105100095)(102415395)(6040450)(2401047)(5005006)(8121501046)(10201501046)(93006095)(93001095)(100000703101)(100105400095)(3002001)(3231022)(6055026)(6041248)(20161123560025)(20161123555025)(20161123558100)(201703131423075)(201702281528075)(201703061421075)(201703061406153)(20161123564025)(20161123562025)(6072148)(201708071742011)(100000704101)(100105200095)(100000705101)(100105500095);
  SRVR:AM0PR0702MB3554; BCL:0; PCL:0;
  RULEID:(100000800101)(100110000095)(100000801101)(100110300095)(100000802101)(100110100095)(100000803101)(100110400095)(100000804101)(100110200095)(100000805101)(100110500095);
- SRVR:AM0PR0702MB3554; 
+ SRVR:AM0PR0702MB3554;
 x-forefront-prvs: 05009853EF
 x-forefront-antispam-report: SFV:NSPM;
  SFS:(10019020)(979002)(346002)(376002)(39860400002)(366004)(189002)(199003)(2906002)(25786009)(74316002)(229853002)(3660700001)(3280700002)(5250100002)(101416001)(14454004)(8936002)(99286004)(81166006)(81156014)(97736004)(6436002)(74482002)(2900100001)(733005)(6506006)(7736002)(86362001)(106356001)(55016002)(224313004)(9686003)(54556002)(105586002)(68736007)(6306002)(54896002)(53346004)(5660300001)(99936001)(102836003)(33656002)(189998001)(3846002)(478600001)(224303003)(53936002)(316002)(7696004)(54356999)(6246003)(6916009)(790700001)(53946003)(50986999)(66066001)(6116002)(491001)(579004)(969003)(989001)(999001)(1009001)(1019001);
  DIR:OUT; SFP:1102; SCL:1; SRVR:AM0PR0702MB3554;
  H:AM0PR0702MB3554.eurprd07.prod.outlook.com; FPR:; SPF:None; PTR:InfoNoRecords;
- MX:1; A:1; LANG:fr; 
+ MX:1; A:1; LANG:fr;
 received-spf: None (protection.outlook.com: bred.fr does not designate
  permitted sender hosts)
 spamdiagnosticoutput: 1:99
@@ -110,14 +110,14 @@ ite =E0 contacter notre centre de relations client au 0 806 060 211 ou au 0=
 Dans cette attente, et vous remerciant de votre confiance, je vous prie d=
 =92agr=E9er l=92expression de mes salutations distingu=E9es.
 Cordialement,
-Charlotte PUMA
+aaa
 Responsable de Client=E8le Professionnelle
 [LOGO BRED AVEC SIGNATURE FER A GAUCHE rvb]
 Multi-sites Paris Voltaire
 204 Boulevard Voltaire
 75011 PARIS
 Tel : 01.53.21.38.49
-Mail : charlotte.puma@bred.fr
+Mail : aaa@bred.fr
 [cid:image002.jpg@01D32B20.06A06880]
 [cid:image004.png@01D32D48.27A275D0]
 
@@ -1109,7 +1109,7 @@ s"><o:p></o:p></span></b></span></p>
 <p class=3D"MsoNormal"><span style=3D"mso-bookmark:_MailAutoSig"><b><span s=
 tyle=3D"mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-the=
 me-font:minor-fareast;color:#1F497D;mso-fareast-language:FR;mso-no-proof:ye=
-s">Charlotte PUMA<o:p></o:p></span></b></span></p>
+s">aaa<o:p></o:p></span></b></span></p>
 <p class=3D"MsoNormal"><span style=3D"mso-bookmark:_MailAutoSig"><span styl=
 e=3D"mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-=
 font:minor-fareast;color:#1F497D;mso-fareast-language:FR;mso-no-proof:yes">=
@@ -1144,7 +1144,7 @@ Tel : 01.53.21.38.49<o:p></o:p></span></span></p>
 <p class=3D"MsoNormal"><span style=3D"mso-bookmark:_MailAutoSig"><span styl=
 e=3D"mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-=
 font:minor-fareast;color:#1F497D;mso-fareast-language:FR;mso-no-proof:yes">=
-Mail : charlotte.puma@bred.fr<o:p></o:p></span></span></p>
+Mail : aaa@bred.fr<o:p></o:p></span></span></p>
 <p class=3D"MsoNormal"><span style=3D"mso-bookmark:_MailAutoSig"><span styl=
 e=3D"mso-fareast-font-family:&quot;Times New Roman&quot;;mso-fareast-theme-=
 font:minor-fareast;color:#1F497D;mso-fareast-language:FR;mso-no-proof:yes">=

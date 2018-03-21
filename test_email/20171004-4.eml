@@ -1,14 +1,14 @@
 Return-Path: <aaa@gmail.com>
-Delivered-To: siltaer@d12s.work
+Delivered-To: ddd@ddd.dd
 Received: by bbb (fdm 1.9, account "ccc")
 	with imap (version=TLSv1/SSLv3 ECDHE-RSA-AES128-GCM-SHA256 128 bits)
 	Wed, 04 Oct 2017 18:21:02 +0200
 Received: from spool.mail.gandi.net (mspool2-d.mgt.gandi.net [10.0.21.133])
 	by nmboxes66.sd2.0x35.net (Postfix) with ESMTP id 68D1628871
-	for <siltaer@d12s.work>; Wed,  4 Oct 2017 18:20:00 +0200 (CEST)
+	for <ddd@ddd.dd>; Wed,  4 Oct 2017 18:20:00 +0200 (CEST)
 Received: from acoeuro.com (unknown [IPv6:2001:4b98:dc0:43:216:3eff:febf:d9a6])
 	by spool.mail.gandi.net (Postfix) with ESMTPS id 55E71178043
-	for <siltaer@d12s.work>; Wed,  4 Oct 2017 18:20:00 +0200 (CEST)
+	for <ddd@ddd.dd>; Wed,  4 Oct 2017 18:20:00 +0200 (CEST)
 Received: from mail-oi0-f48.google.com ([209.85.218.48])
 	by acoeuro.com with esmtp (Exim 4.89)
 	(envelope-from <aaa@gmail.com>)

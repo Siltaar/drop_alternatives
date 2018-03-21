@@ -12,6 +12,11 @@ moderately safe:
 * drops the `text/html` parts that have a corresponding `text/plain` part ;
 * in all other cases keep the message intact.
 
+To find corresponding parts, 280 decoded and HTML-purged characters are
+compared at the begining and the end of the parts, via the `quick_ratio()`
+function of Python's SequenceMatcher. If one segment matches at 91% or more, or
+if both matches at 81% or more, the parts are declared corresponding.
+
 == Performance note
 In a quest for performance, I compared Python 3 and Python 2 versions of the
 code. Python 2.7 appeared to be 20% quicker than Python 3.4 in Debian
@@ -29,13 +34,13 @@ So I kept using Python 2 and made a cross-compatible version.
 == Tests
 Around 30 _doctests_ are included. You can run them with the following command in
 the cloned repository root: +
-`python -m doctest drop_alternatives.py`
+`./test_drop_alternatives.py`
 
 Outputs HTML text to compare in bold (grey 1st, white others), bad marks in yellow and failed in red.
 Best viewed with a 290 character wide capable console.
 
 == Author
-* 2017-····: Simon Descarpentries
+* 2017-2018: Simon Descarpentries
 * 2010-2012: https://github.com/rbrito[rbrito] from a StackExchange https://codereview.stackexchange.com/questions/12967/script-to-drop-html-part-of-multipart-mixed-e-mails/12970[thread].
 
 == Ressources

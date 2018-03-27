@@ -14,15 +14,15 @@ from re import DOTALL, compile as compile_re
 
 
 purge_html_re = compile_re(  # match, to remove :
-	b'<(tit|sty|scr|.:|[^y]*y\s*:\s*n).*?</[^>]*|'
-	# - title, style, script, o:, w:, style="display:none" HTML tags, text leaf, partial ending
-	b'<!--.*?-->|'  # - HTML comments
-	b'<[^>]*|'      # - all complete HTML tags,  # some may be cut at the end/begining
-	b'[\d*]|'       # - links prefix in converted texts
-	b'&[^;]*;|'     # - HTML entities
-	b'[^\s<\xc2\xa0]{25,}',  # - chunks of symbols without spaces too big to be words (such as URL)
+	b'<(sty|(o|w):|scr|tit|[^y]*y\s*:\s*(n|h)).*?</[^>]*'
+	# style, o: w:, script, title, display:none / hidden HTML tags, text leaf, partial ending
+	b'|<!--.*?-->'  # HTML comments
+	b'|<[^>]*'      # all complete HTML tags,  # some may be cut at the end/begining
+	b'|&[^;]*;'     # HTML entities
+	b'|[\d*]'       # links prefix in converted texts
+	b'|[^\s<\xc2\xa0]{25,}',  # - chunks of symbols without spaces too big to be words (as URL)
 	DOTALL)
-bad_chars = b' \t\n\r\f\v\xc2\xa0\'\\#->=:*][+_()/|.,@'
+bad_chars = b' >\n\xc2\xa0.,@#-=:*][+_()/|\'\t\r\f\v\\'
 W = '\033[0m'  # white (normal)
 G = '\033[1;30m'  # grey
 R = '\033[1;31m'  # bold red
@@ -75,12 +75,12 @@ def drop_alternatives(msg_str, debug=0):
 					if debug:
 						ir = ' '+color_ratio(idem_ratio)
 
-						if True:
-						# if idem_ratio_1 < LIM:
+						# if True:
+						if idem_ratio_1 < LIM:
 							print((i and B or G) + str(h_t_1) + W + ' <H', file=stderr)
 							print(str(t_1)+' T '+color_ratio(idem_ratio_1)+ir, file=stderr)
-						if True:
-						# if idem_ratio_2 < LIM:
+						# if True:
+						if idem_ratio_2 < LIM:
 							print((i and B or G) + str(h_t_2) + W + ' H>', file=stderr)
 							print(str(t_2)+' T '+color_ratio(idem_ratio_2)+ir, file=stderr)
 

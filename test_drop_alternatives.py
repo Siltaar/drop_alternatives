@@ -13,36 +13,36 @@ DEBUG = 1
 
 def test_drop_alternatives(msg_str, debug):
 	"""
-    >>> test_drop_alternatives('Content-Type: text/plain;\\nA', DEBUG)
-    text/plain
-    >>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
-    ... '--\\nContent-Type: text/plain;\\nA\\n'
-    ... '--\\nContent-Type: text/html;\\n <sty> B <!-- D -->/* C */\\n</sty>A', DEBUG)
-    multipart/mixed text/plain
-    >>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
-    ... '--\\nContent-Type: text/plain;\\nA\\n'
-    ... '--\\nContent-Type: text/html;\\n<html>\\t\\t\\t\\t\\t\\t\\t<p>A</p>', DEBUG)
-    multipart/mixed text/plain
-    >>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
-    ... '--\\nContent-Type: text/plain;\\nA\\n'
-    ... '--\\nContent-Type: text/html;\\n<html>B', DEBUG)
-    multipart/mixed text/plain text/html
-    >>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
-    ... '--\\nContent-Type: text/plain;\\nA\\n'
-    ... '--\\nContent-Type: text/plain;\\nB\\n'
-    ... '--\\nContent-Type: text/html;\\nB', DEBUG)
-    multipart/mixed text/plain text/plain
-    >>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
-    ... '--\\nContent-Type: text/plain;\\nA\\n'
-    ... '--\\nContent-Type: text/plain;\\nB\\n'
-    ... '--\\nContent-Type: text/html;\\n<p>C</p>', DEBUG)
-    multipart/mixed text/plain text/plain text/html
-    >>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
-    ... '--\\nContent-Type: text/plain;\\nA\\n'
-    ... '--\\nContent-Type: text/plain;\\nB\\n'
-    ... '--\\nContent-Type: text/html;\\nB\\n'
-    ... '--\\nContent-Type: text/html;\\nC', DEBUG)
-    multipart/mixed text/plain text/plain text/html
+	>>> test_drop_alternatives('Content-Type: text/plain;\\nA', DEBUG)
+	text/plain
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/html;\\n <sty> B <!-- D -->/* C */\\n</sty>A', DEBUG)
+	multipart/mixed text/plain
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/html;\\n<html>\\t\\t\\t\\t\\t\\t\\t<p>A</p>', DEBUG)
+	multipart/mixed text/plain
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/html;\\n<html>B', DEBUG)
+	multipart/mixed text/plain text/html
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/plain;\\nB\\n'
+	... '--\\nContent-Type: text/html;\\nB', DEBUG)
+	multipart/mixed text/plain text/plain
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/plain;\\nB\\n'
+	... '--\\nContent-Type: text/html;\\n<p>C</p>', DEBUG)
+	multipart/mixed text/plain text/plain text/html
+	>>> test_drop_alternatives('Content-Type: multipart/mixed; boundary=""\\n'
+	... '--\\nContent-Type: text/plain;\\nA\\n'
+	... '--\\nContent-Type: text/plain;\\nB\\n'
+	... '--\\nContent-Type: text/html;\\nB\\n'
+	... '--\\nContent-Type: text/html;\\nC', DEBUG)
+	multipart/mixed text/plain text/plain text/html
 	>>> test_drop_alternatives(open('test_email/20160916.eml').read(), DEBUG)
 	multipart/mixed text/plain
 	>>> test_drop_alternatives(open('test_email/20170901.eml').read(), DEBUG)

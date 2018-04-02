@@ -5,12 +5,12 @@
 # licence: GPLv3
 
 from __future__ import print_function
-from io import TextIOWrapper
 from email.parser import Parser
 from email.mime.multipart import MIMEMultipart
 from difflib import SequenceMatcher
 from sys import stdin, stderr, version_info
 from re import DOTALL, compile as compile_re
+from os import popen
 
 
 purge_html_re = compile_re(  # match, to remove :
@@ -74,15 +74,20 @@ def drop_alternatives(msg_str, debug=0):
 
 					if debug:
 						ir = ' '+color_ratio(idem_ratio)
+						rows, columns = popen('stty size', 'r').read().split()
+						PUT = int(columns) - 8
+
+						def put(string, postfix, size):
+							print(string[:size].ljust(size) + postfix, file=stderr)
 
 						# if True:
 						if idem_ratio_1 < LIM:
-							print((i and B or G) + str(h_t_1) + W + ' <H', file=stderr)
-							print(str(t_1)+' T '+color_ratio(idem_ratio_1)+ir, file=stderr)
+							put((i and B or G) + str(h_t_1),  W + ' <H', PUT)
+							put(str(t_1), ' T '+color_ratio(idem_ratio_1)+ir, PUT)
 						# if True:
 						if idem_ratio_2 < LIM:
-							print((i and B or G) + str(h_t_2) + W + ' H>', file=stderr)
-							print(str(t_2)+' T '+color_ratio(idem_ratio_2)+ir, file=stderr)
+							put((i and B or G) + str(h_t_2), W + ' H>', PUT)
+							put(str(t_2), ' T '+color_ratio(idem_ratio_2)+ir, PUT)
 
 					if idem_ratio_1 > BON or idem_ratio_2 > BON or idem_ratio > LIM:
 						save_html = False
@@ -133,11 +138,9 @@ def compose_message(orig, parts):
 	return wanted
 
 
-if version_info.major > 2:  # In Python 3: str is the new unicode
-	unicode = str
-
 if __name__ == "__main__":
 	if version_info.major > 2:
+		from io import TextIOWrapper
 		print(drop_alternatives(TextIOWrapper(stdin.buffer, errors='ignore').read()))
 	else:
 		print(drop_alternatives(stdin.read()))

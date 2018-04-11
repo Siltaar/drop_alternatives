@@ -75,19 +75,20 @@ def drop_alternatives(msg_str, debug=0):
 					if debug:
 						ir = ' '+color_ratio(idem_ratio)
 						rows, columns = popen('stty size', 'r').read().split()
-						PUT = int(columns) - 8
+						PUT_txt = int(columns) - 8
+						PUT_htm = int(columns) - 1
 
 						def put(string, postfix, size):
-							print(string[:size].ljust(size) + postfix, file=stderr)
+							print(string[:size].ljust(size, '.') + postfix, file=stderr)
 
 						# if True:
 						if idem_ratio_1 < LIM:
-							put((i and B or G) + str(h_t_1),  W + ' <H', PUT)
-							put(str(t_1), ' T '+color_ratio(idem_ratio_1)+ir, PUT)
+							put((i and B or G) + str(h_t_1),  W + ' <H', PUT_htm - 1)
+							put(str(t_1), ' T '+color_ratio(idem_ratio_1)+ir, PUT_txt)
 						# if True:
 						if idem_ratio_2 < LIM:
-							put((i and B or G) + str(h_t_2), W + ' H>', PUT)
-							put(str(t_2), ' T '+color_ratio(idem_ratio_2)+ir, PUT)
+							put((i and B or G) + str(h_t_2), W + ' H>', PUT_htm)
+							put(str(t_2), ' T '+color_ratio(idem_ratio_2)+ir, PUT_txt)
 
 					if idem_ratio_1 > BON or idem_ratio_2 > BON or idem_ratio > LIM:
 						save_html = False

@@ -45,22 +45,23 @@ def recurse_parts(new_eml, flat_eml, x_drop_alt, debug=0):
 
 			if 'html' in candidate_html.get_content_subtype():
 				new_eml.attach(candidate_txt)
-				x_drop_alt += 'h'
 				debug and print(' keep txt ', file=stderr)
+				x_drop_alt += candidate_html.get_content_type()
 			elif 'related' in candidate_html.get_content_subtype():
 				debug and print(' rel -> X ', file=stderr)
 				new_eml.attach(candidate_txt)
 				sub_part = flat_eml.pop(0)
-				x_drop_alt += '.'
+				x_drop_alt += sub_part.get_content_type()
 
 				while not sub_part.is_multipart() and len(flat_eml) > 0:  # consume intput
 					sub_part = flat_eml.pop(0)
-					x_drop_alt += '.'
+					x_drop_alt += sub_part.get_content_type()
 
 				if sub_part.is_multipart():
 					flat_eml.insert(0, sub_part)
 			else:  # unknown configuration
-				print('drop_alternative : unkown email configuration', file=stderr)
+				debug and print('unknown email configuration', file=stderr)
+				x_drop_alt += 'unknown alternative configuration'
 				new_eml.attach(candidate_txt)  # save parts
 				new_eml.attach(candidate_html)  # save parts
 		elif 'message' in part.get_content_maintype():

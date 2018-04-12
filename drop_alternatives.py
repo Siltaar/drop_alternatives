@@ -1,146 +1,105 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # coding: utf-8
 # author : Simon Descarpentries
 # date: 2017 - 2018
 # licence: GPLv3
 
-from __future__ import print_function
-from email.parser import Parser
+from email.parser import BytesParser
 from email.mime.multipart import MIMEMultipart
-from difflib import SequenceMatcher
-from sys import stdin, stderr, version_info
-from re import DOTALL, compile as compile_re
-from os import popen
+from email.iterators import _structure
+from sys import stdin, stderr
 
 
-purge_html_re = compile_re(  # match, to remove :
-	b'<(sty|(o|w):|scr|tit|[^y]*y\s*:\s*(n|h)).*?</[^>]*'
-	# style, o: w:, script, title, display:none / hidden HTML tags, text leaf, partial ending
-	b'|<!--.*?-->'  # HTML comments
-	b'|<[^>]*'      # all complete HTML tags,  # some may be cut at the end/begining
-	b'|&[^;]*;'     # HTML entities
-	b'|[\d*]'       # links prefix in converted texts
-	b'|[^\s<\xc2\xa0]{25,}',  # - chunks of symbols without spaces too big to be words (as URL)
-	DOTALL)
-bad_chars = b' >\n\xc2\xa0.,@#-=:*][+_()/|\'\t\r\f\v\\'
-W = '\033[0m'  # white (normal)
-G = '\033[1;30m'  # grey
-R = '\033[1;31m'  # bold red
-Y = '\033[1;33m'  # bold yellow
-B = '\033[1;37m'  # bold white
-LEN = 280
-LIM = .82
-BON = .91
+def drop_alternatives(msg_bytes, debug=0):
+	eml = BytesParser().parsebytes(msg_bytes)
+	debug and _structure(eml)
+
+	if not eml.is_multipart():
+		return eml
+
+	new_eml = clone_message(eml)
+	flat_eml = [part for part in eml.walk()]
+	x_drop_alt = ''
+
+	if 'alternative' not in eml.get_content_subtype():
+		flat_eml.pop(0)  # replaced by multipart/mixed
+
+	new_eml, x_drop_alt = recurse_parts(new_eml, flat_eml, x_drop_alt, debug)
+	new_eml['x-drop-alt'] = x_drop_alt
+
+	debug and _structure(new_eml)
+
+	return new_eml
 
 
-def drop_alternatives(msg_str, debug=0):
-	eml = Parser().parsestr(msg_str)
+def recurse_parts(new_eml, flat_eml, x_drop_alt, debug=0):
+	while len(flat_eml) > 0:
+		part = flat_eml.pop(0)
+		debug and print(part.get_content_type(), end='', file=stderr)
 
-	if eml.is_multipart():
-		kept_parts = []
-		html_parts = []
-		texts = []
+		if 'alternative' in part.get_content_subtype() and len(flat_eml) > 1:
+			candidate_txt = flat_eml.pop(0)
+			debug and print(' txt '+candidate_txt.get_content_type(), end='', file=stderr)
+			candidate_html = flat_eml.pop(0)
+			debug and print(' html '+candidate_html.get_content_type(), end='', file=stderr)
 
-		for part in eml.walk():
-			# debug and print('part content_type '+part.get_content_type(), file=stderr)
+			if 'html' in candidate_html.get_content_subtype():
+				new_eml.attach(candidate_txt)
+				x_drop_alt += 'h'
+				debug and print(' keep txt ', file=stderr)
+			elif 'related' in candidate_html.get_content_subtype():
+				debug and print(' rel -> X ', file=stderr)
+				new_eml.attach(candidate_txt)
+				sub_part = flat_eml.pop(0)
+				x_drop_alt += '.'
 
-			if ("multipart" in part.get_content_maintype() or
-				"message" in part.get_content_type()):
-				continue
-			elif 'html' in part.get_content_type():
-				html_parts.append(part)
-				# debug and print('got HTML', file=stderr)
-			elif 'plain' in part.get_content_type():
-				kept_parts.append(part)
-				texts.append(get_txt(part, 3000))
-				# debug and print('got TEXT', file=stderr)
-			else:
-				kept_parts.append(part)
-				# debug and print('kept part '+part.get_content_type(), file=stderr)
+				while not sub_part.is_multipart() and len(flat_eml) > 0:  # consume intput
+					sub_part = flat_eml.pop(0)
+					x_drop_alt += '.'
 
-		if html_parts:
-			recompose_msg = False
+				if sub_part.is_multipart():
+					flat_eml.insert(0, sub_part)
+			else:  # unknown configuration
+				print('drop_alternative : unkown email configuration', file=stderr)
+				new_eml.attach(candidate_txt)  # save parts
+				new_eml.attach(candidate_html)  # save parts
+		elif 'message' in part.get_content_maintype():
+			debug and print(' clne', file=stderr)
+			flat_sub_eml = [sub_part for sub_part in part.walk()]
+			flat_sub_eml.pop(0)  # replaced by multipart/mixed
+			flat_eml = flat_eml[len(flat_sub_eml):]  # consume input
+			sub_msg, x_drop_alt = recurse_parts(
+				clone_message(part), flat_sub_eml, x_drop_alt, debug)
+			new_eml.attach(sub_msg)
+		else:
+			new_eml.attach(part)
+			debug and print('    kept', file=stderr)
 
-			for h in html_parts:
-				h_t_1, h_t_2 = get_txt(h, 30000)
-				s_h_t_1, s_h_t_2 = len(h_t_1), len(h_t_2)
-				save_html = True
-
-				for i, (t_1, t_2) in enumerate(texts):
-					s_1, s_2 = min(s_h_t_1, len(t_1)), min(s_h_t_2, len(t_2))
-					idem_ratio_1 = SequenceMatcher(a=h_t_1[:s_1], b=t_1[:s_1]).quick_ratio()
-					idem_ratio_2 = SequenceMatcher(a=h_t_2[-s_2:], b=t_2[-s_2:]).quick_ratio()
-					idem_ratio = (idem_ratio_1 + idem_ratio_2) / 2
-
-					if debug:
-						ir = ' '+color_ratio(idem_ratio)
-						rows, columns = popen('stty size', 'r').read().split()
-						PUT = int(columns) - 8
-
-						def put(string, postfix, size):
-							print(string[:size].ljust(size) + postfix, file=stderr)
-
-						# if True:
-						if idem_ratio_1 < LIM:
-							put((i and B or G) + str(h_t_1),  W + ' <H', PUT)
-							put(str(t_1), ' T '+color_ratio(idem_ratio_1)+ir, PUT)
-						# if True:
-						if idem_ratio_2 < LIM:
-							put((i and B or G) + str(h_t_2), W + ' H>', PUT)
-							put(str(t_2), ' T '+color_ratio(idem_ratio_2)+ir, PUT)
-
-					if idem_ratio_1 > BON or idem_ratio_2 > BON or idem_ratio > LIM:
-						save_html = False
-						recompose_msg = True
-						del texts[i]  # avoid comparing again with this text
-						break
-
-				if save_html:
-					kept_parts.append(h)
-
-			if recompose_msg:
-				return compose_message(eml, kept_parts)
-
-	return eml
+	return new_eml, x_drop_alt
 
 
-def get_txt(part, raw_len, bad_chars=bad_chars):
-	t = part.get_payload(decode=True)
-	# raw_len < 20000 and print('raw TXT '+t, file=stderr)
-	t_start = t[:raw_len]
-	t_end = t[-raw_len:]
-	t_start = purge_html_re.sub(b'', t_start)
-	# raw_len < 20000 and print(R+'apr purge '+W+t_start, file=stderr)
-	t_start = t_start.translate(None, bad_chars)
-	t_end = purge_html_re.sub(b'', t_end)
-	t_end = t_end.translate(None, bad_chars)
-	return t_start[:LEN], t_end[-LEN:]  # Python 2 ratio() changes its behavior after 199c
+def clone_message(eml):
+	new_eml = MIMEMultipart(_subtype=eml.get_content_subtype(), boundary=eml.get_boundary())
+
+	for k, v in eml.items():  # `eml` have only headers as its items
+		if k not in ["content-length", "content-type", "lines", "status"]:  # unwanted fields
+			# Python will set its own Content-Type line in any case
+			new_eml[k] = v
+
+	new_eml.preamble = eml.preamble
+	new_eml.epilogue = eml.epilogue
+
+	if len(eml.defects):
+		new_eml['x-python-parsing-defects'] = str(eml.defects)
+
+	return new_eml
 
 
-def color_ratio(ratio):
-	C = ratio < LIM and R or ratio < BON and Y or W
-	return str(C + str(int(ratio*100)) + W)
-
-
-def compose_message(orig, parts):
-	wanted = MIMEMultipart()
-	unwanted_fields = ["content-length", "content-type", "lines", "status"]
-
-	for field in unwanted_fields:
-		del orig[field]
-
-	for k, v in orig.items():  # `orig` have only headers as its items
-		wanted[k] = v
-
-	for p in parts:
-		wanted.attach(p)
-
-	return wanted
+DEBUG = 0
 
 
 if __name__ == "__main__":
-	if version_info.major > 2:
-		from io import TextIOWrapper
-		print(drop_alternatives(TextIOWrapper(stdin.buffer, errors='ignore').read()))
+	if DEBUG:
+		drop_alternatives(stdin.buffer.raw.read(), DEBUG)
 	else:
-		print(drop_alternatives(stdin.read()))
+		print(drop_alternatives(stdin.buffer.raw.read()))

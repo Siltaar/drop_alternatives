@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # coding: utf-8
 # author : Simon Descarpentries
 # date: 2017-2018
@@ -34,7 +34,7 @@ OS : Debian Jessie 8.9
 2017-12-20 : 30 tests ; 11.2s ; 3.74ms/t (full bytes, display int ratio)
 
 Linux 4.9.0-5-amd64 #1 SMP Debian 4.9.65-3+deb9u2 (2018-01-04) x86_64 GNU/Linux
-Debian 9.3
+Debian Stretch 9.3
 Python 2.7.13
 
 2018-01-11 : 30 tests ; 11.7s ; 3.91ms/t (major system update, lost perf…)
@@ -43,6 +43,8 @@ Python 2.7.13
 2018-03-19 : 33 tests ; 1.50s ; 4.54ms/t (clean more ASCII art, 'cause EFF… ; slower real tests)
 2018-03-20 : 34 tests ; 1.55s ; 4.55ms/t (non-breakable space is chunk delimiter, \v\f=bad c.)
 2018-03-24 : 34 tests ; 1.53s ; 4.50ms/t (re-order HTML tag name of leaf to strip and bad chars)
+2018-04-11 : 34 tests ; 1.65s ; 4.85ms/t (Python 3.5.3)
+2018-04-12 : 31 tests ; (major rewrite, act on message/alternative)
 
 """
 

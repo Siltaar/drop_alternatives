@@ -43,8 +43,11 @@ Python 2.7.13
 2018-03-19 : 33 tests ; 1.50s ; 4.54ms/t (clean more ASCII art, 'cause EFF… ; slower real tests)
 2018-03-20 : 34 tests ; 1.55s ; 4.55ms/t (non-breakable space is chunk delimiter, \v\f=bad c.)
 2018-03-24 : 34 tests ; 1.53s ; 4.50ms/t (re-order HTML tag name of leaf to strip and bad chars)
-2018-04-11 : 34 tests ; 1.65s ; 4.85ms/t (Python 3.5.3)
-2018-04-12 : 31 tests ; (major rewrite, act on message/alternative)
+
+Python 3.5.3
+
+2018-04-11 : 34 tests ; 1.65s ; 4.85ms/t (Python 3.5.3 : +8%)
+2018-04-12 : 31 tests ; 0.93s ; 3.00ms/t (major rewrite, act on message/alternative, -3fake tst)
 
 """
 

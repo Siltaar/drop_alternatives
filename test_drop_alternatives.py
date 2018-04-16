@@ -13,16 +13,34 @@ DEBUG = 0
 
 def test_drop_alternatives(msg_bytes, debug):
 	"""
-	>>> test_drop_alternatives(b'Content-Type: text/plain;\\nA', DEBUG)
-	text/plain
-	>>> test_drop_alternatives(b'Content-Type: multipart/mixed; boundary=""\\n'
-	... b'--\\nContent-Type: text/html;\\n <sty> B <!-- D -->/* C */\\n</sty>A', DEBUG)
-	multipart/mixed text/html
-	>>> test_drop_alternatives(b'Content-Type: multipart/mixed; boundary=""\\n'
-	... b'--\\nContent-Type: multipart/alternative;\\n'
-	... b'--\\nContent-Type: text/plain;\\nA\\n'
-	... b'--\\nContent-Type: text/html;\\n<html>\\t\\t\\t\\t\\t\\t\\t<p>A</p>', DEBUG)
-	multipart/mixed text/plain
+    >>> test_drop_alternatives(b'Content-Type: text/plain;\\nA', DEBUG)
+    text/plain
+    >>> test_drop_alternatives(b'Content-Type: multipart/mixed; boundary=""\\n'
+    ... b'--\\nContent-Type: multipart/alternative;\\n'
+    ... b'--\\nContent-Type: text/plain;\\nA\\n'
+    ... b'--\\nContent-Type: text/html;\\n <sty> B <!-- D -->/* C */\\n</sty>A', DEBUG)
+    multipart/mixed text/plain
+    >>> test_drop_alternatives(b'Content-Type: multipart/mixed; boundary=""\\n'
+    ... b'--\\nContent-Type: multipart/alternative;\\n'
+    ... b'--\\nContent-Type: text/plain;\\nA\\n'
+    ... b'--\\nContent-Type: text/html;\\n<html>\\t\\t\\t\\t\\t\\t\\t<p>A</p>', DEBUG)
+    multipart/mixed text/plain
+    >>> test_drop_alternatives(b'Content-Type: multipart/mixed; boundary=""\\n'
+    ... b'--\\nContent-Type: multipart/alternative;\\n'
+    ... b'--\\nContent-Type: text/plain;\\nA\\n'
+    ... b'--\\nContent-Type: text/html;\\n<html>B', DEBUG)
+    multipart/mixed text/plain text/html
+    >>> test_drop_alternatives(b'Content-Type: multipart/mixed; boundary=""\\n'
+    ... b'--\\nContent-Type: text/plain;\\nA\\n'
+    ... b'--\\nContent-Type: multipart/alternative;\\n'
+    ... b'--\\nContent-Type: text/plain;\\nB\\n'
+    ... b'--\\nContent-Type: text/html;\\nB', DEBUG)
+    multipart/mixed text/plain text/plain
+    >>> test_drop_alternatives(b'Content-Type: multipart/mixed; boundary=""\\n'
+    ... b'--\\nContent-Type: text/plain;\\nA\\n'
+    ... b'--\\nContent-Type: text/plain;\\nB\\n'
+    ... b'--\\nContent-Type: text/html;\\n<p>C</p>', DEBUG)
+    multipart/mixed text/plain text/plain text/html
 	>>> test_drop_alternatives(open('email_test/20160916.eml', 'rb').read(), DEBUG)
 	multipart/alternative text/plain
 	>>> test_drop_alternatives(open('email_test/20170901.eml', 'rb').read(), DEBUG)
@@ -66,7 +84,7 @@ def test_drop_alternatives(msg_bytes, debug):
 	>>> test_drop_alternatives(open('email_test/20171025.eml', 'rb').read(), DEBUG)
 	multipart/alternative text/plain
 	>>> test_drop_alternatives(open('email_test/20171109.eml', 'rb').read(), DEBUG)
-	multipart/alternative text/plain
+	multipart/alternative text/plain text/plain
 	>>> test_drop_alternatives(open('email_test/20180312.eml', 'rb').read(), DEBUG)
 	multipart/alternative text/plain
 	>>> test_drop_alternatives(open('email_test/20180314.eml', 'rb').read(), DEBUG)

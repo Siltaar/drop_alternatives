@@ -8,11 +8,33 @@ from email.parser import BytesParser
 from email.mime.multipart import MIMEMultipart
 from email.iterators import _structure
 from sys import stdin, stderr
+from difflib import SequenceMatcher
+from re import DOTALL, compile as compile_re
+
+
+purge_html_re = compile_re(  # match, to remove :
+    b'<(sty|(o|w):|scr|tit|[^y]*y\s*:\s*(n|h)).*?</[^>]*'
+    # style, o: w:, script, title, display:none / hidden HTML tags, text leaf, partial ending
+    b'|<!--.*?-->'  # HTML comments
+    b'|<[^>]*'      # all complete HTML tags,  # some may be cut at the end/begining
+    b'|&[^;]*;'     # HTML entities
+    b'|[\d*]'       # links prefix in converted texts
+    b'|[^\s<\xc2\xa0]{25,}',  # - chunks of symbols without spaces too big to be words (as URL)
+    DOTALL)
+bad_chars = b' >\n\xc2\xa0.,@#-=:*][+_()/|\'\t\r\f\v\\'
+W = '\033[0m'  # white (normal)
+G = '\033[1;30m'  # grey
+R = '\033[1;31m'  # bold red
+Y = '\033[1;33m'  # bold yellow
+B = '\033[1;37m'  # bold white
+LEN = 280
+LIM = .82
+BON = .91
 
 
 def drop_alternatives(msg_bytes, debug=0):
 	eml = BytesParser().parsebytes(msg_bytes)
-	debug and _structure(eml)
+	# debug and _structure(eml)
 
 	if not eml.is_multipart():
 		debug and print('not eml.is_multipart()', file=stderr)
@@ -22,7 +44,7 @@ def drop_alternatives(msg_bytes, debug=0):
 	flat_eml = [[part for part in eml.walk()]]
 	new_eml = [clone_message(eml)]
 
-	if 'alt' != eml.get_content_subtype()[:3]:  # alternative
+	if not eml.get_content_subtype().startswith('alt'):  # alternative
 		flat_eml[0].pop(0)  # replaced by multipart/mixed
 
 	while len(flat_eml) > 0:
@@ -30,35 +52,47 @@ def drop_alternatives(msg_bytes, debug=0):
 			part = flat_eml[0].pop(0)
 			debug and print(part.get_content_type(), end='', file=stderr)
 
-			if 'alt' == part.get_content_subtype()[:3] and len(flat_eml[0]) > 1:
+			if part.get_content_subtype().startswith('alt') and len(flat_eml[0]) > 1:
 				candidate_txt = flat_eml[0].pop(0)
 				debug and print(' txt '+candidate_txt.get_content_type(), end='', file=stderr)
 				candidate_html = flat_eml[0].pop(0)
 				debug and print(' htm '+candidate_html.get_content_type(), end='', file=stderr)
-				candidate_html_content_type = candidate_html.get_content_subtype()[:3]
+				candidate_html_content_subtype = candidate_html.get_content_subtype()
 
-				if 'htm' == candidate_html_content_type:  # html
-					new_eml[0].attach(candidate_txt)
-					debug and print(' keep txt ', file=stderr)
-					x_drop_alt.append(candidate_html_content_type)
-				elif 'rel' == candidate_html_content_type:  # related
-					x_drop_alt.append(candidate_html_content_type)
+				if candidate_html_content_subtype.startswith('htm'):  # html
+					if are_idem_txt(candidate_txt, candidate_html, debug):
+						new_eml[0].attach(candidate_txt)
+						debug and print(' keep txt ', file=stderr)
+						x_drop_alt.append(candidate_html_content_subtype)
+					else:
+						keep_parts(new_eml[0], candidate_txt, candidate_html, x_drop_alt, 'txt diff', debug)
+				elif candidate_html_content_subtype.startswith('rel'):  # related
+					x_drop_alt.append(candidate_html_content_subtype)
 					debug and print(' drop rel ', file=stderr)
 					new_eml[0].attach(candidate_txt)
 					sub_part = flat_eml[0].pop(0)
+					htm_dropped = False
 
 					while not sub_part.is_multipart() and len(flat_eml[0]) > 0:
-						x_drop_alt.append(sub_part.get_content_type())
+						if sub_part.get_content_subtype().startswith('htm'):
+							if are_idem_txt(candidate_txt, sub_part, debug):
+								new_eml[0].attach(candidate_txt)
+								debug and print(' keep txt ', file=stderr)
+								x_drop_alt.append(candidate_html_content_subtype)
+								htm_dropped = True
+							else:
+								keep_parts(
+									new_eml[0], candidate_txt, sub_part, x_drop_alt, 'rel txt diff', debug)
+						else:
+							x_drop_alt.append(sub_part.get_content_type())
+
 						sub_part = flat_eml[0].pop(0) # consume intput
 
 					if sub_part.is_multipart():
 						flat_eml[0].insert(0, sub_part)
 				else:  # unknown configuration yet
-					debug and print('unknown email configuration', file=stderr)
-					x_drop_alt.append('unknown alternative configuration')
-					new_eml[0].attach(candidate_txt)  # save parts
-					new_eml[0].attach(candidate_html)  # save parts
-			elif 'me' == part.get_content_maintype()[:2]:  # message
+					keep_parts(new_eml[0], candidate_txt, candidate_html, x_drop_alt, 'new case ?', debug)
+			elif part.get_content_maintype().startswith('me'):  # message
 				debug and print(' clne', file=stderr)
 				flat_sub_eml = [sub_part for sub_part in part.walk()]
 				flat_sub_eml.pop(0)  # replaced by multipart/mixed
@@ -76,8 +110,65 @@ def drop_alternatives(msg_bytes, debug=0):
 		flat_eml.pop(0)
 
 	new_eml[0]['x-drop-alt'] = ', '.join(x_drop_alt)
-	debug and _structure(new_eml[0])
+	# debug and _structure(new_eml[0])
 	return new_eml[0]
+
+
+def keep_parts(new_eml, part_txt, part_htm, x_drop_alt, why, debug=0):
+	debug and print(why, file=stderr)
+	x_drop_alt.append(why)
+	new_eml.attach(part_txt)  # save parts
+	new_eml.attach(part_htm)  # save parts
+
+
+def are_idem_txt(part_txt, part_htm, debug=0):
+	txt_1, txt_2 = get_txt(part_txt, 3000)
+	htm_1, htm_2 = get_txt(part_htm, 30000)
+	s_1, s_2 = min(len(htm_1), len(txt_1)), min(len(htm_2), len(txt_2))
+	idem_ratio_1 = SequenceMatcher(a=htm_1[:s_1], b=txt_1[:s_1]).quick_ratio()
+	idem_ratio_2 = SequenceMatcher(a=htm_2[-s_2:], b=txt_2[-s_2:]).quick_ratio()
+	idem_ratio = (idem_ratio_1 + idem_ratio_2) / 2
+
+	if debug:
+		from os import popen
+		ir = ' '+color_ratio(idem_ratio)
+		rows, columns = popen('stty size', 'r').read().split()
+		PUT_txt = int(columns) - 8
+		PUT_htm = int(columns) - 2
+
+		def put(string, postfix, size):
+			print(string[:size].ljust(size, '.') + postfix, file=stderr)
+
+		# if True:
+		if idem_ratio_1 < LIM:
+			# put((i and B or G) + str(h_t_1),  W + ' <H', PUT_htm - 1)
+			put('\n' + str(htm_1),  W + ' <H', PUT_htm - 1)
+			put(str(txt_1), ' T '+color_ratio(idem_ratio_1)+ir, PUT_txt)
+		# if True:
+		if idem_ratio_2 < LIM:
+			# put((i and B or G) + str(h_t_2), W + ' H>', PUT_htm)
+			put('\n' + str(htm_2), W + ' H>', PUT_htm)
+			put(str(txt_2), ' T '+color_ratio(idem_ratio_2)+ir, PUT_txt)
+
+	return idem_ratio_1 > BON or idem_ratio_2 > BON or idem_ratio > LIM
+
+
+def get_txt(part, raw_len, bad_chars=bad_chars):
+    t = part.get_payload(decode=True)
+    # raw_len < 20000 and print('raw TXT '+t, file=stderr)
+    t_start = t[:raw_len]
+    t_end = t[-raw_len:]
+    t_start = purge_html_re.sub(b'', t_start)
+    # raw_len < 20000 and print(R+'apr purge '+W+t_start, file=stderr)
+    t_start = t_start.translate(None, bad_chars)
+    t_end = purge_html_re.sub(b'', t_end)
+    t_end = t_end.translate(None, bad_chars)
+    return t_start[:LEN], t_end[-LEN:]  # Python 2 ratio() changes its behavior after 199c
+
+
+def color_ratio(ratio):
+    C = ratio < LIM and R or ratio < BON and Y or W
+    return str(C + str(int(ratio*100)) + W)
 
 
 def clone_message(eml):

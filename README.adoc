@@ -7,8 +7,11 @@ https://github.com/nicm/fdm[FDM] or other mail delivery agent.
 
 It tries to be conservative and only acts when things are moderately safe:
 
-* drops the non `text/plain` parts of a `message/alternative` ;
+* drops the non `text/plain` parts of a `message/alternative` with same text content ;
 * in all other cases keep the message intact.
+
+The script inserts a `x-drop-alt` custom email-header which logs the
+content-types of the dropped parts.
 
 == `fdm.conf` example :
 `match all action rewrite "python3 -IOq drop_alternatives.py" continue`

@@ -1,0 +1,99 @@
+# Valid email structures
+
+multipart/alternative -----------------
+	text/plain
+	text/html
+multipart/mixed ----------------------
+	multipart/related
+ 		multipart/alternative
+			text/plain
+			text/html
+		image/gif
+	application/msword
+multipart/alternative -----------------
+	text/plain
+	multipart/related
+		text/html
+		image/gif
+multipart/mixed -----------------------
+    multipart/alternative
+        text/plain
+        text/html
+    text/plain
+multipart/mixed -----------------------
+    multipart/alternative
+        text/plain
+        text/html
+    message/external-body
+        application/octet-stream
+multipart/mixed ----------------------- email_test/20171004-5.eml
+    text/plain
+    message/rfc822
+        multipart/alternative
+            text/plain
+            text/html
+    text/plain
+
+
+# Redundant
+
+multipart/related ----------------------
+    multipart/alternative
+        text/plain
+        text/html
+    message/external-body
+        image/png
+multipart/mixed ------------------------
+    multipart/alternative
+        text/plain
+        text/html
+    message/external-body
+        application/pdf
+multipart/alternative ------------------
+    text/plain
+    multipart/related
+        text/html
+        image/png
+multipart/related ---------------------- 20171122
+    multipart/alternative
+        text/plain
+        text/html
+    message/external-body
+        message/external-body
+            text/plain
+    message/external-body
+        image/jpeg
+    message/external-body
+        image/png
+
+
+# From official Python doc
+
+>>> for part in msg.walk():
+...     print(part.get_content_maintype() == 'multipart',
+...           part.is_multipart())
+True True
+False False
+False True
+False False
+False False
+False True
+False False
+>>> _structure(msg)
+multipart/report
+    text/plain
+    message/delivery-status
+        text/plain
+        text/plain
+    message/rfc822
+        text/plain
+
+>>> for part in msg.walk():
+...     print(part.get_content_type())
+multipart/report
+text/plain
+message/delivery-status
+text/plain
+text/plain
+message/rfc822
+text/plain

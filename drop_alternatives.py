@@ -49,7 +49,7 @@ def drop_alternatives(msg_bytes, debug=0):
 
 					while not sub_part.is_multipart() and len(flat_eml[0]) > 0:
 						x_drop_alt.append(sub_part.get_content_type())
-						sub_part = flat_eml[0].pop(0) # consume intput
+						sub_part = flat_eml[0].pop(0)  # consume intput
 
 					if sub_part.is_multipart():
 						flat_eml[0].insert(0, sub_part)

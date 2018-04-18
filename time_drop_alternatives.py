@@ -48,6 +48,8 @@ Python 3.5.3
 
 2018-04-11 : 34 tests ; 1.65s ; 4.85ms/t (Python 3.5.3 : +8%)
 2018-04-12 : 31 tests ; 0.93s ; 3.00ms/t (major rewrite, act on message/alternative, -3fake tst)
+2018-04-13 : 31 tests ; 0.93s ; 3.00ms/t ('in' -> '==' ; words -> trigrams ; recur -> iter :-( )
+2018-04-14 : 31 tests ; 0.93s ; 3.00ms/t ('==' -> 'startswith' :-( )
 
 """
 

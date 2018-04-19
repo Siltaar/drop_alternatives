@@ -34,7 +34,7 @@ BON = .91
 
 def drop_alternatives(msg_bytes, debug=0):
 	eml = BytesParser().parsebytes(msg_bytes)
-	debug and _structure(eml)
+	# debug and _structure(eml)
 
 	if not eml.is_multipart():
 		debug and print('not eml.is_multipart()', file=stderr)
@@ -106,7 +106,7 @@ def drop_alternatives(msg_bytes, debug=0):
 		flat_eml.pop(0)
 
 	new_eml[0]['x-drop-alt'] = ', '.join(x_drop_alt)
-	debug and _structure(new_eml[0])
+	# debug and _structure(new_eml[0])
 	return new_eml[0]
 
 

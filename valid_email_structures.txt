@@ -37,12 +37,6 @@ multipart/mixed ----------------------- email_test/20171004-5.eml
 
 # Redundant
 
-multipart/related ----------------------
-    multipart/alternative
-        text/plain
-        text/html
-    message/external-body
-        image/png
 multipart/mixed ------------------------
     multipart/alternative
         text/plain
@@ -53,6 +47,12 @@ multipart/alternative ------------------
     text/plain
     multipart/related
         text/html
+        image/png
+multipart/related ----------------------
+    multipart/alternative
+        text/plain
+        text/html
+    message/external-body
         image/png
 multipart/related ---------------------- 20171122
     multipart/alternative
@@ -65,6 +65,16 @@ multipart/related ---------------------- 20171122
         image/jpeg
     message/external-body
         image/png
+multipart/mixed ------------------------ 20180418
+    multipart/related -> considered as a sub-message…
+        multipart/alternative
+            text/plain
+            text/html
+        message/external-body
+            image/jpeg
+        message/external-body
+            image/jpeg
+    text/plain
 
 
 # From official Python doc

@@ -50,23 +50,24 @@ def drop_alternatives(msg_bytes, debug=0):
 	while len(flat_eml) > 0:
 		while len(flat_eml[0]) > 0:
 			part = flat_eml[0].pop(0)
-			debug and print(part.get_content_type(), end='', file=stderr)
+			debug and print(part.get_content_type(), end=' ', file=stderr)
+			part_content_type = part.get_content_type()
 
-			if part.get_content_subtype().startswith('alt') and len(flat_eml[0]) > 1:
+			if 'alternative' in part_content_type and len(flat_eml[0]) > 1:
 				candidate_txt = flat_eml[0].pop(0)
 				keep_part(new_eml[0], candidate_txt, x_drop_alt, '', debug)
-				debug and print(' txt '+candidate_txt.get_content_type(), end='', file=stderr)
+				debug and print('txt '+candidate_txt.get_content_type(), end=' ', file=stderr)
 
 				candidate_htm = flat_eml[0].pop(0)
-				debug and print(' htm '+candidate_htm.get_content_type(), end='', file=stderr)
+				debug and print('htm '+candidate_htm.get_content_type(), end=' ', file=stderr)
 				candidate_htm_subtype = candidate_htm.get_content_subtype()
 
-				if candidate_htm_subtype.startswith('htm'):  # html
+				if 'html' in candidate_htm_subtype:
 					if are_idem_txt(candidate_txt, candidate_htm, debug):
 						x_drop_alt.append(candidate_htm_subtype)
 					else:
 						keep_part(new_eml[0], candidate_htm, x_drop_alt, ' htm diff ', debug)
-				elif candidate_htm_subtype.startswith('rel'):  # related
+				elif 'related' in candidate_htm_subtype:
 					sub_part = flat_eml[0].pop(0)
 
 					while not sub_part.is_multipart() and len(flat_eml[0]) > 0:
@@ -85,13 +86,15 @@ def drop_alternatives(msg_bytes, debug=0):
 						flat_eml[0].insert(0, sub_part)
 				else:  # unknown configuration yet
 					keep_part(new_eml[0], candidate_htm, x_drop_alt, ' new case ? ', debug)
-			elif part.get_content_maintype().startswith('me'):  # message
+			elif 'message' in part_content_type:
 				debug and print(' clne', file=stderr)
 				flat_sub_eml = [sub_part for sub_part in part.walk()]
 				flat_sub_eml.pop(0)  # replaced by multipart/mixed
 				flat_eml[0] = flat_eml[0][len(flat_sub_eml):]  # consume input
 				flat_eml.insert(0, flat_sub_eml)
 				new_eml.insert(0, clone_message(part))
+			elif 'related' in part_content_type:
+				debug and print('drop rel', file=stderr)
 			else:
 				new_eml[0].attach(part)
 				debug and print('	 kept', file=stderr)
@@ -108,9 +111,11 @@ def drop_alternatives(msg_bytes, debug=0):
 
 
 def keep_part(new_eml, part, x_drop_alt, why, debug=0):
-	debug and print(why, file=stderr)
-	x_drop_alt.append(why)
 	new_eml.attach(part)
+
+	if why:
+		debug and print(why, end='', file=stderr)
+		x_drop_alt.append(why)
 
 
 def are_idem_txt(part_txt, part_htm, debug=0):
@@ -147,11 +152,9 @@ def are_idem_txt(part_txt, part_htm, debug=0):
 
 def get_txt(part, raw_len, bad_chars=bad_chars):
 	t = part.get_payload(decode=True)
-	# raw_len < 20000 and print('raw TXT '+t, file=stderr)
 	t_start = t[:raw_len]
 	t_end = t[-raw_len:]
 	t_start = purge_html_re.sub(b'', t_start)
-	# raw_len < 20000 and print(R+'apr purge '+W+t_start, file=stderr)
 	t_start = t_start.translate(None, bad_chars)
 	t_end = purge_html_re.sub(b'', t_end)
 	t_end = t_end.translate(None, bad_chars)
@@ -168,10 +171,9 @@ def clone_message(eml):
 
 	for k, v in eml.items():  # `eml` have only headers as its items
 		if k not in ["content-length", "content-type", "lines", "status"]:  # unwanted fields
-			# Python will set its own Content-Type line in any case
-			# Content-Length would change if a part is dropped
-			# Lines idem
-			# Status unknown
+			# Python will set its own Content-Type and Content-Length lines in any case
+			# Lines may change anyway
+			# What is Status ?
 			new_eml[k] = v
 
 	new_eml.preamble = eml.preamble
@@ -183,7 +185,7 @@ def clone_message(eml):
 	return new_eml
 
 
-DEBUG = 1
+DEBUG = 0
 
 
 if __name__ == "__main__":

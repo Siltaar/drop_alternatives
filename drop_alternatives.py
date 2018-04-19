@@ -7,7 +7,7 @@
 from email.parser import BytesParser
 from email.mime.multipart import MIMEMultipart
 from email.iterators import _structure	# noqa
-from sys import stdin, stderr
+from sys import stdin, stderr, argv
 from difflib import SequenceMatcher
 from re import DOTALL, compile as compile_re
 
@@ -185,10 +185,15 @@ def clone_message(eml):
 	return new_eml
 
 
-DEBUG = 0
-
-
 if __name__ == "__main__":
+	DEBUG = 0
+
+	for i, arg in enumerate(argv):
+		if i == 0:  # 1st arg of argv is the program name
+			continue
+		elif '--debug' in arg:
+			DEBUG = 1
+
 	if DEBUG:
 		drop_alternatives(stdin.buffer.raw.read(), DEBUG)
 	else:

@@ -53,30 +53,31 @@ def drop_alternatives(msg_bytes, debug=0):
 			debug and print(part.get_content_type(), end=' ', file=stderr)
 			part_content_type = part.get_content_type()
 
-			if 'alternative' in part_content_type and len(flat_eml[0]) > 1:
+			if 'alt' in part_content_type and len(flat_eml[0]) > 1:  # alternative
 				candidate_txt = flat_eml[0].pop(0)
-				keep_part(new_eml[0], candidate_txt, x_drop_alt, '', debug)
+				new_eml[0].attach(candidate_txt)
 				debug and print('txt '+candidate_txt.get_content_type(), end=' ', file=stderr)
 
 				candidate_htm = flat_eml[0].pop(0)
 				debug and print('htm '+candidate_htm.get_content_type(), end=' ', file=stderr)
 				candidate_htm_subtype = candidate_htm.get_content_subtype()
 
-				if 'html' in candidate_htm_subtype:
+				if 'htm' in candidate_htm_subtype:  # html
 					if are_idem_txt(candidate_txt, candidate_htm, debug):
 						x_drop_alt.append(candidate_htm_subtype)
 					else:
-						keep_part(new_eml[0], candidate_htm, x_drop_alt, ' htm diff ', debug)
-				elif 'related' in candidate_htm_subtype:
+						new_eml[0].attach(candidate_htm)
+						debug and print('htm diff', end=' ', file=stderr)
+				elif 'rel' in candidate_htm_subtype:  # related
 					sub_part = flat_eml[0].pop(0)
 
 					while not sub_part.is_multipart() and len(flat_eml[0]) > 0:
 						if sub_part.get_content_subtype().startswith('htm'):
 							if are_idem_txt(candidate_txt, sub_part, debug):
-								x_drop_alt.append(candidate_htm_subtype)
+								x_drop_alt.append(sub_part.get_content_subtype())
 							else:
-								keep_part(
-									new_eml[0], sub_part, x_drop_alt, ' rel htm diff ', debug)
+								new_eml[0].attach(sub_part)
+								debug and print('rel htm diff', end=' ', file=stderr)
 						else:
 							x_drop_alt.append(sub_part.get_content_type())
 
@@ -85,15 +86,16 @@ def drop_alternatives(msg_bytes, debug=0):
 					if sub_part.is_multipart():
 						flat_eml[0].insert(0, sub_part)
 				else:  # unknown configuration yet
-					keep_part(new_eml[0], candidate_htm, x_drop_alt, ' new case ? ', debug)
-			elif 'message' in part_content_type:
+					new_eml[0].attach(candidate_htm)
+					debug and print('new configuration ?', end=' ', file=stderr)
+			elif 'me' in part_content_type:  # message
 				debug and print(' clne', file=stderr)
 				flat_sub_eml = [sub_part for sub_part in part.walk()]
 				flat_sub_eml.pop(0)  # replaced by multipart/mixed
 				flat_eml[0] = flat_eml[0][len(flat_sub_eml):]  # consume input
 				flat_eml.insert(0, flat_sub_eml)
 				new_eml.insert(0, clone_message(part))
-			elif 'related' in part_content_type:
+			elif 'rel' in part_content_type:  # related
 				debug and print('drop rel', file=stderr)
 			else:
 				new_eml[0].attach(part)
@@ -108,14 +110,6 @@ def drop_alternatives(msg_bytes, debug=0):
 	new_eml[0]['x-drop-alt'] = ', '.join(x_drop_alt)
 	# debug and _structure(new_eml[0])
 	return new_eml[0]
-
-
-def keep_part(new_eml, part, x_drop_alt, why, debug=0):
-	new_eml.attach(part)
-
-	if why:
-		debug and print(why, end='', file=stderr)
-		x_drop_alt.append(why)
 
 
 def are_idem_txt(part_txt, part_htm, debug=0):
@@ -197,4 +191,7 @@ if __name__ == "__main__":
 	if DEBUG:
 		drop_alternatives(stdin.buffer.raw.read(), DEBUG)
 	else:
-		print(drop_alternatives(stdin.buffer.raw.read()))
+		input_eml = stdin.buffer.raw.read()
+		output_eml = drop_alternatives(input_eml)
+		str_eml = str(output_eml.as_bytes(), errors='replace')
+		print(str_eml)

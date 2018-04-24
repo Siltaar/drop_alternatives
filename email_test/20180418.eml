@@ -1,0 +1,277 @@
+Content-Type: multipart/mixed; boundary="----------=_1524073510-5813-233145"
+MIME-Version: 1.0
+Return-Path: <bbb-owner@framalistes.org>
+Delivered-To: aaa@aaa.aa
+X-policyd-weight: using cached result; rate: -6.1
+Authentication-Results: ggg.globenet.org; dkim=pass
+	reason="1024-bit key; insecure key"
+	header.d=framalistes.org header.i=bbb-request@framalistes.org
+	header.b=A2mC2lJD; dkim-adsp=pass; dkim-atps=neutral
+Received: by eee (fdm 1.9, account "fff")
+	with imap (version=TLSv1/SSLv3 DHE-RSA-AES256-GCM-SHA384 256 bits)
+	Wed, 18 Apr 2018 19:49:01 +0200
+Received: from rod2.framasoft.org (rod2.framasoft.org [94.130.212.188])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by ggg.globenet.org (Postfix) with ESMTPS id C92A5760E3
+	for <aaa@aaa.aa>; Wed, 18 Apr 2018 19:45:18 +0200 (CEST)
+Received: by rod2.framasoft.org (Postfix, from userid 1006)
+	id 315AA14289D; Wed, 18 Apr 2018 19:45:14 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=framalistes.org; h=from:to
+	:date:message-id:mime-version:subject:reply-to:sender:list-id
+	:list-help:list-subscribe:list-unsubscribe:list-post:list-owner
+	:list-archive:content-type; s=dkim; i=
+	bbb-request@framalistes.org; bh=mu6nWU62tI+P1SBVHggywkT+gr
+	8=; b=A2mC2lJDj3evCSoxzqOIL99RJxxiVoJklX2G5KzxePYt484yw6quA7TSue
+	ABH9tdldQ5+oNtGOud0XNKPciNA7I1gOOSmUqX32zpbYrVHzyTWavCF2xxo8/MsN
+	HvsyU3UV9FPZYyzsjIVo3M7G0w3ETnmyd1bKNYjt70h6oEkZk=
+X-Original-To: bbb@framalistes.org
+Delivered-To: bbb@framalistes.org
+Received: from EUR01-HE1-obe.outbound.protection.outlook.com (mail-oln040092065093.outbound.protection.outlook.com [40.92.65.93])
+	by rod2.framasoft.org (Postfix) with ESMTPS id BC998142603
+	for <bbb@framalistes.org>; Wed, 18 Apr 2018 19:45:03 +0200 (CEST)
+Received: from HE1EUR01FT021.eop-EUR01.prod.protection.outlook.com
+ (10.152.0.59) by HE1EUR01HT131.eop-EUR01.prod.protection.outlook.com
+ (10.152.1.50) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P384) id 15.20.675.14; Wed, 18
+ Apr 2018 17:30:51 +0000
+Received: from AM2PR01MB0418.eurprd01.prod.exchangelabs.com (10.152.0.59) by
+ HE1EUR01FT021.mail.protection.outlook.com (10.152.0.167) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id
+ 15.20.675.14 via Frontend Transport; Wed, 18 Apr 2018 17:30:51 +0000
+Received: from AM2PR01MB0418.eurprd01.prod.exchangelabs.com
+ ([fe80::dd03:2d15:c62a:bdd7]) by AM2PR01MB0418.eurprd01.prod.exchangelabs.com
+ ([fe80::dd03:2d15:c62a:bdd7%5]) with mapi id 15.20.0696.011; Wed, 18 Apr 2018
+ 17:30:51 +0000
+From: "DDD ddd" (via bbb Mailing List) <bbb@framalistes.org>
+To: le hhh Framalist <bbb@framalistes.org>
+Thread-Topic: =?utf-8?B?Q29uY2VydCBhdSBDb3VybGlzIMOgIENvdXJsYXkgY2Ugc2FtZWRpIDIxIGF2?=
+ =?utf-8?Q?ril?=
+Thread-Index: AQHT1zr+DxvNPUJvFEmooSAtWjWDhA==
+Date: Wed, 18 Apr 2018 17:30:51 +0000
+Message-ID: <AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60@AM2PR01MB0418.eurprd01.prod.exchangelabs.com>
+Accept-Language: fr-FR, en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+x-incomingtopheadermarker: OriginalChecksum:17CB0480424031037A98FE93256F7D06E0CCA75A79FB6DEFBE453B0337E45452;UpperCasedChecksum:2BBCC39BE751E0FF51CDE661A03E995E9628591C30B35B41989DA832D51DC446;SizeAsReceived:7127;Count:44
+x-ms-exchange-messagesentrepresentingtype: 1
+x-tmn: [OVPoagCHxSrAO1KumSLmmspl0PoUPPnZ7RgjLeBKWNTRIQ2pfndQv3xE7SLh6cSP]
+x-ms-publictraffictype: Email
+x-microsoft-exchange-diagnostics: 1;HE1EUR01HT131;7:Gs0jXZA6owMQvyG33NTRClvmbSDMj3fCErxh6AiIny5zeNPLQFrx8KtJzaXOClLdhIU5uti24yC54Y/6oiX1bx73OdgkiLkpyCcSBCICwOrQr9DJ4oE+3JG/wBNGmVPxitDiOrv4d+pcswgHF4sFbTijxSLGVtx8Vggg3dIEemMLPEly+UO5btATtZM6h+CqoeGyld3lb+/7uMuImV5iCGbQRukNPSMvReVqIHnttbWmAdkHf5TZysJyO9KKqgfy
+x-incomingheadercount: 44
+x-eopattributedmessage: 0
+x-microsoft-antispam: UriScan:;BCL:0;PCL:0;RULEID:(7020095)(201702061078)(5061506573)(5061507331)(1603103135)(2017031320274)(2017031324274)(2017031323274)(2017031322404)(1601125374)(1603101448)(1701031045);SRVR:HE1EUR01HT131;
+x-ms-traffictypediagnostic: HE1EUR01HT131:
+x-exchange-antispam-report-cfa-test: BCL:0;PCL:0;RULEID:(444000031);SRVR:HE1EUR01HT131;BCL:0;PCL:0;RULEID:;SRVR:HE1EUR01HT131;
+x-forefront-prvs: 06469BCC91
+x-forefront-antispam-report: SFV:NSPM;SFS:(7070007)(98901004);DIR:OUT;SFP:1901;SCL:1;SRVR:HE1EUR01HT131;H:AM2PR01MB0418.eurprd01.prod.exchangelabs.com;FPR:;SPF:None;LANG:;
+x-microsoft-antispam-message-info: KzFQh4EOUTHV+USxX2uclDzZ7yIVCS1/WCEDxdVMpCn++I1GLbsXsOTtEFURAGYeJT9gAHutHIVuhwUXa9ScJliK58FmqtzjzrXpudLK9Zic/csGu7tZZxtFcCwWN9ryAM7uk/xlHMG/sjqNE3NsZ211oMg19XKoJcq7UJ/6LDAv/l3utIa28z1dfL1eOL9L
+MIME-Version: 1.0
+X-MS-Office365-Filtering-Correlation-Id: 5b905dbd-7bc2-44bf-db47-08d5a5521ade
+X-OriginatorOrg: hotmail.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: d4d70346-2c10-4f39-8c00-e767963926d9
+X-MS-Exchange-CrossTenant-Network-Message-Id: 5b905dbd-7bc2-44bf-db47-08d5a5521ade
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: d4d70346-2c10-4f39-8c00-e767963926d9
+X-MS-Exchange-CrossTenant-originalarrivaltime: 18 Apr 2018 17:30:51.2697
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Internet
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: HE1EUR01HT131
+Subject: [bbb] Concert au hhh =?UTF-8?Q?=C3=A0?= Courlay ce samedi
+ 21 avril
+Reply-To: DDD ddd <ccc@hotmail.com>
+X-Loop: bbb@framalistes.org
+X-Sequence: 29
+Errors-To: bbb-owner@framalistes.org
+Precedence: list
+Precedence: bulk
+Sender: bbb-request@framalistes.org
+X-no-archive: yes
+List-Id: <bbb.framalistes.org>
+List-Help: <mailto:sympa@framalistes.org?subject=help>
+List-Subscribe: <mailto:sympa@framalistes.org?subject=subscribe%20bbb>
+List-Unsubscribe: <mailto:sympa@framalistes.org?subject=unsubscribe%20bbb>
+List-Post: <mailto:bbb@framalistes.org>
+List-Owner: <mailto:bbb-request@framalistes.org>
+List-Archive: <https://framalistes.org/sympa/arc/bbb>
+Archived-At: <https://framalistes.org/sympa/arcsearch_id/bbb/2018-04/AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60%40AM2PR01MB0418.eurprd01.prod.exchangelabs.com>
+Content-type: multipart/mixed; boundary="----------=_1524073510-5813-233145"
+X-Original-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version;
+ bh=eWJmZ0xo9Rme7JXTmp22lNzfhELrliwuHPffAdKDwaY=;
+ b=l76Z9f5IDuIQJH5ig0PxijOi36Vqbk1slR2riBYT1Ha484hw88j3gfrM8bwmeJWhPZB46BngHeoHQy5qvfWwnYCGmgLMGrsZlPNRmkGXdAgKcAPL1Y4XJWcmq80abbyMClj7F/jQjlU/S+R+2UaqobJDJZaDsxHHDdJhyMg11kYDxsuTRYKiNZC/yVkNLVCzxjkUUkLgltVPyMeusWkFyiT40/k6tiiXtFO513BXaU/ikNyEvhadhMDUzoQNWeTYiJ7kB5qTOLAloEgggX3WeHhNf5mGp3oM5M/hc0RuHFbIUNq3J4ydblrEByxJW76nUbK0ETM75Kl6lpINUMSwww==
+X-Original-From: DDD ddd <ccc@hotmail.com>
+x-drop-alt: , html
+Content-Length: 8252
+
+This is a multi-part message in MIME format...
+
+------------=_1524073510-5813-233145
+Content-Language: en-US
+Content-Type: multipart/related;
+	boundary="_005_AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60AM2PR01MB0418eurp_";
+	type="multipart/alternative"
+
+--_005_AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60AM2PR01MB0418eurp_
+Content-Type: multipart/alternative;
+	boundary="_000_AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60AM2PR01MB0418eurp_"
+
+--_000_AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60AM2PR01MB0418eurp_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+Qm9uam91ciwNCg0Kdm91cyBhaW1leiBsZXMgY2hhbnRldXJzIGRlcyBhbm7D
+qWVzIDgwPw0KDQp2ZW5leiBmcmVkb25uZXIsIGNoYW50ZXIgdm9pcmUgZGFu
+c2VyIGF2ZWMgbm91cy4NCg0KW2NpZDpwYXJ0MS5GOEU4ODY0Qi4zRkFFMjAz
+MEBob3RtYWlsLmNvbV1bY2lkOnBhcnQyLjgyNkI4QjA5LjI4RkRDOERCQGhv
+dG1haWwuY29tXQ0KDQpTbmFjayBzdXIgcGxhY2UsIGF2YW50LCBwZW5kYW50
+IGV0IMOgIGwnZW50cmFjdGUuDQoNCi0tDQpBcm1lbGxlIExFR1JBTkQNCkxh
+IEdvdW1hbmRpw6hyZQ0KNzk0MzAgTGEgQ2hhcGVsbGUgU2FpbnQgTGF1cmVu
+dA0KMDYgODUgNDYgNTYgNDENCg0KW2h0dHBzOi8vaXBtY2RuLmF2YXN0LmNv
+bS9pbWFnZXMvaWNvbnMvaWNvbi1lbnZlbG9wZS10aWNrLXJvdW5kLW9yYW5n
+ZS1hbmltYXRlZC1uby1yZXBlYXQtdjEuZ2lmXTxodHRwczovL3d3dy5hdmFz
+dC5jb20vc2lnLWVtYWlsP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1s
+aW5rJnV0bV9jYW1wYWlnbj1zaWctZW1haWwmdXRtX2NvbnRlbnQ9ZW1haWxj
+bGllbnQ+ICAgICAgR2FyYW50aSBzYW5zIHZpcnVzLiB3d3cuYXZhc3QuY29t
+PGh0dHBzOi8vd3d3LmF2YXN0LmNvbS9zaWctZW1haWw/dXRtX21lZGl1bT1l
+bWFpbCZ1dG1fc291cmNlPWxpbmsmdXRtX2NhbXBhaWduPXNpZy1lbWFpbCZ1
+dG1fY29udGVudD1lbWFpbGNsaWVudD4NCg==
+
+--_000_AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60AM2PR01MB0418eurp_
+Content-Type: text/html; charset="utf-8"
+Content-ID: <9735561F59E4124DAC6EF3AC7A315130@eurprd01.prod.exchangelabs.com>
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlw
+ZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjwvaGVh
+ZD4NCjxib2R5IHRleHQ9IiMwMDAwMDAiIGJnY29sb3I9IiNGRkZGRkYiPg0K
+PHA+Qm9uam91ciw8L3A+DQo8cD52b3VzIGFpbWV6IGxlcyBjaGFudGV1cnMg
+ZGVzIGFubsOpZXMgODA/PC9wPg0KPHA+dmVuZXogZnJlZG9ubmVyLCBjaGFu
+dGVyIHZvaXJlIGRhbnNlciBhdmVjIG5vdXMuPC9wPg0KPGltZyBtb3otZG8t
+bm90LXNlbmQ9ImZhbHNlIiBzcmM9ImNpZDpwYXJ0MS5GOEU4ODY0Qi4zRkFF
+MjAzMEBob3RtYWlsLmNvbSIgYWx0PSIiIGhlaWdodD0iMjgxIiB3aWR0aD0i
+Mzc1Ij48aW1nIG1vei1kby1ub3Qtc2VuZD0iZmFsc2UiIHNyYz0iY2lkOnBh
+cnQyLjgyNkI4QjA5LjI4RkRDOERCQGhvdG1haWwuY29tIiBhbHQ9IiIgaGVp
+Z2h0PSIyNzkiIHdpZHRoPSIxOTYiPg0KPHA+U25hY2sgc3VyIHBsYWNlLCBh
+dmFudCwgcGVuZGFudCBldCDDoCBsJ2VudHJhY3RlLjxicj4NCjwvcD4NCjxw
+cmUgY2xhc3M9Im1vei1zaWduYXR1cmUiIGNvbHM9IjcyIj4tLSANCkFybWVs
+bGUgTEVHUkFORA0KTGEgR291bWFuZGnDqHJlDQo3OTQzMCBMYSBDaGFwZWxs
+ZSBTYWludCBMYXVyZW50DQowNiA4NSA0NiA1NiA0MTwvcHJlPg0KPGRpdiBp
+ZD0iREFCNEZBRDgtMkRENy00MEJCLUExQjgtNEUyQUExRjlGREYyIj48YnI+
+DQo8dGFibGUgc3R5bGU9ImJvcmRlci10b3A6IDFweCBzb2xpZCAjRDNENERF
+OyI+DQo8dGJvZHk+DQo8dHI+DQo8dGQgc3R5bGU9IndpZHRoOiA1NXB4OyBw
+YWRkaW5nLXRvcDogMThweDsiPjxhIGhyZWY9Imh0dHBzOi8vd3d3LmF2YXN0
+LmNvbS9zaWctZW1haWw/dXRtX21lZGl1bT1lbWFpbCZhbXA7dXRtX3NvdXJj
+ZT1saW5rJmFtcDt1dG1fY2FtcGFpZ249c2lnLWVtYWlsJmFtcDt1dG1fY29u
+dGVudD1lbWFpbGNsaWVudCIgdGFyZ2V0PSJfYmxhbmsiPjxpbWcgc3JjPSJo
+dHRwczovL2lwbWNkbi5hdmFzdC5jb20vaW1hZ2VzL2ljb25zL2ljb24tZW52
+ZWxvcGUtdGljay1yb3VuZC1vcmFuZ2UtYW5pbWF0ZWQtbm8tcmVwZWF0LXYx
+LmdpZiIgYWx0PSIiIHdpZHRoPSI0NiIgaGVpZ2h0PSIyOSIgc3R5bGU9Indp
+ZHRoOiA0NnB4OyBoZWlnaHQ6IDI5cHg7Ij48L2E+PC90ZD4NCjx0ZCBzdHls
+ZT0id2lkdGg6IDQ3MHB4OyBwYWRkaW5nLXRvcDogMTdweDsgY29sb3I6ICM0
+MTQyNGU7IGZvbnQtc2l6ZTogMTNweDsgZm9udC1mYW1pbHk6IEFyaWFsLCBI
+ZWx2ZXRpY2EsIHNhbnMtc2VyaWY7IGxpbmUtaGVpZ2h0OiAxOHB4OyI+DQpH
+YXJhbnRpIHNhbnMgdmlydXMuIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmF2YXN0
+LmNvbS9zaWctZW1haWw/dXRtX21lZGl1bT1lbWFpbCZhbXA7dXRtX3NvdXJj
+ZT1saW5rJmFtcDt1dG1fY2FtcGFpZ249c2lnLWVtYWlsJmFtcDt1dG1fY29u
+dGVudD1lbWFpbGNsaWVudCIgdGFyZ2V0PSJfYmxhbmsiIHN0eWxlPSJjb2xv
+cjogIzQ0NTNlYTsiPg0Kd3d3LmF2YXN0LmNvbTwvYT4gPC90ZD4NCjwvdHI+
+DQo8L3Rib2R5Pg0KPC90YWJsZT4NCjxhIGhyZWY9IiNEQUI0RkFEOC0yREQ3
+LTQwQkItQTFCOC00RTJBQTFGOUZERjIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEi
+PjwvYT48L2Rpdj4NCjwvYm9keT4NCjwvaHRtbD4NCg==
+
+--_000_AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60AM2PR01MB0418eurp_--
+
+--_005_AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60AM2PR01MB0418eurp_
+Content-Type: message/external-body; access-type=x-mutt-deleted;
+	expiration="Wed, 18 Apr 2018 19:54:00 +0200"; length=119329
+
+Content-Type: image/jpeg; name="salle concert.jpg"
+Content-Description: salle concert.jpg
+Content-Disposition: inline; filename="salle concert.jpg"; size=88029;
+	creation-date="Wed, 18 Apr 2018 17:30:49 GMT";
+	modification-date="Wed, 18 Apr 2018 17:30:49 GMT"
+Content-ID: <part1.F8E8864B.3FAE2030@hotmail.com>
+Content-Transfer-Encoding: base64
+
+
+--_005_AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60AM2PR01MB0418eurp_
+Content-Type: message/external-body; access-type=x-mutt-deleted;
+	expiration="Wed, 18 Apr 2018 19:54:00 +0200"; length=440339
+
+Content-Type: image/jpeg; name="affiche concert 21 avril 2018.jpg"
+Content-Description: affiche concert 21 avril 2018.jpg
+Content-Disposition: inline; filename="affiche concert 21 avril 2018.jpg";
+	size=324840; creation-date="Wed, 18 Apr 2018 17:30:49 GMT";
+	modification-date="Wed, 18 Apr 2018 17:30:49 GMT"
+Content-ID: <part2.826B8B09.28FDC8DB@hotmail.com>
+Content-Transfer-Encoding: base64
+
+
+--_005_AM2PR01MB0418EE7FE0D0E918A0CB47B1BEB60AM2PR01MB0418eurp_--
+
+------------=_1524073510-5813-233145
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+Qm9uam91ciwNCg0Kdm91cyBhaW1leiBsZXMgY2hhbnRldXJzIGRlcyBhbm7D
+qWVzIDgwPw0KDQp2ZW5leiBmcmVkb25uZXIsIGNoYW50ZXIgdm9pcmUgZGFu
+c2VyIGF2ZWMgbm91cy4NCg0KW2NpZDpwYXJ0MS5GOEU4ODY0Qi4zRkFFMjAz
+MEBob3RtYWlsLmNvbV1bY2lkOnBhcnQyLjgyNkI4QjA5LjI4RkRDOERCQGhv
+dG1haWwuY29tXQ0KDQpTbmFjayBzdXIgcGxhY2UsIGF2YW50LCBwZW5kYW50
+IGV0IMOgIGwnZW50cmFjdGUuDQoNCi0tDQpBcm1lbGxlIExFR1JBTkQNCkxh
+IEdvdW1hbmRpw6hyZQ0KNzk0MzAgTGEgQ2hhcGVsbGUgU2FpbnQgTGF1cmVu
+dA0KMDYgODUgNDYgNTYgNDENCg0KW2h0dHBzOi8vaXBtY2RuLmF2YXN0LmNv
+bS9pbWFnZXMvaWNvbnMvaWNvbi1lbnZlbG9wZS10aWNrLXJvdW5kLW9yYW5n
+ZS1hbmltYXRlZC1uby1yZXBlYXQtdjEuZ2lmXTxodHRwczovL3d3dy5hdmFz
+dC5jb20vc2lnLWVtYWlsP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1s
+aW5rJnV0bV9jYW1wYWlnbj1zaWctZW1haWwmdXRtX2NvbnRlbnQ9ZW1haWxj
+bGllbnQ+ICAgICAgR2FyYW50aSBzYW5zIHZpcnVzLiB3d3cuYXZhc3QuY29t
+PGh0dHBzOi8vd3d3LmF2YXN0LmNvbS9zaWctZW1haWw/dXRtX21lZGl1bT1l
+bWFpbCZ1dG1fc291cmNlPWxpbmsmdXRtX2NhbXBhaWduPXNpZy1lbWFpbCZ1
+dG1fY29udGVudD1lbWFpbGNsaWVudD4NCg==
+
+------------=_1524073510-5813-233145
+Content-Type: message/external-body; access-type=x-mutt-deleted;
+	expiration="Wed, 18 Apr 2018 19:54:00 +0200"; length=119329
+
+Content-Type: image/jpeg; name="salle concert.jpg"
+Content-Description: salle concert.jpg
+Content-Disposition: inline; filename="salle concert.jpg"; size=88029;
+	creation-date="Wed, 18 Apr 2018 17:30:49 GMT";
+	modification-date="Wed, 18 Apr 2018 17:30:49 GMT"
+Content-ID: <part1.F8E8864B.3FAE2030@hotmail.com>
+Content-Transfer-Encoding: base64
+
+
+------------=_1524073510-5813-233145
+Content-Type: message/external-body; access-type=x-mutt-deleted;
+	expiration="Wed, 18 Apr 2018 19:54:00 +0200"; length=440339
+
+Content-Type: image/jpeg; name="affiche concert 21 avril 2018.jpg"
+Content-Description: affiche concert 21 avril 2018.jpg
+Content-Disposition: inline; filename="affiche concert 21 avril 2018.jpg";
+	size=324840; creation-date="Wed, 18 Apr 2018 17:30:49 GMT";
+	modification-date="Wed, 18 Apr 2018 17:30:49 GMT"
+Content-ID: <part2.826B8B09.28FDC8DB@hotmail.com>
+Content-Transfer-Encoding: base64
+
+
+------------=_1524073510-5813-233145
+Content-Type: text/plain; charset="utf-8"
+Content-Disposition: inline
+Content-Transfer-Encoding: base64
+
+Ci0tIApWb3VzIHJlY2V2ZXogY2V0IGVtYWlsIGNhciB2b3VzIMOqdGVzIGFib25uw6nCt2Ugw6Ag
+bGEgbGlzdGUgImxlY291cmxpcyIuClBvdXIgdm91cyBkw6lzYWJvbm5lciwgbWVyY2kgZGUgY2xp
+cXVlciBzdXIgY2UgbGllbiA6IGh0dHBzOi8vZnJhbWFsaXN0ZXMub3JnL3N5bXBhL3NpZ3JlcXVl
+c3QvbGVjb3VybGlzCm91IGQnZW52b3llciB1biBtYWlsIMOgIHN5bXBhQGZyYW1hbGlzdGVzLm9y
+ZyBhdmVjIGNvbW1lIHN1amV0ICJ1bnN1YnNjcmliZSBsZWNvdXJsaXMiCgpZb3UgcmVjZWl2ZSB0
+aGlzIGVtYWlsIHNpbmNlIHlvdSBzdWJzY3JpYmVkIHRvIHRoZSBsaXN0ICJsZWNvdXJsaXMiLgpU
+byB1bnN1YnNjcmliZSwgY2xpY2sgb24gZm9sbG93aW5nIGxpbms6IGh0dHBzOi8vZnJhbWFsaXN0
+ZXMub3JnL3N5bXBhL3NpZ3JlcXVlc3QvbGVjb3VybGlzCm9yIHNlbmQgYW4gZW1haWwgdG8gc3lt
+cGFAZnJhbWFsaXN0ZXMub3JnIHdpdGggdGhlIHN1YmplY3Q6IHVuc3Vic2NyaWJlIGxlY291cmxp
+cwo=
+
+------------=_1524073510-5813-233145--
+

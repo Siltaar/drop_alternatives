@@ -37,11 +37,16 @@ def drop_alternatives(msg_bytes, debug=0):
 	# debug and _structure(eml)
 
 	if not eml.is_multipart():
-		debug and print('not eml.is_multipart()', file=stderr)
+		debug and print('not multipart', file=stderr)
 		return eml
 
 	x_drop_alt = []
 	flat_eml = [[part for part in eml.walk()]]
+
+	if not len([part for part in eml.walk() if 'htm' in part.get_content_subtype()]):
+		debug and print('no HTML to drop', file=stderr)
+		return eml
+
 	new_eml = [clone_message(eml)]
 
 	if not eml.get_content_subtype().startswith('alt'):  # alternative
@@ -107,9 +112,12 @@ def drop_alternatives(msg_bytes, debug=0):
 
 		flat_eml.pop(0)
 
-	new_eml[0]['x-drop-alt'] = ', '.join(x_drop_alt)
-	# debug and _structure(new_eml[0])
-	return new_eml[0]
+	if len(x_drop_alt):
+		new_eml[0]['x-drop-alt'] = ', '.join(x_drop_alt)
+		# debug and _structure(new_eml[0])
+		return new_eml[0]
+	else:
+		return eml
 
 
 def are_idem_txt(part_txt, part_htm, debug=0):
@@ -194,4 +202,4 @@ if __name__ == "__main__":
 		input_eml = stdin.buffer.raw.read()
 		output_eml = drop_alternatives(input_eml)
 		str_eml = str(output_eml.as_bytes(), errors='replace')
-		print(str_eml)
+		print(str_eml, end='')

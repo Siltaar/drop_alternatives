@@ -52,6 +52,7 @@ Python 3.5.3
 2018-04-14 : 31 tests ; 0.93s ; 3.00ms/t ('==' -> 'startswith' :-( )
 2018-04-16 : 34 tests ; 1.72s ; 5.05ms/t (re-insert comparison stuff)
 2018-04-19 : 36 tests ; 2.78s ; 7.72ms/t (real testcases are slower, line_profile analysis)
+2018-04-24 : 37 tests ; 2.79s ; 7.54ms/t (new hyp test on skip treatment trigger)
 
 """
 

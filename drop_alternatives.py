@@ -47,23 +47,24 @@ def drop_alternatives(msg_bytes, debug=0):
 		debug and print('no HTML to drop', file=stderr)
 		return eml
 
+	flat_eml[0].reverse()
 	new_eml = [clone_message(eml)]
 
-	if not eml.get_content_subtype().startswith('alt'):  # alternative
-		flat_eml[0].pop(0)  # replaced by multipart/mixed
+	if 'alt' not in eml.get_content_subtype():  # alternative
+		flat_eml[0].pop()  # replaced by multipart/mixed
 
 	while len(flat_eml) > 0:
-		while len(flat_eml[0]) > 0:
-			part = flat_eml[0].pop(0)
+		while len(flat_eml[-1]) > 0:
+			part = flat_eml[-1].pop()
 			debug and print(part.get_content_type(), end=' ', file=stderr)
 			part_content_type = part.get_content_type()
 
-			if 'alt' in part_content_type and len(flat_eml[0]) > 1:  # alternative
-				candidate_txt = flat_eml[0].pop(0)
-				new_eml[0].attach(candidate_txt)
+			if 'alt' in part_content_type and len(flat_eml[-1]) > 1:  # alternative
+				candidate_txt = flat_eml[-1].pop()
+				new_eml[-1].attach(candidate_txt)
 				debug and print('txt '+candidate_txt.get_content_type(), end=' ', file=stderr)
 
-				candidate_htm = flat_eml[0].pop(0)
+				candidate_htm = flat_eml[-1].pop()
 				debug and print('htm '+candidate_htm.get_content_type(), end=' ', file=stderr)
 				candidate_htm_subtype = candidate_htm.get_content_subtype()
 
@@ -71,46 +72,47 @@ def drop_alternatives(msg_bytes, debug=0):
 					if are_idem_txt(candidate_txt, candidate_htm, debug):
 						x_drop_alt.append(candidate_htm_subtype)
 					else:
-						new_eml[0].attach(candidate_htm)
+						new_eml[-1].attach(candidate_htm)
 						debug and print('htm diff', end=' ', file=stderr)
 				elif 'rel' in candidate_htm_subtype:  # related
-					sub_part = flat_eml[0].pop(0)
+					sub_part = flat_eml[-1].pop()
 
-					while not sub_part.is_multipart() and len(flat_eml[0]) > 0:
-						if sub_part.get_content_subtype().startswith('htm'):
+					while not sub_part.is_multipart() and len(flat_eml[-1]) > 0:
+						if 'htm' in sub_part.get_content_subtype():
 							if are_idem_txt(candidate_txt, sub_part, debug):
 								x_drop_alt.append(sub_part.get_content_subtype())
 							else:
-								new_eml[0].attach(sub_part)
+								new_eml[-1].attach(sub_part)
 								debug and print('rel htm diff', end=' ', file=stderr)
 						else:
 							x_drop_alt.append(sub_part.get_content_type())
 
-						sub_part = flat_eml[0].pop(0)  # consume intput
+						sub_part = flat_eml[-1].pop()  # consume intput
 
 					if sub_part.is_multipart():
-						flat_eml[0].insert(0, sub_part)
+						flat_eml[-1].append(sub_part)
 				else:  # unknown configuration yet
-					new_eml[0].attach(candidate_htm)
+					new_eml[-1].attach(candidate_htm)
 					debug and print('new configuration ?', end=' ', file=stderr)
 			elif 'me' in part_content_type:  # message
 				debug and print(' clne', file=stderr)
 				flat_sub_eml = [sub_part for sub_part in part.walk()]
-				flat_sub_eml.pop(0)  # replaced by multipart/mixed
-				flat_eml[0] = flat_eml[0][len(flat_sub_eml):]  # consume input
-				flat_eml.insert(0, flat_sub_eml)
-				new_eml.insert(0, clone_message(part))
+				flat_sub_eml.reverse()
+				flat_sub_eml.pop()  # replaced by multipart/mixed
+				flat_eml[-1] = flat_eml[-1][:-len(flat_sub_eml)]  # consume input
+				flat_eml.append(flat_sub_eml)
+				new_eml.append(clone_message(part))
 			elif 'rel' in part_content_type:  # related
 				debug and print('drop rel', file=stderr)
 			else:
-				new_eml[0].attach(part)
+				new_eml[-1].attach(part)
 				debug and print('	 kept', file=stderr)
 
 		if len(new_eml) > 1:
-			new_eml[1].attach(new_eml[0])
-			new_eml.pop(0)
+			new_eml[-2].attach(new_eml[-1])
+			new_eml.pop()
 
-		flat_eml.pop(0)
+		flat_eml.pop()
 
 	if len(x_drop_alt):
 		new_eml[0]['x-drop-alt'] = ', '.join(x_drop_alt)

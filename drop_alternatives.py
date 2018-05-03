@@ -133,23 +133,19 @@ def are_idem_txt(part_txt, part_htm, debug=0):
 	if debug:
 		from shutil import get_terminal_size
 		ir = ' '+color_ratio(idem_ratio)
-		rows, cols = get_terminal_size()
+		cols, rows = get_terminal_size()
 		PUT_txt = int(cols) - 8
-		PUT_htm = int(cols) - 2
+		PUT_htm = int(cols) - 7
 
 		def put(string, postfix, size):
 			print(string[:size].ljust(size, '.') + postfix, file=stderr)
 
-		# if True:
-		if idem_ratio_1 < LIM:
-			# put((i and B or G) + str(h_t_1),	W + ' <H', PUT_htm - 1)
-			put('\n' + str(htm_1),	W + ' <H', PUT_htm - 1)
-			put(str(txt_1), ' T '+color_ratio(idem_ratio_1)+ir, PUT_txt)
-		# if True:
-		if idem_ratio_2 < LIM:
-			# put((i and B or G) + str(h_t_2), W + ' H>', PUT_htm)
-			put('\n' + str(htm_2), W + ' H>', PUT_htm)
-			put(str(txt_2), ' T '+color_ratio(idem_ratio_2)+ir, PUT_txt)
+		if idem_ratio_1 < LIM:  # or True:
+			put('\n' + str(htm_1, errors='replace'), W + ' <H', PUT_htm - 1)
+			put(str(txt_1, errors='replace'), ' T '+color_ratio(idem_ratio_1)+ir, PUT_txt)
+		if idem_ratio_2 < LIM:  # or True:
+			put('\n' + str(htm_2, errors='replace'), W + ' H>', PUT_htm)
+			put(str(txt_2, errors='replace'), ' T '+color_ratio(idem_ratio_2)+ir, PUT_txt)
 
 	return idem_ratio_1 > BON or idem_ratio_2 > BON or idem_ratio > LIM
 

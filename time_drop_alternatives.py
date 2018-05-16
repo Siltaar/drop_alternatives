@@ -54,6 +54,7 @@ Python 3.5.3
 2018-04-19 : 36 tests ; 2.78s ; 7.72ms/t (real testcases are slower, line_profile analysis)
 2018-04-24 : 37 tests ; 2.79s ; 7.54ms/t (new hyp test on skip treatment trigger)
 2018-04-25 : 37 tests ; 2.80s ; 7.56ms/t (in 50%< startswith, append/pop 30%< inser(0,_)/pop(0))
+2018-05-16 : 37 tests ; 2.80s ; 7.56ms/t (.lower() each compared text portions)
 
 """
 

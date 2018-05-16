@@ -158,7 +158,8 @@ def get_txt(part, raw_len, bad_chars=bad_chars):
 	t_start = t_start.translate(None, bad_chars)
 	t_end = purge_html_re.sub(b'', t_end)
 	t_end = t_end.translate(None, bad_chars)
-	return t_start[:LEN], t_end[-LEN:]  # Python 2 ratio() changes its behavior after 199c
+	# Python 2 ratio() changes its behavior after 199c
+	return t_start[:LEN].lower(), t_end[-LEN:].lower()
 
 
 def color_ratio(ratio):
